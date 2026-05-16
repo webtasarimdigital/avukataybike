@@ -56,34 +56,34 @@ export default function Header() {
   return (
     <>
       {/* Top Bar */}
-      <div className="hidden lg:flex bg-primary text-white py-2 px-6 md:px-20 border-b border-white/5">
+      <div className="hidden lg:flex bg-accent text-primary py-2 px-6 md:px-20 border-b border-primary/10">
         <div className="max-w-7xl mx-auto w-full flex justify-between items-center text-[12px] font-medium tracking-wide">
           <div className="flex gap-8">
             <a
               href="https://www.google.com/maps/search/?api=1&query=Eğitim+Mah.,+Poyraz+Sokak,+No:26/4,+Kadıköy/İstanbul"
               target="_blank"
-              className="flex items-center gap-2 hover:text-accent transition-all cursor-pointer"
+              className="flex items-center gap-2 hover:text-primary/70 transition-all cursor-pointer"
             >
-              <MapPin size={16} className="text-accent" />
+              <MapPin size={16} className="text-primary" />
               Eğitim Mah., Poyraz Sk. No:26/4, Kadıköy/İST
             </a>
             <a
               href="tel:05514882948"
-              className="flex items-center gap-2 hover:text-accent transition-all cursor-pointer"
+              className="flex items-center gap-2 hover:text-primary/70 transition-all cursor-pointer"
             >
-              <PhoneIcon size={16} className="text-accent" />
+              <PhoneIcon size={16} className="text-primary" />
               0551 488 29 48
             </a>
           </div>
 
           <div className="flex items-center gap-6">
-            <div className="flex items-center gap-4 border-r border-white/10 pr-6 mr-2">
-              <a href="#" className="hover:text-accent transition-colors"><Instagram size={14} /></a>
-              <a href="#" className="hover:text-accent transition-colors"><Facebook size={14} /></a>
-              <a href="#" className="hover:text-accent transition-colors"><MessageCircle size={14} /></a>
+            <div className="flex items-center gap-4 border-r border-primary/20 pr-6 mr-2">
+              <a href="#" className="hover:text-primary/60 transition-colors"><Instagram size={14} /></a>
+              <a href="#" className="hover:text-primary/60 transition-colors"><Facebook size={14} /></a>
+              <a href="#" className="hover:text-primary/60 transition-colors"><MessageCircle size={14} /></a>
             </div>
             <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+              <span className="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
               Çalışma Saatleri: 09:00 - 18:00
             </div>
           </div>
@@ -91,7 +91,7 @@ export default function Header() {
       </div>
 
       {/* Main Navigation */}
-      <nav className={`fixed w-full z-[100] transition-all duration-500 top-0 lg:top-[37px] ${isScrolled ? "lg:!top-0 bg-white shadow-xl py-3" : "bg-white/95 backdrop-blur-md py-5 border-b border-gray-100"}`}>
+      <nav className={`fixed w-full z-[100] transition-all duration-500 top-0 lg:top-[37px] ${isScrolled ? "lg:!top-0 bg-primary shadow-xl py-3" : "bg-primary py-5 border-b border-white/10"}`}>
         <div className="max-w-7xl mx-auto px-6 md:px-20 flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
@@ -99,7 +99,7 @@ export default function Header() {
               <img src="/logo.png" alt="Logo" className="w-full h-full object-contain" />
             </div>
             <div className="flex flex-col">
-              <span className="text-primary font-black text-xl md:text-2xl leading-none tracking-tighter">AYBİKE SULTAN</span>
+              <span className="text-white font-black text-xl md:text-2xl leading-none tracking-tighter">AYBİKE SULTAN</span>
               <span className="text-accent font-bold text-[10px] md:text-[12px] tracking-[0.3em] mt-1 leading-none uppercase">Hukuk & Danışmanlık</span>
             </div>
           </Link>
@@ -110,7 +110,7 @@ export default function Header() {
               <div key={link.name} className="relative group">
                 <Link
                   href={link.href}
-                  className="text-primary font-bold text-[13px] tracking-widest hover:text-accent transition-colors flex items-center gap-1"
+                  className="text-white/90 font-bold text-[13px] tracking-widest hover:text-accent transition-colors flex items-center gap-1"
                   onClick={link.submenu ? (e) => toggleDropdown(link.name, e) : undefined}
                 >
                   {link.name}
@@ -139,13 +139,13 @@ export default function Header() {
 
           {/* Right Action */}
           <div className="hidden lg:flex items-center gap-6">
-            <a href="https://wa.me/905514882948" target="_blank" className="bg-primary text-white px-8 py-3.5 rounded-xl font-bold text-xs tracking-widest hover:bg-accent hover:text-primary transition-all shadow-lg shadow-primary/10 uppercase">
+            <a href="https://wa.me/905514882948" target="_blank" className="bg-accent text-primary px-8 py-3.5 rounded-xl font-bold text-xs tracking-widest hover:bg-white hover:text-primary transition-all shadow-lg shadow-accent/20 uppercase">
               Tıkla Bilgi Al
             </a>
           </div>
 
           {/* Mobile Menu Button */}
-          <button className="lg:hidden text-primary p-2" onClick={() => setIsMenuOpen(true)}>
+          <button className="lg:hidden text-white p-2" onClick={() => setIsMenuOpen(true)}>
             <Menu size={32} />
           </button>
         </div>

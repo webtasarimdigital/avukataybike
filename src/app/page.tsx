@@ -26,38 +26,100 @@ export default function Home() {
     <div className="flex flex-col w-full overflow-hidden">
       
       {/* HERO SECTION */}
-      <section className="relative min-h-[85vh] flex items-center pt-10 pb-16">
-        <div className="absolute inset-0 bg-primary z-0 overflow-hidden">
-           <div className="absolute top-0 right-0 w-[60%] h-full bg-primary-light/20 -skew-x-12 translate-x-1/4 pointer-events-none" />
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+        {/* Arka plan */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-[#061a0f] via-primary to-[#0d2b1a]" />
+          {/* Köşegen gold şerit */}
+          <div className="absolute top-0 right-0 w-[45%] h-full bg-gradient-to-bl from-accent/8 via-transparent to-transparent" />
+          {/* Halftone desen */}
+          <div className="absolute inset-0 opacity-[0.04]" style={{backgroundImage:"radial-gradient(circle, #EAB308 1px, transparent 1px)", backgroundSize:"28px 28px"}} />
+          {/* Alt gold çizgi */}
+          <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent opacity-40" />
         </div>
-        <div className="container mx-auto px-6 max-w-7xl relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+        <div className="container mx-auto px-6 max-w-7xl relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center py-32 lg:py-24 pt-36 lg:pt-32">
+          {/* Sol – Metin */}
           <div className="space-y-8">
-            <div className="inline-flex items-center gap-3 bg-white/10 border border-white/20 px-4 py-2 rounded-full">
+            <div className="inline-flex items-center gap-3 bg-accent/10 border border-accent/25 px-5 py-2.5 rounded-full">
               <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-              <span className="text-white text-xs font-bold tracking-widest uppercase">Hukuki Çözüm Ortağınız</span>
+              <span className="text-accent text-xs font-black tracking-[0.3em] uppercase">Hukuki Çözüm Ortağınız</span>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
-              Adalet İçin <br />
-              <span className="text-accent underline decoration-accent/30 underline-offset-8 italic">Güçlü Bir Savunma.</span>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.05] tracking-tight">
+              Adalet İçin<br />
+              <span className="text-accent italic">Güvenilir</span><br />
+              <span className="text-white/80">Hukuki Destek.</span>
             </h1>
-            <p className="text-white/70 text-lg md:text-xl max-w-xl font-medium leading-relaxed">
-              Avukat Aybike Sultan Biçer olarak, hukuki süreçlerinizde şeffaf, güvenilir ve çözüm odaklı yaklaşımımızla yanınızdayız.
+            <p className="text-white/60 text-lg max-w-lg leading-relaxed">
+              Avukat Aybike Sultan Biçer olarak hukuki süreçlerinizde şeffaf, güvenilir ve çözüm odaklı yaklaşımımızla yanınızdayız.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <a href="#iletisim" className="bg-accent hover:bg-white text-primary px-10 py-5 rounded-2xl font-black tracking-widest text-sm transition-all shadow-2xl shadow-accent/20 flex items-center gap-3 group uppercase">
-                Hemen Bilgi Al <ArrowRight className="group-hover:translate-x-2 transition-transform" />
+            {/* Özellikler */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+              {[["10+","Yıllık Deneyim"],["14","Hizmet Alanı"],["Kadıköy","İstanbul"]].map(([v,l])=>(
+                <div key={l} className="border border-white/10 rounded-2xl px-5 py-4 bg-white/5 backdrop-blur-sm">
+                  <p className="text-accent font-black text-2xl italic leading-none">{v}</p>
+                  <p className="text-white/40 text-[10px] font-bold uppercase tracking-widest mt-1">{l}</p>
+                </div>
+              ))}
+            </div>
+            <div className="flex flex-wrap gap-4 pt-2">
+              <a href="tel:05514882948" className="bg-accent hover:bg-white text-primary px-10 py-4 rounded-2xl font-black tracking-widest text-sm transition-all shadow-2xl shadow-accent/20 flex items-center gap-3 group uppercase">
+                <Phone size={18} /> Hemen Ara
               </a>
-              <Link href="/hakkimizda" className="bg-white/5 hover:bg-white/10 text-white border border-white/10 px-10 py-5 rounded-2xl font-black tracking-widest text-sm transition-all flex items-center gap-3 uppercase">
-                Hakkımızda
+              <Link href="/hakkimizda" className="bg-white/5 hover:bg-white/10 text-white border border-white/15 px-10 py-4 rounded-2xl font-black tracking-widest text-sm transition-all flex items-center gap-3 uppercase">
+                Hakkımızda <ArrowRight size={16} />
               </Link>
             </div>
           </div>
-          <div className="hidden lg:block relative">
-            <div className="relative z-10 rounded-[40px] overflow-hidden border-8 border-white/5 shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500">
-               <img src="/logo.png" alt="Av. Aybike Sultan Biçer" className="w-full h-auto bg-white" />
+
+          {/* Sağ – Avukat Fotoğrafı */}
+          <div className="hidden lg:flex items-end justify-center relative">
+            {/* Dekoratif arka çember */}
+            <div className="absolute w-[420px] h-[420px] rounded-full border border-accent/10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+            <div className="absolute w-[320px] h-[320px] rounded-full border border-accent/15 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+
+            {/* Fotoğraf frame */}
+            <div className="relative z-10 w-[340px]">
+              {/* Gold üst köşe çizgisi */}
+              <div className="absolute -top-3 -left-3 w-16 h-16 border-t-4 border-l-4 border-accent rounded-tl-2xl z-20" />
+              <div className="absolute -bottom-3 -right-3 w-16 h-16 border-b-4 border-r-4 border-accent rounded-br-2xl z-20" />
+
+              {/* Fotoğraf alanı */}
+              <div className="relative rounded-[32px] overflow-hidden shadow-2xl bg-gradient-to-b from-primary-light to-primary border border-white/10">
+                <img
+                  src="/avukat.jpg"
+                  alt="Av. Aybike Sultan Biçer"
+                  className="w-full h-[460px] object-cover object-top"
+                  onError={(e) => {
+                    const t = e.currentTarget;
+                    t.style.display = "none";
+                    t.nextElementSibling?.classList.remove("hidden");
+                  }}
+                />
+                {/* Placeholder – fotoğraf yokken gösterilir */}
+                <div className="hidden w-full h-[460px] flex-col items-center justify-center gap-6 p-8">
+                  <div className="w-32 h-32 rounded-full border-4 border-accent/30 bg-white/5 flex items-center justify-center">
+                    <img src="/logo.png" alt="Logo" className="w-20 h-20 object-contain opacity-60" />
+                  </div>
+                  <p className="text-white/30 text-xs font-bold tracking-widest uppercase text-center">Fotoğraf Yüklenecek<br />(/avukat.jpg)</p>
+                </div>
+
+                {/* Alt bilgi bandı */}
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-6">
+                  <p className="text-white font-black text-lg tracking-tight uppercase italic">Av. Aybike Sultan Biçer</p>
+                  <p className="text-accent text-xs font-bold tracking-[0.25em] uppercase mt-1">Hukuk & Danışmanlık</p>
+                </div>
+              </div>
+
+              {/* İletişim badge */}
+              <div className="absolute -right-12 top-12 bg-accent text-primary rounded-2xl px-5 py-4 shadow-xl shadow-accent/20 z-30">
+                <p className="font-black text-[10px] tracking-widest uppercase">Randevu İçin</p>
+                <p className="font-black text-base mt-0.5 leading-none">0551 488 29 48</p>
+              </div>
             </div>
-            <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-accent rounded-full -z-10 blur-3xl opacity-50" />
-            <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary-light rounded-full -z-10 blur-3xl opacity-50" />
+
+            {/* Arka glow */}
+            <div className="absolute bottom-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl -z-10" />
           </div>
         </div>
       </section>
