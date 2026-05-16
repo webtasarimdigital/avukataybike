@@ -48,7 +48,7 @@
 .service-card:hover p,
 .service-card:hover .text-primary,
 .service-card:hover .text-neutral-500 {
-  @apply text-primary !important;
+  @apply !text-primary;
 }
 
 .service-card:hover .w-16 {
@@ -56,5 +56,5 @@
 }
 
 .service-card:hover .flex.items-center.gap-2 {
-  @apply text-primary !important;
+  @apply !text-primary;
 }
