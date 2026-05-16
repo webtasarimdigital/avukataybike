@@ -82,16 +82,20 @@ export default function ServiceDetailPage() {
             </div>
           </div>
 
-          {data && (
-            <div className="hidden lg:grid grid-cols-3 gap-4 pb-8">
-              {data.stats.map((s, i) => (
-                <div key={i} className="bg-white/5 border border-white/10 rounded-3xl p-6 text-center backdrop-blur-sm">
-                  <p className="text-3xl font-black text-accent italic leading-none mb-2">{s.value}</p>
-                  <p className="text-white/50 text-[10px] font-bold uppercase tracking-widest leading-tight">{s.label}</p>
-                </div>
-              ))}
+          <div className="hidden lg:grid grid-cols-3 gap-4 pb-8">
+            <div className="bg-white/5 border border-white/10 rounded-3xl p-6 text-center backdrop-blur-sm">
+              <p className="text-3xl font-black text-accent italic leading-none mb-2">10+</p>
+              <p className="text-white/50 text-[10px] font-bold uppercase tracking-widest leading-tight">Yıllık Deneyim</p>
             </div>
-          )}
+            <div className="bg-white/5 border border-white/10 rounded-3xl p-6 text-center backdrop-blur-sm">
+              <p className="text-3xl font-black text-accent italic leading-none mb-2">14</p>
+              <p className="text-white/50 text-[10px] font-bold uppercase tracking-widest leading-tight">Hizmet Alanı</p>
+            </div>
+            <div className="bg-white/5 border border-white/10 rounded-3xl p-6 text-center backdrop-blur-sm">
+              <p className="text-2xl font-black text-accent italic leading-none mb-2">Kadıköy</p>
+              <p className="text-white/50 text-[10px] font-bold uppercase tracking-widest leading-tight">İstanbul</p>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -160,16 +164,20 @@ export default function ServiceDetailPage() {
             </div>
 
             {/* Stats (mobile) */}
-            {data && (
-              <div className="grid grid-cols-3 gap-4 lg:hidden">
-                {data.stats.map((s, i) => (
-                  <div key={i} className="bg-white rounded-3xl p-6 text-center shadow-md border border-gray-100">
-                    <p className="text-2xl font-black text-primary italic leading-none mb-1">{s.value}</p>
-                    <p className="text-neutral-400 text-[10px] font-bold uppercase tracking-widest leading-tight">{s.label}</p>
-                  </div>
-                ))}
+            <div className="grid grid-cols-3 gap-4 lg:hidden">
+              <div className="bg-white rounded-3xl p-6 text-center shadow-md border border-gray-100">
+                <p className="text-2xl font-black text-primary italic leading-none mb-1">10+</p>
+                <p className="text-neutral-400 text-[10px] font-bold uppercase tracking-widest leading-tight">Yıllık Deneyim</p>
               </div>
-            )}
+              <div className="bg-white rounded-3xl p-6 text-center shadow-md border border-gray-100">
+                <p className="text-2xl font-black text-primary italic leading-none mb-1">14</p>
+                <p className="text-neutral-400 text-[10px] font-bold uppercase tracking-widest leading-tight">Hizmet Alanı</p>
+              </div>
+              <div className="bg-white rounded-3xl p-6 text-center shadow-md border border-gray-100">
+                <p className="text-xl font-black text-primary italic leading-none mb-1">Kadıköy</p>
+                <p className="text-neutral-400 text-[10px] font-bold uppercase tracking-widest leading-tight">İstanbul</p>
+              </div>
+            </div>
 
             {/* FAQ */}
             <div className="bg-white rounded-[40px] shadow-xl border border-gray-100 p-10 md:p-16">
@@ -189,33 +197,25 @@ export default function ServiceDetailPage() {
               </div>
             </div>
 
-            {/* Testimonial / Trust */}
-            <div className="bg-neutral-50 rounded-[40px] border border-gray-100 p-10 md:p-14 flex flex-col md:flex-row gap-8 items-center">
-              <div className="flex flex-col items-center text-center md:items-start md:text-left space-y-4 flex-1">
-                <div className="flex gap-1 text-accent">{[...Array(5)].map((_,i)=><Star key={i} size={20} fill="currentColor" />)}</div>
-                <p className="text-neutral-600 text-lg font-medium italic leading-relaxed">
-                  "Av. Aybike Sultan Biçer, {title.toLowerCase()} davamda son derece profesyonel ve özverili bir hizmet sundu. Sürecin her aşamasında yanımda oldu ve haklarımı tam anlamıyla korudu."
-                </p>
-                <div className="flex items-center gap-3 pt-2">
-                  <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-black text-lg">M</div>
-                  <div>
-                    <p className="font-black text-primary text-sm">Mehmet K.</p>
-                    <p className="text-neutral-400 text-xs font-medium">Müvekkil — 2024</p>
-                  </div>
-                </div>
+            {/* Hukuki Bilgilendirme / Yasal Uyarı */}
+            <div className="bg-neutral-50 rounded-[40px] border border-gray-100 p-10 md:p-14">
+              <h3 className="text-xl font-black text-primary uppercase italic mb-6">Neden Hukuki Danışmanlık Almalısınız?</h3>
+              <div className="space-y-4 text-neutral-600 text-sm leading-relaxed">
+                <p>Hukuki süreçlerde yasal süreler çok kısa olabilmekte; süre aşımı durumunda dava açma hakkı tamamen ortadan kalkabilmektedir. Bu nedenle uyuşmazlık oluştuğu anda bir avukata başvurmanız büyük önem taşımaktadır.</p>
+                <p>Her dava kendine özgü koşullar içermektedir. Benzer görünen davalarda farklı sonuçlar ortaya çıkabilir. Genel bilgilendirme niteliğindeki bu sayfadaki açıklamalar, kişisel hukuki danışmanlık yerine geçmez.</p>
               </div>
-              <div className="flex flex-col gap-4 shrink-0">
-                <div className="flex items-center gap-3 bg-white rounded-2xl p-4 border border-gray-100 shadow-sm">
+              <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="flex items-center gap-3 bg-white rounded-2xl p-4 border border-gray-100">
                   <Clock size={20} className="text-accent" />
-                  <span className="text-primary font-bold text-sm">Hızlı Dönüş Garantisi</span>
+                  <span className="text-primary font-bold text-sm">Süre Takibi Kritik</span>
                 </div>
-                <div className="flex items-center gap-3 bg-white rounded-2xl p-4 border border-gray-100 shadow-sm">
+                <div className="flex items-center gap-3 bg-white rounded-2xl p-4 border border-gray-100">
                   <Award size={20} className="text-accent" />
-                  <span className="text-primary font-bold text-sm">10+ Yıl Tecrübe</span>
+                  <span className="text-primary font-bold text-sm">Bireysel Değerlendirme</span>
                 </div>
-                <div className="flex items-center gap-3 bg-white rounded-2xl p-4 border border-gray-100 shadow-sm">
+                <div className="flex items-center gap-3 bg-white rounded-2xl p-4 border border-gray-100">
                   <Shield size={20} className="text-accent" />
-                  <span className="text-primary font-bold text-sm">Tam Gizlilik</span>
+                  <span className="text-primary font-bold text-sm">Gizlilik İlkesi</span>
                 </div>
               </div>
             </div>

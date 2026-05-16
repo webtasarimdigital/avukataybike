@@ -3,15 +3,33 @@ import { ArrowRight, BookOpen, Clock, Tag, Calendar } from "lucide-react";
 import Link from "next/link";
 
 const blogPosts = [
-  { id: 1, t: "Boşanma Davalarında Mal Paylaşımı", c: "Aile Hukuku", d: "20.05.2024", slug: "bosanma-davalarinda-mal-paylasimi", summary: "Evlilik sürecinde edinilen malların boşanma sonrası nasıl paylaşılacağı, yasal mal rejimi ve dikkat edilmesi gereken hususlar." },
-  { id: 2, t: "İş Kazası Sonrası Haklarınız", c: "İş Hukuku", d: "18.05.2024", slug: "is-kazasi-sonrasi-haklariniz", summary: "İş kazası geçiren çalışanların maddi-manevi tazminat hakları, SGK süreçleri ve işverene karşı hukuki başvuru yolları." },
-  { id: 3, t: "Kira Tahliye Süreçleri ve Haklar", c: "Gayrimenkul Hukuku", d: "15.05.2024", slug: "kira-tahliye-surecleri-ve-haklar", summary: "Kiracı tahliyesinde yasal gerekçeler, icra yolu ve dava süreci hakkında bilmeniz gereken her şey." },
-  { id: 4, t: "Bilişim Suçları ve Savunma Yöntemleri", c: "Bilişim Hukuku", d: "12.05.2024", slug: "bilisim-suclari-ve-savunma-yontemleri", summary: "İnternet üzerinden işlenen suçlar, dijital delil tespiti ve bilişim suçlamalarına karşı etkili savunma stratejileri." },
-  { id: 5, t: "Marka Tescilinin Önemi", c: "Ticaret Hukuku", d: "10.05.2024", slug: "marka-tescilinin-onemi", summary: "Markanızı rakiplerinize karşı korumak için tescil sürecinin önemi, TÜRKPATENT başvurusu ve ihlal davaları." },
-  { id: 6, t: "Tüketici Hakem Heyeti Süreçleri", c: "Tüketici Hukuku", d: "08.05.2024", slug: "tuketici-hakem-heyeti-surecleri", summary: "Ayıplı ürün ve hizmetlerde tüketici hakem heyetine başvuru, limit tutarları ve itiraz süreçleri hakkında detaylı bilgi." },
-  { id: 7, t: "Velayet Davalarında Çocuğun Üstün Yararı", c: "Aile Hukuku", d: "05.05.2024", slug: "velayet-davalarinda-cocugun-ustun-yarari", summary: "Velayet kararlarında mahkemelerin esas aldığı kriterler, çocuğun üstün yararı ilkesi ve kişisel ilişki düzenlenmesi." },
-  { id: 8, t: "Sigorta Tazminatı Nasıl Alınır?", c: "Sigorta Hukuku", d: "02.05.2024", slug: "sigorta-tazminati-nasil-alinir", summary: "Sigorta şirketlerinin tazminat ödemekten kaçınma yöntemleri ve haklarınızı korumanın en etkili yolları." },
-  { id: 9, t: "Anonim Şirket Kuruluşu Rehberi", c: "Ticaret Hukuku", d: "28.04.2024", slug: "anonim-sirket-kurulumu-rehberi", summary: "Türkiye'de anonim şirket kuruluşu için gerekli belgeler, yasal zorunluluklar ve dikkat edilmesi gereken hukuki noktalar." },
+  {
+    id: 1,
+    t: "Haksız İşten Çıkarılma Durumunda Yasal Başvuru Yolları",
+    c: "İş Hukuku",
+    d: "20.05.2024",
+    slug: "haksiz-isten-cikarilmada-yasal-basvuru-yollari",
+    summary: "Haksız fesih bildirimine maruz kalan işçilerin arabuluculuk ve iş mahkemesi süreçleri hakkında bilinmesi gereken yasal bilgiler.",
+    readTime: "5 dk",
+  },
+  {
+    id: 2,
+    t: "Boşanma Sürecinde Mal Rejimi ve Yasal Düzenlemeler",
+    c: "Aile Hukuku",
+    d: "10.05.2024",
+    slug: "bosanma-surecinde-mal-rejimi-ve-yasal-duzenlemeler",
+    summary: "Edinilmiş mallara katılma rejimi, mal paylaşımında esas alınan kriterler ve boşanma davalarında dikkat edilmesi gereken yasal süreler.",
+    readTime: "7 dk",
+  },
+  {
+    id: 3,
+    t: "Tüketici Olarak Haklarınız: Ayıplı Mal ve Hizmetlerde Başvuru Yolları",
+    c: "Tüketici Hukuku",
+    d: "01.05.2024",
+    slug: "tuketici-haklari-ayipli-mal-ve-hizmetlerde-basvuru-yollari",
+    summary: "Ayıplı ürün tesliminde iade, değişim ve onarım hakları ile tüketici hakem heyetine başvuru sürecine ilişkin yasal bilgiler.",
+    readTime: "6 dk",
+  },
 ];
 
 export default function BlogPage() {
@@ -65,8 +83,9 @@ export default function BlogPage() {
                 <div className="absolute top-4 left-4 bg-primary text-white text-[9px] font-black uppercase px-4 py-2 rounded-full tracking-widest shadow-lg">{post.c}</div>
               </div>
               <div className="p-8 flex flex-col flex-1">
-                <div className="flex items-center gap-2 text-accent mb-3 text-[10px] font-black uppercase tracking-widest">
-                  <Calendar size={12} strokeWidth={3} /><span>{post.d}</span>
+                <div className="flex items-center gap-4 mb-3 text-[10px] font-black uppercase tracking-widest">
+                  <span className="flex items-center gap-1 text-accent"><Calendar size={12} strokeWidth={3} />{post.d}</span>
+                  <span className="flex items-center gap-1 text-neutral-400"><Clock size={12} />{post.readTime}</span>
                 </div>
                 <h3 className="text-lg font-black text-primary mb-3 leading-snug group-hover:text-accent transition-colors uppercase italic">{post.t}</h3>
                 <p className="text-neutral-500 text-sm leading-relaxed mb-6 flex-1 line-clamp-3">{post.summary}</p>

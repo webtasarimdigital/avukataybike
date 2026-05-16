@@ -1,5 +1,5 @@
 import React from "react";
-import { Scale, ShieldCheck, Users, Award, CheckCircle2, ArrowRight, Phone, MessageSquare, Star, BookOpen, Gavel, MapPin, Clock } from "lucide-react";
+import { Scale, ShieldCheck, Users, Award, CheckCircle2, ArrowRight, Phone, MessageSquare, BookOpen, Gavel, MapPin, Clock } from "lucide-react";
 import Link from "next/link";
 
 const services = [
@@ -15,12 +15,6 @@ const services = [
   { title: "Tüketici Hukuku", slug: "tuketici-hukuku" },
   { title: "Yatırım Hukuku", slug: "yatirim-hukuku" },
   { title: "İdare ve Vergi Hukuku", slug: "idare-ve-vergi-hukuku" },
-];
-
-const testimonials = [
-  { name: "Mehmet A.", role: "Ticaret Davası Müvekkili", text: "Banka uyuşmazlığımda hızlı ve kararlı bir şekilde haklarımı korudu. Süreci şeffaf biçimde iletti.", stars: 5 },
-  { name: "Selin T.", role: "Aile Hukuku Müvekkili", text: "Boşanma sürecinde hem hukuki hem de insani bir destek aldım. Velayet kararı tam istediğim gibi sonuçlandı.", stars: 5 },
-  { name: "Kemal Y.", role: "İş Hukuku Müvekkili", text: "Haksız işten çıkarılma davasında işe iade ve tazminatımı eksiksiz aldım. Tecrübesi ve kararlılığı farklı.", stars: 5 },
 ];
 
 export default function AboutPage() {
@@ -74,7 +68,7 @@ export default function AboutPage() {
                   <p className="text-accent text-xs font-bold tracking-[0.3em] uppercase mt-1">Hukuk & Danışmanlık</p>
                 </div>
                 <div className="flex gap-6 mt-2">
-                  {[["10+","Yıl Tecrübe"],["500+","Başarılı Dosya"],["14","Uzmanlık Alanı"]].map(([v,l],i)=>(
+                  {[["10+","Yıl Deneyim"],["14","Hizmet Alanı"],["Kadıköy","İstanbul"]].map(([v,l],i)=>(
                     <div key={i} className="text-center">
                       <p className="text-accent font-black text-2xl italic">{v}</p>
                       <p className="text-white/40 text-[10px] font-bold uppercase tracking-widest leading-tight mt-1">{l}</p>
@@ -172,27 +166,15 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* ── MÜVEKKİL GERİBİLDİRİMLERİ ── */}
-        <div>
-          <div className="text-center mb-12 space-y-3">
-            <span className="text-accent font-black tracking-[0.4em] text-xs uppercase italic">Müvekkil Görüşleri</span>
-            <h2 className="text-3xl md:text-5xl font-black text-primary uppercase italic">Ne Diyorlar?</h2>
-            <div className="w-20 h-1.5 bg-accent mx-auto rounded-full" />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map((t, i) => (
-              <div key={i} className="bg-white rounded-[32px] p-10 border border-gray-100 shadow-sm hover:shadow-xl transition-all space-y-5">
-                <div className="flex gap-1 text-accent">{[...Array(t.stars)].map((_,j)=><Star key={j} size={18} fill="currentColor" />)}</div>
-                <p className="text-neutral-600 text-base leading-relaxed italic">"{t.text}"</p>
-                <div className="flex items-center gap-3 pt-2 border-t border-gray-50">
-                  <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-black text-lg">{t.name[0]}</div>
-                  <div>
-                    <p className="font-black text-primary text-sm">{t.name}</p>
-                    <p className="text-neutral-400 text-xs font-medium">{t.role}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
+        {/* ── YASAL BİLGİLENDİRME ── */}
+        <div className="bg-neutral-50 rounded-[40px] border border-gray-100 p-10 md:p-14">
+          <div className="flex items-start gap-6">
+            <div className="w-14 h-14 rounded-2xl bg-primary/5 text-primary flex items-center justify-center shrink-0"><Scale size={28} /></div>
+            <div className="space-y-3">
+              <h3 className="text-xl font-black text-primary uppercase italic">Avukatlık Hizmetleri Hakkında</h3>
+              <p className="text-neutral-500 text-sm leading-relaxed">Bu internet sitesi yalnızca genel bilgilendirme amacıyla hazırlanmıştır; hukuki danışmanlık hizmeti yerine geçmez. Her hukuki uyuşmazlık kendine özgü koşullar içermekte olup benzer görünen davalarda farklı sonuçlar ortaya çıkabilir. Kişisel durumunuz için lütfen bir avukata başvurunuz.</p>
+              <p className="text-neutral-500 text-sm leading-relaxed">Büromuz İstanbul Barosu'na kayıtlıdır ve Avukatlık Kanunu ile Türkiye Barolar Birliği Meslek Kuralları çerçevesinde faaliyet göstermektedir.</p>
+            </div>
           </div>
         </div>
 

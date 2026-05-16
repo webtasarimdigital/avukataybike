@@ -5,10 +5,9 @@ import { Calendar, User, ArrowLeft, BookOpen, Share2, Phone, MessageSquare, Tag,
 import Link from "next/link";
 
 const relatedPosts = [
-  { t: "Boşanma Davalarında Mal Paylaşımı", c: "Aile Hukuku", slug: "bosanma-davalarinda-mal-paylasimi" },
-  { t: "İş Kazası Sonrası Haklarınız", c: "İş Hukuku", slug: "is-kazasi-sonrasi-haklariniz" },
-  { t: "Kira Tahliye Süreçleri ve Haklar", c: "Gayrimenkul Hukuku", slug: "kira-tahliye-surecleri-ve-haklar" },
-  { t: "Marka Tescilinin Önemi", c: "Ticaret Hukuku", slug: "marka-tescilinin-onemi" },
+  { t: "Haksız İşten Çıkarılma Durumunda Yasal Başvuru Yolları", c: "İş Hukuku", slug: "haksiz-isten-cikarilmada-yasal-basvuru-yollari" },
+  { t: "Boşanma Sürecinde Mal Rejimi ve Yasal Düzenlemeler", c: "Aile Hukuku", slug: "bosanma-surecinde-mal-rejimi-ve-yasal-duzenlemeler" },
+  { t: "Tüketici Olarak Haklarınız: Ayıplı Mal ve Hizmetlerde Başvuru Yolları", c: "Tüketici Hukuku", slug: "tuketici-haklari-ayipli-mal-ve-hizmetlerde-basvuru-yollari" },
 ];
 
 export default function BlogPostPage() {
@@ -58,47 +57,47 @@ export default function BlogPostPage() {
                 Bu yazımızda <strong>{title}</strong> konusunu hukuki boyutları, güncel yargı kararları ve dikkat edilmesi gereken kritik noktalar eşliğinde ele alıyoruz.
               </p>
 
-              <div className="prose prose-lg max-w-none space-y-6 text-neutral-600 leading-relaxed">
-                <h2 className="text-2xl font-black text-primary uppercase italic">{title} Nedir?</h2>
+              <div className="space-y-6 text-neutral-600 leading-relaxed">
+                <h2 className="text-2xl font-black text-primary uppercase italic">{title} Hakkında Genel Bilgi</h2>
                 <p>
-                  Hukuki süreçlerin en önemli aşamalarından biri olan {title} konusu, tarafların haklarını koruma altına alan ve gelecekte oluşabilecek uyuşmazlıkları önleyen kritik bir role sahiptir. Türk Medeni Kanunu ve ilgili mevzuat çerçevesinde şekillenen bu alan, uzman hukuki görüş ve deneyim gerektirmektedir.
+                  Bu yazıda {title.toLowerCase()} konusundaki yasal düzenlemeler, süreçler ve dikkat edilmesi gereken hususlara ilişkin genel bilgiler ele alınmaktadır. Bu sayfa bilgilendirme niteliği taşımakta olup kişisel hukuki danışmanlık hizmeti niteliği taşımamaktadır.
                 </p>
                 <p>
-                  Özellikle son dönemde artan dava sayısı ve değişen yargı kararları göz önünde bulundurulduğunda, bu konuda bilinçli olmak her bireyin ve kurumun temel hakkıdır. Hukuki süreçlerde geç kalınan adımlar telafisi güç hak kayıplarına yol açabilmektedir.
+                  Bireysel durumunuzu değerlendirmek ve somut hukuki tavsiye almak için mutlaka bir avukata başvurmanızı öneririz. Hukuki süreçlerde yasal süreler kısa olabilmekte; geç kalınan başvurular hak kaybına yol açabilmektedir.
+                </p>
+
+                <h2 className="text-2xl font-black text-primary uppercase italic pt-4">Yasal Çerçeve</h2>
+                <p>
+                  Türk hukuku, bu alanda tarafların haklarını ve yükümlülüklerini dengeleyen çeşitli düzenlemeler öngörmektedir. İlgili kanun maddeleri ve yargı kararları doğrultusunda sürecin doğru yönetilmesi başarılı bir sonuç için belirleyici önem taşır.
                 </p>
 
                 <h2 className="text-2xl font-black text-primary uppercase italic pt-4">Dikkat Edilmesi Gereken Hususlar</h2>
                 <p>
-                  Süreç boyunca tarafların beyanları, sunulan deliller ve yasal sürelerin titizlikle takibi hayati önem taşımaktadır. Hak kaybına uğramamak adına her adımın bir uzman eşliğinde planlanması büyük önem taşır.
+                  Süreç boyunca yasal sürelerin takibi, belge ve delillerin eksiksiz muhafazası ve resmi yazışmalara özen gösterilmesi büyük önem taşımaktadır.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
-                  {["Yasal süreleri kaçırmamak","Delilleri zamanında sunmak","Resmi yazışmalara dikkat etmek","Uzman avukat desteği almak","Beyanları dikkatlice hazırlamak","Tebliğ tarihlerini kayıt altına almak"].map((i,k)=>(
+                  {["Yasal süreleri kaçırmamak","Delilleri zamanında muhafaza etmek","Resmi yazışmalara özen göstermek","Bir avukata danışmak","Beyanları dikkatlice hazırlamak","Tebliğ tarihlerini kayıt altına almak"].map((item,k)=>(
                     <div key={k} className="flex items-center gap-3 bg-neutral-50 border border-gray-100 p-4 rounded-2xl">
                       <div className="w-8 h-8 rounded-xl bg-accent/10 text-accent flex items-center justify-center shrink-0 text-sm font-black">{k+1}</div>
-                      <span className="text-primary font-bold text-sm">{i}</span>
+                      <span className="text-primary font-bold text-sm">{item}</span>
                     </div>
                   ))}
                 </div>
 
-                <h2 className="text-2xl font-black text-primary uppercase italic pt-4">Güncel Yargı Kararları</h2>
-                <p>
-                  Yargıtay'ın son dönemde verdiği kararlar, {title} konusundaki uygulamaları önemli ölçüde şekillendirmiştir. Özellikle ispat yüküne ilişkin getirilen yeni yorumlar ve delil standartlarındaki değişiklikler, dava stratejisini doğrudan etkilemektedir.
-                </p>
-
-                {/* Callout */}
+                {/* Yasal Uyarı */}
                 <div className="bg-primary rounded-3xl p-8 flex gap-6 items-start my-6">
                   <div className="w-14 h-14 rounded-2xl bg-accent/20 text-accent flex items-center justify-center shrink-0">
                     <BookOpen size={28} />
                   </div>
                   <div>
-                    <h4 className="text-white font-black text-lg uppercase italic mb-2">Önemli Hatırlatma</h4>
-                    <p className="text-white/60 text-sm leading-relaxed">Bu yazı genel hukuki bilgilendirme amacıyla hazırlanmıştır. Bireysel durumunuz için mutlaka uzman bir avukattan kişisel danışmanlık almanızı tavsiye ederiz.</p>
+                    <h4 className="text-white font-black text-lg uppercase italic mb-2">Yasal Uyarı</h4>
+                    <p className="text-white/60 text-sm leading-relaxed">Bu yazı yalnızca genel bilgilendirme amacıyla hazırlanmıştır. Kişisel hukuki danışmanlık niteliği taşımaz. Bireysel durumunuz için lütfen bir avukattan hukuki yardım alınız.</p>
                   </div>
                 </div>
 
                 <h2 className="text-2xl font-black text-primary uppercase italic pt-4">Sonuç</h2>
                 <p>
-                  {title} konusunda bilinçli olmak, haklarınızı zamanında ve eksiksiz kullanabilmeniz açısından kritik bir öneme sahiptir. Profesyonel hukuki destek alarak süreci doğru yönetmek, hem zaman hem de maddi açıdan önemli avantajlar sağlayacaktır.
+                  {title.split(" ")[0]} alanında yaşanan uyuşmazlıklarda kısa yasal süreler ve ispat yükü kuralları sürecin kritik unsurlarını oluşturmaktadır. Durumunuza özel değerlendirme için bir hukuk bürosuyla irtibata geçmeniz önerilir.
                 </p>
               </div>
 

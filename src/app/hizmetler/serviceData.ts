@@ -24,10 +24,10 @@ export interface ServiceItem {
 export const serviceContent: Record<string, ServiceItem> = {
   "banka-ve-ticaret-hukuku": {
     title: "Banka ve Ticaret Hukuku",
-    subtitle: "Ticari İlişkilerde Güçlü Hukuki Temsil",
+    subtitle: "Ticari İlişkilerde Hukuki Destek",
     heroDesc: "Şirketler, bankalar ve ticari kuruluşlar için kapsamlı hukuki danışmanlık ve dava takibi hizmetleri.",
     desc1: "Banka ve Ticaret Hukuku alanında sunduğumuz hizmetler; şirket kuruluşu ve yönetimi, ticari sözleşmelerin hazırlanması, banka uyuşmazlıkları ve kredi hukuku gibi geniş bir yelpazeyi kapsamaktadır. Müvekkillerimizin ticari ilişkilerinde güvenli ve sağlam bir hukuki zemin oluşturmaları için stratejik danışmanlık sağlıyoruz.",
-    desc2: "Türk Ticaret Kanunu, Bankacılık Kanunu ve ilgili mevzuat çerçevesinde şirketlerin ihtiyaç duyduğu tüm hukuki süreçlerde etkin biçimde temsil ediyoruz. Ticari uyuşmazlıklarda arabuluculuk ve dava yollarını en verimli şekilde kullanarak müvekkillerimizin haklarını koruyoruz.",
+    desc2: "Türk Ticaret Kanunu, Bankacılık Kanunu ve ilgili mevzuat çerçevesinde şirketlerin ihtiyaç duyduğu hukuki süreçlerde temsil hizmetleri sunuyoruz. Ticari uyuşmazlıklarda arabuluculuk ve dava yollarını mevzuat çerçevesinde değerlendiriyoruz.",
     features: [
       "Şirket kuruluşu, birleşme ve devralma işlemleri",
       "Ticari sözleşmelerin hazırlanması ve müzakeresi",
@@ -39,7 +39,7 @@ export const serviceContent: Record<string, ServiceItem> = {
       "Uluslararası ticaret hukuku danışmanlığı",
     ],
     process: [
-      { step: "01", title: "Ücretsiz Ön Görüşme", desc: "Durumunuzu dinleyip hukuki yol haritanızı belirliyoruz." },
+      { step: "01", title: "İlk Görüşme", desc: "Durumunuzu dinleyip hukuki süreci birlikte değerlendiriyoruz." },
       { step: "02", title: "Dosya İncelemesi", desc: "Belge ve delilleri eksiksiz inceleyerek güçlü strateji oluşturuyoruz." },
       { step: "03", title: "Hukuki Süreç Yönetimi", desc: "Dava veya müzakere sürecini titizlikle takip ediyoruz." },
       { step: "04", title: "Sonuç ve Raporlama", desc: "Süreci şeffaf biçimde raporlayarak müvekkili bilgilendiriyoruz." },
@@ -58,10 +58,10 @@ export const serviceContent: Record<string, ServiceItem> = {
 
   "is-hukuku": {
     title: "İş Hukuku",
-    subtitle: "İşçi ve İşveren Haklarında Uzman Temsil",
-    heroDesc: "İş akdinin kurulmasından sona ermesine kadar tüm süreçlerde işçi ve işveren haklarını kararlılıkla savunuyoruz.",
+    subtitle: "İşçi ve İşveren Haklarında Hukuki Destek",
+    heroDesc: "İş akdinin kurulmasından sona ermesine kadar tüm süreçlerde işçi ve işveren hakları kapsamında hukuki danışmanlık ve temsil hizmetleri.",
     desc1: "İş hukuku, çalışma hayatının en kritik alanlarından birini oluşturmaktadır. Haksız işten çıkarma, kıdem ve ihbar tazminatı, fazla mesai alacakları, mobbing ve iş kazası gibi konularda hem işçilere hem de işverenlere kapsamlı hukuki destek sağlıyoruz.",
-    desc2: "İş Kanunu, Sendikalar Kanunu ve ilgili mevzuat kapsamında işyeri politikalarının oluşturulmasından bireysel iş uyuşmazlıklarının çözümüne kadar geniş bir hizmet yelpazesi sunuyoruz. İş mahkemelerinde etkin temsil ile müvekkillerimizin haklarını en üst düzeyde koruyoruz.",
+    desc2: "İş Kanunu, Sendikalar Kanunu ve ilgili mevzuat kapsamında işyeri politikalarının oluşturulmasından bireysel iş uyuşmazlıklarının çözümüne kadar geniş bir hizmet yelpazesi sunuyoruz. İş mahkemelerinde temsil hizmetleri sunuyor, hukuki süreçlerin doğru yönetilmesi için danışmanlık sağlıyoruz.",
     features: [
       "Haksız fesih ve işe iade davaları",
       "Kıdem ve ihbar tazminatı talepleri",
@@ -76,7 +76,7 @@ export const serviceContent: Record<string, ServiceItem> = {
       { step: "01", title: "Durum Değerlendirmesi", desc: "İş ilişkinizin hukuki boyutunu detaylı inceliyoruz." },
       { step: "02", title: "Arabuluculuk", desc: "İş uyuşmazlıklarında zorunlu arabuluculuk sürecini etkin yönetiyoruz." },
       { step: "03", title: "Dava Açılması", desc: "Arabuluculukta anlaşma sağlanamazsa iş mahkemesinde dava açıyoruz." },
-      { step: "04", title: "Karar ve Tahsil", desc: "Lehe kararın icrası için gerekli tüm adımları atıyoruz." },
+      { step: "04", title: "Karar Sonrası", desc: "Mahkeme kararı sonrası infaz ve bilgilendirme sürecini takip ediyoruz." },
     ],
     faq: [
       { q: "İşten çıkarılırsam ne kadar sürem var?", a: "Fesih bildiriminden itibaren 1 ay içinde arabulucuya başvurmanız, anlaşmazlık halinde ise 2 ay içinde dava açmanız gerekmektedir." },
@@ -92,10 +92,10 @@ export const serviceContent: Record<string, ServiceItem> = {
 
   "aile-hukuku": {
     title: "Aile Hukuku",
-    subtitle: "Aile Uyuşmazlıklarında Hassas ve Kararlı Temsil",
-    heroDesc: "Boşanma, velayet, nafaka ve miras gibi hassas süreçlerde hukuki haklarınızı en etkin biçimde koruyoruz.",
-    desc1: "Aile hukuku, bireylerin en kırılgan dönemlerinde ihtiyaç duydukları hukuki desteği içermektedir. Boşanma davası, velayet ve kişisel ilişki düzenlenmesi, nafaka talepleri, mal rejimi ve aile içi şiddet davalarında müvekkillerimize güvenilir bir yol arkadaşlığı yapıyoruz.",
-    desc2: "Uzlaşmacı yaklaşımımızla öncelikle anlaşmalı çözümler arayarak müvekkillerimizi duygusal ve ekonomik açıdan koruyoruz. Çekişmeli davalarda ise güçlü hukuki argümanlar ve kapsamlı delil yönetimiyle en iyi sonucu elde etmek için kararlılıkla mücadele ediyoruz.",
+    subtitle: "Aile Uyuşmazlıklarında Hukuki Destek",
+    heroDesc: "Boşanma, velayet, nafaka ve miras gibi hassas süreçlerde hukuki haklarınız kapsamında danışmanlık ve temsil hizmetleri.",
+    desc1: "Aile hukuku; bireylerin en kırılgan dönemlerinde ihtiyaç duydukları hukuki desteği içermektedir. Boşanma davası, velayet ve kişisel ilişki düzenlenmesi, nafaka talepleri, mal rejimi ve aile içi şiddet davalarında müvekkillerimize güvenilir bir yol arkadaşlığı yapıyoruz.",
+    desc2: "Öncelikle anlaşmalı çözüm yollarını değerlendiriyor, taraflara ve koşullara göre en uygun hukuki yolu birlikte belirliyoruz. Çekişmeli davalarda ise hukuki argümanlar ve delil yönetimi konusunda müvekkile destek sunuyoruz.",
     features: [
       "Anlaşmalı ve çekişmeli boşanma davaları",
       "Velayet ve kişisel ilişki düzenlenmesi",
@@ -126,9 +126,9 @@ export const serviceContent: Record<string, ServiceItem> = {
 
   "gayrimenkul-hukuku": {
     title: "Gayrimenkul Hukuku",
-    subtitle: "Taşınmaz Uyuşmazlıklarında Güvenilir Çözüm",
+    subtitle: "Gayrimenkul Hukukunda Hukuki Destek",
     heroDesc: "Tapu işlemleri, kira uyuşmazlıkları, imar sorunları ve inşaat hukukunda kapsamlı hukuki destek.",
-    desc1: "Gayrimenkul hukuku; taşınmaz alım-satım işlemleri, kira sözleşmeleri, tapu iptal ve tescil davaları, kamulaştırma uyuşmazlıkları ve imar hukuku gibi önemli alanları kapsamaktadır. Bu alanda yaşanan sorunlar büyük maddi kayıplara yol açabileceğinden uzman hukuki destek kritik önem taşımaktadır.",
+    desc1: "Gayrimenkul hukuku; taşınmaz alım-satım işlemleri, kira sözleşmeleri, tapu iptal ve tescil davaları, kamulaştırma uyuşmazlıkları ve imar hukuku gibi önemli alanları kapsamaktadır. Bu alanda yaşanan sorunlar telafisi güç sonuçlara yol açabileceğinden hukuki sürecin doğru yönetilmesi önem taşımaktadır.",
     desc2: "Gayrimenkul yatırımlarınızı güvence altına almak, hak kayıplarını önlemek ve taşınmaz uyuşmazlıklarını etkin biçimde çözmek için kapsamlı danışmanlık ve temsil hizmetleri sunuyoruz.",
     features: [
       "Tapu iptal ve tescil davaları",
@@ -144,7 +144,7 @@ export const serviceContent: Record<string, ServiceItem> = {
       { step: "01", title: "Tapu ve İmar İncelemesi", desc: "Taşınmaza ilişkin tüm belgeleri ve imar durumunu inceliyoruz." },
       { step: "02", title: "Risk Analizi", desc: "Olası hukuki riskleri belirleyerek önlem stratejisi oluşturuyoruz." },
       { step: "03", title: "Müzakere veya Dava", desc: "Uyuşmazlığa göre uzlaşı ya da mahkeme yolunu seçiyoruz." },
-      { step: "04", title: "Tescil ve İnfaz", desc: "Mahkeme kararının tapu siciline işlenmesini sağlıyoruz." },
+      { step: "04", title: "Tescil ve Takip", desc: "Mahkeme kararı sonrası gerekli tescil işlemleri takip edilir." },
     ],
     faq: [
       { q: "Tapu iptali davası ne kadar sürer?", a: "Tapu iptal ve tescil davaları ortalama 1-2 yıl sürmektedir. Delillerin güçlü olması ve taşınmazın niteliğine göre bu süre değişebilir." },
@@ -194,10 +194,10 @@ export const serviceContent: Record<string, ServiceItem> = {
 
   "sigorta-hukuku": {
     title: "Sigorta Hukuku",
-    subtitle: "Sigorta Uyuşmazlıklarında Hakkınızı Alın",
-    heroDesc: "Sigorta şirketlerine karşı haklarınızı güçlü bir şekilde savunuyor, hak ettiğiniz tazminatı alıyoruz.",
+    subtitle: "Sigorta Uyuşmazlıklarında Hukuki Destek",
+    heroDesc: "Sigorta poliçenizden doğan haklarınızın kullanılması ve sigorta şirketi uyuşmazlıklarında hukuki danışmanlık hizmetleri.",
     desc1: "Sigorta hukuku alanında; trafik kazası tazminatları, kasko ve zorunlu trafik sigortası uyuşmazlıkları, hayat sigortası ödemeleri, konut sigortası hasarları ve sigorta şirketinin tazminat ödemekten kaçınması gibi durumlarda müvekkillerimizi temsil ediyoruz.",
-    desc2: "Sigorta şirketleri kimi zaman ödeme yapmaktan kaçınmakta ya da hak edilen tazminatın çok altında teklifler sunmaktadır. Bu durumlarda tarafınızda yer alarak sigorta poliçesi şartlarını titizlikle inceliyor ve en yüksek tazminatı almanızı sağlıyoruz.",
+    desc2: "Sigorta şirketleri kimi zaman ödeme yapmaktan kaçınmakta ya da hak edilen tazminatın çok altında teklifler sunmaktadır. Bu durumlarda tarafınızda yer alarak sigorta poliçesi şartlarını titizlikle inceliyor ve haklarınızı nasıl kullanabileceğiniz konusunda yönlendiriyoruz.",
     features: [
       "Trafik kazası tazminat davaları",
       "Zorunlu trafik sigortası (ZMSS) uyuşmazlıkları",
@@ -228,10 +228,10 @@ export const serviceContent: Record<string, ServiceItem> = {
 
   "bilisim-hukuku": {
     title: "Bilişim Hukuku",
-    subtitle: "Dijital Dünyada Hukuki Güvenceniz",
-    heroDesc: "Siber suçlar, veri ihlalleri, sosyal medya uyuşmazlıkları ve e-ticaret hukukunda uzman danışmanlık.",
+    subtitle: "Bilişim Hukuku Danışmanlığı",
+    heroDesc: "Siber suçlar, veri ihlalleri, sosyal medya uyuşmazlıkları ve e-ticaret hukukunda hukuki danışmanlık ve temsil hizmetleri.",
     desc1: "Bilişim hukuku, teknolojinin hızla gelişmesiyle birlikte günümüzde kritik bir öneme kavuşmuştur. İnternet üzerinden işlenen suçlar, kişisel verilerin korunması (KVKK), sosyal medya uyuşmazlıkları, siber zorbalık ve e-ticaret hukukunda müvekkillerimize kapsamlı hizmet sunuyoruz.",
-    desc2: "KVKK uyum süreçlerinde şirketlere danışmanlık sağlıyor, veri ihlali durumlarında hukuki kriz yönetimi yapıyor ve bilişim suçlarında etkin savunma veya takip hizmeti veriyoruz. Dijital delil tespiti ve koruma konusundaki uzmanlığımızla davalarınıza güçlü bir zemin oluşturuyoruz.",
+    desc2: "KVKK uyum süreçlerinde şirketlere danışmanlık sağlıyor, veri ihlali durumlarında hukuki kriz yönetimi yapıyor ve bilişim suçlarında savunma veya takip hizmeti sunuyoruz. Dijital delil tespiti ve koruma konusundaki bilgi birikimiyle davalarınız için hukuki destek sağlıyoruz.",
     features: [
       "Bilişim suçları savunma ve takibi",
       "KVKK uyum danışmanlığı",
@@ -246,7 +246,7 @@ export const serviceContent: Record<string, ServiceItem> = {
       { step: "01", title: "Dijital Delil Tespiti", desc: "Dijital ortamdaki delillerin kaybolmaması için acil tespit işlemi yapıyoruz." },
       { step: "02", title: "Hukuki Değerlendirme", desc: "Olayı ilgili mevzuat açısından kapsamlı biçimde değerlendiriyoruz." },
       { step: "03", title: "İşlem Başlatma", desc: "Şikayet, içerik kaldırma veya dava yollarını belirleyip harekete geçiyoruz." },
-      { step: "04", title: "Sonuç Takibi", desc: "Kararların uygulanmasını ve içeriklerin kaldırılmasını takip ediyoruz." },
+      { step: "04", title: "Karar Takibi", desc: "Kararların uygulanmasına ilişkin gerekli işlemler yürütülür." },
     ],
     faq: [
       { q: "Sosyal medyada hakaret edildiysem ne yapabilirim?", a: "Ekran görüntüsü alarak delil oluşturun. Cumhuriyet Savcılığı'na şikayette bulunabilir veya tazminat davası açabilirsiniz. İçerik kaldırma için BTK'ya başvurulabilir." },
@@ -280,7 +280,7 @@ export const serviceContent: Record<string, ServiceItem> = {
       { step: "01", title: "Alacak Tespiti", desc: "Alacak belgeleri incelenerek en uygun icra yolu belirleniyor." },
       { step: "02", title: "Takip Başlatma", desc: "İcra dairesinde takip başlatılarak borçluya ödeme emri gönderiliyor." },
       { step: "03", title: "Haciz ve Satış", desc: "Borçlunun mal varlığına haciz konularak satış işlemleri yürütülüyor." },
-      { step: "04", title: "Tahsilat", desc: "Satış bedeli alacaklıya ödenerek dosya kapatılıyor." },
+      { step: "04", title: "Süreç Tamamlama", desc: "İcra işlemlerinin sonlandırılmasının ardından bilgilendirme yapılır." },
     ],
     faq: [
       { q: "İcra takibine itiraz ettiler ne yapmalıyım?", a: "İtiraz tarihinden itibaren 1 yıl içinde itirazın iptali davası açmanız gerekmektedir. Bu süreyi kaçırmamak kritik önem taşır." },
@@ -311,7 +311,7 @@ export const serviceContent: Record<string, ServiceItem> = {
       "Telif hakkı uyuşmazlıkları",
     ],
     process: [
-      { step: "01", title: "Ön Araştırma", desc: "Başvuru öncesi benzer marka ve patent araştırması yapıyoruz." },
+      { step: "01", title: "Ön Araştırma", desc: "Başvuru öncesi benzer marka ve patent araştırmaları yapıyoruz." },
       { step: "02", title: "Başvuru Hazırlığı", desc: "Gerekli belgeleri hazırlayarak TÜRKPATENT'e başvuru yapıyoruz." },
       { step: "03", title: "Süreç Takibi", desc: "Başvuru sürecini ve itirazları titizlikle takip ediyoruz." },
       { step: "04", title: "Tescil ve Koruma", desc: "Tescil sonrası ihlallere karşı aktif koruma sağlıyoruz." },
@@ -330,10 +330,10 @@ export const serviceContent: Record<string, ServiceItem> = {
 
   "saglik-hukuku": {
     title: "Sağlık Hukuku",
-    subtitle: "Tıbbi Hata ve Hasta Haklarında Uzman Temsil",
-    heroDesc: "Tıbbi malpraktis, hasta hakları ihlalleri ve sağlık kurumlarıyla uyuşmazlıklarda güçlü hukuki savunma.",
-    desc1: "Sağlık hukuku; tıbbi hata ve malpraktis davaları, hasta haklarının korunması, sağlık kuruluşlarıyla yaşanan uyuşmazlıklar ve sağlık personelinin hukuki sorumluluğu gibi önemli konuları kapsamaktadır. Bu alanda yaşanan hak kayıpları telafisi güç sonuçlar doğurabilir.",
-    desc2: "Tıbbi hata sonucu bedensel zarar gören ya da hasta hakları ihlale uğrayan müvekkillerimiz için hukuken etkin bir takip yapıyor; hem maddi hem de manevi tazminat elde etmelerini sağlıyoruz.",
+    subtitle: "Tıbbi Hata ve Hasta Haklarında Hukuki Destek",
+    heroDesc: "Tıbbi malpraktis, hasta hakları ihlalleri ve sağlık kurumlarıyla uyuşmazlıklarda hukuki danışmanlık ve temsil hizmetleri.",
+    desc1: "Sağlık hukuku; tıbbi hata ve malpraktis davaları, hasta haklarının korunması, sağlık kuruluşlarıyla yaşanan uyuşmazlıklar ve sağlık personelinin hukuki sorumluluğu gibi önemli konuları kapsamaktadır. Bu alanda zamanında başvuru yapılmaması telafisi güç sonuçlara yol açabilir.",
+    desc2: "Tıbbi hata sonucu bedensel zarar gören ya da hasta hakları ihlale uğrayan müvekkillerimiz için hukuken etkin bir takip yapıyor; hukuki süreçlerin doğru yürütülmesi için destek sağlıyoruz.",
     features: [
       "Tıbbi malpraktis (yanlış tedavi) davaları",
       "Hasta hakları ihlali şikayetleri",
@@ -348,7 +348,7 @@ export const serviceContent: Record<string, ServiceItem> = {
       { step: "01", title: "Tıbbi Dosya İncelemesi", desc: "Tüm tıbbi belge ve kayıtları tıp uzmanlarıyla birlikte inceliyoruz." },
       { step: "02", title: "Uzman Görüşü", desc: "Bağımsız tıp uzmanından bilirkişi raporu alınmasını sağlıyoruz." },
       { step: "03", title: "Dava veya Şikayet", desc: "Şartlara göre cezai şikayet veya tazminat davası açıyoruz." },
-      { step: "04", title: "Tazminat Tahsili", desc: "Lehe karar sonrası tazminatın tahsilini eksiksiz gerçekleştiriyoruz." },
+      { step: "04", title: "Karar Sonrası", desc: "Mahkeme kararı sonrası gerekli adımlar konusunda bilgilendirme yapıyoruz." },
     ],
     faq: [
       { q: "Tıbbi hata davası açmak için sürem ne kadar?", a: "Zararın öğrenildiği tarihten itibaren 2 yıl, her halükarda 10 yıllık zamanaşımı süresi mevcuttur. Süreyi kaçırmamak için danışmanlık almanızı öneririz." },
@@ -364,10 +364,10 @@ export const serviceContent: Record<string, ServiceItem> = {
 
   "tuketici-hukuku": {
     title: "Tüketici Hukuku",
-    subtitle: "Tüketici Haklarınızı Kararlılıkla Savunuyoruz",
-    heroDesc: "Ayıplı ürün ve hizmetler, haksız sözleşme şartları ve tüketici uyuşmazlıklarında etkin çözüm.",
+    subtitle: "Tüketici Haklarında Hukuki Destek",
+    heroDesc: "Ayıplı ürün ve hizmetler, haksız sözleşme şartları ve tüketici uyuşmazlıklarında hukuki danışmanlık ve temsil hizmetleri.",
     desc1: "Tüketici hukuku; ayıplı mal ve hizmet davaları, haksız ticari uygulamalar, abonelik sözleşmesi uyuşmazlıkları, konut ve araç alımından doğan sorunlar ile e-ticaret kaynaklı şikayetleri kapsamaktadır.",
-    desc2: "Tüketici olarak maruz kaldığınız haksız uygulamalara karşı tüketici hakem heyeti başvurusu, tüketici mahkemesi davası ve cezai şikayet gibi tüm yasal yolları kullanarak haklarınızı en etkin biçimde koruyoruz.",
+    desc2: "Tüketici olarak maruz kaldığınız haksız uygulamalara karşı tüketici hakem heyeti başvurusu, tüketici mahkemesi davası ve cezai şikayet gibi tüm yasal yolları kullanarak ve hukuki sürecin doğru yönetilmesi için destek sağlıyoruz.",
     features: [
       "Ayıplı mal ve hizmet tazminat davaları",
       "Konut ve işyeri satış sözleşmesi uyuşmazlıkları",
@@ -382,7 +382,7 @@ export const serviceContent: Record<string, ServiceItem> = {
       { step: "01", title: "Hak Değerlendirmesi", desc: "Tüketici sıfatınız ve talebinizin yasal dayanağını inceliyoruz." },
       { step: "02", title: "Hakem Heyeti", desc: "Belirlenen limit dahilinde önce tüketici hakem heyetine başvuruyoruz." },
       { step: "03", title: "Tüketici Mahkemesi", desc: "Limiti aşan ve karara itiraz edilen durumlarda dava açıyoruz." },
-      { step: "04", title: "Hakkın Tahsili", desc: "İade, değiştirme veya tazminat kararının uygulanmasını takip ediyoruz." },
+      { step: "04", title: "Karar Uygulaması", desc: "Hakem veya mahkeme kararı sonrası uygulama sürecine ilişkin bilgilendirme yapılır." },
     ],
     faq: [
       { q: "Aldığım araç arızalı çıktı ne yapmalıyım?", a: "Ayıplı araç tesliminden itibaren 2 yıl içinde başvuru yapabilirsiniz. Misli ile değişim, iade veya ücretsiz onarım haklarına sahipsiniz." },
@@ -398,7 +398,7 @@ export const serviceContent: Record<string, ServiceItem> = {
 
   "yatirim-hukuku": {
     title: "Yatırım Hukuku",
-    subtitle: "Yatırımlarınızı Hukuki Güvenceyle Büyütün",
+    subtitle: "Yatırım Hukuku Danışmanlığı",
     heroDesc: "Yurt içi ve uluslararası yatırımlarda hukuki yapılandırma, risk yönetimi ve uyuşmazlık çözümü.",
     desc1: "Yatırım hukuku; yurt içi ve yabancı yatırımların hukuki yapılandırılması, yatırım teşvik mevzuatı, ortaklık anlaşmaları ve çıkış stratejileri ile yatırım uyuşmazlıklarının çözümü gibi kritik konuları kapsamaktadır.",
     desc2: "Yatırımlarınızın güvenli ve sürdürülebilir biçimde büyümesi için şirket hukuku, menkul kıymetler hukuku ve uluslararası yatırım mevzuatı kapsamında kapsamlı danışmanlık hizmeti sunuyoruz.",
@@ -484,7 +484,7 @@ export const serviceContent: Record<string, ServiceItem> = {
       { step: "01", title: "İdari Başvuru", desc: "İdare ile uyuşmazlıkta önce zorunlu idari başvuru yollarını tüketiyoruz." },
       { step: "02", title: "Süre Takibi", desc: "İdare hukukunda kısa olan dava açma sürelerini titizlikle takip ediyoruz." },
       { step: "03", title: "Dava Açılması", desc: "İdare veya vergi mahkemesinde davayı gerekçeli biçimde açıyoruz." },
-      { step: "04", title: "Karar Takibi", desc: "İstinaf ve Danıştay aşamalarında lehe karar için mücadeleyi sürdürüyoruz." },
+      { step: "04", title: "Kanun Yolları", desc: "İstinaf ve Danıştay aşamalarında dilekçe ve işlemler takip edilir." },
     ],
     faq: [
       { q: "Vergi cezasına nasıl itiraz ederim?", a: "İhbarnamenin tebliğinden itibaren 30 gün içinde uzlaşma talebinde bulunabilir veya vergi mahkemesinde dava açabilirsiniz." },
