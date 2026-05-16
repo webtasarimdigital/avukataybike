@@ -25,103 +25,104 @@ export default function Home() {
   return (
     <div className="flex flex-col w-full overflow-hidden">
       
-      {/* HERO SECTION */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-        {/* Arka plan */}
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#061a0f] via-primary to-[#0d2b1a]" />
-          {/* Köşegen gold şerit */}
-          <div className="absolute top-0 right-0 w-[45%] h-full bg-gradient-to-bl from-accent/8 via-transparent to-transparent" />
-          {/* Halftone desen */}
-          <div className="absolute inset-0 opacity-[0.04]" style={{backgroundImage:"radial-gradient(circle, #C9882A 1px, transparent 1px)", backgroundSize:"28px 28px"}} />
-          {/* Alt gold çizgi */}
-          <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent opacity-40" />
-        </div>
+      {/* HERO SECTION — split screen */}
+      <section className="relative min-h-[90vh] flex flex-col lg:flex-row overflow-hidden">
 
-        <div className="container mx-auto px-6 max-w-7xl relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center py-32 lg:py-24 pt-36 lg:pt-32">
-          {/* Sol – Metin */}
-          <div className="space-y-8">
-            <div className="inline-flex items-center gap-3 bg-accent/10 border border-accent/25 px-5 py-2.5 rounded-full">
+        {/* ── SOL: Açık / Krem Alan ── */}
+        <div className="relative flex-1 lg:w-1/2 bg-[#F5F0E6] flex items-center pt-28 pb-16 lg:pt-0 lg:pb-0">
+          {/* Hafif desen */}
+          <div className="absolute inset-0 opacity-[0.035]" style={{backgroundImage:"radial-gradient(circle, #092f1a 1px, transparent 1px)", backgroundSize:"24px 24px"}} />
+          {/* Sağ kenar yumuşak geçiş */}
+          <div className="absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-[#F5F0E6] to-transparent hidden lg:block" />
+
+          <div className="relative z-10 w-full max-w-xl mx-auto px-8 lg:pl-16 lg:pr-8 space-y-8">
+            {/* Etiket */}
+            <div className="inline-flex items-center gap-3 bg-primary/8 border border-primary/15 px-5 py-2.5 rounded-full">
               <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-              <span className="text-accent text-xs font-black tracking-[0.3em] uppercase">Hukuki Çözüm Ortağınız</span>
+              <span className="text-primary text-xs font-black tracking-[0.3em] uppercase">Hukuki Çözüm Ortağınız</span>
             </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.05] tracking-tight">
+
+            {/* Başlık */}
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-primary leading-[1.02] tracking-tight">
               Adalet İçin<br />
               <span className="text-accent italic">Güvenilir</span><br />
-              <span className="text-white/80">Hukuki Destek.</span>
+              Hukuki Destek.
             </h1>
-            <p className="text-white/60 text-lg max-w-lg leading-relaxed">
+
+            <p className="text-primary/55 text-lg leading-relaxed">
               Avukat Aybike Sultan Biçer olarak hukuki süreçlerinizde şeffaf, güvenilir ve çözüm odaklı yaklaşımımızla yanınızdayız.
             </p>
-            {/* Özellikler */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+
+            {/* Stat kartları */}
+            <div className="grid grid-cols-3 gap-3 pt-1">
               {[["10+","Yıllık Deneyim"],["14","Hizmet Alanı"],["Kadıköy","İstanbul"]].map(([v,l])=>(
-                <div key={l} className="border border-white/10 rounded-2xl px-5 py-4 bg-white/5 backdrop-blur-sm">
+                <div key={l} className="border border-primary/12 rounded-2xl px-4 py-4 bg-white/60 backdrop-blur-sm">
                   <p className="text-accent font-black text-2xl italic leading-none">{v}</p>
-                  <p className="text-white/40 text-[10px] font-bold uppercase tracking-widest mt-1">{l}</p>
+                  <p className="text-primary/40 text-[10px] font-bold uppercase tracking-widest mt-1.5">{l}</p>
                 </div>
               ))}
             </div>
-            <div className="flex flex-wrap gap-4 pt-2">
-              <a href="tel:05514882948" className="bg-accent hover:bg-white text-primary px-10 py-4 rounded-2xl font-black tracking-widest text-sm transition-all shadow-2xl shadow-accent/20 flex items-center gap-3 group uppercase">
-                <Phone size={18} /> Hemen Ara
+
+            {/* Butonlar */}
+            <div className="flex flex-wrap gap-4 pt-1">
+              <a href="tel:05514882948" className="bg-primary hover:bg-primary/90 text-white px-9 py-4 rounded-2xl font-black tracking-widest text-sm transition-all shadow-xl shadow-primary/25 flex items-center gap-3 uppercase">
+                <Phone size={17} /> Hemen Ara
               </a>
-              <Link href="/hakkimizda" className="bg-white/5 hover:bg-white/10 text-white border border-white/15 px-10 py-4 rounded-2xl font-black tracking-widest text-sm transition-all flex items-center gap-3 uppercase">
-                Hakkımızda <ArrowRight size={16} />
+              <Link href="/hakkimizda" className="bg-transparent hover:bg-primary/6 text-primary border-2 border-primary/20 hover:border-primary/40 px-9 py-4 rounded-2xl font-black tracking-widest text-sm transition-all flex items-center gap-3 uppercase">
+                Hakkımızda <ArrowRight size={15} />
               </Link>
             </div>
           </div>
+        </div>
 
-          {/* Sağ – Avukat Fotoğrafı */}
-          <div className="hidden lg:flex items-end justify-center relative">
-            {/* Dekoratif arka çember */}
-            <div className="absolute w-[420px] h-[420px] rounded-full border border-accent/10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
-            <div className="absolute w-[320px] h-[320px] rounded-full border border-accent/15 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+        {/* ── SAĞ: Koyu Yeşil / Fotoğraf ── */}
+        <div className="hidden lg:flex lg:w-1/2 bg-primary items-center justify-center relative overflow-hidden py-28 px-12">
+          {/* Desen */}
+          <div className="absolute inset-0 opacity-[0.04]" style={{backgroundImage:"radial-gradient(circle, #C9882A 1px, transparent 1px)", backgroundSize:"28px 28px"}} />
+          {/* Köşe glow */}
+          <div className="absolute top-0 right-0 w-72 h-72 bg-accent/8 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-56 h-56 bg-accent/6 rounded-full blur-3xl" />
 
-            {/* Fotoğraf frame */}
-            <div className="relative z-10 w-[340px]">
-              {/* Gold üst köşe çizgisi */}
-              <div className="absolute -top-3 -left-3 w-16 h-16 border-t-4 border-l-4 border-accent rounded-tl-2xl z-20" />
-              <div className="absolute -bottom-3 -right-3 w-16 h-16 border-b-4 border-r-4 border-accent rounded-br-2xl z-20" />
+          {/* Fotoğraf frame */}
+          <div className="relative z-10 w-[320px]">
+            {/* Gold köşe süsler */}
+            <div className="absolute -top-3 -left-3 w-14 h-14 border-t-[3px] border-l-[3px] border-accent rounded-tl-xl z-20" />
+            <div className="absolute -bottom-3 -right-3 w-14 h-14 border-b-[3px] border-r-[3px] border-accent rounded-br-xl z-20" />
 
-              {/* Fotoğraf alanı */}
-              <div className="relative rounded-[32px] overflow-hidden shadow-2xl bg-gradient-to-b from-primary-light to-primary border border-white/10">
-                <img
-                  src="/avukat.jpg"
-                  alt="Av. Aybike Sultan Biçer"
-                  className="w-full h-[460px] object-cover object-top"
-                  onError={(e) => {
-                    const t = e.currentTarget;
-                    t.style.display = "none";
-                    t.nextElementSibling?.classList.remove("hidden");
-                  }}
-                />
-                {/* Placeholder – fotoğraf yokken gösterilir */}
-                <div className="hidden w-full h-[460px] flex-col items-center justify-center gap-6 p-8">
-                  <div className="w-32 h-32 rounded-full border-4 border-accent/30 bg-white/5 flex items-center justify-center">
-                    <img src="/logo.png" alt="Logo" className="w-20 h-20 object-contain opacity-60" />
-                  </div>
-                  <p className="text-white/30 text-xs font-bold tracking-widest uppercase text-center">Fotoğraf Yüklenecek<br />(/avukat.jpg)</p>
+            <div className="relative rounded-[28px] overflow-hidden shadow-2xl shadow-black/40 border border-white/8">
+              <img
+                src="/avukat.jpg"
+                alt="Av. Aybike Sultan Biçer"
+                className="w-full h-[440px] object-cover object-top"
+                onError={(e) => {
+                  const t = e.currentTarget;
+                  t.style.display = "none";
+                  (t.nextElementSibling as HTMLElement)?.style.setProperty("display","flex");
+                }}
+              />
+              {/* Placeholder */}
+              <div style={{display:"none"}} className="w-full h-[440px] flex-col items-center justify-center gap-5 bg-primary-light p-8">
+                <div className="w-28 h-28 rounded-full border-4 border-accent/25 bg-white/5 flex items-center justify-center">
+                  <img src="/logo.png" alt="Logo" className="w-18 h-18 object-contain opacity-50" />
                 </div>
-
-                {/* Alt bilgi bandı */}
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-6">
-                  <p className="text-white font-black text-lg tracking-tight uppercase italic">Av. Aybike Sultan Biçer</p>
-                  <p className="text-accent text-xs font-bold tracking-[0.25em] uppercase mt-1">Hukuk & Danışmanlık</p>
-                </div>
+                <p className="text-white/25 text-[11px] font-bold tracking-widest uppercase text-center">Fotoğraf Yüklenecek<br />/avukat.jpg</p>
               </div>
 
-              {/* İletişim badge */}
-              <div className="absolute -right-12 top-12 bg-accent text-primary rounded-2xl px-5 py-4 shadow-xl shadow-accent/20 z-30">
-                <p className="font-black text-[10px] tracking-widest uppercase">Randevu İçin</p>
-                <p className="font-black text-base mt-0.5 leading-none">0551 488 29 48</p>
+              {/* Alt isim bandı */}
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/75 via-black/30 to-transparent p-6 pt-16">
+                <p className="text-white font-black text-base tracking-tight uppercase italic">Av. Aybike Sultan Biçer</p>
+                <p className="text-accent text-[10px] font-bold tracking-[0.25em] uppercase mt-1">Hukuk & Danışmanlık</p>
               </div>
             </div>
 
-            {/* Arka glow */}
-            <div className="absolute bottom-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl -z-10" />
+            {/* Telefon badge */}
+            <div className="absolute -right-14 top-10 bg-accent text-primary rounded-2xl px-5 py-3.5 shadow-xl shadow-accent/20 z-30">
+              <p className="font-black text-[9px] tracking-widest uppercase opacity-70">Randevu İçin</p>
+              <p className="font-black text-[15px] leading-tight mt-0.5">0551 488 29 48</p>
+            </div>
           </div>
         </div>
+
       </section>
 
       {/* HAKKIMIZDA SECTION */}
