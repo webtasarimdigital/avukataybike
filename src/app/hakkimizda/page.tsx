@@ -1,5 +1,21 @@
 import React from "react";
-import { Scale, ShieldCheck, Users, Award, CheckCircle2 } from "lucide-react";
+import { Scale, ShieldCheck, Users, Award, CheckCircle2, ArrowRight, Phone, MessageSquare } from "lucide-react";
+import Link from "next/link";
+
+const services = [
+  { title: "Banka ve Ticaret Hukuku", slug: "banka-ve-ticaret-hukuku" },
+  { title: "İş Hukuku", slug: "is-hukuku" },
+  { title: "Aile Hukuku", slug: "aile-hukuku" },
+  { title: "Gayrimenkul Hukuku", slug: "gayrimenkul-hukuku" },
+  { title: "Ceza Hukuku", slug: "ceza-hukuku" },
+  { title: "Sigorta Hukuku", slug: "sigorta-hukuku" },
+  { title: "Bilişim Hukuku", slug: "bilisim-hukuku" },
+  { title: "İcra ve İflas Hukuku", slug: "icra-ve-iflas-hukuku" },
+  { title: "Marka ve Patent Hukuku", slug: "marka-ve-patent-hukuku" },
+  { title: "Tüketici Hukuku", slug: "tuketici-hukuku" },
+  { title: "Yatırım Hukuku", slug: "yatirim-hukuku" },
+  { title: "İdare ve Vergi Hukuku", slug: "idare-ve-vergi-hukuku" },
+];
 
 export default function AboutPage() {
   return (
@@ -85,6 +101,45 @@ export default function AboutPage() {
                 <p className="text-neutral-500 text-sm leading-relaxed">{item.d}</p>
              </div>
            ))}
+        </div>
+
+        {/* Hizmetlerimiz Grid */}
+        <div className="mt-24">
+          <div className="text-center mb-14 space-y-4">
+            <span className="text-accent font-black tracking-[0.4em] text-xs uppercase italic">Uzmanlık Alanları</span>
+            <h2 className="text-3xl md:text-5xl font-black text-primary uppercase leading-tight">Hizmetlerimiz</h2>
+            <div className="w-20 h-1.5 bg-accent mx-auto rounded-full" />
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {services.map((s, i) => (
+              <Link key={i} href={`/hizmetler/${s.slug}`} className="group bg-white p-6 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-accent transition-all flex items-center justify-between gap-3">
+                <span className="font-bold text-primary text-sm group-hover:text-accent transition-colors leading-tight">{s.title}</span>
+                <ArrowRight size={16} className="shrink-0 text-accent opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* İletişim CTA */}
+        <div className="mt-24 bg-primary rounded-[40px] p-12 md:p-20 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-1/2 h-full bg-accent/5 -skew-x-12 translate-x-1/4" />
+          <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-10">
+            <div className="space-y-4">
+              <span className="text-accent font-bold tracking-[0.3em] text-xs uppercase italic">İletişim</span>
+              <h3 className="text-3xl md:text-5xl font-black text-white leading-tight uppercase">
+                Hukuki Sorununuz <br /><span className="text-accent italic">Çözümsüz Değil.</span>
+              </h3>
+              <p className="text-white/60 max-w-md">Hemen iletişime geçin, uzman ekibimizle en doğru stratejiyi birlikte belirleyelim.</p>
+            </div>
+            <div className="flex flex-col gap-4 shrink-0">
+              <a href="tel:05514882948" className="bg-accent hover:bg-white text-primary px-10 py-5 rounded-2xl font-black tracking-widest text-sm transition-all flex items-center justify-center gap-3 shadow-2xl uppercase">
+                <Phone size={20} /> Hemen Ara
+              </a>
+              <Link href="/iletisim" className="bg-white/10 hover:bg-white/20 border border-white/20 text-white px-10 py-5 rounded-2xl font-black tracking-widest text-sm transition-all flex items-center justify-center gap-3 uppercase">
+                <MessageSquare size={20} /> İletişim Formu
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </main>

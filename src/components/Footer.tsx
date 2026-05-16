@@ -81,9 +81,9 @@ export default function Footer() {
             <h4 className="text-white font-bold tracking-widest uppercase text-[15px] mb-6">KURUMSAL</h4>
             <ul className="space-y-4">
               <li><Link href="/" className="text-[14px] text-neutral-400 hover:text-accent transition-colors">Ana Sayfa</Link></li>
-              <li><Link href="#hakkimizda" className="text-[14px] text-neutral-400 hover:text-accent transition-colors">Hakkımızda</Link></li>
-              <li><Link href="#blog" className="text-[14px] text-neutral-400 hover:text-accent transition-colors">Blog</Link></li>
-              <li><Link href="#iletisim" className="text-[14px] text-neutral-400 hover:text-accent transition-colors">İletişim</Link></li>
+              <li><Link href="/hakkimizda" className="text-[14px] text-neutral-400 hover:text-accent transition-colors">Hakkımızda</Link></li>
+              <li><Link href="/blog" className="text-[14px] text-neutral-400 hover:text-accent transition-colors">Blog</Link></li>
+              <li><Link href="/iletisim" className="text-[14px] text-neutral-400 hover:text-accent transition-colors">İletişim</Link></li>
             </ul>
           </div>
 
@@ -93,7 +93,7 @@ export default function Footer() {
             <ul className="space-y-4">
               {services.map((s, idx) => (
                 <li key={idx}>
-                  <Link href={`#${s.slug}`} className="text-[14px] text-neutral-400 hover:text-accent transition-colors">
+                  <Link href={`/hizmetler/${s.slug}`} className="text-[14px] text-neutral-400 hover:text-accent transition-colors">
                     {s.title}
                   </Link>
                 </li>

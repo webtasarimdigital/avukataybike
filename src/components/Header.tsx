@@ -40,17 +40,17 @@ export default function Header() {
 
   const navLinks = [
     { name: "ANA SAYFA", href: "/" },
-    { name: "HAKKIMIZDA", href: "#hakkimizda" },
+    { name: "HAKKIMIZDA", href: "/hakkimizda" },
     {
       name: "HİZMETLER",
-      href: "#hizmetler",
+      href: "/#hizmetler",
       submenu: services.map((s) => ({
         name: s.title,
-        href: `#${s.slug}`,
+        href: `/hizmetler/${s.slug}`,
       })),
     },
-    { name: "BLOG", href: "#blog" },
-    { name: "İLETİŞİM", href: "#iletisim" },
+    { name: "BLOG", href: "/blog" },
+    { name: "İLETİŞİM", href: "/iletisim" },
   ];
 
   return (

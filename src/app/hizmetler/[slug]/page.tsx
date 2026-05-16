@@ -1,14 +1,41 @@
 "use client";
 import React from "react";
 import { useParams } from "next/navigation";
-import { Scale, ArrowRight, CheckCircle2, Phone, Info, MessageSquare } from "lucide-react";
+import { Scale, ArrowRight, CheckCircle2, Phone, Info, MessageSquare, BookOpen, Gavel, Shield, Building2, Cpu, Heart, ShoppingCart, TrendingUp, Globe, FileText } from "lucide-react";
 import Link from "next/link";
 
-const serviceData: Record<string, any> = {
+const allServices = [
+  { t: "Banka ve Ticaret Hukuku", s: "banka-ve-ticaret-hukuku" },
+  { t: "İş Hukuku", s: "is-hukuku" },
+  { t: "Marka ve Patent Hukuku", s: "marka-ve-patent-hukuku" },
+  { t: "Aile Hukuku", s: "aile-hukuku" },
+  { t: "Sigorta Hukuku", s: "sigorta-hukuku" },
+  { t: "Gayrimenkul Hukuku", s: "gayrimenkul-hukuku" },
+  { t: "Bilişim Hukuku", s: "bilisim-hukuku" },
+  { t: "İcra ve İflas Hukuku", s: "icra-ve-iflas-hukuku" },
+  { t: "Sağlık Hukuku", s: "saglik-hukuku" },
+  { t: "Tüketici Hukuku", s: "tuketici-hukuku" },
+  { t: "Yatırım Hukuku", s: "yatirim-hukuku" },
+  { t: "Uluslararası Ticari Sözleşmeler", s: "uluslararasi-ticari-sozlesmeler" },
+  { t: "Ceza Hukuku", s: "ceza-hukuku" },
+  { t: "İdare ve Vergi Hukuku", s: "idare-ve-vergi-hukuku" },
+];
+
+const serviceData: Record<string, { title: string; icon: React.ReactNode }> = {
   "banka-ve-ticaret-hukuku": { title: "Banka ve Ticaret Hukuku", icon: <Scale size={60} /> },
   "is-hukuku": { title: "İş Hukuku", icon: <CheckCircle2 size={60} /> },
-  "marka-ve-patent-hukuku": { title: "Marka ve Patent Hukuku", icon: <Scale size={60} /> },
+  "marka-ve-patent-hukuku": { title: "Marka ve Patent Hukuku", icon: <BookOpen size={60} /> },
   "aile-hukuku": { title: "Aile Hukuku", icon: <MessageSquare size={60} /> },
+  "sigorta-hukuku": { title: "Sigorta Hukuku", icon: <Shield size={60} /> },
+  "gayrimenkul-hukuku": { title: "Gayrimenkul Hukuku", icon: <Building2 size={60} /> },
+  "bilisim-hukuku": { title: "Bilişim Hukuku", icon: <Cpu size={60} /> },
+  "icra-ve-iflas-hukuku": { title: "İcra ve İflas Hukuku", icon: <Gavel size={60} /> },
+  "saglik-hukuku": { title: "Sağlık Hukuku", icon: <Heart size={60} /> },
+  "tuketici-hukuku": { title: "Tüketici Hukuku", icon: <ShoppingCart size={60} /> },
+  "yatirim-hukuku": { title: "Yatırım Hukuku", icon: <TrendingUp size={60} /> },
+  "uluslararasi-ticari-sozlesmeler": { title: "Uluslararası Ticari Sözleşmeler", icon: <Globe size={60} /> },
+  "ceza-hukuku": { title: "Ceza Hukuku", icon: <Scale size={60} /> },
+  "idare-ve-vergi-hukuku": { title: "İdare ve Vergi Hukuku", icon: <FileText size={60} /> },
 };
 
 export default function ServiceDetailPage() {
@@ -94,14 +121,7 @@ export default function ServiceDetailPage() {
                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -mr-16 -mt-16 blur-3xl" />
                 <h3 className="text-white font-black text-xl mb-8 border-b border-white/10 pb-4 italic uppercase">DİĞER HİZMETLERİMİZ</h3>
                 <ul className="space-y-4">
-                   {[
-                     { t: "Banka ve Ticaret Hukuku", s: "banka-ve-ticaret-hukuku" },
-                     { t: "İş Hukuku", s: "is-hukuku" },
-                     { t: "Aile Hukuku", s: "aile-hukuku" },
-                     { t: "Gayrimenkul Hukuku", s: "gayrimenkul-hukuku" },
-                     { t: "Ceza Hukuku", s: "ceza-hukuku" },
-                     { t: "Sigorta Hukuku", s: "sigorta-hukuku" }
-                   ].map((item, i) => (
+                   {allServices.map((item, i) => (
                      <li key={i}>
                         <Link href={`/hizmetler/${item.s}`} className={`flex items-center justify-between group transition-all font-bold text-xs uppercase tracking-widest ${slug === item.s ? "text-accent" : "text-white/40 hover:text-white"}`}>
                            {item.t} <ArrowRight size={16} className={`group-hover:translate-x-1 transition-transform ${slug === item.s ? "opacity-100" : "opacity-0 group-hover:opacity-100 text-accent"}`} />

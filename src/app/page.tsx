@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { CheckCircle2, ArrowRight, MessageSquare, Scale, BookOpen, Gavel, Phone } from "lucide-react";
+import Link from "next/link";
 
 const services = [
   { title: "BANKA VE TİCARET HUKUKU", slug: "banka-ve-ticaret-hukuku", icon: <Scale size={32} /> },
@@ -46,9 +47,9 @@ export default function Home() {
               <a href="#iletisim" className="bg-accent hover:bg-white text-primary px-10 py-5 rounded-2xl font-black tracking-widest text-sm transition-all shadow-2xl shadow-accent/20 flex items-center gap-3 group uppercase">
                 Hemen Bilgi Al <ArrowRight className="group-hover:translate-x-2 transition-transform" />
               </a>
-              <a href="#hakkimizda" className="bg-white/5 hover:bg-white/10 text-white border border-white/10 px-10 py-5 rounded-2xl font-black tracking-widest text-sm transition-all flex items-center gap-3 uppercase">
+              <Link href="/hakkimizda" className="bg-white/5 hover:bg-white/10 text-white border border-white/10 px-10 py-5 rounded-2xl font-black tracking-widest text-sm transition-all flex items-center gap-3 uppercase">
                 Hakkımızda
-              </a>
+              </Link>
             </div>
           </div>
           <div className="hidden lg:block relative">
@@ -124,7 +125,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => (
-              <div key={index} id={service.slug} className="service-card bg-white border border-neutral-100 p-8 rounded-3xl shadow-sm group">
+              <Link key={index} href={`/hizmetler/${service.slug}`} id={service.slug} className="service-card bg-white border border-neutral-100 p-8 rounded-3xl shadow-sm group block">
                 <div className="fill-bg" />
                 <div className="relative z-10 flex flex-col h-full">
                   <div className="w-16 h-16 rounded-2xl bg-primary/5 text-primary flex items-center justify-center mb-8 group-hover:bg-black/10 transition-colors">
@@ -140,7 +141,7 @@ export default function Home() {
                     Detaylı Bilgi <ArrowRight size={14} className="group-hover:translate-x-2 transition-transform" />
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -193,18 +194,18 @@ export default function Home() {
                <span className="text-primary font-bold tracking-[0.3em] text-xs uppercase italic">Blog</span>
                <h2 className="text-4xl md:text-5xl font-black text-primary leading-tight uppercase">Son Yazılarımız</h2>
             </div>
-            <a href="#" className="group flex items-center gap-3 font-black text-xs tracking-widest text-primary uppercase border-b-2 border-accent pb-2 italic">
+            <Link href="/blog" className="group flex items-center gap-3 font-black text-xs tracking-widest text-primary uppercase border-b-2 border-accent pb-2 italic">
                Tüm Blog Yazıları <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform" />
-            </a>
+            </Link>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { t: "Boşanma Davalarında Mal Paylaşımı", c: "Aile Hukuku", d: "20.05.2024" },
-              { t: "İş Kazası Sonrası Haklarınız", c: "İş Hukuku", d: "18.05.2024" },
-              { t: "Kira Tahliye Süreçleri ve Haklar", c: "Gayrimenkul Hukuku", d: "15.05.2024" }
+              { t: "Boşanma Davalarında Mal Paylaşımı", c: "Aile Hukuku", d: "20.05.2024", slug: "bosanma-davalarinda-mal-paylasimi" },
+              { t: "İş Kazası Sonrası Haklarınız", c: "İş Hukuku", d: "18.05.2024", slug: "is-kazasi-sonrasi-haklariniz" },
+              { t: "Kira Tahliye Süreçleri ve Haklar", c: "Gayrimenkul Hukuku", d: "15.05.2024", slug: "kira-tahliye-surecleri-ve-haklar" }
             ].map((blog, i) => (
-              <div key={i} className="group cursor-pointer">
+              <Link key={i} href={`/blog/${blog.slug}`} className="group cursor-pointer block">
                 <div className="aspect-[16/10] bg-neutral-100 rounded-3xl mb-6 overflow-hidden relative">
                    <div className="absolute top-4 left-4 bg-primary text-white text-[10px] font-black uppercase px-3 py-1.5 rounded-full z-10 tracking-widest italic">
                      {blog.c}
@@ -222,7 +223,7 @@ export default function Home() {
                      Bu makalemizde ilgili hukuki süreçler ve dikkat edilmesi gereken noktalar hakkında detaylı bilgileri bulabilirsiniz...
                    </p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
