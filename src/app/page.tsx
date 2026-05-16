@@ -43,7 +43,7 @@ export default function Home() {
               Avukat Aybike Sultan Biçer olarak, hukuki süreçlerinizde şeffaf, güvenilir ve çözüm odaklı yaklaşımımızla yanınızdayız.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a href="#iletisim" className="bg-accent hover:bg-white text-black px-10 py-5 rounded-2xl font-black tracking-widest text-sm transition-all shadow-2xl shadow-accent/20 flex items-center gap-3 group uppercase">
+              <a href="#iletisim" className="bg-accent hover:bg-white text-primary px-10 py-5 rounded-2xl font-black tracking-widest text-sm transition-all shadow-2xl shadow-accent/20 flex items-center gap-3 group uppercase">
                 Hemen Bilgi Al <ArrowRight className="group-hover:translate-x-2 transition-transform" />
               </a>
               <a href="#hakkimizda" className="bg-white/5 hover:bg-white/10 text-white border border-white/10 px-10 py-5 rounded-2xl font-black tracking-widest text-sm transition-all flex items-center gap-3 uppercase">

@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { MapPin, Phone as PhoneIcon, Instagram, Facebook, MessageCircle, Menu, X, ChevronDown } from "lucide-react";
 
 const services = [
   { title: "BANKA VE TİCARET HUKUKU", slug: "banka-ve-ticaret-hukuku" },
@@ -63,93 +64,67 @@ export default function Header() {
               target="_blank"
               className="flex items-center gap-2 hover:text-accent transition-all cursor-pointer"
             >
-              <span className="material-symbols-outlined text-[16px]">location_on</span>
+              <MapPin size={16} className="text-accent" />
               Eğitim Mah., Poyraz Sk. No:26/4, Kadıköy/İST
             </a>
             <a
               href="tel:05514882948"
               className="flex items-center gap-2 hover:text-accent transition-all cursor-pointer"
             >
-              <span className="material-symbols-outlined text-[16px]">call</span>
+              <PhoneIcon size={16} className="text-accent" />
               0551 488 29 48
             </a>
           </div>
-          <div className="flex gap-4">
-            <a href="https://instagram.com" target="_blank" className="hover:text-accent transition-colors">
-              <i className="fab fa-instagram"></i>
-            </a>
-            <a href="https://facebook.com" target="_blank" className="hover:text-accent transition-colors">
-              <i className="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://whatsapp.com" target="_blank" className="hover:text-accent transition-colors">
-              <i className="fab fa-whatsapp"></i>
-            </a>
+
+          <div className="flex items-center gap-6">
+            <div className="flex items-center gap-4 border-r border-white/10 pr-6 mr-2">
+              <a href="#" className="hover:text-accent transition-colors"><Instagram size={14} /></a>
+              <a href="#" className="hover:text-accent transition-colors"><Facebook size={14} /></a>
+              <a href="#" className="hover:text-accent transition-colors"><MessageCircle size={14} /></a>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+              Çalışma Saatleri: 09:00 - 18:00
+            </div>
           </div>
         </div>
       </div>
 
       {/* Main Navigation */}
-      <header
-        className={`sticky top-0 z-50 transition-all duration-300 ${
-          isScrolled ? "bg-primary/95 backdrop-blur-md py-3 shadow-2xl" : "bg-primary py-5"
-        } text-white px-6 md:px-20`}
-      >
-        <div className="max-w-7xl mx-auto w-full flex items-center justify-between">
-          <div className="flex items-center">
-            <Link href="/" className="flex items-center gap-3 group">
-              <img src="/logo.png" alt="Aybike Sultan Biçer Logo" className="h-12 w-auto bg-white rounded-full p-1" />
-              <div className="flex flex-col">
-                <span className="text-lg font-bold tracking-tight leading-none group-hover:text-accent transition-colors">AV. AYBİKE SULTAN BİÇER</span>
-                <span className="text-[10px] tracking-[0.3em] font-light text-neutral-400 uppercase">Hukuk & Danışmanlık</span>
-              </div>
-            </Link>
-          </div>
+      <nav className={`fixed w-full z-[100] transition-all duration-500 top-0 lg:top-[37px] ${isScrolled ? "lg:!top-0 bg-white shadow-xl py-3" : "bg-white/95 backdrop-blur-md py-5 border-b border-gray-100"}`}>
+        <div className="max-w-7xl mx-auto px-6 md:px-20 flex justify-between items-center">
+          {/* Logo */}
+          <Link href="/" className="flex items-center gap-3 group">
+            <div className="relative w-12 h-12 md:w-14 md:h-14 overflow-hidden rounded-xl transition-transform group-hover:scale-105">
+              <img src="/logo.png" alt="Logo" className="w-full h-full object-contain" />
+            </div>
+            <div className="flex flex-col">
+              <span className="text-primary font-black text-xl md:text-2xl leading-none tracking-tighter">AYBİKE SULTAN</span>
+              <span className="text-accent font-bold text-[10px] md:text-[12px] tracking-[0.3em] mt-1 leading-none uppercase">Hukuk & Danışmanlık</span>
+            </div>
+          </Link>
 
-          {/* Desktop Menu */}
-          <nav className="hidden lg:flex items-center gap-10 text-[13px] font-bold tracking-wider uppercase">
+          {/* Desktop Nav */}
+          <div className="hidden lg:flex items-center gap-10">
             {navLinks.map((link) => (
-              <div
-                key={link.name}
-                className="relative group"
-                onMouseEnter={() => setOpenDropdown(link.name)}
-                onMouseLeave={() => setOpenDropdown(null)}
-              >
-                {link.submenu ? (
-                  <div
-                    className="hover:text-accent transition-colors flex items-center gap-1 py-2 cursor-pointer"
-                    onClick={(e) => toggleDropdown(link.name, e)}
-                  >
-                    {link.name}
-                    <span
-                      className={`material-symbols-outlined text-[16px] transition-transform duration-300 ${
-                        openDropdown === link.name ? "rotate-180" : ""
-                      }`}
-                    >
-                      expand_more
-                    </span>
-                  </div>
-                ) : (
-                  <Link
-                    className="hover:text-accent transition-colors flex items-center gap-1 py-2"
-                    href={link.href}
-                  >
-                    {link.name}
-                  </Link>
-                )}
+              <div key={link.name} className="relative group">
+                <Link
+                  href={link.href}
+                  className="text-primary font-bold text-[13px] tracking-widest hover:text-accent transition-colors flex items-center gap-1"
+                  onClick={link.submenu ? (e) => toggleDropdown(link.name, e) : undefined}
+                >
+                  {link.name}
+                  {link.submenu && <ChevronDown size={14} className={`transition-transform duration-300 ${openDropdown === link.name ? "rotate-180" : ""}`} />}
+                </Link>
+
                 {link.submenu && (
-                  <div
-                    className={`absolute top-full left-1/2 -translate-x-1/2 bg-primary min-w-[280px] shadow-2xl rounded-b-xl py-4 transition-all duration-300 border-t-2 border-accent ${
-                      openDropdown === link.name
-                        ? "opacity-100 visible translate-y-0"
-                        : "opacity-0 invisible translate-y-4 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0"
-                    }`}
-                  >
-                    <div className="grid grid-cols-1 gap-1 max-h-[400px] overflow-y-auto custom-scrollbar">
+                  <div className={`absolute left-0 top-full pt-5 transition-all duration-300 ${openDropdown === link.name ? "opacity-100 visible translate-y-0" : "opacity-0 invisible translate-y-4"}`}>
+                    <div className="bg-white shadow-2xl rounded-2xl py-4 min-w-[280px] border border-gray-50 grid grid-cols-1 gap-1">
                       {link.submenu.map((sub) => (
                         <Link
-                          key={sub.href}
+                          key={sub.name}
                           href={sub.href}
-                          className="block px-6 py-2.5 hover:bg-accent hover:text-black transition-all text-[11px] font-bold uppercase"
+                          className="px-6 py-2.5 text-[12px] font-bold text-gray-600 hover:text-accent hover:bg-gray-50 transition-all border-l-4 border-transparent hover:border-accent"
                           onClick={() => setOpenDropdown(null)}
                         >
                           {sub.name}
@@ -160,97 +135,75 @@ export default function Header() {
                 )}
               </div>
             ))}
-          </nav>
+          </div>
 
-          <div className="flex items-center gap-4 lg:hidden">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-white p-2 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 hover:bg-accent hover:text-black transition-all"
-            >
-              <span className="material-symbols-outlined text-[28px]">{isMenuOpen ? "close" : "menu"}</span>
+          {/* Right Action */}
+          <div className="hidden lg:flex items-center gap-6">
+            <a href="https://wa.me/905514882948" target="_blank" className="bg-primary text-white px-8 py-3.5 rounded-xl font-bold text-xs tracking-widest hover:bg-accent hover:text-primary transition-all shadow-lg shadow-primary/10 uppercase">
+              Tıkla Bilgi Al
+            </a>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button className="lg:hidden text-primary p-2" onClick={() => setIsMenuOpen(true)}>
+            <Menu size={32} />
+          </button>
+        </div>
+      </nav>
+
+      {/* Mobile Drawer */}
+      <div className={`fixed inset-0 z-[200] lg:hidden transition-all duration-500 ${isMenuOpen ? "visible" : "invisible pointer-events-none"}`}>
+        <div className={`absolute inset-0 bg-primary/95 backdrop-blur-xl transition-opacity duration-500 ${isMenuOpen ? "opacity-100" : "opacity-0"}`} onClick={() => setIsMenuOpen(false)} />
+        <div className={`absolute top-0 right-0 h-full w-[85%] bg-white shadow-2xl transition-transform duration-500 p-8 flex flex-col ${isMenuOpen ? "translate-x-0" : "translate-x-full"}`}>
+          <div className="flex justify-between items-center mb-12">
+            <img src="/logo.png" alt="Logo" className="h-12 w-auto" />
+            <button className="bg-gray-100 p-3 rounded-xl text-primary" onClick={() => setIsMenuOpen(false)}>
+              <X size={24} />
             </button>
           </div>
 
-          <div className="hidden lg:flex items-center gap-4">
-            <a
-              href="https://wa.me/905514882948"
-              target="_blank"
-              className="bg-accent hover:bg-white text-black px-6 py-3 rounded-xl font-bold text-[12px] transition-all shadow-lg hover:shadow-accent/20 flex items-center gap-2 group"
-            >
-              TIKLA BİLGİ AL <span className="material-symbols-outlined text-[16px] font-black group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          <div className="flex flex-col gap-6 overflow-y-auto pr-4">
+            {navLinks.map((link) => (
+              <div key={link.name} className="border-b border-gray-50 pb-4">
+                <Link
+                  href={link.href}
+                  className="text-primary font-black text-xl tracking-tight flex justify-between items-center"
+                  onClick={link.submenu ? (e) => toggleDropdown(link.name, e) : () => setIsMenuOpen(false)}
+                >
+                  {link.name}
+                  {link.submenu && <ChevronDown size={20} className={openDropdown === link.name ? "rotate-180" : ""} />}
+                </Link>
+
+                {link.submenu && openDropdown === link.name && (
+                  <div className="mt-4 flex flex-col gap-3 pl-4 border-l-2 border-accent">
+                    {link.submenu.map((sub) => (
+                      <Link
+                        key={sub.name}
+                        href={sub.href}
+                        className="text-gray-500 font-bold text-sm"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {sub.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-auto pt-8">
+            <a href="tel:05514882948" className="w-full bg-accent text-primary p-5 rounded-2xl flex items-center justify-center gap-3 font-black tracking-widest uppercase text-sm mb-4">
+              <PhoneIcon size={20} /> HEMEN ARA
             </a>
-          </div>
-        </div>
-
-        {/* Mobile Menu Drawer */}
-        <div
-          className={`lg:hidden fixed inset-0 z-[60] transition-opacity duration-300 ${
-            isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-          }`}
-        >
-          <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setIsMenuOpen(false)}></div>
-          <div
-            className={`absolute top-0 right-0 w-[80%] max-w-[320px] h-full bg-primary shadow-2xl flex flex-col transition-transform duration-300 ease-out transform ${
-              isMenuOpen ? "translate-x-0" : "translate-x-full"
-            }`}
-          >
-            <div className="flex justify-between items-center p-6 border-b border-white/5">
-              <img src="/logo.png" alt="Logo" className="h-10 w-auto bg-white rounded-full p-1" />
-              <button
-                onClick={() => setIsMenuOpen(false)}
-                className="text-white/60 hover:text-white p-2 rounded-lg bg-white/5 border border-white/10 transition-colors"
-              >
-                <span className="material-symbols-outlined text-xl">close</span>
-              </button>
-            </div>
-
-            <nav className="flex-1 overflow-y-auto p-6 flex flex-col gap-2">
-              {navLinks.map((link) => (
-                <div key={link.name} className="flex flex-col border-b border-white/5 pb-3 mb-1 last:border-0">
-                  {link.submenu ? (
-                    <div className="text-[11px] font-black tracking-[0.2em] text-accent uppercase mb-3 mt-1">
-                      {link.name}
-                    </div>
-                  ) : (
-                    <Link
-                      href={link.href}
-                      className="text-[14px] font-bold tracking-wide text-white/80 hover:text-accent transition-colors flex items-center justify-between py-1"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {link.name}
-                    </Link>
-                  )}
-                  {link.submenu && (
-                    <div className="flex flex-col gap-2 pl-4 border-l-2 border-white/10 ml-1">
-                      {link.submenu.map((sub) => (
-                        <Link
-                          key={sub.href}
-                          href={sub.href}
-                          className="text-[12px] font-medium text-white/50 hover:text-accent transition-colors uppercase"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          {sub.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
-            </nav>
-
-            <div className="p-6 border-t border-white/5 bg-black/10">
-              <a
-                href="https://wa.me/905514882948"
-                target="_blank"
-                className="w-full bg-accent text-black py-4 rounded-xl font-bold text-[13px] tracking-widest uppercase transition-all flex items-center justify-center gap-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                TIKLA BİLGİ AL <span className="material-symbols-outlined font-black text-sm">arrow_forward</span>
-              </a>
+            <div className="flex justify-center gap-8 text-primary/30">
+              <Instagram size={24} />
+              <Facebook size={24} />
+              <MessageCircle size={24} />
             </div>
           </div>
         </div>
-      </header>
+      </div>
     </>
   );
 }

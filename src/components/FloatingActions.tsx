@@ -43,10 +43,10 @@ export default function FloatingActions() {
             </button>
 
             <div className="relative w-10 h-10 md:w-12 md:h-12 flex items-center justify-center">
-               <span className="text-accent material-symbols-outlined text-4xl">contact_support</span>
+               <MessageCircle size={32} className="text-accent" />
             </div>
           </div>
-          <div className="bg-accent group-hover:bg-white transition-colors flex-1 w-full flex items-center justify-center text-center text-black font-black text-[11px] md:text-[13px] leading-snug tracking-wider px-1 md:px-2">
+          <div className="bg-accent group-hover:bg-white transition-colors flex-1 w-full flex items-center justify-center text-center text-primary group-hover:text-primary font-black text-[11px] md:text-[13px] leading-snug tracking-wider px-1 md:px-2">
             <div>TIKLA BİLGİ AL</div>
           </div>
         </a>
@@ -91,7 +91,7 @@ export default function FloatingActions() {
       <div className="fixed bottom-0 left-0 right-0 z-[250] md:hidden bg-white/95 backdrop-blur-md border-t border-gray-100 flex shadow-[0_-10px_30px_rgba(0,0,0,0.08)] pb-safe h-[70px]">
         
         {/* BILGI AL - Priority Button */}
-        <a href="https://wa.me/905514882948" target="_blank" className="w-[40%] flex items-center justify-center bg-accent text-black hover:bg-white transition-colors h-full border-r border-black/5">
+        <a href="https://wa.me/905514882948" target="_blank" className="w-[40%] flex items-center justify-center bg-accent text-primary hover:bg-white transition-colors h-full border-r border-primary/5">
           <span className="font-black tracking-widest uppercase text-[13px] text-center leading-tight">
             BİLGİ AL
           </span>

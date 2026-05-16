@@ -4,9 +4,9 @@
   --background: #ffffff;
   --foreground: #0a0a0a;
   --primary: #0A3125;
-  --primary-light: #115E41;
-  --accent: #F5A623;
-  --accent-foreground: #000000;
+  --primary-light: #164638;
+  --accent: #B9D1A1; /* Light green from logo name "AYBİKE SULTAN" */
+  --accent-foreground: #0A3125;
 }
 
 @theme inline {
@@ -18,44 +18,43 @@
   --color-accent-foreground: var(--accent-foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-
-  @keyframes fill-up {
-    from { transform: translateY(100%); }
-    to { transform: translateY(0); }
-  }
 }
 
 @layer base {
   body {
-    background: var(--background);
-    color: var(--foreground);
-    @apply antialiased;
+    @apply font-sans text-primary antialiased selection:bg-accent/30 selection:text-primary;
   }
 }
 
-/* Custom Nivdiş-style Hover Animation */
+/* Service Card Hover Animation */
 .service-card {
-  position: relative;
-  overflow: hidden;
-  transition: all 0.5s ease;
+  @apply relative overflow-hidden transition-all duration-500 cursor-pointer;
 }
 
 .service-card .fill-bg {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--accent);
-  transform: translateY(100%);
-  transition: transform 0.5s ease;
-  z-index: 0;
+  @apply absolute bottom-0 left-0 w-full h-0 bg-accent transition-all duration-500 ease-in-out z-0;
 }
 
 .service-card:hover .fill-bg {
-  transform: translateY(0);
+  @apply h-full;
 }
 
-.service-card:hover * {
-  @apply text-black relative z-10;
+/* Ensure text and content stay above the filling background and change color for readability */
+.service-card .relative {
+  @apply z-10 transition-colors duration-300;
+}
+
+.service-card:hover h3,
+.service-card:hover p,
+.service-card:hover .text-primary,
+.service-card:hover .text-neutral-500 {
+  @apply text-primary !important;
+}
+
+.service-card:hover .w-16 {
+  @apply bg-primary/10 transition-colors duration-300;
+}
+
+.service-card:hover .flex.items-center.gap-2 {
+  @apply text-primary !important;
 }
