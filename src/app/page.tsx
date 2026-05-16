@@ -25,7 +25,7 @@ export default function Home() {
     <div className="flex flex-col w-full overflow-hidden">
       
       {/* HERO SECTION */}
-      <section className="relative min-h-[90vh] flex items-center pt-20">
+      <section className="relative min-h-[85vh] flex items-center pt-10 pb-16">
         <div className="absolute inset-0 bg-primary z-0 overflow-hidden">
            <div className="absolute top-0 right-0 w-[60%] h-full bg-primary-light/20 -skew-x-12 translate-x-1/4 pointer-events-none" />
         </div>
