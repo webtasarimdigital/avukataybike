@@ -3,83 +3,96 @@ import { ArrowRight, BookOpen, Clock, Tag, Calendar } from "lucide-react";
 import Link from "next/link";
 
 const blogPosts = [
-  { id: 1, t: "Boşanma Davalarında Mal Paylaşımı", c: "Aile Hukuku", d: "20.05.2024", slug: "bosanma-davalarinda-mal-paylasimi" },
-  { id: 2, t: "İş Kazası Sonrası Haklarınız", c: "İş Hukuku", d: "18.05.2024", slug: "is-kazasi-sonrasi-haklariniz" },
-  { id: 3, t: "Kira Tahliye Süreçleri ve Haklar", c: "Gayrimenkul Hukuku", d: "15.05.2024", slug: "kira-tahliye-surecleri-ve-haklar" },
-  { id: 4, t: "Bilişim Suçları ve Savunma Yöntemleri", c: "Bilişim Hukuku", d: "12.05.2024", slug: "bilisim-suclari-ve-savunma-yontemleri" },
-  { id: 5, t: "Marka Tescilinin Önemi", c: "Ticaret Hukuku", d: "10.05.2024", slug: "marka-tescilinin-onemi" },
-  { id: 6, t: "Tüketici Hakem Heyeti Süreçleri", c: "Tüketici Hukuku", d: "08.05.2024", slug: "tuketici-hakem-heyeti-surecleri" },
+  { id: 1, t: "Boşanma Davalarında Mal Paylaşımı", c: "Aile Hukuku", d: "20.05.2024", slug: "bosanma-davalarinda-mal-paylasimi", summary: "Evlilik sürecinde edinilen malların boşanma sonrası nasıl paylaşılacağı, yasal mal rejimi ve dikkat edilmesi gereken hususlar." },
+  { id: 2, t: "İş Kazası Sonrası Haklarınız", c: "İş Hukuku", d: "18.05.2024", slug: "is-kazasi-sonrasi-haklariniz", summary: "İş kazası geçiren çalışanların maddi-manevi tazminat hakları, SGK süreçleri ve işverene karşı hukuki başvuru yolları." },
+  { id: 3, t: "Kira Tahliye Süreçleri ve Haklar", c: "Gayrimenkul Hukuku", d: "15.05.2024", slug: "kira-tahliye-surecleri-ve-haklar", summary: "Kiracı tahliyesinde yasal gerekçeler, icra yolu ve dava süreci hakkında bilmeniz gereken her şey." },
+  { id: 4, t: "Bilişim Suçları ve Savunma Yöntemleri", c: "Bilişim Hukuku", d: "12.05.2024", slug: "bilisim-suclari-ve-savunma-yontemleri", summary: "İnternet üzerinden işlenen suçlar, dijital delil tespiti ve bilişim suçlamalarına karşı etkili savunma stratejileri." },
+  { id: 5, t: "Marka Tescilinin Önemi", c: "Ticaret Hukuku", d: "10.05.2024", slug: "marka-tescilinin-onemi", summary: "Markanızı rakiplerinize karşı korumak için tescil sürecinin önemi, TÜRKPATENT başvurusu ve ihlal davaları." },
+  { id: 6, t: "Tüketici Hakem Heyeti Süreçleri", c: "Tüketici Hukuku", d: "08.05.2024", slug: "tuketici-hakem-heyeti-surecleri", summary: "Ayıplı ürün ve hizmetlerde tüketici hakem heyetine başvuru, limit tutarları ve itiraz süreçleri hakkında detaylı bilgi." },
+  { id: 7, t: "Velayet Davalarında Çocuğun Üstün Yararı", c: "Aile Hukuku", d: "05.05.2024", slug: "velayet-davalarinda-cocugun-ustun-yarari", summary: "Velayet kararlarında mahkemelerin esas aldığı kriterler, çocuğun üstün yararı ilkesi ve kişisel ilişki düzenlenmesi." },
+  { id: 8, t: "Sigorta Tazminatı Nasıl Alınır?", c: "Sigorta Hukuku", d: "02.05.2024", slug: "sigorta-tazminati-nasil-alinir", summary: "Sigorta şirketlerinin tazminat ödemekten kaçınma yöntemleri ve haklarınızı korumanın en etkili yolları." },
+  { id: 9, t: "Anonim Şirket Kuruluşu Rehberi", c: "Ticaret Hukuku", d: "28.04.2024", slug: "anonim-sirket-kurulumu-rehberi", summary: "Türkiye'de anonim şirket kuruluşu için gerekli belgeler, yasal zorunluluklar ve dikkat edilmesi gereken hukuki noktalar." },
 ];
 
 export default function BlogPage() {
+  const featured = blogPosts[0];
+  const rest = blogPosts.slice(1);
+
   return (
     <main className="min-h-screen bg-[#F8FAFC]">
-      {/* Hero Header Area (Megagöz Style) */}
-      <div className="relative w-full h-[450px] md:h-[550px] flex items-center justify-center pt-24 pb-12 overflow-hidden">
-        <div className="absolute inset-0 bg-primary z-0">
-           <div className="absolute inset-0 bg-primary-light/20 -skew-x-12 translate-x-1/4 pointer-events-none" />
-           <div className="absolute inset-0 bg-black/40 z-10" />
+      {/* ── HERO ── */}
+      <div className="relative w-full min-h-[500px] flex items-end pt-28 pb-0 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-[#0a1628]">
+          <div className="absolute inset-0 opacity-5" style={{backgroundImage:"repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(255,255,255,.04) 40px,rgba(255,255,255,.04) 80px)"}} />
+          <div className="absolute right-0 top-0 w-1/3 h-full opacity-5 flex items-center justify-end pr-16"><BookOpen size={300} /></div>
         </div>
-        
-        <div className="relative z-20 flex flex-col items-center justify-center text-center px-4 max-w-4xl">
-          <div className="flex items-center gap-4 mb-4">
-            <div className="h-[1px] w-8 md:w-12 bg-accent" />
-            <span className="text-accent font-bold tracking-[0.4em] uppercase text-xs md:text-sm italic">
-              BLOG
-            </span>
-            <div className="h-[1px] w-8 md:w-12 bg-accent" />
+        <div className="container mx-auto px-6 max-w-7xl relative z-10 pb-28 space-y-5">
+          <div className="inline-flex items-center gap-3 bg-accent/10 border border-accent/20 px-4 py-2 rounded-full">
+            <Tag size={12} className="text-accent" /><span className="text-accent text-xs font-bold tracking-widest uppercase">Hukuki Bilgi Merkezi</span>
           </div>
-          
-          <h1 className="text-4xl md:text-6xl font-black text-white tracking-tight mb-6 uppercase italic">
-            HUKUKİ REHBER
-          </h1>
-          
-          <p className="text-white/70 text-sm md:text-lg font-medium leading-relaxed max-w-2xl px-4">
-            Hukuk dünyasındaki son gelişmeleri ve merak ettiğiniz konuları ele aldığımız güncel makaleler.
-          </p>
+          <h1 className="text-5xl md:text-7xl font-black text-white leading-tight uppercase italic">Hukuki <span className="text-accent">Rehber</span></h1>
+          <p className="text-white/60 text-lg max-w-2xl leading-relaxed">Hukuk dünyasındaki son gelişmeler, dikkat edilmesi gereken yasal süreçler ve haklarınız hakkında uzman içerikler.</p>
         </div>
       </div>
 
-      {/* Main Blog Grid (Overlapping) */}
-      <div className="container mx-auto px-6 max-w-7xl relative z-30 -mt-20 md:-mt-32 pb-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-          {blogPosts.map((post) => (
-            <Link href={`/blog/${post.slug}`} key={post.id} className="group flex flex-col bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-              <div className="relative h-56 w-full overflow-hidden bg-neutral-100 flex items-center justify-center">
-                 <BookOpen size={60} className="text-primary/5 transition-transform duration-500 group-hover:scale-125" />
-                 <div className="absolute top-4 left-4 bg-primary text-white text-[9px] font-black uppercase px-4 py-2 rounded-full z-10 tracking-widest italic shadow-lg">
-                    {post.c}
-                 </div>
+      <div className="container mx-auto px-6 max-w-7xl -mt-16 pb-32 space-y-12">
+        {/* Featured Post */}
+        <Link href={`/blog/${featured.slug}`} className="group bg-white rounded-[48px] shadow-2xl border border-gray-100 overflow-hidden grid grid-cols-1 lg:grid-cols-2 hover:shadow-xl transition-all block">
+          <div className="relative bg-primary min-h-[300px] flex items-center justify-center p-16 overflow-hidden">
+            <div className="absolute inset-0 opacity-5" style={{backgroundImage:"repeating-linear-gradient(45deg,transparent,transparent 30px,rgba(255,255,255,.05) 30px,rgba(255,255,255,.05) 60px)"}} />
+            <div className="absolute top-6 left-6 bg-accent text-primary text-[10px] font-black uppercase px-4 py-2 rounded-full tracking-widest z-10">Öne Çıkan</div>
+            <div className="text-white/5 group-hover:text-white/10 transition-colors duration-700"><BookOpen size={160} /></div>
+          </div>
+          <div className="p-10 md:p-16 flex flex-col justify-center">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="bg-primary/5 text-primary text-[10px] font-black uppercase px-4 py-2 rounded-full tracking-widest">{featured.c}</span>
+              <span className="flex items-center gap-2 text-neutral-400 text-xs font-bold"><Calendar size={12} className="text-accent" />{featured.d}</span>
+            </div>
+            <h2 className="text-2xl md:text-3xl font-black text-primary uppercase italic leading-tight mb-4 group-hover:text-accent transition-colors">{featured.t}</h2>
+            <p className="text-neutral-500 text-sm leading-relaxed mb-8">{featured.summary}</p>
+            <div className="flex items-center gap-2 text-accent font-black text-xs tracking-widest uppercase">
+              Devamını Oku <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform" />
+            </div>
+          </div>
+        </Link>
+
+        {/* Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {rest.map((post) => (
+            <Link href={`/blog/${post.slug}`} key={post.id} className="group flex flex-col bg-white rounded-[32px] overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl hover:border-accent/30 transition-all duration-300 hover:-translate-y-1">
+              <div className="relative h-48 bg-primary/5 flex items-center justify-center overflow-hidden">
+                <BookOpen size={72} className="text-primary/10 group-hover:scale-110 transition-transform duration-700" />
+                <div className="absolute top-4 left-4 bg-primary text-white text-[9px] font-black uppercase px-4 py-2 rounded-full tracking-widest shadow-lg">{post.c}</div>
               </div>
-
               <div className="p-8 flex flex-col flex-1">
-                <div className="flex items-center gap-3 text-accent mb-4 text-[10px] font-black uppercase tracking-widest italic">
-                   <Calendar size={14} strokeWidth={3} />
-                   <span>{post.d}</span>
+                <div className="flex items-center gap-2 text-accent mb-3 text-[10px] font-black uppercase tracking-widest">
+                  <Calendar size={12} strokeWidth={3} /><span>{post.d}</span>
                 </div>
-                
-                <h3 className="text-xl font-black text-primary mb-4 leading-snug group-hover:text-accent transition-colors uppercase tracking-tight italic">
-                  {post.t}
-                </h3>
-                
-                <p className="text-neutral-500 text-sm leading-relaxed mb-6 flex-1 line-clamp-3 font-medium">
-                  {post.t} konusuyla ilgili merak edilen hukuki süreçleri, dikkat edilmesi gereken noktaları ve en güncel gelişmeleri bu makalemizde bulabilirsiniz.
-                </p>
-
-                <div className="mt-auto flex items-center gap-2 text-primary font-black text-[11px] tracking-widest uppercase italic group-hover:text-accent transition-colors">
-                  DEVAMINI OKU
-                  <ArrowRight size={16} className="transition-transform group-hover:translate-x-2" />
+                <h3 className="text-lg font-black text-primary mb-3 leading-snug group-hover:text-accent transition-colors uppercase italic">{post.t}</h3>
+                <p className="text-neutral-500 text-sm leading-relaxed mb-6 flex-1 line-clamp-3">{post.summary}</p>
+                <div className="mt-auto flex items-center gap-2 text-primary font-black text-[11px] tracking-widest uppercase group-hover:text-accent transition-colors">
+                  Devamını Oku <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
             </Link>
           ))}
         </div>
 
-        {/* Pagination */}
-        <div className="mt-20 flex justify-center gap-4">
-           <button className="w-12 h-12 rounded-2xl bg-primary text-white font-black flex items-center justify-center shadow-xl shadow-primary/20">1</button>
-           <button className="w-12 h-12 rounded-2xl bg-white border border-gray-200 text-primary font-black flex items-center justify-center hover:bg-accent hover:border-accent transition-all">2</button>
-           <button className="w-12 h-12 rounded-2xl bg-white border border-gray-200 text-primary font-black flex items-center justify-center hover:bg-accent hover:border-accent transition-all">3</button>
+        {/* CTA Banner */}
+        <div className="bg-primary rounded-[40px] p-12 md:p-16 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-10">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full -mr-32 -mt-32 blur-3xl" />
+          <div className="relative z-10 space-y-3">
+            <span className="text-accent font-bold tracking-widest text-xs uppercase italic">Hukuki Danışmanlık</span>
+            <h3 className="text-3xl md:text-4xl font-black text-white uppercase italic leading-tight">Sorunuz mu Var?<br /><span className="text-accent">Cevap Verelim.</span></h3>
+          </div>
+          <div className="relative z-10 flex gap-4 shrink-0 flex-wrap">
+            <a href="tel:05514882948" className="bg-accent hover:bg-white text-primary px-8 py-5 rounded-2xl font-black text-sm tracking-widest uppercase transition-all flex items-center gap-3">
+              <Clock size={18} /> Hemen Ara
+            </a>
+            <Link href="/iletisim" className="bg-white/10 hover:bg-white/20 border border-white/20 text-white px-8 py-5 rounded-2xl font-black text-sm tracking-widest uppercase transition-all">
+              İletişim Formu
+            </Link>
+          </div>
         </div>
       </div>
     </main>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Scale, ShieldCheck, Users, Award, CheckCircle2, ArrowRight, Phone, MessageSquare } from "lucide-react";
+import { Scale, ShieldCheck, Users, Award, CheckCircle2, ArrowRight, Phone, MessageSquare, Star, BookOpen, Gavel, MapPin, Clock } from "lucide-react";
 import Link from "next/link";
 
 const services = [
@@ -17,130 +17,244 @@ const services = [
   { title: "İdare ve Vergi Hukuku", slug: "idare-ve-vergi-hukuku" },
 ];
 
+const testimonials = [
+  { name: "Mehmet A.", role: "Ticaret Davası Müvekkili", text: "Banka uyuşmazlığımda hızlı ve kararlı bir şekilde haklarımı korudu. Süreci şeffaf biçimde iletti.", stars: 5 },
+  { name: "Selin T.", role: "Aile Hukuku Müvekkili", text: "Boşanma sürecinde hem hukuki hem de insani bir destek aldım. Velayet kararı tam istediğim gibi sonuçlandı.", stars: 5 },
+  { name: "Kemal Y.", role: "İş Hukuku Müvekkili", text: "Haksız işten çıkarılma davasında işe iade ve tazminatımı eksiksiz aldım. Tecrübesi ve kararlılığı farklı.", stars: 5 },
+];
+
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-neutral-50">
-      {/* Hero Header Area (Megagöz Style) */}
-      <div className="relative w-full h-[400px] md:h-[550px] flex items-center justify-center pt-24 pb-12 overflow-hidden">
-        <div className="absolute inset-0 bg-primary z-0">
-           <div className="absolute inset-0 bg-primary-light/20 -skew-x-12 translate-x-1/4 pointer-events-none" />
-           <div className="absolute inset-0 bg-black/40 z-10" />
-        </div>
-        
-        <div className="relative z-20 flex flex-col items-center justify-center text-center px-4 max-w-4xl">
-          <div className="flex items-center gap-4 mb-4">
-            <div className="h-[1px] w-8 md:w-12 bg-accent" />
-            <span className="text-accent font-bold tracking-[0.4em] uppercase text-xs md:text-sm italic">
-              KURUMSAL
-            </span>
-            <div className="h-[1px] w-8 md:w-12 bg-accent" />
+    <main className="min-h-screen bg-[#F8FAFC]">
+
+      {/* ── HERO ── */}
+      <div className="relative w-full min-h-[580px] flex items-end pt-28 pb-0 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-[#0a1628] z-0">
+          <div className="absolute inset-0 opacity-10" style={{backgroundImage:"repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(255,255,255,.03) 40px,rgba(255,255,255,.03) 80px)"}} />
+          <div className="absolute right-0 top-0 w-1/2 h-full opacity-5 flex items-center justify-end">
+            <Scale size={400} />
           </div>
-          
-          <h1 className="text-4xl md:text-6xl font-black text-white tracking-tight mb-6 uppercase italic">
-            HAKKIMIZDA
-          </h1>
-          
-          <p className="text-white/70 text-sm md:text-lg font-medium leading-relaxed max-w-2xl px-4">
-            Avukat Aybike Sultan Biçer Hukuk ve Danışmanlık bürosunun köklü geçmişi ve ilkeleri.
-          </p>
+        </div>
+        <div className="container mx-auto px-6 max-w-7xl relative z-10 pb-36">
+          <div className="max-w-3xl space-y-6">
+            <div className="flex items-center gap-3">
+              <Link href="/" className="text-white/40 hover:text-white text-xs font-bold tracking-widest uppercase transition-colors">Ana Sayfa</Link>
+              <span className="text-white/20">/</span>
+              <span className="text-accent text-xs font-bold tracking-widest uppercase">Hakkımızda</span>
+            </div>
+            <div className="inline-flex items-center gap-3 bg-accent/10 border border-accent/20 px-4 py-2 rounded-full">
+              <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+              <span className="text-accent text-xs font-bold tracking-widest uppercase">Kurumsal</span>
+            </div>
+            <h1 className="text-5xl md:text-7xl font-black text-white leading-tight uppercase italic">
+              Hukuki Güç,<br /><span className="text-accent">Güvenilir Temsil.</span>
+            </h1>
+            <p className="text-white/60 text-xl leading-relaxed max-w-2xl">
+              Avukat Aybike Sultan Biçer Hukuk ve Danışmanlık olarak 10 yılı aşkın tecrübemizle müvekkillerimizin haklarını en üst düzeyde koruyoruz.
+            </p>
+          </div>
         </div>
       </div>
 
-      {/* Main Content (Overlapping) */}
-      <div className="container mx-auto px-6 max-w-7xl relative z-30 -mt-20 md:-mt-24 pb-24">
-        <div className="bg-white rounded-[40px] shadow-2xl overflow-hidden border border-gray-100">
-           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch">
-              <div className="relative bg-neutral-50 p-12 flex items-center justify-center border-r border-gray-100">
-                 <div className="relative z-10 w-full aspect-square max-w-md">
-                    <img src="/logo.png" alt="Logo" className="w-full h-full object-contain p-8" />
-                 </div>
-                 <div className="absolute inset-0 bg-primary/5 -skew-y-6 translate-y-12" />
-              </div>
-              <div className="p-8 md:p-16 flex flex-col justify-center space-y-8">
-                 <div className="space-y-4">
-                    <h2 className="text-3xl md:text-4xl font-black text-primary leading-tight uppercase italic">
-                      Hukuki Çözümlerde <br /> <span className="text-accent">Güvenilir Adres</span>
-                    </h2>
-                    <div className="w-20 h-1.5 bg-accent rounded-full" />
-                 </div>
-                 <div className="space-y-6 text-neutral-600 leading-relaxed text-lg font-medium">
-                    <p>
-                       Avukat Aybike Sultan Biçer olarak, müvekkillerimize sunduğumuz şeffaf, güvenilir ve sonuç odaklı hizmetlerle hukuki süreçlerde güçlü bir savunma sağlıyoruz.
-                    </p>
-                    <p>
-                       Kadıköy merkezli ofisimizde, geniş bir yelpazede hukuki danışmanlık ve dava takibi hizmetleri sunarak haklarınızı en üst seviyede korumayı amaçlıyoruz.
-                    </p>
-                 </div>
-                 
-                 <div className="grid grid-cols-2 gap-8 pt-8 border-t border-gray-100">
-                    <div>
-                       <p className="text-4xl font-black text-primary italic leading-none">10+</p>
-                       <p className="text-xs font-bold text-neutral-400 uppercase tracking-widest mt-2">Yıllık Tecrübe</p>
-                    </div>
-                    <div>
-                       <p className="text-4xl font-black text-primary italic leading-none">500+</p>
-                       <p className="text-xs font-bold text-neutral-400 uppercase tracking-widest mt-2">Başarılı Dosya</p>
-                    </div>
-                 </div>
-              </div>
-           </div>
-        </div>
+      <div className="container mx-auto px-6 max-w-7xl relative z-10 -mt-24 pb-32 space-y-16">
 
-        {/* Values (3 Columns) */}
-        <div className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-8">
-           {[
-             { icon: <ShieldCheck size={40} />, t: "Güven ve Gizlilik", d: "Müvekkillerimizin tüm bilgileri en üst düzeyde gizlilik prensibiyle korunmaktadır." },
-             { icon: <Users size={40} />, t: "Müvekkil Odaklılık", d: "Her davayı kendi özelinde değerlendiriyor ve sürekli iletişim halinde kalıyoruz." },
-             { icon: <Award size={40} />, t: "Profesyonel Mükemmeliyet", d: "Hukukun her dalında en güncel ve doğru bilgiyi kullanarak stratejiler geliştiriyoruz." }
-           ].map((item, i) => (
-             <div key={i} className="bg-white p-12 rounded-[40px] shadow-sm border border-gray-100 flex flex-col items-center text-center group hover:shadow-xl transition-all">
-                <div className="w-20 h-20 rounded-2xl bg-primary/5 text-primary flex items-center justify-center mb-8 group-hover:bg-accent group-hover:text-primary transition-all">
-                  {item.icon}
+        {/* ── AVUKAT TANITIM KARTI ── */}
+        <div className="bg-white rounded-[48px] shadow-2xl border border-gray-100 overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-2">
+            {/* Sol – Logo/Visual */}
+            <div className="relative bg-primary p-16 flex items-center justify-center min-h-[420px]">
+              <div className="absolute inset-0 opacity-5" style={{backgroundImage:"repeating-linear-gradient(45deg,transparent,transparent 30px,rgba(255,255,255,.05) 30px,rgba(255,255,255,.05) 60px)"}} />
+              <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent/10 rounded-full -ml-32 -mb-32 blur-3xl" />
+              <div className="relative z-10 flex flex-col items-center gap-6">
+                <div className="w-48 h-48 rounded-[40px] bg-white/10 border border-white/20 p-6 backdrop-blur-sm flex items-center justify-center">
+                  <img src="/logo.png" alt="Av. Aybike Sultan Biçer" className="w-full h-full object-contain" />
                 </div>
-                <h4 className="text-xl font-bold text-primary mb-4">{item.t}</h4>
-                <p className="text-neutral-500 text-sm leading-relaxed">{item.d}</p>
-             </div>
-           ))}
+                <div className="text-center">
+                  <p className="text-white font-black text-2xl italic uppercase">Av. Aybike Sultan Biçer</p>
+                  <p className="text-accent text-xs font-bold tracking-[0.3em] uppercase mt-1">Hukuk & Danışmanlık</p>
+                </div>
+                <div className="flex gap-6 mt-2">
+                  {[["10+","Yıl Tecrübe"],["500+","Başarılı Dosya"],["14","Uzmanlık Alanı"]].map(([v,l],i)=>(
+                    <div key={i} className="text-center">
+                      <p className="text-accent font-black text-2xl italic">{v}</p>
+                      <p className="text-white/40 text-[10px] font-bold uppercase tracking-widest leading-tight mt-1">{l}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Sağ – Metin */}
+            <div className="p-10 md:p-16 flex flex-col justify-center">
+              <div className="space-y-3 mb-8">
+                <span className="text-accent font-bold tracking-[0.3em] text-xs uppercase italic">Kimiz?</span>
+                <h2 className="text-3xl md:text-4xl font-black text-primary leading-tight uppercase italic">
+                  Hukuki Çözümlerde <span className="text-accent">Güvenilir Adres</span>
+                </h2>
+                <div className="w-16 h-1.5 bg-accent rounded-full" />
+              </div>
+              <div className="space-y-5 text-neutral-600 text-base leading-relaxed font-medium mb-10">
+                <p>
+                  İstanbul Kadıköy merkezli ofisimizde faaliyet gösteren büromuz, bireysel ve kurumsal müvekkillerimize geniş bir hukuki hizmet yelpazesi sunmaktadır. Avukat Aybike Sultan Biçer liderliğinde ekibimiz; şeffaflık, dürüstlük ve sonuç odaklılık ilkeleri çerçevesinde her davayı özgün bir yaklaşımla ele almaktadır.
+                </p>
+                <p>
+                  Türk hukuku ve uluslararası mevzuat konusundaki derin bilgimiz, artan dava deneyimimiz ve müvekkil odaklı hizmet anlayışımızla her hukuki soruna kalıcı ve etkili çözümler üretiyoruz.
+                </p>
+                <p>
+                  Müvekkillerimizi sürecin her adımında bilgilendiriyor, kararları birlikte alıyor ve hak kayıplarını en aza indirmek için kararlılıkla çalışıyoruz.
+                </p>
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  { icon: <ShieldCheck size={22} />, t: "Tam Gizlilik" },
+                  { icon: <Clock size={22} />, t: "Hızlı Dönüş" },
+                  { icon: <CheckCircle2 size={22} />, t: "Şeffaf Süreç" },
+                  { icon: <Award size={22} />, t: "Kanıtlı Başarı" },
+                ].map((f,i)=>(
+                  <div key={i} className="flex items-center gap-3 bg-neutral-50 rounded-2xl p-4 border border-gray-100">
+                    <div className="w-10 h-10 rounded-xl bg-primary/5 text-primary flex items-center justify-center shrink-0">{f.icon}</div>
+                    <span className="font-bold text-primary text-sm">{f.t}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
 
-        {/* Hizmetlerimiz Grid */}
-        <div className="mt-24">
-          <div className="text-center mb-14 space-y-4">
-            <span className="text-accent font-black tracking-[0.4em] text-xs uppercase italic">Uzmanlık Alanları</span>
-            <h2 className="text-3xl md:text-5xl font-black text-primary uppercase leading-tight">Hizmetlerimiz</h2>
+        {/* ── DEĞERLER ── */}
+        <div>
+          <div className="text-center mb-12 space-y-3">
+            <span className="text-accent font-black tracking-[0.4em] text-xs uppercase italic">Temel İlkelerimiz</span>
+            <h2 className="text-3xl md:text-5xl font-black text-primary uppercase italic">Neden Bizi Tercih Etmelisiniz?</h2>
             <div className="w-20 h-1.5 bg-accent mx-auto rounded-full" />
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {services.map((s, i) => (
-              <Link key={i} href={`/hizmetler/${s.slug}`} className="group bg-white p-6 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-accent transition-all flex items-center justify-between gap-3">
-                <span className="font-bold text-primary text-sm group-hover:text-accent transition-colors leading-tight">{s.title}</span>
-                <ArrowRight size={16} className="shrink-0 text-accent opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
-              </Link>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              { icon: <ShieldCheck size={44} />, t: "Güven ve Gizlilik", d: "Müvekkillerimizin tüm bilgileri avukatlık meslek sırrı kapsamında en üst düzeyde gizlilik prensibiyle korunmaktadır. Her müvekkil ilişkisi mutlak bir güven zeminine dayanır." },
+              { icon: <Users size={44} />, t: "Müvekkil Odaklılık", d: "Her davayı kendi özgün koşulları içinde değerlendiriyor, müvekkillerimizle sürekli iletişim halinde kalıyoruz. Süreçteki her gelişmeden anında haberdar edilirsiniz." },
+              { icon: <Award size={44} />, t: "Profesyonel Mükemmeliyet", d: "Hukukun her dalında güncel mevzuat ve yargı kararlarını yakından takip ederek en doğru stratejiyi oluşturuyoruz. Sürekli eğitim ve gelişim temel prensiplerimizdendir." },
+              { icon: <Scale size={44} />, t: "Adalet Tutkusu", d: "Her müvekkil için adil ve hakkaniyetli bir sonuç elde etmek yalnızca bir iş değil, temel değerimizdir. Hakkın peşinde bitmez bir kararlılıkla yürüyoruz." },
+              { icon: <BookOpen size={44} />, t: "Güncel Hukuki Bilgi", d: "Değişen mevzuat ve yargıtay kararlarını anlık takip ederek müvekkillerimize her zaman en güncel ve doğru hukuki danışmanlığı sunuyoruz." },
+              { icon: <Gavel size={44} />, t: "Güçlü Mahkeme Tecrübesi", d: "İstanbul başta olmak üzere Türkiye'nin önde gelen mahkemelerinde yürütülen davalarda kazandığımız tecrübe, her dosyada güçlü bir temsil sağlamamızı mümkün kılmaktadır." },
+            ].map((item, i) => (
+              <div key={i} className="bg-white p-10 rounded-[32px] shadow-sm border border-gray-100 flex flex-col group hover:shadow-xl hover:border-accent/30 transition-all duration-300">
+                <div className="w-16 h-16 rounded-2xl bg-primary/5 text-primary flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-primary transition-all shrink-0">
+                  {item.icon}
+                </div>
+                <h4 className="text-xl font-black text-primary mb-3 uppercase italic">{item.t}</h4>
+                <p className="text-neutral-500 text-sm leading-relaxed">{item.d}</p>
+              </div>
             ))}
           </div>
         </div>
 
-        {/* İletişim CTA */}
-        <div className="mt-24 bg-primary rounded-[40px] p-12 md:p-20 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-1/2 h-full bg-accent/5 -skew-x-12 translate-x-1/4" />
-          <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-10">
-            <div className="space-y-4">
-              <span className="text-accent font-bold tracking-[0.3em] text-xs uppercase italic">İletişim</span>
-              <h3 className="text-3xl md:text-5xl font-black text-white leading-tight uppercase">
-                Hukuki Sorununuz <br /><span className="text-accent italic">Çözümsüz Değil.</span>
-              </h3>
-              <p className="text-white/60 max-w-md">Hemen iletişime geçin, uzman ekibimizle en doğru stratejiyi birlikte belirleyelim.</p>
+        {/* ── HİZMETLER GRID ── */}
+        <div className="bg-primary rounded-[48px] p-12 md:p-16 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full -mr-48 -mt-48 blur-3xl" />
+          <div className="relative z-10">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-12">
+              <div className="space-y-3">
+                <span className="text-accent font-black tracking-[0.4em] text-xs uppercase italic">Uzmanlık Alanları</span>
+                <h2 className="text-3xl md:text-5xl font-black text-white uppercase italic leading-tight">Hizmetlerimiz</h2>
+              </div>
+              <Link href="/#hizmetler" className="text-white/50 hover:text-accent transition-colors text-xs font-bold tracking-widest uppercase flex items-center gap-2">
+                Tümünü Gör <ArrowRight size={16} />
+              </Link>
             </div>
-            <div className="flex flex-col gap-4 shrink-0">
-              <a href="tel:05514882948" className="bg-accent hover:bg-white text-primary px-10 py-5 rounded-2xl font-black tracking-widest text-sm transition-all flex items-center justify-center gap-3 shadow-2xl uppercase">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+              {services.map((s, i) => (
+                <Link key={i} href={`/hizmetler/${s.slug}`} className="group bg-white/5 hover:bg-accent border border-white/10 hover:border-accent p-5 rounded-2xl transition-all flex items-center justify-between gap-2">
+                  <span className="font-bold text-white/70 group-hover:text-primary text-xs uppercase tracking-wider leading-tight">{s.title}</span>
+                  <ArrowRight size={14} className="shrink-0 text-accent group-hover:text-primary opacity-0 group-hover:opacity-100 transition-all group-hover:translate-x-1" />
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* ── MÜVEKKİL GERİBİLDİRİMLERİ ── */}
+        <div>
+          <div className="text-center mb-12 space-y-3">
+            <span className="text-accent font-black tracking-[0.4em] text-xs uppercase italic">Müvekkil Görüşleri</span>
+            <h2 className="text-3xl md:text-5xl font-black text-primary uppercase italic">Ne Diyorlar?</h2>
+            <div className="w-20 h-1.5 bg-accent mx-auto rounded-full" />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {testimonials.map((t, i) => (
+              <div key={i} className="bg-white rounded-[32px] p-10 border border-gray-100 shadow-sm hover:shadow-xl transition-all space-y-5">
+                <div className="flex gap-1 text-accent">{[...Array(t.stars)].map((_,j)=><Star key={j} size={18} fill="currentColor" />)}</div>
+                <p className="text-neutral-600 text-base leading-relaxed italic">"{t.text}"</p>
+                <div className="flex items-center gap-3 pt-2 border-t border-gray-50">
+                  <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-black text-lg">{t.name[0]}</div>
+                  <div>
+                    <p className="font-black text-primary text-sm">{t.name}</p>
+                    <p className="text-neutral-400 text-xs font-medium">{t.role}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* ── OFİS & İLETİŞİM CTA ── */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {/* Ofis Bilgileri */}
+          <div className="bg-white rounded-[40px] border border-gray-100 shadow-sm p-10 md:p-14 space-y-8">
+            <div className="space-y-2">
+              <span className="text-accent font-bold tracking-[0.3em] text-xs uppercase italic">Bize Ulaşın</span>
+              <h3 className="text-3xl font-black text-primary uppercase italic">Ofis Bilgileri</h3>
+              <div className="w-12 h-1.5 bg-accent rounded-full" />
+            </div>
+            <div className="space-y-6">
+              <div className="flex gap-4 items-start">
+                <div className="w-12 h-12 rounded-2xl bg-primary/5 text-primary flex items-center justify-center shrink-0"><MapPin size={22} /></div>
+                <div>
+                  <p className="font-black text-primary text-sm uppercase tracking-wider mb-1">Adres</p>
+                  <p className="text-neutral-500 text-sm leading-relaxed">Eğitim Mah., Poyraz Sokak, No:26/4,<br />Kadıköy / İstanbul</p>
+                </div>
+              </div>
+              <div className="flex gap-4 items-start">
+                <div className="w-12 h-12 rounded-2xl bg-primary/5 text-primary flex items-center justify-center shrink-0"><Phone size={22} /></div>
+                <div>
+                  <p className="font-black text-primary text-sm uppercase tracking-wider mb-1">Telefon</p>
+                  <a href="tel:05514882948" className="text-neutral-500 text-sm hover:text-accent transition-colors font-medium">0551 488 29 48</a>
+                </div>
+              </div>
+              <div className="flex gap-4 items-start">
+                <div className="w-12 h-12 rounded-2xl bg-primary/5 text-primary flex items-center justify-center shrink-0"><Clock size={22} /></div>
+                <div>
+                  <p className="font-black text-primary text-sm uppercase tracking-wider mb-1">Çalışma Saatleri</p>
+                  <p className="text-neutral-500 text-sm font-medium">Pazartesi – Cuma: 09:00 – 18:00</p>
+                  <p className="text-neutral-400 text-xs mt-1">Cumartesi randevuyla</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="bg-primary rounded-[40px] p-10 md:p-14 relative overflow-hidden flex flex-col justify-between">
+            <div className="absolute top-0 right-0 w-72 h-72 bg-accent/5 rounded-full -mr-36 -mt-36 blur-3xl" />
+            <div className="relative z-10 space-y-4 mb-10">
+              <span className="text-accent font-bold tracking-[0.3em] text-xs uppercase italic">Danışmanlık</span>
+              <h3 className="text-3xl md:text-4xl font-black text-white uppercase italic leading-tight">
+                Hukuki Sorununuz<br /><span className="text-accent">Çözümsüz Değil.</span>
+              </h3>
+              <p className="text-white/60 leading-relaxed">Uzman ekibimizle en doğru stratejiyi birlikte belirleyelim. İlk görüşme için hemen ulaşın.</p>
+            </div>
+            <div className="relative z-10 flex flex-col gap-4">
+              <a href="tel:05514882948" className="bg-accent hover:bg-white text-primary px-8 py-5 rounded-2xl font-black tracking-widest text-sm transition-all flex items-center justify-center gap-3 shadow-xl shadow-accent/20 uppercase">
                 <Phone size={20} /> Hemen Ara
               </a>
-              <Link href="/iletisim" className="bg-white/10 hover:bg-white/20 border border-white/20 text-white px-10 py-5 rounded-2xl font-black tracking-widest text-sm transition-all flex items-center justify-center gap-3 uppercase">
-                <MessageSquare size={20} /> İletişim Formu
+              <a href="https://wa.me/905514882948" target="_blank" className="bg-[#25D366] hover:bg-white hover:text-[#25D366] text-white px-8 py-5 rounded-2xl font-black tracking-widest text-sm transition-all flex items-center justify-center gap-3 uppercase">
+                <MessageSquare size={20} /> WhatsApp ile Yaz
+              </a>
+              <Link href="/iletisim" className="bg-white/10 hover:bg-white/20 border border-white/20 text-white px-8 py-5 rounded-2xl font-black tracking-widest text-sm transition-all flex items-center justify-center gap-3 uppercase">
+                İletişim Formu
               </Link>
             </div>
           </div>
         </div>
+
       </div>
     </main>
   );
