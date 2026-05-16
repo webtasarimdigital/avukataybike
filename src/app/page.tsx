@@ -29,7 +29,7 @@ export default function Home() {
       <section className="relative min-h-[90vh] flex flex-col lg:flex-row overflow-hidden">
 
         {/* ── SOL: Açık / Krem Alan ── */}
-        <div className="relative flex-1 lg:w-1/2 bg-[#F5F0E6] flex items-center pt-28 pb-16 lg:pt-0 lg:pb-0">
+        <div className="relative flex-1 lg:w-1/2 bg-[#F5F0E6] flex items-center pt-44 pb-16 lg:pt-0 lg:pb-0">
           {/* Hafif desen */}
           <div className="absolute inset-0 opacity-[0.035]" style={{backgroundImage:"radial-gradient(circle, #092f1a 1px, transparent 1px)", backgroundSize:"24px 24px"}} />
           {/* Sağ kenar yumuşak geçiş */}
