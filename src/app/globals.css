@@ -32,29 +32,29 @@
 }
 
 .service-card .fill-bg {
-  @apply absolute bottom-0 left-0 w-full h-0 bg-accent transition-all duration-500 ease-in-out z-0;
+  @apply absolute bottom-0 left-0 w-full h-0 bg-primary transition-all duration-500 ease-in-out z-0;
 }
 
 .service-card:hover .fill-bg {
   @apply h-full;
 }
 
-/* Ensure text and content stay above the filling background and change color for readability */
 .service-card .relative {
   @apply z-10 transition-colors duration-300;
 }
 
-.service-card:hover h3,
-.service-card:hover p,
-.service-card:hover .text-primary,
-.service-card:hover .text-neutral-500 {
-  @apply !text-primary;
+.service-card:hover h3 {
+  @apply !text-white;
 }
 
-.service-card:hover .w-16 {
-  @apply bg-primary/10 transition-colors duration-300;
+.service-card:hover p {
+  @apply !text-white/60;
 }
 
-.service-card:hover .flex.items-center.gap-2 {
-  @apply !text-primary;
+.service-card:hover .svc-icon {
+  @apply !bg-accent/20 !text-accent;
+}
+
+.service-card:hover .svc-link {
+  @apply !text-accent;
 }
