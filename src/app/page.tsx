@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { CheckCircle2, ArrowRight, MessageSquare, Scale, BookOpen, Gavel } from "lucide-react";
+import { CheckCircle2, ArrowRight, MessageSquare, Scale, BookOpen, Gavel, Phone } from "lucide-react";
 
 const services = [
   { title: "BANKA VE TİCARET HUKUKU", slug: "banka-ve-ticaret-hukuku", icon: <Scale size={32} /> },
