@@ -45,30 +45,29 @@ export default function Header() {
 
   return (
     <header className="w-full fixed top-0 left-0 right-0 z-50 flex flex-col font-sans">
-      {/* Top Green Bar - Megagöz style (Disappears on scroll) */}
-      <div 
-        className={`bg-primary text-white text-[14px] font-semibold tracking-wide transition-all duration-300 origin-top ${
-          isScrolled ? "h-0 opacity-0 overflow-hidden" : "hidden lg:flex h-[55px] opacity-100 border-b border-white/10"
+      {/* Top Bar — Beyaz */}
+      <div
+        className={`bg-white border-b border-gray-100 text-[13px] font-semibold tracking-wide transition-all duration-300 origin-top ${
+          isScrolled ? "h-0 opacity-0 overflow-hidden" : "hidden lg:flex h-[46px] opacity-100"
         }`}
       >
         <div className="w-full max-w-[1400px] mx-auto flex items-center justify-between h-full px-8">
           <div className="flex items-center gap-8">
-            <a href="https://maps.google.com" target="_blank" className="hover:text-accent transition-colors flex items-center gap-2">
-              <MapPin size={14} className="text-accent" /> Eğitim Mah., Poyraz Sk. No:26/4, Kadıköy/İST
+            <a href="https://maps.google.com" target="_blank" className="text-primary/70 hover:text-accent transition-colors flex items-center gap-2">
+              <MapPin size={13} className="text-accent" /> Eğitim Mah., Poyraz Sk. No:26/4, Kadıköy/İST
             </a>
-            <span className="text-white/20">|</span>
-            <a href="tel:05514882948" className="hover:text-accent transition-colors flex items-center gap-2">
-              <Phone size={14} className="text-accent" /> 0551 488 29 48
+            <span className="text-gray-200">|</span>
+            <a href="tel:05514882948" className="text-primary/70 hover:text-accent transition-colors flex items-center gap-2">
+              <Phone size={13} className="text-accent" /> 0551 488 29 48
             </a>
           </div>
-
           <div className="flex items-center gap-6">
-            <div className="flex items-center gap-4 border-r border-white/10 pr-6 mr-2">
-              <a href="#" className="hover:text-accent transition-colors"><Instagram size={16} /></a>
-              <a href="#" className="hover:text-accent transition-colors"><Facebook size={16} /></a>
-              <a href="#" className="hover:text-accent transition-colors"><MessageCircle size={16} /></a>
+            <div className="flex items-center gap-4 border-r border-gray-100 pr-6 mr-2 text-primary/40">
+              <a href="#" className="hover:text-accent transition-colors"><Instagram size={15} /></a>
+              <a href="#" className="hover:text-accent transition-colors"><Facebook size={15} /></a>
+              <a href="#" className="hover:text-accent transition-colors"><MessageCircle size={15} /></a>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 text-primary/50">
               <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
               Çalışma Saatleri: 09:00 - 18:00
             </div>
@@ -76,16 +75,16 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Main Nav Bar - Megagöz style */}
-      <div className={`transition-all duration-300 ${isScrolled ? "shadow-xl py-3 lg:py-3 bg-primary" : "py-3 lg:py-5 bg-primary/95 backdrop-blur-md"}`}>
+      {/* Main Nav Bar — Beyaz */}
+      <div className={`transition-all duration-300 bg-white border-b border-gray-100 ${isScrolled ? "shadow-lg py-3" : "py-3 lg:py-4"}`}>
         <div className="w-full max-w-[1400px] mx-auto flex items-center justify-between px-8">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 shrink-0">
-            <div className="relative w-12 h-12 md:w-14 md:h-14 overflow-hidden rounded-xl bg-white p-1">
+            <div className="relative w-12 h-12 md:w-14 md:h-14 overflow-hidden rounded-xl bg-primary/5 p-1">
               <img src="/logo.png" alt="Logo" className="w-full h-full object-contain" />
             </div>
             <div className="flex flex-col">
-              <span className="text-white font-black text-xl md:text-2xl leading-none tracking-tighter">AYBİKE SULTAN</span>
+              <span className="text-primary font-black text-xl md:text-2xl leading-none tracking-tighter">AYBİKE SULTAN</span>
               <span className="text-accent font-bold text-[10px] md:text-[12px] tracking-[0.3em] mt-1 leading-none uppercase">Hukuk & Danışmanlık</span>
             </div>
           </Link>
@@ -101,7 +100,7 @@ export default function Header() {
                     onMouseEnter={() => setServicesHovered(true)}
                     onMouseLeave={() => setServicesHovered(false)}
                   >
-                    <button className="text-[14px] font-bold text-white hover:text-accent transition-colors whitespace-nowrap tracking-widest flex items-center gap-1.5 py-4">
+                    <button className="text-[14px] font-bold text-primary hover:text-accent transition-colors whitespace-nowrap tracking-widest flex items-center gap-1.5 py-4">
                       {link.name} <ChevronDown size={14} className={`mt-0.5 transition-transform duration-300 ${servicesHovered ? "rotate-180 text-accent" : ""}`} />
                     </button>
 
@@ -136,7 +135,7 @@ export default function Header() {
                 <Link 
                   key={link.name} 
                   href={link.href}
-                  className="text-[14px] font-bold text-white hover:text-accent transition-colors whitespace-nowrap tracking-widest py-4 uppercase"
+                  className="text-[14px] font-bold text-primary hover:text-accent transition-colors whitespace-nowrap tracking-widest py-4 uppercase"
                 >
                   {link.name}
                 </Link>
@@ -154,7 +153,7 @@ export default function Header() {
           {/* Mobile Menu Toggle */}
           <div className="lg:hidden">
              <button 
-               className="text-white p-1"
+               className="text-primary p-1"
                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
              >
                {mobileMenuOpen ? <X size={32} /> : <Menu size={32} />}

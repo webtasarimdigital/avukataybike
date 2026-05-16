@@ -43,13 +43,6 @@ const TeraziSVG = ({ className }: { className?: string }) => (
   </svg>
 );
 
-const slides = [
-  { label: "Hukuki Çözüm Ortağınız", heading: ["Adalet İçin", "Güvenilir", "Hukuki Destek."] },
-  { label: "Aile Hukukunda Temsil", heading: ["Aile Uyuşmazlıklarında", "Yanınızda", "Güvenilir Destek."] },
-  { label: "İş Hukukunda Danışmanlık", heading: ["İşçi ve İşveren", "Haklarında", "Hukuki Rehberlik."] },
-  { label: "Gayrimenkul Hukuku", heading: ["Taşınmaz", "Uyuşmazlıklarında", "Güvenilir Temsil."] },
-];
-
 const faqs = [
   { q: "İlk görüşme ücretli mi?", a: "Hukuki danışmanlık hizmetlerimiz kapsamındaki görüşme ücret bilgileri için lütfen iletişime geçiniz." },
   { q: "Dava süreci ne kadar sürer?", a: "Her davanın niteliği, mahkemelerin iş yoğunluğu ve delil durumuna göre süreçler değişkenlik göstermektedir." },
