@@ -3,9 +3,9 @@
 :root {
   --background: #ffffff;
   --foreground: #0a0a0a;
-  --primary: #0A3125;
-  --primary-light: #164638;
-  --accent: #EAB308; /* Gold color from the logo name and subtitle */
+  --primary: #092f1a;
+  --primary-light: #1a4a2e;
+  --accent: #C9882A; /* Warm amber-gold */
   --accent-foreground: #0A3125;
 }
 

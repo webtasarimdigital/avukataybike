@@ -33,7 +33,7 @@ export default function Home() {
           {/* Köşegen gold şerit */}
           <div className="absolute top-0 right-0 w-[45%] h-full bg-gradient-to-bl from-accent/8 via-transparent to-transparent" />
           {/* Halftone desen */}
-          <div className="absolute inset-0 opacity-[0.04]" style={{backgroundImage:"radial-gradient(circle, #EAB308 1px, transparent 1px)", backgroundSize:"28px 28px"}} />
+          <div className="absolute inset-0 opacity-[0.04]" style={{backgroundImage:"radial-gradient(circle, #C9882A 1px, transparent 1px)", backgroundSize:"28px 28px"}} />
           {/* Alt gold çizgi */}
           <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent opacity-40" />
         </div>
