@@ -8,23 +8,23 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
-type SvcType = { title: string; slug: string; Icon: React.ElementType; desc: string };
+type SvcType = { title: string; slug: string; Icon: React.ElementType; desc: string; img: string };
 
 const services: SvcType[] = [
-  { title: "Banka ve Ticaret Hukuku", slug: "banka-ve-ticaret-hukuku", Icon: Briefcase, desc: "Ticari uyuşmazlıklar, şirket sözleşmeleri ve banka işlemleri." },
-  { title: "İş Hukuku", slug: "is-hukuku", Icon: Users, desc: "İş sözleşmesi, haksız fesih ve tazminat davaları." },
-  { title: "Marka ve Patent Hukuku", slug: "marka-ve-patent-hukuku", Icon: Shield, desc: "Fikri mülkiyet tescili ve ihlallerine karşı hukuki temsil." },
-  { title: "Aile Hukuku", slug: "aile-hukuku", Icon: Heart, desc: "Boşanma, velayet, nafaka ve mal paylaşımı davaları." },
-  { title: "Sigorta Hukuku", slug: "sigorta-hukuku", Icon: Shield, desc: "Sigorta tazminat talepleri ve uyuşmazlık süreçleri." },
-  { title: "Gayrimenkul Hukuku", slug: "gayrimenkul-hukuku", Icon: Building2, desc: "Tapu iptali, kira tahliyesi ve inşaat hukuku davaları." },
-  { title: "Bilişim Hukuku", slug: "bilisim-hukuku", Icon: Monitor, desc: "Siber suçlar, veri gizliliği ve dijital uyuşmazlıklar." },
-  { title: "İcra ve İflas Hukuku", slug: "icra-ve-iflas-hukuku", Icon: Gavel, desc: "Alacak takibi, haciz işlemleri ve iflas süreçleri." },
-  { title: "Sağlık Hukuku", slug: "saglik-hukuku", Icon: Heart, desc: "Tıbbi uygulama hataları ve hasta hakları savunuculuğu." },
-  { title: "Tüketici Hukuku", slug: "tuketici-hukuku", Icon: ShoppingCart, desc: "Ayıplı ürün/hizmet talepleri ve tüketici hakları süreçleri." },
-  { title: "Yatırım Hukuku", slug: "yatirim-hukuku", Icon: TrendingUp, desc: "Yabancı sermaye ve yatırım uyuşmazlıklarında danışmanlık." },
-  { title: "Uluslararası Ticari Sözleşmeler", slug: "uluslararasi-ticari-sozlesmeler", Icon: Globe, desc: "Sınır ötesi ticaret ve uluslararası tahkim süreçleri." },
-  { title: "Ceza Hukuku", slug: "ceza-hukuku", Icon: Scale, desc: "Ceza davaları, soruşturma ve kovuşturma aşamalarında temsil." },
-  { title: "İdare ve Vergi Hukuku", slug: "idare-ve-vergi-hukuku", Icon: Landmark, desc: "İdari işlem iptali ve vergi uyuşmazlıklarında hukuki destek." },
+  { title: "Banka ve Ticaret Hukuku", slug: "banka-ve-ticaret-hukuku", Icon: Briefcase, desc: "Ticari uyuşmazlıklar, şirket sözleşmeleri ve banka işlemleri.", img: "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&q=80&auto=format&fit=crop" },
+  { title: "İş Hukuku", slug: "is-hukuku", Icon: Users, desc: "İş sözleşmesi, haksız fesih ve tazminat davaları.", img: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&q=80&auto=format&fit=crop" },
+  { title: "Marka ve Patent Hukuku", slug: "marka-ve-patent-hukuku", Icon: Shield, desc: "Fikri mülkiyet tescili ve ihlallerine karşı hukuki temsil.", img: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&q=80&auto=format&fit=crop" },
+  { title: "Aile Hukuku", slug: "aile-hukuku", Icon: Heart, desc: "Boşanma, velayet ve nafaka süreçlerinde hukuki destek.", img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80&auto=format&fit=crop" },
+  { title: "Sigorta Hukuku", slug: "sigorta-hukuku", Icon: Shield, desc: "Sigorta tazminat uyuşmazlıkları ve poliçe itirazları.", img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80&auto=format&fit=crop" },
+  { title: "Gayrimenkul Hukuku", slug: "gayrimenkul-hukuku", Icon: Building2, desc: "Tapu, kira anlaşmazlıkları ve inşaat sözleşmeleri.", img: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80&auto=format&fit=crop" },
+  { title: "Bilişim Hukuku", slug: "bilisim-hukuku", Icon: Monitor, desc: "Veri gizliliği, siber suçlar ve e-ticaret hukuku.", img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&q=80&auto=format&fit=crop" },
+  { title: "İcra ve İflas Hukuku", slug: "icra-ve-iflas-hukuku", Icon: Gavel, desc: "Alacak takibi, icra işlemleri ve iflas süreçleri.", img: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&q=80&auto=format&fit=crop" },
+  { title: "Sağlık Hukuku", slug: "saglik-hukuku", Icon: Heart, desc: "Tıbbi malpraktis ve hasta hakları uyuşmazlıkları.", img: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&q=80&auto=format&fit=crop" },
+  { title: "Tüketici Hukuku", slug: "tuketici-hukuku", Icon: ShoppingCart, desc: "Ayıplı ürün, tüketici hakları ve hakem heyeti.", img: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80&auto=format&fit=crop" },
+  { title: "Yatırım Hukuku", slug: "yatirim-hukuku", Icon: TrendingUp, desc: "Yabancı yatırım mevzuatı ve teşvik hukuku.", img: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&q=80&auto=format&fit=crop" },
+  { title: "Uluslararası Ticari Sözleşmeler", slug: "uluslararasi-ticari-sozlesmeler", Icon: Globe, desc: "Çok taraflı anlaşmalar ve sınır ötesi hukuki süreçler.", img: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=600&q=80&auto=format&fit=crop" },
+  { title: "Ceza Hukuku", slug: "ceza-hukuku", Icon: Scale, desc: "Ceza davalarında savunma ve mağdur temsili.", img: "https://images.unsplash.com/photo-1589578228447-e1a4e481c6c8?w=600&q=80&auto=format&fit=crop" },
+  { title: "İdare ve Vergi Hukuku", slug: "idare-ve-vergi-hukuku", Icon: Landmark, desc: "İdari itirazlar, vergi cezaları ve iptal davaları.", img: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80&auto=format&fit=crop" },
 ];
 
 const TeraziSVG = ({ className }: { className?: string }) => (
@@ -310,19 +310,19 @@ export default function Home() {
                 className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-400 flex flex-col border border-neutral-100"
               >
                 {/* Üst görsel alan */}
-                <div className="relative h-52 bg-primary overflow-hidden flex items-center justify-center">
-                  {/* Dekoratif desen */}
-                  <div className="absolute inset-0 opacity-[0.06]" style={{backgroundImage:"radial-gradient(circle, #fff 1.5px, transparent 1.5px)", backgroundSize:"20px 20px"}} />
-                  {/* Büyük arka plan ikon (watermark) */}
-                  <div className="absolute opacity-[0.07] scale-[2.5]">
-                    <svc.Icon size={80} className="text-white" />
-                  </div>
-                  {/* Gradient overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/80 to-primary/60 group-hover:from-primary/90 transition-all duration-500" />
-                  {/* Merkez ikon */}
-                  <div className="relative z-10 flex flex-col items-center gap-3">
-                    <div className="w-20 h-20 rounded-2xl bg-white/10 border border-white/20 backdrop-blur-sm flex items-center justify-center group-hover:bg-accent/20 group-hover:border-accent/40 transition-all duration-500">
-                      <svc.Icon size={36} className="text-white group-hover:text-accent transition-colors duration-500" />
+                <div className="relative h-52 bg-primary overflow-hidden">
+                  {/* Gerçek fotoğraf */}
+                  <img
+                    src={svc.img}
+                    alt={svc.title}
+                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  {/* Koyu overlay — hover'da hafifler */}
+                  <div className="absolute inset-0 bg-primary/55 group-hover:bg-primary/35 transition-all duration-500" />
+                  {/* Merkez ikon — görselin üstünde */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-16 h-16 rounded-2xl bg-white/15 border border-white/30 backdrop-blur-sm flex items-center justify-center group-hover:bg-accent/30 group-hover:border-accent/50 transition-all duration-500">
+                      <svc.Icon size={30} className="text-white group-hover:text-accent transition-colors duration-500" />
                     </div>
                   </div>
                   {/* Accent çizgi — alt */}
