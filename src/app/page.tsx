@@ -285,10 +285,12 @@ export default function Home() {
       </section>
 
       {/* ══════════════════════════════════════
-          HİZMETLER — Hover → Koyu Yeşil Dolum
+          HİZMETLER — Görsel Kart Yapısı
       ══════════════════════════════════════ */}
-      <section id="hizmetler" className="py-24 md:py-32 bg-white">
+      <section id="hizmetler" className="py-24 md:py-32 bg-[#F8F5EF]">
         <div className="container mx-auto px-6 max-w-7xl">
+
+          {/* Başlık */}
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
             <div className="flex items-center justify-center gap-4">
               <div className="h-px w-10 bg-accent" />
@@ -296,31 +298,66 @@ export default function Home() {
               <div className="h-px w-10 bg-accent" />
             </div>
             <h2 className="text-4xl md:text-5xl font-black text-primary uppercase leading-tight">Hukuki Hizmetlerimiz</h2>
-            <p className="text-neutral-500">Üzerine gelince koyu yeşile dönen kartlara tıklayarak ilgili hizmet detayına ulaşabilirsiniz.</p>
+            <p className="text-neutral-500 text-lg">Hukuki Sorunlarınız İçin Uzman Çözümler</p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+          {/* Kart Izgarası */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((svc) => (
-              <Link key={svc.slug} href={`/hizmetler/${svc.slug}`}
-                className="service-card bg-white border border-neutral-100 rounded-2xl p-7 shadow-sm group block hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                <div className="fill-bg" />
-                <div className="relative z-10 flex flex-col h-full">
-                  <div className="svc-icon w-14 h-14 rounded-xl bg-primary/6 text-primary flex items-center justify-center mb-6 transition-all duration-500">
-                    <svc.Icon size={28} />
+              <Link
+                key={svc.slug}
+                href={`/hizmetler/${svc.slug}`}
+                className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-400 flex flex-col border border-neutral-100"
+              >
+                {/* Üst görsel alan */}
+                <div className="relative h-52 bg-primary overflow-hidden flex items-center justify-center">
+                  {/* Dekoratif desen */}
+                  <div className="absolute inset-0 opacity-[0.06]" style={{backgroundImage:"radial-gradient(circle, #fff 1.5px, transparent 1.5px)", backgroundSize:"20px 20px"}} />
+                  {/* Büyük arka plan ikon (watermark) */}
+                  <div className="absolute opacity-[0.07] scale-[2.5]">
+                    <svc.Icon size={80} className="text-white" />
                   </div>
-                  <h3 className="font-black text-primary text-base leading-tight mb-3 transition-colors duration-500 tracking-tight">
+                  {/* Gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/80 to-primary/60 group-hover:from-primary/90 transition-all duration-500" />
+                  {/* Merkez ikon */}
+                  <div className="relative z-10 flex flex-col items-center gap-3">
+                    <div className="w-20 h-20 rounded-2xl bg-white/10 border border-white/20 backdrop-blur-sm flex items-center justify-center group-hover:bg-accent/20 group-hover:border-accent/40 transition-all duration-500">
+                      <svc.Icon size={36} className="text-white group-hover:text-accent transition-colors duration-500" />
+                    </div>
+                  </div>
+                  {/* Accent çizgi — alt */}
+                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                </div>
+
+                {/* Alt içerik */}
+                <div className="p-7 flex flex-col flex-1">
+                  {/* Kategori rozeti */}
+                  <span className="inline-flex items-center gap-1.5 text-accent text-[10px] font-black tracking-widest uppercase mb-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-accent" /> Hukuki Hizmet
+                  </span>
+                  <h3 className="font-black text-primary text-lg leading-tight mb-3 tracking-tight group-hover:text-accent transition-colors duration-300">
                     {svc.title}
                   </h3>
-                  <p className="text-neutral-500 text-sm leading-relaxed flex-1 transition-colors duration-500">
+                  <p className="text-neutral-500 text-sm leading-relaxed flex-1">
                     {svc.desc}
                   </p>
-                  <div className="svc-link mt-5 flex items-center gap-2 text-primary text-xs font-black tracking-widest uppercase transition-colors duration-500">
-                    Detaylı Bilgi <ArrowRight size={13} className="group-hover:translate-x-2 transition-transform" />
+                  <div className="mt-6 flex items-center gap-2 text-primary text-xs font-black tracking-widest uppercase border-t border-neutral-100 pt-5 group-hover:text-accent transition-colors duration-300">
+                    Detaylı Bilgi
+                    <ArrowRight size={13} className="group-hover:translate-x-2 transition-transform duration-300" />
                   </div>
                 </div>
               </Link>
             ))}
           </div>
+
+          {/* Alt CTA */}
+          <div className="text-center mt-14">
+            <Link href="/hizmetler/banka-ve-ticaret-hukuku"
+              className="inline-flex items-center gap-3 bg-primary hover:bg-primary/90 text-white px-10 py-4 rounded-2xl font-black text-sm tracking-widest uppercase transition-all shadow-xl shadow-primary/20">
+              Tüm Hizmetlerimizi İnceleyin <ArrowRight size={16} />
+            </Link>
+          </div>
+
         </div>
       </section>
 
