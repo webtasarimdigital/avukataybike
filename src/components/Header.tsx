@@ -47,28 +47,28 @@ export default function Header() {
     <header className="w-full fixed top-0 left-0 right-0 z-50 flex flex-col font-sans">
       {/* Top Bar — Beyaz */}
       <div
-        className={`bg-white border-b border-gray-100 text-[13px] font-semibold tracking-wide transition-all duration-300 origin-top ${
+        className={`bg-primary text-white text-[13px] font-semibold tracking-wide transition-all duration-300 origin-top ${
           isScrolled ? "h-0 opacity-0 overflow-hidden" : "hidden lg:flex h-[46px] opacity-100"
         }`}
       >
         <div className="w-full max-w-[1400px] mx-auto flex items-center justify-between h-full px-8">
           <div className="flex items-center gap-8">
-            <a href="https://maps.google.com" target="_blank" className="text-primary/70 hover:text-accent transition-colors flex items-center gap-2">
+            <a href="https://maps.google.com" target="_blank" className="text-white/80 hover:text-accent transition-colors flex items-center gap-2">
               <MapPin size={13} className="text-accent" /> Eğitim Mah., Poyraz Sk. No:26/4, Kadıköy/İST
             </a>
-            <span className="text-gray-200">|</span>
-            <a href="tel:05514882948" className="text-primary/70 hover:text-accent transition-colors flex items-center gap-2">
+            <span className="text-white/20">|</span>
+            <a href="tel:05514882948" className="text-white/80 hover:text-accent transition-colors flex items-center gap-2">
               <Phone size={13} className="text-accent" /> 0551 488 29 48
             </a>
           </div>
           <div className="flex items-center gap-6">
-            <div className="flex items-center gap-4 border-r border-gray-100 pr-6 mr-2 text-primary/40">
+            <div className="flex items-center gap-4 border-r border-white/10 pr-6 mr-2 text-white/50">
               <a href="#" className="hover:text-accent transition-colors"><Instagram size={15} /></a>
               <a href="#" className="hover:text-accent transition-colors"><Facebook size={15} /></a>
               <a href="#" className="hover:text-accent transition-colors"><MessageCircle size={15} /></a>
             </div>
-            <div className="flex items-center gap-2 text-primary/50">
-              <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+            <div className="flex items-center gap-2 text-white/60">
+              <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
               Çalışma Saatleri: 09:00 - 18:00
             </div>
           </div>
