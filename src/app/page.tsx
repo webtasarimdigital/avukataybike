@@ -52,9 +52,9 @@ const faqs = [
 ];
 
 const blogPosts = [
-  { t: "Haksız İşten Çıkarılmada Yasal Başvuru Yolları", c: "İş Hukuku", d: "20.05.2024", slug: "haksiz-isten-cikarilmada-yasal-basvuru-yollari", Icon: Users },
-  { t: "Boşanma Sürecinde Mal Rejimi ve Yasal Düzenlemeler", c: "Aile Hukuku", d: "10.05.2024", slug: "bosanma-surecinde-mal-rejimi-ve-yasal-duzenlemeler", Icon: Heart },
-  { t: "Tüketici Haklarınız: Ayıplı Mal ve Hizmetlerde Başvuru Yolları", c: "Tüketici Hukuku", d: "01.05.2024", slug: "tuketici-haklari-ayipli-mal-ve-hizmetlerde-basvuru-yollari", Icon: ShoppingCart },
+  { t: "Haksız İşten Çıkarılmada Yasal Başvuru Yolları", c: "İş Hukuku", d: "20.05.2024", slug: "haksiz-isten-cikarilmada-yasal-basvuru-yollari", Icon: Users, img: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&q=80&auto=format&fit=crop" },
+  { t: "Boşanma Sürecinde Mal Rejimi ve Yasal Düzenlemeler", c: "Aile Hukuku", d: "10.05.2024", slug: "bosanma-surecinde-mal-rejimi-ve-yasal-duzenlemeler", Icon: Heart, img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80&auto=format&fit=crop" },
+  { t: "Tüketici Haklarınız: Ayıplı Mal ve Hizmetlerde Başvuru Yolları", c: "Tüketici Hukuku", d: "01.05.2024", slug: "tuketici-haklari-ayipli-mal-ve-hizmetlerde-basvuru-yollari", Icon: ShoppingCart, img: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80&auto=format&fit=crop" },
 ];
 
 export default function Home() {
@@ -444,10 +444,12 @@ export default function Home() {
             {blogPosts.map((post, i) => (
               <Link key={i} href={`/blog/${post.slug}`} className="group block">
                 <div className="aspect-[16/9] rounded-2xl mb-6 overflow-hidden relative bg-primary">
-                  <div className="absolute inset-0 opacity-[0.06]" style={{backgroundImage:"radial-gradient(circle, #C9882A 1px, transparent 1px)", backgroundSize:"22px 22px"}} />
-                  <div className="absolute inset-0 flex items-center justify-center text-accent/20 group-hover:scale-110 transition-transform duration-700">
-                    <post.Icon size={72} />
-                  </div>
+                  <img
+                    src={post.img}
+                    alt={post.t}
+                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-primary/40 group-hover:bg-primary/20 transition-all duration-500" />
                   <div className="absolute top-4 left-4 bg-accent text-primary text-[10px] font-black uppercase px-3 py-1.5 rounded-full z-10 tracking-widest">
                     {post.c}
                   </div>
