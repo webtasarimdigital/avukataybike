@@ -2,8 +2,8 @@
 import React, { useState } from "react";
 import {
   Scale, Gavel, Shield, Briefcase, Users, Building2, Globe,
-  Monitor, Heart, ShoppingCart, TrendingUp, Landmark, BookOpen,
-  CheckCircle2, ArrowRight, MessageSquare, Phone, ChevronLeft, ChevronRight,
+  Monitor, Heart, ShoppingCart, TrendingUp, Landmark,
+  CheckCircle2, ArrowRight, MessageSquare, Phone,
   MapPin, FileText, Clock,
 } from "lucide-react";
 import Link from "next/link";
@@ -58,87 +58,95 @@ const blogPosts = [
 ];
 
 export default function Home() {
-  const [active, setActive] = useState(0);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const prev = () => setActive(i => (i - 1 + slides.length) % slides.length);
-  const next = () => setActive(i => (i + 1) % slides.length);
 
   return (
     <div className="flex flex-col w-full overflow-hidden">
 
       {/* ══════════════════════════════════════
-          HERO — Full Bleed Slider
+          HERO — Yatay Split
       ══════════════════════════════════════ */}
-      <section className="relative w-full min-h-screen overflow-hidden flex items-center">
-        <div className="absolute inset-0 bg-primary">
-          <img src="/avukat.jpg" alt="" className="w-full h-full object-cover object-center"
-            onError={(e) => { e.currentTarget.style.display = "none"; }} />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/40" />
-          <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-primary/30" />
-          {/* Subtle dot pattern */}
-          <div className="absolute inset-0 opacity-[0.035]" style={{backgroundImage:"radial-gradient(circle, #fff 1px, transparent 1px)", backgroundSize:"32px 32px"}} />
-        </div>
+      <section className="relative w-full min-h-screen flex flex-col lg:flex-row overflow-hidden pt-[92px] lg:pt-[100px]">
 
-        {/* Slide numerals */}
-        <div className="absolute left-6 lg:left-10 top-1/2 -translate-y-1/2 z-20 hidden lg:flex flex-col gap-8 items-center">
-          {slides.map((_, i) => (
-            <button key={i} onClick={() => setActive(i)}
-              className={`font-black text-sm leading-none transition-all duration-300 ${active===i?"text-accent scale-125":"text-white/25 hover:text-white/50"}`}>
-              0{i+1}
-            </button>
-          ))}
-        </div>
+        {/* SOL — Metin */}
+        <div className="relative flex-1 lg:w-[52%] bg-[#F7F4EE] flex items-center">
+          {/* Hafif desen */}
+          <div className="absolute inset-0 opacity-[0.04]" style={{backgroundImage:"radial-gradient(circle, #092f1a 1px, transparent 1px)", backgroundSize:"24px 24px"}} />
+          {/* Sağ kenara terazi watermark */}
+          <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/3 opacity-[0.06] pointer-events-none hidden lg:block">
+            <TeraziSVG className="w-80 h-80 text-primary" />
+          </div>
 
-        {/* Terazi dekoratif — sağ */}
-        <div className="absolute right-12 top-1/2 -translate-y-1/2 hidden xl:block opacity-5 pointer-events-none">
-          <TeraziSVG className="w-72 h-72 text-white" />
-        </div>
-
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-8 lg:pl-24 lg:pr-16 pt-32 pb-28">
-          <div className="max-w-2xl space-y-8">
-            <div className="inline-flex items-center gap-3 bg-accent/15 border border-accent/30 px-5 py-2.5 rounded-full">
+          <div className="relative z-10 w-full max-w-2xl px-8 md:px-14 lg:px-16 xl:pl-24 py-16 lg:py-0 space-y-8">
+            {/* Etiket */}
+            <div className="inline-flex items-center gap-3 bg-primary/8 border border-primary/12 px-5 py-2.5 rounded-full">
               <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-              <span className="text-accent text-xs font-black tracking-[0.3em] uppercase">{slides[active].label}</span>
+              <span className="text-primary text-[11px] font-black tracking-[0.35em] uppercase">Hukuki Çözüm Ortağınız</span>
             </div>
-            <h1 className="text-6xl md:text-7xl lg:text-[88px] font-black text-white leading-[0.95] tracking-tight uppercase">
-              {slides[active].heading.map((line, i) =>
-                i === 1 ? <span key={i} className="block text-accent italic">{line}</span>
-                        : <span key={i} className="block">{line}</span>
-              )}
+
+            {/* Başlık */}
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-primary leading-[0.95] tracking-tight uppercase">
+              Adalet İçin<br />
+              <span className="text-accent italic">Güvenilir</span><br />
+              Hukuki Destek.
             </h1>
-            <p className="text-white/55 text-lg max-w-lg leading-relaxed">
-              Avukat Aybike Sultan Biçer olarak hukuki süreçlerinizde şeffaf, güvenilir ve çözüm odaklı yaklaşımımızla yanınızdayız.
+
+            <p className="text-primary/55 text-lg leading-relaxed max-w-md">
+              Avukat Aybike Sultan Biçer olarak hukuki süreçlerinizde şeffaf, güvenilir ve çözüm odaklı yaklaşımla yanınızdayım.
             </p>
-            <div className="flex items-center gap-4 pt-2 flex-wrap">
-              <button onClick={prev} style={{width:52,height:52}}
-                className="rounded-full border-2 border-white/25 hover:border-white/60 flex items-center justify-center text-white transition-all shrink-0">
-                <ChevronLeft size={22} />
-              </button>
-              <button onClick={next} style={{width:52,height:52}}
-                className="rounded-full bg-accent hover:bg-white flex items-center justify-center text-primary transition-all shadow-lg shadow-accent/30 shrink-0">
-                <ChevronRight size={22} />
-              </button>
+
+            {/* Stat row */}
+            <div className="grid grid-cols-3 gap-3">
+              {[["10+","Yıl Deneyim"],["14","Hizmet Alanı"],["7/24","Danışma"]].map(([v,l]) => (
+                <div key={l} className="bg-white/70 border border-primary/8 rounded-2xl px-4 py-4">
+                  <p className="text-accent font-black text-2xl italic leading-none">{v}</p>
+                  <p className="text-primary/40 text-[10px] font-bold uppercase tracking-widest mt-1.5">{l}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* Butonlar */}
+            <div className="flex flex-wrap gap-4 pt-1">
               <a href="tel:05514882948"
-                className="ml-2 bg-white/10 hover:bg-white/20 border border-white/15 text-white px-8 py-3.5 rounded-full font-black text-[13px] tracking-widest uppercase transition-all flex items-center gap-3">
-                <Phone size={16} /> Hemen Ara
+                className="bg-primary hover:bg-primary/90 text-white px-9 py-4 rounded-2xl font-black text-sm tracking-widest uppercase transition-all shadow-xl shadow-primary/20 flex items-center gap-3">
+                <Phone size={17} /> Hemen Ara
               </a>
               <Link href="/hakkimizda"
-                className="hidden md:flex bg-accent hover:bg-white text-primary px-8 py-3.5 rounded-full font-black text-[13px] tracking-widest uppercase transition-all items-center gap-2 shadow-lg shadow-accent/20">
+                className="border-2 border-primary/20 hover:border-primary/50 hover:bg-primary/5 text-primary px-9 py-4 rounded-2xl font-black text-sm tracking-widest uppercase transition-all flex items-center gap-2">
                 Hakkımızda <ArrowRight size={15} />
               </Link>
             </div>
           </div>
         </div>
 
-        {/* Alt stat bandı */}
-        <div className="absolute bottom-0 left-0 right-0 bg-black/35 backdrop-blur-md border-t border-white/8 py-5 px-8 hidden lg:flex justify-center gap-20">
-          {[["10+","Yıllık Deneyim"],["14","Hizmet Alanı"],["İstanbul","Kadıköy Ofis"],["7/24","Danışma Hattı"]].map(([v,l]) => (
-            <div key={l} className="flex items-center gap-3">
-              <p className="text-accent font-black text-2xl italic leading-none">{v}</p>
-              <p className="text-white/35 text-[10px] font-bold uppercase tracking-widest leading-tight">{l}</p>
-            </div>
-          ))}
+        {/* SAĞ — Görsel */}
+        <div className="relative lg:w-[48%] min-h-[55vw] lg:min-h-0 bg-primary overflow-hidden">
+          {/* Avukat fotoğrafı */}
+          <img src="/avukat.jpg" alt="Av. Aybike Sultan Biçer"
+            className="absolute inset-0 w-full h-full object-cover object-top"
+            onError={(e) => { e.currentTarget.style.display = "none"; }} />
+          {/* Sol kenara gradient geçiş */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#F7F4EE] via-transparent to-transparent lg:w-32 w-0" />
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent" />
+
+          {/* Fotoğraf yoksa terazi placeholder */}
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <TeraziSVG className="w-1/2 h-1/2 text-accent/10" />
+          </div>
+
+          {/* Alt isim şeridi */}
+          <div className="absolute bottom-0 left-0 right-0 p-7 bg-gradient-to-t from-black/75 via-black/30 to-transparent">
+            <p className="text-white font-black text-lg italic uppercase tracking-tight">Av. Aybike Sultan Biçer</p>
+            <p className="text-accent text-[10px] font-bold tracking-[0.25em] uppercase mt-1">Hukuk & Danışmanlık · Kadıköy, İstanbul</p>
+          </div>
+
+          {/* Telefon rozeti */}
+          <div className="absolute top-8 right-8 bg-accent text-primary rounded-2xl px-5 py-3.5 shadow-xl shadow-accent/20">
+            <p className="font-black text-[9px] tracking-widest uppercase opacity-70">Randevu İçin</p>
+            <p className="font-black text-sm leading-tight mt-0.5">0551 488 29 48</p>
+          </div>
         </div>
+
       </section>
 
       {/* ══════════════════════════════════════
