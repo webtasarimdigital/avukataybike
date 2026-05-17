@@ -69,36 +69,36 @@ export default function Home() {
       <section className="relative w-full min-h-screen flex flex-col lg:flex-row overflow-hidden pt-[92px] lg:pt-[100px]">
 
         {/* SOL — Metin */}
-        <div className="relative flex-1 lg:w-[52%] bg-[#F7F4EE] flex items-center">
+        <div className="relative flex-1 lg:w-[52%] bg-[#F7F4EE] flex items-center justify-center">
           {/* Hafif desen */}
           <div className="absolute inset-0 opacity-[0.04]" style={{backgroundImage:"radial-gradient(circle, #092f1a 1px, transparent 1px)", backgroundSize:"24px 24px"}} />
-          {/* Sağ kenara terazi watermark */}
-          <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/3 opacity-[0.06] pointer-events-none hidden lg:block">
+          {/* Terazi watermark */}
+          <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/3 opacity-[0.05] pointer-events-none hidden lg:block">
             <TeraziSVG className="w-80 h-80 text-primary" />
           </div>
 
-          <div className="relative z-10 w-full max-w-2xl px-8 md:px-14 lg:px-16 xl:pl-24 py-16 lg:py-0 space-y-8">
+          <div className="relative z-10 w-full max-w-[520px] px-10 md:px-12 py-16 lg:py-0 space-y-7">
             {/* Etiket */}
-            <div className="inline-flex items-center gap-3 bg-primary/8 border border-primary/12 px-5 py-2.5 rounded-full">
-              <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-              <span className="text-primary text-[11px] font-black tracking-[0.35em] uppercase">Hukuki Çözüm Ortağınız</span>
+            <div className="inline-flex items-center gap-2.5 bg-primary/8 border border-primary/10 px-4 py-2 rounded-full">
+              <span className="w-2 h-2 rounded-full bg-accent animate-pulse shrink-0" />
+              <span className="text-primary/80 text-[10px] font-black tracking-[0.3em] uppercase">Hukuki Çözüm Ortağınız</span>
             </div>
 
             {/* Başlık */}
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-primary leading-[0.95] tracking-tight uppercase">
+            <h1 className="text-5xl md:text-[56px] lg:text-[64px] font-black text-primary leading-[1] tracking-tight uppercase">
               Adalet İçin<br />
               <span className="text-accent italic">Güvenilir</span><br />
               Hukuki Destek.
             </h1>
 
-            <p className="text-primary/55 text-lg leading-relaxed max-w-md">
+            <p className="text-primary/60 text-base md:text-lg leading-relaxed">
               Avukat Aybike Sultan Biçer olarak hukuki süreçlerinizde şeffaf, güvenilir ve çözüm odaklı yaklaşımla yanınızdayım.
             </p>
 
             {/* Stat row */}
-            <div className="grid grid-cols-3 gap-3">
+            <div className="grid grid-cols-3 gap-3 pt-1">
               {[["10+","Yıl Deneyim"],["14","Hizmet Alanı"],["7/24","Danışma"]].map(([v,l]) => (
-                <div key={l} className="bg-white/70 border border-primary/8 rounded-2xl px-4 py-4">
+                <div key={l} className="bg-white border border-primary/8 rounded-2xl px-4 py-4 shadow-sm">
                   <p className="text-accent font-black text-2xl italic leading-none">{v}</p>
                   <p className="text-primary/40 text-[10px] font-bold uppercase tracking-widest mt-1.5">{l}</p>
                 </div>
@@ -106,14 +106,14 @@ export default function Home() {
             </div>
 
             {/* Butonlar */}
-            <div className="flex flex-wrap gap-4 pt-1">
+            <div className="flex flex-wrap gap-3 pt-1">
               <a href="tel:05514882948"
-                className="bg-primary hover:bg-primary/90 text-white px-9 py-4 rounded-2xl font-black text-sm tracking-widest uppercase transition-all shadow-xl shadow-primary/20 flex items-center gap-3">
-                <Phone size={17} /> Hemen Ara
+                className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-2xl font-black text-[13px] tracking-widest uppercase transition-all shadow-xl shadow-primary/20 flex items-center gap-3">
+                <Phone size={16} /> Hemen Ara
               </a>
               <Link href="/hakkimizda"
-                className="border-2 border-primary/20 hover:border-primary/50 hover:bg-primary/5 text-primary px-9 py-4 rounded-2xl font-black text-sm tracking-widest uppercase transition-all flex items-center gap-2">
-                Hakkımızda <ArrowRight size={15} />
+                className="border-2 border-primary/20 hover:border-primary/40 hover:bg-primary/5 text-primary px-8 py-4 rounded-2xl font-black text-[13px] tracking-widest uppercase transition-all flex items-center gap-2">
+                Hakkımızda <ArrowRight size={14} />
               </Link>
             </div>
           </div>
