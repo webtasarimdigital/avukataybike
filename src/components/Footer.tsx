@@ -4,10 +4,13 @@ import Link from "next/link";
 const services = [
   { title: "Banka ve Ticaret Hukuku", slug: "banka-ve-ticaret-hukuku" },
   { title: "İş Hukuku", slug: "is-hukuku" },
+  { title: "Marka ve Patent Hukuku", slug: "marka-ve-patent-hukuku" },
   { title: "Aile Hukuku", slug: "aile-hukuku" },
-  { title: "Gayrimenkul Hukuku", slug: "gayrimenkul-hukuku" },
-  { title: "Ceza Hukuku", slug: "ceza-hukuku" },
+  { title: "Sigorta Hukuku", slug: "sigorta-hukuku" },
   { title: "İcra ve İflas Hukuku", slug: "icra-ve-iflas-hukuku" },
+  { title: "Sağlık Hukuku", slug: "saglik-hukuku" },
+  { title: "Tüketici Hukuku", slug: "tuketici-hukuku" },
+  { title: "Kişisel Verilerin Korunması", slug: "kisisel-verilerin-korunmasi-hukuku" },
 ];
 
 export default function Footer() {
@@ -53,12 +56,12 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="container mx-auto px-6 max-w-[1300px] pt-12 md:pt-16 pb-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-x-12 gap-y-10 mb-16">
+      <div className="container mx-auto px-4 md:px-6 max-w-[1300px] pt-12 md:pt-16 pb-6">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-12 gap-x-6 md:gap-x-12 gap-y-10 mb-12">
           {/* Column 1: Brand & Intro */}
-          <div className="col-span-1 md:col-span-2 lg:col-span-4 space-y-7">
-            <Link href="/" className="inline-block bg-white p-2 rounded-full">
-              <img src="/logo.png" alt="Logo" className="h-16 w-auto" />
+          <div className="col-span-2 md:col-span-2 lg:col-span-4 space-y-5">
+            <Link href="/" className="inline-block bg-white p-2 rounded-xl">
+              <img src="/logo.png" alt="Logo" className="h-20 w-auto" />
             </Link>
             <p className="text-[14px] leading-relaxed text-neutral-400 font-medium max-w-sm">
               Avukat Aybike Sultan Biçer, hukuk ve danışmanlık alanında profesyonel, şeffaf ve sonuç odaklı hizmetler sunarak müvekkillerinin haklarını en üst seviyede korumayı amaçlamaktadır.
@@ -77,7 +80,7 @@ export default function Footer() {
           </div>
 
           {/* Column 2: Kurumsal */}
-          <div className="col-span-1 md:col-span-1 lg:col-span-2">
+          <div className="col-span-1 md:col-span-1 lg:col-span-2 min-w-0">
             <h4 className="text-white font-bold tracking-widest uppercase text-[15px] mb-6">KURUMSAL</h4>
             <ul className="space-y-4">
               <li><Link href="/" className="text-[14px] text-neutral-400 hover:text-accent transition-colors">Ana Sayfa</Link></li>
@@ -88,7 +91,7 @@ export default function Footer() {
           </div>
 
           {/* Column 3: Hizmetlerimiz */}
-          <div className="col-span-1 md:col-span-1 lg:col-span-3">
+          <div className="col-span-2 md:col-span-1 lg:col-span-3 min-w-0">
             <h4 className="text-white font-bold tracking-widest uppercase text-[15px] mb-6">HİZMETLERİMİZ</h4>
             <ul className="space-y-4">
               {services.map((s, idx) => (
@@ -102,7 +105,7 @@ export default function Footer() {
           </div>
 
           {/* Column 4: İletişim */}
-          <div className="col-span-1 md:col-span-1 lg:col-span-3">
+          <div className="col-span-2 md:col-span-2 lg:col-span-3 min-w-0">
             <h4 className="text-white font-bold tracking-widest uppercase text-[15px] mb-6">İLETİŞİM</h4>
             <div className="space-y-6">
               <div className="flex items-start gap-3">

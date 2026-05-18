@@ -84,13 +84,13 @@ export default function Header() {
       <div className={`transition-all duration-300 bg-white border-b border-gray-100 ${isScrolled ? "shadow-lg py-3" : "py-3 lg:py-4"}`}>
         <div className="w-full max-w-[1400px] mx-auto flex items-center justify-between px-8">
           {/* Logo */}
-          <Link href="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex items-center gap-3 shrink-0">
-            <div className="relative w-12 h-12 md:w-14 md:h-14 overflow-hidden rounded-xl bg-primary/5 p-1">
+          <Link href="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex items-center gap-2.5 shrink-0">
+            <div className="relative w-16 h-16 md:w-20 md:h-20 overflow-hidden shrink-0">
               <img src="/logo.png" alt="Logo" className="w-full h-full object-contain" />
             </div>
             <div className="flex flex-col">
-              <span className="text-primary font-black text-xl md:text-2xl leading-none tracking-tighter">AYBİKE SULTAN</span>
-              <span className="text-accent font-bold text-[10px] md:text-[12px] tracking-[0.3em] mt-1 leading-none uppercase">Hukuk & Danışmanlık</span>
+              <span className="text-primary font-black text-base md:text-xl leading-none tracking-tight">AYBİKE SULTAN BİÇER</span>
+              <span className="text-accent font-bold text-[9px] md:text-[11px] tracking-[0.25em] mt-1 leading-none uppercase">Hukuk & Danışmanlık</span>
             </div>
           </Link>
 
