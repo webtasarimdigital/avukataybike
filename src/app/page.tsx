@@ -115,71 +115,33 @@ export default function Home() {
           </div>
         </div>
 
-        {/* SAĞ — Yuvarlak fotoğraf */}
-        <div className="relative lg:w-[48%] min-h-[520px] lg:min-h-0 bg-[#F7F4EE] flex items-center justify-center py-16 lg:py-12 overflow-hidden">
-          {/* Ofis fotoğrafı arka plan */}
+        {/* SAĞ — Full cover fotoğraf */}
+        <div className="relative lg:w-[48%] min-h-[420px] lg:min-h-0 overflow-hidden">
+          {/* Avukat fotoğrafı — tüm alanı kaplar */}
           <img
-            src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=900&q=80&auto=format&fit=crop"
-            alt="Hukuk Bürosu"
-            className="absolute inset-0 w-full h-full object-cover opacity-[0.12]"
+            src="/avukat.jpg"
+            alt="Av. Aybike Sultan Biçer"
+            className="absolute inset-0 w-full h-full object-cover object-top z-10"
+            onError={(e) => { e.currentTarget.style.display = "none"; }}
           />
+          {/* Fallback: ofis fotoğrafı */}
+          <img
+            src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=1200&q=80&auto=format&fit=crop"
+            alt="Hukuk Bürosu"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          {/* Alt gradient — isim kartı için */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent z-20" />
 
-          {/* Dekoratif daireler */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85%] aspect-square rounded-full border border-primary/6" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70%] aspect-square rounded-full border border-primary/10" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[55%] aspect-square rounded-full bg-primary/4" />
-
-          {/* Terazi dekoratif — sağ alt */}
-          <div className="absolute bottom-8 right-8 opacity-[0.07] pointer-events-none">
-            <TeraziSVG className="w-28 h-28 text-primary" />
-          </div>
-
-          {/* Ana yuvarlak fotoğraf alanı */}
-          <div className="relative z-10 flex flex-col items-center gap-6">
-
-            {/* Oval/yuvarlak fotoğraf */}
-            <div className="relative">
-              {/* Dış halka (accent border) */}
-              <div className="absolute -inset-3 rounded-full border-2 border-accent/30" />
-              {/* İç halka (beyaz) */}
-              <div className="absolute -inset-1.5 rounded-full border-4 border-white shadow-2xl shadow-primary/20" />
-              {/* Fotoğraf */}
-              <div className="w-64 h-80 lg:w-72 lg:h-[360px] rounded-full overflow-hidden relative">
-                <img
-                  src="/avukat.jpg"
-                  alt="Av. Aybike Sultan Biçer"
-                  className="w-full h-full object-cover object-top"
-                  onError={(e) => { e.currentTarget.style.display = "none"; }}
-                />
-                {/* Alt gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/50 via-transparent to-transparent" />
-                {/* Fotoğraf yoksa fallback */}
-                <div className="absolute inset-0 flex items-end justify-center pb-8">
-                  <TeraziSVG className="w-20 h-20 text-white/20" />
-                </div>
-              </div>
-
-              {/* Deneyim rozeti — sağ üst */}
-              <div className="absolute -top-2 -right-4 bg-accent text-primary rounded-2xl px-4 py-3 shadow-xl shadow-accent/25 z-20">
-                <p className="font-black text-[9px] tracking-widest uppercase opacity-70 leading-none">Deneyim</p>
-                <p className="font-black text-xl leading-tight">10+</p>
-                <p className="font-black text-[9px] uppercase opacity-70 tracking-wide">Yıl</p>
-              </div>
-
-              {/* Baro rozeti — sol alt */}
-              <div className="absolute -bottom-2 -left-6 bg-primary text-white rounded-2xl px-4 py-3 shadow-xl z-20 flex items-center gap-2.5">
-                <CheckCircle2 size={16} className="text-accent shrink-0" />
-                <div>
-                  <p className="font-black text-[9px] tracking-wide uppercase opacity-60 leading-none">Üye</p>
-                  <p className="font-black text-[11px] leading-tight">İstanbul Barosu</p>
-                </div>
-              </div>
+          {/* Alt bilgi kartı */}
+          <div className="absolute bottom-8 left-8 right-8 z-30 flex items-end justify-between">
+            <div>
+              <p className="text-white font-black text-xl uppercase italic tracking-tight drop-shadow-lg">Av. Aybike Sultan Biçer</p>
+              <p className="text-accent text-[11px] font-bold tracking-[0.2em] uppercase mt-1">Hukuk & Danışmanlık — Kadıköy, İstanbul</p>
             </div>
-
-            {/* İsim kartı */}
-            <div className="bg-white rounded-2xl px-8 py-4 shadow-lg shadow-primary/8 text-center border border-primary/6">
-              <p className="text-primary font-black text-base uppercase italic tracking-tight">Av. Aybike Sultan Biçer</p>
-              <p className="text-accent text-[10px] font-bold tracking-[0.25em] uppercase mt-1">Hukuk & Danışmanlık · Kadıköy</p>
+            <div className="bg-primary/80 backdrop-blur-sm text-white rounded-2xl px-4 py-2.5 flex items-center gap-2 border border-white/10">
+              <CheckCircle2 size={14} className="text-accent" />
+              <span className="text-[11px] font-black tracking-wide">İstanbul Barosu</span>
             </div>
           </div>
         </div>
