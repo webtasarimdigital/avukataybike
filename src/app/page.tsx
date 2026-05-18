@@ -390,7 +390,7 @@ export default function Home() {
             <div className="flex justify-center">
               <div className="relative w-72 h-80 md:w-80 md:h-[420px] rounded-3xl overflow-hidden shadow-2xl shadow-primary/20 border-4 border-white">
                 <img
-                  src="https://images.unsplash.com/photo-1589578228447-e1a4e481c6c8?w=800&q=85&auto=format&fit=crop"
+                  src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&q=85&auto=format&fit=crop"
                   alt="Adalet Terazisi"
                   className="w-full h-full object-cover"
                 />
