@@ -62,41 +62,44 @@ export default function Home() {
       {/* ══════════════════════════════════════
           HERO — Yatay Split
       ══════════════════════════════════════ */}
-      <section className="relative w-full min-h-screen flex flex-col lg:flex-row overflow-hidden pt-[92px] lg:pt-[100px]" style={{maxWidth:"100vw"}}>
+      <section className="relative w-full min-h-screen flex flex-col lg:flex-row overflow-hidden" style={{paddingTop:"var(--header-h,92px)"}}>
 
-        {/* SOL — Metin */}
-        <div className="relative flex-1 lg:w-[52%] bg-[#F7F4EE] flex items-center justify-center">
-          {/* Hafif desen */}
-          <div className="absolute inset-0 opacity-[0.04]" style={{backgroundImage:"radial-gradient(circle, #092f1a 1px, transparent 1px)", backgroundSize:"24px 24px"}} />
-          {/* Terazi watermark */}
-          <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/3 opacity-[0.05] pointer-events-none hidden lg:block">
-            <TeraziSVG className="w-80 h-80 text-primary" />
-          </div>
+        {/* Arka plan: hukuk kitaplığı tam kaplıyor */}
+        <img
+          src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=1800&q=80&auto=format&fit=crop"
+          alt="Hukuk Bürosu"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        {/* Overlay: soldan sağa koyulaşan gradient */}
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/92 via-primary/70 to-primary/20 z-10" />
 
-          <div className="relative z-10 w-full max-w-[520px] px-10 md:px-12 py-16 lg:py-0 space-y-7">
+        {/* SOL — Metin (overlay üstünde) */}
+        <div className="relative z-20 flex-1 lg:w-[55%] flex items-center justify-center py-20 lg:py-0 px-8 md:px-14">
+          <div className="w-full max-w-[540px] space-y-7">
+
             {/* Etiket */}
-            <div className="inline-flex items-center gap-2.5 bg-primary/8 border border-primary/10 px-4 py-2 rounded-full">
+            <div className="inline-flex items-center gap-2.5 bg-white/10 border border-white/20 px-4 py-2 rounded-full">
               <span className="w-2 h-2 rounded-full bg-accent animate-pulse shrink-0" />
-              <span className="text-primary/80 text-[10px] font-black tracking-[0.3em] uppercase">Hukuki Çözüm Ortağınız</span>
+              <span className="text-white/80 text-[10px] font-black tracking-[0.3em] uppercase">Hukuki Çözüm Ortağınız</span>
             </div>
 
             {/* Başlık */}
-            <h1 className="text-5xl md:text-[56px] lg:text-[64px] font-black text-primary leading-[1] tracking-tight uppercase">
+            <h1 className="text-5xl md:text-[58px] lg:text-[68px] font-black text-white leading-[1] tracking-tight uppercase">
               Adalet İçin<br />
               <span className="text-accent italic">Güvenilir</span><br />
               Hukuki Destek.
             </h1>
 
-            <p className="text-primary/60 text-base md:text-lg leading-relaxed">
+            <p className="text-white/70 text-base md:text-lg leading-relaxed max-w-md">
               Avukat Aybike Sultan Biçer olarak hukuki süreçlerinizde şeffaf, güvenilir ve çözüm odaklı yaklaşımla yanınızdayım.
             </p>
 
             {/* Stat row */}
             <div className="grid grid-cols-3 gap-3 pt-1">
               {[["10+","Yıl Deneyim"],["14","Hizmet Alanı"],["7/24","Danışma"]].map(([v,l]) => (
-                <div key={l} className="bg-white border border-primary/8 rounded-2xl px-4 py-4 shadow-sm">
+                <div key={l} className="bg-white/10 border border-white/15 backdrop-blur-sm rounded-2xl px-4 py-4">
                   <p className="text-accent font-black text-2xl italic leading-none">{v}</p>
-                  <p className="text-primary/40 text-[10px] font-bold uppercase tracking-widest mt-1.5">{l}</p>
+                  <p className="text-white/50 text-[10px] font-bold uppercase tracking-widest mt-1.5">{l}</p>
                 </div>
               ))}
             </div>
@@ -104,45 +107,31 @@ export default function Home() {
             {/* Butonlar */}
             <div className="flex gap-3 pt-1">
               <a href="tel:05514882948"
-                className="flex-1 bg-primary hover:bg-primary/90 text-white px-4 py-4 rounded-2xl font-black text-[12px] tracking-widest uppercase transition-all shadow-xl shadow-primary/20 flex items-center justify-center gap-2">
+                className="flex-1 bg-accent hover:bg-accent/90 text-primary px-4 py-4 rounded-2xl font-black text-[12px] tracking-widest uppercase transition-all shadow-xl shadow-accent/20 flex items-center justify-center gap-2">
                 <Phone size={15} /> Hemen Ara
               </a>
               <Link href="/hakkimizda"
-                className="flex-1 border-2 border-primary/20 hover:border-primary/40 hover:bg-primary/5 text-primary px-4 py-4 rounded-2xl font-black text-[12px] tracking-widest uppercase transition-all flex items-center justify-center gap-2">
+                className="flex-1 border-2 border-white/30 hover:border-white/60 hover:bg-white/10 text-white px-4 py-4 rounded-2xl font-black text-[12px] tracking-widest uppercase transition-all flex items-center justify-center gap-2 backdrop-blur-sm">
                 Hakkımızda <ArrowRight size={13} />
               </Link>
             </div>
           </div>
         </div>
 
-        {/* SAĞ — Full cover fotoğraf */}
-        <div className="relative lg:w-[48%] min-h-[420px] lg:min-h-0 overflow-hidden">
-          {/* Avukat fotoğrafı — tüm alanı kaplar */}
+        {/* SAĞ — Avukat portresi */}
+        <div className="relative z-20 lg:w-[45%] flex items-end justify-center pt-12 lg:pt-0">
           <img
             src="/avukat.jpg"
             alt="Av. Aybike Sultan Biçer"
-            className="absolute inset-0 w-full h-full object-cover object-top z-10"
-            onError={(e) => { e.currentTarget.style.display = "none"; }}
+            className="h-full max-h-[700px] lg:max-h-none lg:h-[90vh] w-auto object-cover object-top drop-shadow-2xl"
+            onError={(e) => {
+              (e.currentTarget as HTMLImageElement).src = "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=700&q=85&auto=format&fit=crop&crop=top";
+            }}
           />
-          {/* Fallback: ofis fotoğrafı */}
-          <img
-            src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=1200&q=80&auto=format&fit=crop"
-            alt="Hukuk Bürosu"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-          {/* Alt gradient — isim kartı için */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent z-20" />
-
-          {/* Alt bilgi kartı */}
-          <div className="absolute bottom-8 left-8 right-8 z-30 flex items-end justify-between">
-            <div>
-              <p className="text-white font-black text-xl uppercase italic tracking-tight drop-shadow-lg">Av. Aybike Sultan Biçer</p>
-              <p className="text-accent text-[11px] font-bold tracking-[0.2em] uppercase mt-1">Hukuk & Danışmanlık — Kadıköy, İstanbul</p>
-            </div>
-            <div className="bg-primary/80 backdrop-blur-sm text-white rounded-2xl px-4 py-2.5 flex items-center gap-2 border border-white/10">
-              <CheckCircle2 size={14} className="text-accent" />
-              <span className="text-[11px] font-black tracking-wide">İstanbul Barosu</span>
-            </div>
+          {/* İsim etiketi */}
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 bg-black/50 backdrop-blur-md border border-white/15 text-white rounded-2xl px-6 py-3 text-center whitespace-nowrap">
+            <p className="font-black text-sm uppercase italic tracking-tight">Av. Aybike Sultan Biçer</p>
+            <p className="text-accent text-[9px] font-bold tracking-[0.2em] uppercase mt-0.5">Hukuk & Danışmanlık · İstanbul Barosu</p>
           </div>
         </div>
 
