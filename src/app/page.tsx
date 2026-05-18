@@ -309,43 +309,30 @@ export default function Home() {
               <Link
                 key={svc.slug}
                 href={`/hizmetler/${svc.slug}`}
-                className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-400 flex flex-col border border-neutral-100"
+                className="group bg-white hover:bg-accent rounded-3xl p-5 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-400 flex flex-col border border-neutral-100 hover:border-accent"
               >
-                {/* Üst görsel alan */}
-                <div className="relative h-52 bg-primary overflow-hidden">
-                  {/* Gerçek fotoğraf */}
+                {/* Görsel — içeride yuvarlak */}
+                <div className="relative rounded-2xl overflow-hidden h-48 mb-5 shrink-0">
                   <img
                     src={svc.img}
                     alt={svc.title}
-                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
-                  {/* Hafif alt gradient - görsel net görünsün */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-                  {/* Hover accent tonu */}
-                  <div className="absolute inset-0 bg-accent/0 group-hover:bg-accent/15 transition-all duration-500" />
-                  {/* İkon - sağ üst */}
-                  <div className="absolute top-4 right-4 w-12 h-12 rounded-xl bg-white/20 border border-white/30 backdrop-blur-sm flex items-center justify-center group-hover:bg-accent group-hover:border-transparent transition-all duration-400">
-                    <svc.Icon size={22} className="text-white transition-colors duration-400" />
-                  </div>
-                  {/* Accent çizgi — alt */}
-                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
                 </div>
 
-                {/* Alt içerik */}
-                <div className="p-7 flex flex-col flex-1">
-                  {/* Kategori rozeti */}
-                  <span className="inline-flex items-center gap-1.5 text-accent text-[10px] font-black tracking-widest uppercase mb-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-accent" /> Hukuki Hizmet
-                  </span>
-                  <h3 className="font-black text-primary text-lg leading-tight mb-3 tracking-tight group-hover:text-accent transition-colors duration-300">
+                {/* İçerik */}
+                <div className="flex flex-col flex-1">
+                  <h3 className="font-black text-primary group-hover:text-white text-lg leading-tight mb-2 tracking-tight transition-colors duration-300">
                     {svc.title}
                   </h3>
-                  <p className="text-neutral-500 text-sm leading-relaxed flex-1">
+                  <p className="text-neutral-500 group-hover:text-white/80 text-sm leading-relaxed flex-1 transition-colors duration-300">
                     {svc.desc}
                   </p>
-                  <div className="mt-6 flex items-center gap-2 text-primary text-xs font-black tracking-widest uppercase border-t border-neutral-100 pt-5 group-hover:text-accent transition-colors duration-300">
-                    Detaylı Bilgi
-                    <ArrowRight size={13} className="group-hover:translate-x-2 transition-transform duration-300" />
+                  <div className="mt-5 flex items-center gap-2 text-accent group-hover:text-white text-[11px] font-black tracking-widest uppercase transition-colors duration-300">
+                    DETAYLAR
+                    <span className="w-7 h-7 rounded-full border-2 border-accent group-hover:border-white flex items-center justify-center transition-colors duration-300">
+                      <ArrowRight size={12} className="group-hover:translate-x-0.5 transition-transform duration-300" />
+                    </span>
                   </div>
                 </div>
               </Link>
