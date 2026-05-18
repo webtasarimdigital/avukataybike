@@ -18,6 +18,7 @@ const services = [
   { title: "YATIRIM HUKUKU", slug: "yatirim-hukuku" },
   { title: "ULUSLARARASI TİCARİ SÖZLEŞMELER", slug: "uluslararasi-ticari-sozlesmeler" },
   { title: "CEZA HUKUKU", slug: "ceza-hukuku" },
+  { title: "KİŞİSEL VERİLERİN KORUNMASI HUKUKU", slug: "kisisel-verilerin-korunmasi-hukuku" },
   { title: "İDARE VE VERGİ HUKUKU", slug: "idare-ve-vergi-hukuku" },
 ];
 

@@ -472,6 +472,41 @@ export const serviceContent: Record<string, ServiceItem> = {
     ],
   },
 
+  "kisisel-verilerin-korunmasi-hukuku": {
+    title: "Kişisel Verilerin Korunması Hukuku",
+    subtitle: "KVKK Uyum ve Veri Güvenliği Danışmanlığı",
+    heroDesc: "6698 sayılı KVKK kapsamında şirketlerin veri işleme süreçlerini mevzuata uygun şekilde yapılandırıyor; hukuki riskleri minimize ediyoruz.",
+    desc1: "Dijitalleşen dünyada kişisel verilerin korunması, bireyler ve şirketler açısından her geçen gün daha kritik hale gelmektedir. Büromuz; 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında şirketlerin veri işleme süreçlerinin mevzuata uygun şekilde yapılandırılması, hukuki risklerin minimize edilmesi ve sürdürülebilir uyum süreçlerinin oluşturulması konularında kapsamlı danışmanlık hizmeti sunmaktadır.",
+    desc2: "Güncel teknoloji ve iş dünyasının ihtiyaçlarını yakından takip eden ekibimiz, yalnızca mevzuata uyum sağlamayı değil; aynı zamanda müvekkillerimizin kurumsal güvenilirliğini ve veri güvenliği standartlarını güçlendirmeyi hedeflemektedir.",
+    features: [
+      "KVKK uyum süreçlerinin yürütülmesi",
+      "Veri envanteri hazırlanması",
+      "VERBİS süreçlerinin yönetimi",
+      "Aydınlatma metinleri ve açık rıza dokümanlarının hazırlanması",
+      "Çalışan ve müşteri süreçlerinin hukuki denetimi",
+      "Veri ihlali durumlarında hukuki destek",
+      "Kişisel veri işleme sözleşmeleri",
+      "Kurumsal veri güvenliği politikalarının oluşturulması",
+    ],
+    process: [
+      { step: "01", title: "Mevcut Durum Analizi", desc: "Şirketinizin veri işleme faaliyetleri ve mevcut uyum düzeyi kapsamlı biçimde inceleniyor." },
+      { step: "02", title: "Uyum Yol Haritası", desc: "KVKK gerekliliklerine göre önceliklendirilmiş bir eylem planı hazırlanıyor." },
+      { step: "03", title: "Uygulama ve Dokümantasyon", desc: "Politikalar, aydınlatma metinleri, rıza formları ve VERBİS kayıtları tamamlanıyor." },
+      { step: "04", title: "Sürekli Uyum Desteği", desc: "Mevzuat değişikliklerini takip ederek uyum sürecinin sürdürülebilirliğini sağlıyoruz." },
+    ],
+    faq: [
+      { q: "VERBİS'e kayıt zorunlu mu?", a: "Yıllık çalışan sayısı 50'den fazla olan veya ana faaliyeti özel nitelikli kişisel veri işleme olan veri sorumluları VERBİS'e kayıt yaptırmakla yükümlüdür." },
+      { q: "Veri ihlalinde ne yapılmalı?", a: "Veri ihlalinin öğrenilmesinden itibaren 72 saat içinde Kişisel Verileri Koruma Kurulu'na bildirim yapılması gerekmektedir. İhlalden etkilenen kişilerin de bilgilendirilmesi zorunludur." },
+      { q: "KVKK'ya aykırılığın yaptırımı nedir?", a: "İdari para cezaları, veri işlemenin durdurulması kararı ve cezai sorumluluk gibi ağır yaptırımlar söz konusu olabilir. Proaktif uyum bu riskleri ortadan kaldırır." },
+      { q: "Açık rıza olmadan kişisel veri işlenebilir mi?", a: "KVKK'da açık rıza dışında da veri işlemeye imkân tanıyan sınırlı hukuki sebepler mevcuttur. Bu koşulların doğru değerlendirilmesi için hukuki danışmanlık alınması önerilir." },
+    ],
+    stats: [
+      { label: "KVKK Danışmanlık", value: "40+" },
+      { label: "Uyum Projesi", value: "30+" },
+      { label: "Yıllık Deneyim", value: "10+" },
+    ],
+  },
+
   "idare-ve-vergi-hukuku": {
     title: "İdare ve Vergi Hukuku",
     subtitle: "Kamu Kurumlarına Karşı Etkili Hukuki Mücadele",

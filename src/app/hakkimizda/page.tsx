@@ -14,6 +14,7 @@ const services = [
   { title: "Marka ve Patent Hukuku", slug: "marka-ve-patent-hukuku" },
   { title: "Tüketici Hukuku", slug: "tuketici-hukuku" },
   { title: "Yatırım Hukuku", slug: "yatirim-hukuku" },
+  { title: "Kişisel Verilerin Korunması Hukuku", slug: "kisisel-verilerin-korunmasi-hukuku" },
   { title: "İdare ve Vergi Hukuku", slug: "idare-ve-vergi-hukuku" },
 ];
 
