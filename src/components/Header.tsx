@@ -19,8 +19,8 @@ const services = [
 
 const kurumsal = [
   { title: "Hakkımızda", href: "/hakkimizda" },
-  { title: "Vizyonumuz", href: "/hakkimizda#vizyon" },
-  { title: "Misyonumuz", href: "/hakkimizda#misyon" },
+  { title: "Vizyonumuz", href: "/vizyon" },
+  { title: "Misyonumuz", href: "/misyon" },
   { title: "Ekibimiz", href: "/hakkimizda#ekibimiz" },
   { title: "İş Başvurusu", href: "/is-basvurusu" },
 ];

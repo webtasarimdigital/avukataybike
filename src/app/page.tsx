@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
   Scale, Gavel, Shield, Briefcase, Users,
-  Heart, ShoppingCart, Award, Target, Home,
+  Heart, ShoppingCart, Award, Target, Home as HomeIcon,
   CheckCircle2, ArrowRight, MessageSquare, Phone,
   MapPin, FileText, Clock,
 } from "lucide-react";
@@ -21,7 +21,7 @@ const services: SvcType[] = [
   { title: "Sağlık Hukuku", slug: "saglik-hukuku", Icon: Heart, desc: "Tıbbi malpraktis ve hasta hakları uyuşmazlıkları.", img: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&q=80&auto=format&fit=crop" },
   { title: "Tüketici Hukuku", slug: "tuketici-hukuku", Icon: ShoppingCart, desc: "Ayıplı ürün, tüketici hakları ve hakem heyeti.", img: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80&auto=format&fit=crop" },
   { title: "Kişisel Verilerin Korunması Hukuku", slug: "kisisel-verilerin-korunmasi-hukuku", Icon: Shield, desc: "KVKK uyum, veri envanteri ve veri ihlali danışmanlığı.", img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&q=80&auto=format&fit=crop" },
-  { title: "Kira Hukuku", slug: "kira-hukuku", Icon: Home, desc: "Kira sözleşmesi, tahliye davaları ve kira alacağı tahsili.", img: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80&auto=format&fit=crop" },
+  { title: "Kira Hukuku", slug: "kira-hukuku", Icon: HomeIcon, desc: "Kira sözleşmesi, tahliye davaları ve kira alacağı tahsili.", img: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80&auto=format&fit=crop" },
 ];
 
 const TeraziSVG = ({ className }: { className?: string }) => (
@@ -119,23 +119,38 @@ export default function Home() {
           </div>
         </div>
 
-        {/* SAĞ — Avukat portresi */}
-        <div className="relative z-20 lg:w-[45%] flex items-end justify-center pt-12 lg:pt-0">
-          <img
-            src="/avukat.jpg"
-            alt="Av. Aybike Sultan Biçer"
-            className="h-full max-h-[700px] lg:max-h-none lg:h-[90vh] w-auto object-cover object-top drop-shadow-2xl"
-            onError={(e) => {
-              const img = e.currentTarget as HTMLImageElement;
-              img.onerror = null;
-              img.src = "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=700&q=85&auto=format&fit=crop&crop=top";
-            }}
-          />
-          {/* İsim etiketi */}
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 bg-black/50 backdrop-blur-md border border-white/15 text-white rounded-2xl px-6 py-3 text-center whitespace-nowrap">
-            <p className="font-black text-sm uppercase italic tracking-tight">Av. Aybike Sultan Biçer</p>
-            <p className="text-accent text-[9px] font-bold tracking-[0.2em] uppercase mt-0.5">Hukuk & Danışmanlık · İstanbul Barosu</p>
+        {/* SAĞ — Avukat portresi şık çerçevede */}
+        <div className="relative z-20 lg:w-[45%] flex items-center justify-center py-12 lg:py-16">
+
+          {/* Dış dekoratif halka */}
+          <div className="absolute w-[340px] h-[440px] md:w-[380px] md:h-[500px] rounded-[48px] border border-white/10 rotate-3" />
+          <div className="absolute w-[340px] h-[440px] md:w-[380px] md:h-[500px] rounded-[48px] border border-accent/20 -rotate-3" />
+
+          {/* Ana çerçeve */}
+          <div className="relative w-[300px] h-[400px] md:w-[340px] md:h-[460px] rounded-[40px] overflow-hidden border-4 border-white/25 shadow-2xl shadow-black/40">
+            <img
+              src="/avukat.jpg"
+              alt="Av. Aybike Sultan Biçer"
+              className="w-full h-full object-cover object-top"
+              onError={(e) => {
+                const img = e.currentTarget as HTMLImageElement;
+                img.onerror = null;
+                img.src = "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=700&q=85&auto=format&fit=crop&crop=top";
+              }}
+            />
+            {/* Alt gradient */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+
+            {/* İsim etiketi — çerçeve içinde */}
+            <div className="absolute bottom-5 left-4 right-4 bg-black/40 backdrop-blur-md border border-white/15 text-white rounded-2xl px-4 py-3 text-center">
+              <p className="font-black text-sm uppercase italic tracking-tight">Av. Aybike Sultan Biçer</p>
+              <p className="text-accent text-[9px] font-bold tracking-[0.2em] uppercase mt-0.5">Hukuk & Danışmanlık · İstanbul Barosu</p>
+            </div>
           </div>
+
+          {/* Accent köşe süsü */}
+          <div className="absolute top-10 right-10 md:right-16 w-3 h-3 rounded-full bg-accent opacity-60" />
+          <div className="absolute bottom-10 left-10 md:left-16 w-2 h-2 rounded-full bg-white opacity-30" />
         </div>
 
       </section>
