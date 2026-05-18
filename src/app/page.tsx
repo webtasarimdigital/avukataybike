@@ -116,6 +116,12 @@ export default function Home() {
 
         {/* SAĞ — Yuvarlak fotoğraf */}
         <div className="relative lg:w-[48%] min-h-[520px] lg:min-h-0 bg-[#F7F4EE] flex items-center justify-center py-16 lg:py-12 overflow-hidden">
+          {/* Ofis fotoğrafı arka plan */}
+          <img
+            src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=900&q=80&auto=format&fit=crop"
+            alt="Hukuk Bürosu"
+            className="absolute inset-0 w-full h-full object-cover opacity-[0.12]"
+          />
 
           {/* Dekoratif daireler */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85%] aspect-square rounded-full border border-primary/6" />
@@ -208,9 +214,17 @@ export default function Home() {
           {/* Sol: görsel */}
           <div className="relative">
             <div className="relative rounded-[40px] overflow-hidden shadow-2xl bg-primary aspect-[4/5] flex items-end">
-              <img src="/avukat.jpg" alt="Av. Aybike Sultan Biçer"
-                className="absolute inset-0 w-full h-full object-cover object-top"
-                onError={(e) => { e.currentTarget.style.display="none"; }} />
+              <img
+                src="/avukat.jpg"
+                alt="Av. Aybike Sultan Biçer"
+                className="absolute inset-0 w-full h-full object-cover object-top z-10"
+                onError={(e) => { e.currentTarget.style.display="none"; }}
+              />
+              <img
+                src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80&auto=format&fit=crop"
+                alt="Hukuk Bürosu Ofis"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
               {/* Büyük terazi arka plan dekoratifi */}
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                 <TeraziSVG className="w-3/4 h-3/4 text-accent/10" />

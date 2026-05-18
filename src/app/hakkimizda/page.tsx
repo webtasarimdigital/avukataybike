@@ -21,6 +21,11 @@ export default function AboutPage() {
       {/* ── HERO ── */}
       <div className="relative w-full min-h-[580px] flex items-end pt-28 pb-0 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-[#0a1628] z-0">
+          <img
+            src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=1600&q=80&auto=format&fit=crop"
+            alt="Hukuk Bürosu"
+            className="absolute inset-0 w-full h-full object-cover opacity-[0.13] mix-blend-luminosity"
+          />
           <div className="absolute inset-0 opacity-10" style={{backgroundImage:"repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(255,255,255,.03) 40px,rgba(255,255,255,.03) 80px)"}} />
           <div className="absolute right-0 top-0 w-1/2 h-full opacity-5 flex items-center justify-end">
             <Scale size={400} />
