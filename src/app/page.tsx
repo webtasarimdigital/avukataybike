@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import {
   Scale, Gavel, Shield, Briefcase, Users,
   Heart, ShoppingCart,
@@ -318,16 +319,16 @@ export default function Home() {
                     alt={svc.title}
                     className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
-                  {/* Koyu overlay — hover'da hafifler */}
-                  <div className="absolute inset-0 bg-primary/55 group-hover:bg-primary/35 transition-all duration-500" />
-                  {/* Merkez ikon — görselin üstünde */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-16 h-16 rounded-2xl bg-white/15 border border-white/30 backdrop-blur-sm flex items-center justify-center group-hover:bg-accent/30 group-hover:border-accent/50 transition-all duration-500">
-                      <svc.Icon size={30} className="text-white group-hover:text-accent transition-colors duration-500" />
-                    </div>
+                  {/* Hafif alt gradient - görsel net görünsün */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                  {/* Hover accent tonu */}
+                  <div className="absolute inset-0 bg-accent/0 group-hover:bg-accent/15 transition-all duration-500" />
+                  {/* İkon - sağ üst */}
+                  <div className="absolute top-4 right-4 w-12 h-12 rounded-xl bg-white/20 border border-white/30 backdrop-blur-sm flex items-center justify-center group-hover:bg-accent group-hover:border-transparent transition-all duration-400">
+                    <svc.Icon size={22} className="text-white transition-colors duration-400" />
                   </div>
                   {/* Accent çizgi — alt */}
-                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
                 </div>
 
                 {/* Alt içerik */}
@@ -353,7 +354,7 @@ export default function Home() {
 
           {/* Alt CTA */}
           <div className="text-center mt-14">
-            <Link href="/hizmetler/banka-ve-ticaret-hukuku"
+            <Link href="/hizmetler"
               className="inline-flex items-center gap-3 bg-primary hover:bg-primary/90 text-white px-10 py-4 rounded-2xl font-black text-sm tracking-widest uppercase transition-all shadow-xl shadow-primary/20">
               Tüm Hizmetlerimizi İnceleyin <ArrowRight size={16} />
             </Link>
@@ -365,31 +366,44 @@ export default function Home() {
       {/* ══════════════════════════════════════
           SÜREÇ — Nasıl Çalışıyoruz
       ══════════════════════════════════════ */}
-      <section className="py-24 md:py-32 bg-[#F8F5EF]">
-        <div className="container mx-auto px-6 max-w-7xl">
-          <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
+      <section className="pb-24 md:pb-32 bg-primary">
+        <div className="container mx-auto px-6 max-w-7xl pt-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-center max-w-2xl mx-auto mb-14 space-y-4"
+          >
             <div className="flex items-center justify-center gap-4">
               <div className="h-px w-10 bg-accent" />
               <span className="text-accent font-black tracking-[0.35em] text-[11px] uppercase">Çalışma Sürecimiz</span>
               <div className="h-px w-10 bg-accent" />
             </div>
-            <h2 className="text-4xl md:text-5xl font-black text-primary uppercase">Nasıl İlerleriz?</h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <h2 className="text-4xl md:text-5xl font-black text-white uppercase">Nasıl İlerleriz?</h2>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             {[
               { n:"01", icon: Phone,        t:"İletişime Geçin",   d:"Telefon, WhatsApp veya e-posta ile randevu alın." },
               { n:"02", icon: FileText,     t:"Dosya Değerlendirme", d:"Durumunuzu ve belgelerinizi birlikte inceleriz." },
               { n:"03", icon: Scale,        t:"Strateji Belirleme", d:"Hukuki durumunuza uygun en doğru yol haritasını çizeriz." },
               { n:"04", icon: CheckCircle2, t:"Süreci Takip",       d:"Dava veya danışmanlık sürecini başından sonuna yönetiriz." },
-            ].map((step) => (
-              <div key={step.n} className="relative bg-white rounded-2xl p-8 border border-neutral-100 shadow-sm group hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-                <div className="absolute top-6 right-6 text-6xl font-black text-primary/5 leading-none select-none">{step.n}</div>
-                <div className="w-14 h-14 rounded-xl bg-primary text-accent flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-primary transition-all duration-300">
+            ].map((step, i) => (
+              <motion.div
+                key={step.n}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.45, delay: i * 0.1 }}
+                className="relative bg-white/5 border border-white/10 rounded-2xl p-8 group hover:bg-white/10 hover:-translate-y-1 transition-all duration-300"
+              >
+                <div className="absolute top-5 right-5 text-5xl font-black text-white/5 leading-none select-none">{step.n}</div>
+                <div className="w-14 h-14 rounded-xl bg-accent/20 text-accent flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-primary transition-all duration-300">
                   <step.icon size={26} />
                 </div>
-                <h3 className="font-black text-primary text-lg mb-3">{step.t}</h3>
-                <p className="text-neutral-500 text-sm leading-relaxed">{step.d}</p>
-              </div>
+                <h3 className="font-black text-white text-lg mb-3">{step.t}</h3>
+                <p className="text-white/50 text-sm leading-relaxed">{step.d}</p>
+              </motion.div>
             ))}
           </div>
         </div>
