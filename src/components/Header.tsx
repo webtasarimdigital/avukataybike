@@ -84,7 +84,7 @@ export default function Header() {
       <div className={`transition-all duration-300 bg-white border-b border-gray-100 ${isScrolled ? "shadow-lg py-3" : "py-3 lg:py-4"}`}>
         <div className="w-full max-w-[1400px] mx-auto flex items-center justify-between px-8">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 shrink-0">
+          <Link href="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex items-center gap-3 shrink-0">
             <div className="relative w-12 h-12 md:w-14 md:h-14 overflow-hidden rounded-xl bg-primary/5 p-1">
               <img src="/logo.png" alt="Logo" className="w-full h-full object-contain" />
             </div>
@@ -175,9 +175,10 @@ export default function Header() {
               }
 
               return (
-                <Link 
-                  key={link.name} 
+                <Link
+                  key={link.name}
                   href={link.href}
+                  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                   className="text-[14px] font-bold text-primary hover:text-accent transition-colors whitespace-nowrap tracking-widest py-4 uppercase"
                 >
                   {link.name}
@@ -306,7 +307,7 @@ export default function Header() {
                   <Link
                     key={link.name}
                     href={link.href}
-                    onClick={() => setMobileMenuOpen(false)}
+                    onClick={() => { setMobileMenuOpen(false); window.scrollTo({ top: 0, behavior: "smooth" }); }}
                     className="text-white font-black text-xl tracking-tight uppercase border-b border-white/5 pb-4"
                   >
                     {link.name}
