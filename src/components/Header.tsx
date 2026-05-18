@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { MapPin, Phone, MessageCircle, Menu, X, ChevronDown, Instagram, Facebook } from "lucide-react";
+import { MapPin, Phone, MessageCircle, Menu, X, ChevronDown, Instagram, Facebook, Mail, Clock } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const services = [
@@ -50,32 +50,72 @@ export default function Header() {
 
   return (
     <header className="w-full fixed top-0 left-0 right-0 z-50 flex flex-col font-sans">
-      {/* Top Bar — Beyaz */}
-      <div
-        className={`bg-primary text-white text-[13px] font-semibold tracking-wide transition-all duration-300 origin-top ${
-          isScrolled ? "h-0 opacity-0 overflow-hidden" : "hidden lg:flex h-[46px] opacity-100"
-        }`}
-      >
-        <div className="w-full max-w-[1400px] mx-auto flex items-center justify-between h-full px-8">
-          <div className="flex items-center gap-8">
-            <a href="https://maps.google.com" target="_blank" className="text-white/80 hover:text-accent transition-colors flex items-center gap-2">
-              <MapPin size={13} className="text-accent" /> Eğitim Mah., Poyraz Sk. No:26/4, Kadıköy/İST
+      {/* Top Info Bar — Nivdış style */}
+      <div className={`bg-primary transition-all duration-300 origin-top ${isScrolled ? "h-0 opacity-0 overflow-hidden" : "hidden lg:block opacity-100"}`}>
+        <div className="w-full max-w-[1400px] mx-auto px-8">
+          <div className="flex items-stretch divide-x divide-white/10">
+
+            {/* Adres */}
+            <a href="https://maps.google.com/?q=Eğitim+Mah.+Poyraz+Sk.+No:26/4+Kadıköy+İstanbul" target="_blank"
+              className="flex items-center gap-3 px-6 py-4 group hover:bg-white/5 transition-colors">
+              <div className="w-9 h-9 rounded-full bg-accent/15 flex items-center justify-center shrink-0 group-hover:bg-accent/25 transition-colors">
+                <MapPin size={16} className="text-accent" />
+              </div>
+              <div>
+                <p className="text-white/40 text-[10px] font-bold uppercase tracking-widest leading-none mb-0.5">Adres</p>
+                <p className="text-white text-[12px] font-semibold leading-tight">Eğitim Mah., Poyraz Sk. No:26/4<br />Kadıköy / İstanbul</p>
+              </div>
             </a>
-            <span className="text-white/20">|</span>
-            <a href="tel:05514882948" className="text-white/80 hover:text-accent transition-colors flex items-center gap-2">
-              <Phone size={13} className="text-accent" /> 0551 488 29 48
+
+            {/* Mail */}
+            <a href="mailto:info@aybikesultanbicer.com"
+              className="flex items-center gap-3 px-6 py-4 group hover:bg-white/5 transition-colors">
+              <div className="w-9 h-9 rounded-full bg-accent/15 flex items-center justify-center shrink-0 group-hover:bg-accent/25 transition-colors">
+                <Mail size={16} className="text-accent" />
+              </div>
+              <div>
+                <p className="text-white/40 text-[10px] font-bold uppercase tracking-widest leading-none mb-0.5">E-Posta</p>
+                <p className="text-white text-[12px] font-semibold leading-tight">info@aybikesultanbicer.com</p>
+              </div>
             </a>
-          </div>
-          <div className="flex items-center gap-6">
-            <div className="flex items-center gap-4 border-r border-white/10 pr-6 mr-2 text-white/50">
-              <a href="https://www.instagram.com/asblawoffice.av/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors"><Instagram size={15} /></a>
-              <a href="#" className="hover:text-accent transition-colors"><Facebook size={15} /></a>
-              <a href="#" className="hover:text-accent transition-colors"><MessageCircle size={15} /></a>
+
+            {/* Çalışma Saatleri */}
+            <div className="flex items-center gap-3 px-6 py-4">
+              <div className="w-9 h-9 rounded-full bg-accent/15 flex items-center justify-center shrink-0">
+                <Clock size={16} className="text-accent" />
+              </div>
+              <div>
+                <p className="text-white/40 text-[10px] font-bold uppercase tracking-widest leading-none mb-0.5">Çalışma Saatleri</p>
+                <p className="text-white text-[12px] font-semibold leading-tight">Pzt – Cuma: 09:00 – 18:00</p>
+              </div>
             </div>
-            <div className="flex items-center gap-2 text-white/60">
-              <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-              Çalışma Saatleri: 09:00 - 18:00
+
+            {/* Telefon */}
+            <a href="tel:05514882948"
+              className="flex items-center gap-3 px-6 py-4 group hover:bg-white/5 transition-colors">
+              <div className="w-9 h-9 rounded-full bg-accent/15 flex items-center justify-center shrink-0 group-hover:bg-accent/25 transition-colors">
+                <Phone size={16} className="text-accent" />
+              </div>
+              <div>
+                <p className="text-white/40 text-[10px] font-bold uppercase tracking-widest leading-none mb-0.5">Telefon</p>
+                <p className="text-white text-[12px] font-semibold leading-tight">0 551 488 29 48</p>
+              </div>
+            </a>
+
+            {/* Sosyal medya — sağ */}
+            <div className="ml-auto flex items-center gap-3 pl-6 pr-2">
+              <a href="https://www.instagram.com/asblawoffice.av/" target="_blank" rel="noopener noreferrer"
+                className="w-8 h-8 rounded-full border border-white/15 flex items-center justify-center text-white/50 hover:bg-accent hover:text-primary hover:border-accent transition-all">
+                <Instagram size={14} />
+              </a>
+              <a href="#" className="w-8 h-8 rounded-full border border-white/15 flex items-center justify-center text-white/50 hover:bg-accent hover:text-primary hover:border-accent transition-all">
+                <Facebook size={14} />
+              </a>
+              <a href="https://wa.me/905514882948" target="_blank" className="w-8 h-8 rounded-full border border-white/15 flex items-center justify-center text-white/50 hover:bg-accent hover:text-primary hover:border-accent transition-all">
+                <MessageCircle size={14} />
+              </a>
             </div>
+
           </div>
         </div>
       </div>
