@@ -125,10 +125,13 @@ export default function HizmetlerPage() {
             >
               <Link
                 href={`/hizmetler/${svc.slug}`}
-                className="group bg-white hover:bg-accent rounded-3xl p-5 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-400 flex flex-col border border-neutral-100 hover:border-accent h-full"
+                className="group relative bg-white rounded-3xl p-5 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-400 flex flex-col border border-neutral-100 hover:border-accent overflow-hidden h-full"
               >
+                {/* Alttan yukarı dolma katmanı */}
+                <div className="absolute inset-0 bg-accent origin-bottom scale-y-0 group-hover:scale-y-100 transition-transform duration-500 ease-out rounded-3xl z-0" />
+
                 {/* Görsel — içeride yuvarlak */}
-                <div className="relative rounded-2xl overflow-hidden h-48 mb-5 shrink-0">
+                <div className="relative rounded-2xl overflow-hidden h-48 mb-5 shrink-0 z-10">
                   <img
                     src={svc.img}
                     alt={svc.title}
@@ -137,11 +140,11 @@ export default function HizmetlerPage() {
                 </div>
 
                 {/* İçerik */}
-                <div className="flex flex-col flex-1">
+                <div className="relative z-10 flex flex-col flex-1">
                   <h3 className="font-black text-primary group-hover:text-white text-lg leading-tight mb-2 tracking-tight transition-colors duration-300">
                     {svc.title}
                   </h3>
-                  <p className="text-neutral-500 group-hover:text-white/80 text-sm leading-relaxed flex-1 transition-colors duration-300">
+                  <p className="text-neutral-500 group-hover:text-white/90 text-sm leading-relaxed flex-1 transition-colors duration-300">
                     {svc.desc}
                   </p>
                   <div className="mt-5 flex items-center gap-2 text-accent group-hover:text-white text-[11px] font-black tracking-widest uppercase transition-colors duration-300">
