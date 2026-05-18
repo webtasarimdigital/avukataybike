@@ -10,16 +10,17 @@ const services = [
   { title: "MARKA VE PATENT HUKUKU", slug: "marka-ve-patent-hukuku" },
   { title: "AİLE HUKUKU", slug: "aile-hukuku" },
   { title: "SİGORTA HUKUKU", slug: "sigorta-hukuku" },
-  { title: "GAYRİMENKUL HUKUKU", slug: "gayrimenkul-hukuku" },
-  { title: "BİLİŞİM HUKUKU", slug: "bilisim-hukuku" },
   { title: "İCRA VE İFLAS HUKUKU", slug: "icra-ve-iflas-hukuku" },
   { title: "SAĞLIK HUKUKU", slug: "saglik-hukuku" },
   { title: "TÜKETİCİ HUKUKU", slug: "tuketici-hukuku" },
-  { title: "YATIRIM HUKUKU", slug: "yatirim-hukuku" },
-  { title: "ULUSLARARASI TİCARİ SÖZLEŞMELER", slug: "uluslararasi-ticari-sozlesmeler" },
-  { title: "CEZA HUKUKU", slug: "ceza-hukuku" },
   { title: "KİŞİSEL VERİLERİN KORUNMASI HUKUKU", slug: "kisisel-verilerin-korunmasi-hukuku" },
-  { title: "İDARE VE VERGİ HUKUKU", slug: "idare-ve-vergi-hukuku" },
+];
+
+const kurumsal = [
+  { title: "Hakkımızda", href: "/hakkimizda" },
+  { title: "Vizyonumuz", href: "/hakkimizda#vizyon" },
+  { title: "Misyonumuz", href: "/hakkimizda#misyon" },
+  { title: "Ekibimiz", href: "/hakkimizda#ekibimiz" },
 ];
 
 export default function Header() {
@@ -27,6 +28,8 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesHovered, setServicesHovered] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [kurumsalHovered, setKurumsalHovered] = useState(false);
+  const [mobileKurumsalOpen, setMobileKurumsalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,9 +41,10 @@ export default function Header() {
 
   const navLinks = [
     { name: "ANA SAYFA", href: "/" },
-    { name: "HAKKIMIZDA", href: "/hakkimizda" },
+    { name: "KURUMSAL", href: "#", id: "kurumsal" },
     { name: "HİZMETLER", href: "#", id: "services" },
     { name: "BLOG", href: "/blog" },
+    { name: "İŞ BAŞVURUSU", href: "/is-basvurusu" },
     { name: "İLETİŞİM", href: "/iletisim" },
   ];
 
@@ -93,6 +97,44 @@ export default function Header() {
           {/* Desktop Menu */}
           <nav className="hidden lg:flex items-center gap-8 xl:gap-12">
             {navLinks.map((link) => {
+              if (link.id === "kurumsal") {
+                return (
+                  <div
+                    key={link.name}
+                    className="relative group h-full flex items-center"
+                    onMouseEnter={() => setKurumsalHovered(true)}
+                    onMouseLeave={() => setKurumsalHovered(false)}
+                  >
+                    <button className="text-[14px] font-bold text-primary hover:text-accent transition-colors whitespace-nowrap tracking-widest flex items-center gap-1.5 py-4">
+                      {link.name} <ChevronDown size={14} className={`mt-0.5 transition-transform duration-300 ${kurumsalHovered ? "rotate-180 text-accent" : ""}`} />
+                    </button>
+                    <AnimatePresence>
+                      {kurumsalHovered && (
+                        <motion.div
+                          initial={{ opacity: 0, y: 15 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: 10 }}
+                          transition={{ duration: 0.2 }}
+                          className="absolute top-[90%] left-1/2 -translate-x-1/2 min-w-[240px] bg-white rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.3)] border border-gray-100 flex flex-col overflow-hidden z-50 py-3"
+                        >
+                          {kurumsal.map((k, idx) => (
+                            <Link
+                              key={idx}
+                              href={k.href}
+                              className="px-6 py-3 text-[13px] font-bold text-primary hover:bg-neutral-50 hover:text-accent transition-all border-b last:border-b-0 border-gray-50 flex items-center justify-between group/item"
+                              onClick={() => setKurumsalHovered(false)}
+                            >
+                              {k.title}
+                              <ArrowRight size={14} className="opacity-0 group-hover/item:opacity-100 transition-all -translate-x-2 group-hover/item:translate-x-0" />
+                            </Link>
+                          ))}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                );
+              }
+
               if (link.id === "services") {
                 return (
                   <div 
@@ -190,6 +232,41 @@ export default function Header() {
 
             <div className="flex-1 overflow-y-auto px-8 py-10 flex flex-col gap-6">
               {navLinks.map((link) => {
+                if (link.id === "kurumsal") {
+                  return (
+                    <div key={link.name} className="flex flex-col border-b border-white/5 pb-4">
+                      <button
+                        onClick={() => setMobileKurumsalOpen(!mobileKurumsalOpen)}
+                        className="flex items-center justify-between text-white font-black text-xl tracking-tight uppercase"
+                      >
+                        {link.name}
+                        <ChevronDown size={20} className={`transition-transform duration-300 ${mobileKurumsalOpen ? "rotate-180 text-accent" : "text-white/40"}`} />
+                      </button>
+                      <AnimatePresence>
+                        {mobileKurumsalOpen && (
+                          <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            className="flex flex-col pt-6 space-y-4 overflow-hidden pl-4 border-l-2 border-accent/30"
+                          >
+                            {kurumsal.map((k, idx) => (
+                              <Link
+                                key={idx}
+                                href={k.href}
+                                onClick={() => setMobileMenuOpen(false)}
+                                className="text-white/60 font-bold text-sm hover:text-accent transition-colors"
+                              >
+                                {k.title}
+                              </Link>
+                            ))}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  );
+                }
+
                 if (link.id === "services") {
                   return (
                     <div key={link.name} className="flex flex-col border-b border-white/5 pb-4">

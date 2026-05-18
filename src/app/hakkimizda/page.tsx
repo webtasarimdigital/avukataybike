@@ -5,17 +5,13 @@ import Link from "next/link";
 const services = [
   { title: "Banka ve Ticaret Hukuku", slug: "banka-ve-ticaret-hukuku" },
   { title: "İş Hukuku", slug: "is-hukuku" },
-  { title: "Aile Hukuku", slug: "aile-hukuku" },
-  { title: "Gayrimenkul Hukuku", slug: "gayrimenkul-hukuku" },
-  { title: "Ceza Hukuku", slug: "ceza-hukuku" },
-  { title: "Sigorta Hukuku", slug: "sigorta-hukuku" },
-  { title: "Bilişim Hukuku", slug: "bilisim-hukuku" },
-  { title: "İcra ve İflas Hukuku", slug: "icra-ve-iflas-hukuku" },
   { title: "Marka ve Patent Hukuku", slug: "marka-ve-patent-hukuku" },
+  { title: "Aile Hukuku", slug: "aile-hukuku" },
+  { title: "Sigorta Hukuku", slug: "sigorta-hukuku" },
+  { title: "İcra ve İflas Hukuku", slug: "icra-ve-iflas-hukuku" },
+  { title: "Sağlık Hukuku", slug: "saglik-hukuku" },
   { title: "Tüketici Hukuku", slug: "tuketici-hukuku" },
-  { title: "Yatırım Hukuku", slug: "yatirim-hukuku" },
   { title: "Kişisel Verilerin Korunması Hukuku", slug: "kisisel-verilerin-korunmasi-hukuku" },
-  { title: "İdare ve Vergi Hukuku", slug: "idare-ve-vergi-hukuku" },
 ];
 
 export default function AboutPage() {
@@ -126,7 +122,7 @@ export default function AboutPage() {
         </div>
 
         {/* ── VİZYON & MİSYON ── */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div id="vizyon" className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Vizyon */}
           <div className="relative bg-primary rounded-[40px] p-12 overflow-hidden flex flex-col gap-6">
             <div className="absolute top-0 right-0 w-56 h-56 bg-accent/10 rounded-full -mr-28 -mt-28 blur-3xl" />
@@ -140,7 +136,7 @@ export default function AboutPage() {
             </div>
           </div>
           {/* Misyon */}
-          <div className="relative bg-white rounded-[40px] p-12 border border-gray-100 shadow-sm overflow-hidden flex flex-col gap-6">
+          <div id="misyon" className="relative bg-white rounded-[40px] p-12 border border-gray-100 shadow-sm overflow-hidden flex flex-col gap-6">
             <div className="absolute top-0 right-0 w-56 h-56 bg-accent/5 rounded-full -mr-28 -mt-28 blur-3xl" />
             <div className="relative z-10">
               <span className="text-accent font-black tracking-[0.4em] text-xs uppercase italic">Amacımız</span>
@@ -154,7 +150,7 @@ export default function AboutPage() {
         </div>
 
         {/* ── ÖZGEÇMİŞ ── */}
-        <div className="bg-white rounded-[40px] border border-gray-100 shadow-sm overflow-hidden">
+        <div id="ekibimiz" className="bg-white rounded-[40px] border border-gray-100 shadow-sm overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr]">
             <div className="bg-primary p-10 flex flex-col items-center justify-center gap-5 relative overflow-hidden">
               <div className="absolute inset-0 opacity-10" style={{backgroundImage:"repeating-linear-gradient(45deg,transparent,transparent 20px,rgba(255,255,255,.04) 20px,rgba(255,255,255,.04) 40px)"}} />

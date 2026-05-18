@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import {
-  Scale, Gavel, Shield, Briefcase, Users, Building2, Globe,
-  Monitor, Heart, ShoppingCart, TrendingUp, Landmark,
+  Scale, Gavel, Shield, Briefcase, Users,
+  Heart, ShoppingCart,
   CheckCircle2, ArrowRight, MessageSquare, Phone,
   MapPin, FileText, Clock,
 } from "lucide-react";
@@ -16,15 +16,10 @@ const services: SvcType[] = [
   { title: "Marka ve Patent Hukuku", slug: "marka-ve-patent-hukuku", Icon: Shield, desc: "Fikri mülkiyet tescili ve ihlallerine karşı hukuki temsil.", img: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&q=80&auto=format&fit=crop" },
   { title: "Aile Hukuku", slug: "aile-hukuku", Icon: Heart, desc: "Boşanma, velayet ve nafaka süreçlerinde hukuki destek.", img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80&auto=format&fit=crop" },
   { title: "Sigorta Hukuku", slug: "sigorta-hukuku", Icon: Shield, desc: "Sigorta tazminat uyuşmazlıkları ve poliçe itirazları.", img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80&auto=format&fit=crop" },
-  { title: "Gayrimenkul Hukuku", slug: "gayrimenkul-hukuku", Icon: Building2, desc: "Tapu, kira anlaşmazlıkları ve inşaat sözleşmeleri.", img: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80&auto=format&fit=crop" },
-  { title: "Bilişim Hukuku", slug: "bilisim-hukuku", Icon: Monitor, desc: "Veri gizliliği, siber suçlar ve e-ticaret hukuku.", img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&q=80&auto=format&fit=crop" },
   { title: "İcra ve İflas Hukuku", slug: "icra-ve-iflas-hukuku", Icon: Gavel, desc: "Alacak takibi, icra işlemleri ve iflas süreçleri.", img: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&q=80&auto=format&fit=crop" },
   { title: "Sağlık Hukuku", slug: "saglik-hukuku", Icon: Heart, desc: "Tıbbi malpraktis ve hasta hakları uyuşmazlıkları.", img: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&q=80&auto=format&fit=crop" },
   { title: "Tüketici Hukuku", slug: "tuketici-hukuku", Icon: ShoppingCart, desc: "Ayıplı ürün, tüketici hakları ve hakem heyeti.", img: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80&auto=format&fit=crop" },
-  { title: "Yatırım Hukuku", slug: "yatirim-hukuku", Icon: TrendingUp, desc: "Yabancı yatırım mevzuatı ve teşvik hukuku.", img: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&q=80&auto=format&fit=crop" },
-  { title: "Uluslararası Ticari Sözleşmeler", slug: "uluslararasi-ticari-sozlesmeler", Icon: Globe, desc: "Çok taraflı anlaşmalar ve sınır ötesi hukuki süreçler.", img: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=600&q=80&auto=format&fit=crop" },
-  { title: "Ceza Hukuku", slug: "ceza-hukuku", Icon: Scale, desc: "Ceza davalarında savunma ve mağdur temsili.", img: "https://images.unsplash.com/photo-1589578228447-e1a4e481c6c8?w=600&q=80&auto=format&fit=crop" },
-  { title: "İdare ve Vergi Hukuku", slug: "idare-ve-vergi-hukuku", Icon: Landmark, desc: "İdari itirazlar, vergi cezaları ve iptal davaları.", img: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80&auto=format&fit=crop" },
+  { title: "Kişisel Verilerin Korunması Hukuku", slug: "kisisel-verilerin-korunmasi-hukuku", Icon: Shield, desc: "KVKK uyum, veri envanteri ve veri ihlali danışmanlığı.", img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&q=80&auto=format&fit=crop" },
 ];
 
 const TeraziSVG = ({ className }: { className?: string }) => (
