@@ -204,9 +204,12 @@ export default function Header() {
 
           {/* Action Button */}
           <div className="hidden lg:block">
-            <a href="https://wa.me/905514882948" target="_blank" className="bg-accent text-primary px-8 py-3.5 rounded-xl font-bold text-[13px] tracking-widest hover:bg-white hover:text-primary transition-all shadow-lg shadow-accent/20 uppercase italic">
+            <button
+              onClick={() => document.dispatchEvent(new CustomEvent("open-contact-modal"))}
+              className="bg-accent text-primary px-8 py-3.5 rounded-xl font-bold text-[13px] tracking-widest hover:bg-white hover:text-primary transition-all shadow-lg shadow-accent/20 uppercase italic"
+            >
               Tıkla Bilgi Al
-            </a>
+            </button>
           </div>
 
           {/* Mobile Menu Toggle */}

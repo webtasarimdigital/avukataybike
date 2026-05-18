@@ -28,28 +28,26 @@ export default function FloatingActions() {
         </button>
 
         {/* Main active panel */}
-        <a 
-          href="https://wa.me/905514882948"
-          target="_blank"
-          className="relative w-[70px] h-[150px] md:w-[85px] md:h-[190px] flex flex-col shadow-[-5px_0_20px_rgba(0,0,0,0.2)] overflow-hidden hover:scale-[1.03] origin-right rounded-l-xl md:rounded-l-2xl z-40 bg-white group transition-transform text-left"
+        <div
+          onClick={() => document.dispatchEvent(new CustomEvent("open-contact-modal"))}
+          className="relative w-[70px] h-[150px] md:w-[85px] md:h-[190px] flex flex-col shadow-[-5px_0_20px_rgba(0,0,0,0.2)] overflow-hidden hover:scale-[1.03] origin-right rounded-l-xl md:rounded-l-2xl z-40 bg-white group transition-transform text-left cursor-pointer"
         >
           <div className="bg-primary flex-1 w-full flex flex-col items-center justify-center border-b border-white/10 relative">
             {/* Close Button */}
-            <button 
-              onClick={(e) => { e.preventDefault(); e.stopPropagation(); setIsWidgetClosed(true); }}
+            <button
+              onClick={(e) => { e.stopPropagation(); setIsWidgetClosed(true); }}
               className="absolute top-1 left-1 md:top-1.5 md:left-1.5 text-white/50 hover:text-white transition-colors bg-black/20 hover:bg-red-500 rounded-full p-1 z-50"
             >
                <X size={12} className="md:w-[14px] md:h-[14px]" />
             </button>
-
             <div className="relative w-10 h-10 md:w-12 md:h-12 flex items-center justify-center">
                <MessageCircle size={32} className="text-accent" />
             </div>
           </div>
-          <div className="bg-accent group-hover:bg-white transition-colors flex-1 w-full flex items-center justify-center text-center text-primary group-hover:text-primary font-black text-[11px] md:text-[13px] leading-snug tracking-wider px-1 md:px-2">
+          <div className="bg-accent group-hover:bg-white transition-colors flex-1 w-full flex items-center justify-center text-center text-primary font-black text-[11px] md:text-[13px] leading-snug tracking-wider px-1 md:px-2">
             <div>TIKLA BİLGİ AL</div>
           </div>
-        </a>
+        </div>
       </div>
 
       {/* DESKTOP (Web) VERSION - Floating Icons Bottom Right */}
@@ -91,11 +89,11 @@ export default function FloatingActions() {
       <div className="fixed bottom-0 left-0 right-0 z-[250] md:hidden bg-white/95 backdrop-blur-md border-t border-gray-100 flex shadow-[0_-10px_30px_rgba(0,0,0,0.08)] pb-safe h-[70px]">
         
         {/* BILGI AL - Priority Button */}
-        <a href="https://wa.me/905514882948" target="_blank" className="w-[40%] flex items-center justify-center bg-accent text-primary hover:bg-white transition-colors h-full border-r border-primary/5">
+        <button onClick={() => document.dispatchEvent(new CustomEvent("open-contact-modal"))} className="w-[40%] flex items-center justify-center bg-accent text-primary hover:bg-white transition-colors h-full border-r border-primary/5">
           <span className="font-black tracking-widest uppercase text-[13px] text-center leading-tight">
             BİLGİ AL
           </span>
-        </a>
+        </button>
 
         {/* ICONS (Location, Phone, WA) */}
         <div className="w-[60%] flex items-center justify-evenly h-full">

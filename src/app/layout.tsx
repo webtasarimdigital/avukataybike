@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingActions from "@/components/FloatingActions";
+import ContactModal from "@/components/ContactModal";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,6 +42,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <FloatingActions />
+        <ContactModal />
       </body>
     </html>
   );
