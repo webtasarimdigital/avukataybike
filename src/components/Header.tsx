@@ -214,7 +214,7 @@ export default function Header() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "-100%" }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
-            className="fixed inset-0 bg-primary z-[200] lg:hidden flex flex-col"
+            className="fixed inset-0 bg-primary z-[300] lg:hidden flex flex-col"
           >
             <div className="flex items-center justify-between p-8 border-b border-white/5">
                <div className="flex items-center gap-3">
@@ -238,7 +238,7 @@ export default function Header() {
                     <div key={link.name} className="flex flex-col border-b border-white/5 pb-4">
                       <button
                         onClick={() => setMobileKurumsalOpen(!mobileKurumsalOpen)}
-                        className="flex items-center justify-between text-white font-black text-xl tracking-tight uppercase"
+                        className="flex items-center justify-between text-white font-black text-sm tracking-wide uppercase"
                       >
                         {link.name}
                         <ChevronDown size={20} className={`transition-transform duration-300 ${mobileKurumsalOpen ? "rotate-180 text-accent" : "text-white/40"}`} />
@@ -273,7 +273,7 @@ export default function Header() {
                     <div key={link.name} className="flex flex-col border-b border-white/5 pb-4">
                        <button 
                          onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-                         className="flex items-center justify-between text-white font-black text-xl tracking-tight uppercase"
+                         className="flex items-center justify-between text-white font-black text-sm tracking-wide uppercase"
                        >
                          {link.name}
                          <ChevronDown size={20} className={`transition-transform duration-300 ${mobileServicesOpen ? "rotate-180 text-accent" : "text-white/40"}`} />
@@ -308,7 +308,7 @@ export default function Header() {
                     key={link.name}
                     href={link.href}
                     onClick={() => { setMobileMenuOpen(false); window.scrollTo({ top: 0, behavior: "smooth" }); }}
-                    className="text-white font-black text-xl tracking-tight uppercase border-b border-white/5 pb-4"
+                    className="text-white font-black text-sm tracking-wide uppercase border-b border-white/5 pb-4"
                   >
                     {link.name}
                   </Link>
