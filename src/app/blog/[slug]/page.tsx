@@ -21,7 +21,7 @@ export default function BlogPostPage() {
   return (
     <main className="min-h-screen bg-[#F8FAFC]">
       {/* ── HERO ── */}
-      <div className="relative w-full min-h-[480px] flex items-end pt-28 pb-0 overflow-hidden">
+      <div className="relative w-full min-h-[480px] flex items-end pt-44 pb-0 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-[#0a1628]">
           <div className="absolute inset-0 opacity-5" style={{backgroundImage:"repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(255,255,255,.04) 40px,rgba(255,255,255,.04) 80px)"}} />
         </div>

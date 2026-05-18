@@ -5,7 +5,7 @@ export default function ContactPage() {
   return (
     <main className="min-h-screen bg-[#F8FAFC]">
       {/* Hero Header Area (Megagöz Style) */}
-      <div className="relative w-full h-[450px] md:h-[550px] flex items-center justify-center pt-24 pb-12 overflow-hidden">
+      <div className="relative w-full h-[450px] md:h-[550px] flex items-center justify-center pt-44 pb-12 overflow-hidden">
         <div className="absolute inset-0 bg-primary z-0">
            <div className="absolute inset-0 bg-primary-light/20 -skew-x-12 translate-x-1/4 pointer-events-none" />
            <div className="absolute inset-0 bg-black/40 z-10" />
