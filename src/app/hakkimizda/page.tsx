@@ -44,7 +44,7 @@ export default function AboutPage() {
               Hukuki Güç,<br /><span className="text-accent">Güvenilir Temsil.</span>
             </h1>
             <p className="text-white/60 text-xl leading-relaxed max-w-2xl">
-              Avukat Aybike Sultan Biçer Hukuk ve Danışmanlık olarak 10 yılı aşkın tecrübemizle müvekkillerimizin haklarını en üst düzeyde koruyoruz.
+              Hukukun yalnızca mevzuattan değil; strateji, iletişim ve doğru yaklaşımın birleşiminden oluştuğuna inanıyoruz.
             </p>
           </div>
         </div>
@@ -94,13 +94,13 @@ export default function AboutPage() {
               </div>
               <div className="space-y-5 text-neutral-600 text-base leading-relaxed font-medium mb-10">
                 <p>
-                  İstanbul Kadıköy merkezli ofisimizde faaliyet gösteren büromuz, bireysel ve kurumsal müvekkillerimize geniş bir hukuki hizmet yelpazesi sunmaktadır. Avukat Aybike Sultan Biçer liderliğinde ekibimiz; şeffaflık, dürüstlük ve sonuç odaklılık ilkeleri çerçevesinde her davayı özgün bir yaklaşımla ele almaktadır.
+                  ASB Hukuk, Türkiye'nin önde gelen hukuk fakültelerinden mezun, alanlarında uzman ve güncel hukuki gelişmeleri yakından takip eden dinamik bir ekip tarafından kurulmuştur. Bireysel ve kurumsal müvekkillerimize; hızlı, erişilebilir ve sonuç odaklı hukuki hizmet sunmayı temel ilke olarak benimsiyoruz.
                 </p>
                 <p>
-                  Türk hukuku ve uluslararası mevzuat konusundaki derin bilgimiz, artan dava deneyimimiz ve müvekkil odaklı hizmet anlayışımızla her hukuki soruna kalıcı ve etkili çözümler üretiyoruz.
+                  Her hukuki sürecin kendine özgü olduğunu biliyor; müvekkillerimizin ihtiyaçlarını standart çözümler yerine özel stratejilerle değerlendiriyoruz. Dava takibinden hukuki danışmanlığa, sözleşme süreçlerinden uyuşmazlık yönetimine kadar her aşamada şeffaf iletişim ve profesyonel yaklaşımı ön planda tutuyoruz.
                 </p>
                 <p>
-                  Müvekkillerimizi sürecin her adımında bilgilendiriyor, kararları birlikte alıyor ve hak kayıplarını en aza indirmek için kararlılıkla çalışıyoruz.
+                  Büromuz; şirketler, girişimler ve bireysel müvekkiller için güvenilir bir çözüm ortağı olmayı hedeflemekte; yalnızca mevcut sorunlara değil, gelecekte oluşabilecek hukuki risklere karşı da koruyucu danışmanlık sağlamaktadır.
                 </p>
               </div>
               <div className="grid grid-cols-2 gap-4">
@@ -116,6 +116,34 @@ export default function AboutPage() {
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* ── VİZYON & MİSYON ── */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Vizyon */}
+          <div className="relative bg-primary rounded-[40px] p-12 overflow-hidden flex flex-col gap-6">
+            <div className="absolute top-0 right-0 w-56 h-56 bg-accent/10 rounded-full -mr-28 -mt-28 blur-3xl" />
+            <div className="relative z-10">
+              <span className="text-accent font-black tracking-[0.4em] text-xs uppercase italic">Hedefimiz</span>
+              <h3 className="text-3xl font-black text-white uppercase italic mt-2 mb-5">Vizyonumuz</h3>
+              <div className="w-12 h-1.5 bg-accent rounded-full mb-6" />
+              <p className="text-white/70 text-base leading-relaxed">
+                Hukuki hizmet anlayışını modern, erişilebilir ve stratejik bir bakış açısıyla yeniden şekillendirerek; Türkiye'nin güvenilir ve tercih edilen hukuk bürolarından biri olmak.
+              </p>
+            </div>
+          </div>
+          {/* Misyon */}
+          <div className="relative bg-white rounded-[40px] p-12 border border-gray-100 shadow-sm overflow-hidden flex flex-col gap-6">
+            <div className="absolute top-0 right-0 w-56 h-56 bg-accent/5 rounded-full -mr-28 -mt-28 blur-3xl" />
+            <div className="relative z-10">
+              <span className="text-accent font-black tracking-[0.4em] text-xs uppercase italic">Amacımız</span>
+              <h3 className="text-3xl font-black text-primary uppercase italic mt-2 mb-5">Misyonumuz</h3>
+              <div className="w-12 h-1.5 bg-accent rounded-full mb-6" />
+              <p className="text-neutral-600 text-base leading-relaxed">
+                Müvekkillerimize yalnızca hukuki temsil sunmak değil; süreci doğru yöneten, riskleri öngören ve sürdürülebilir çözümler üreten güçlü bir iş ortağı olmak.
+              </p>
             </div>
           </div>
         </div>
