@@ -129,7 +129,7 @@ export default function Home() {
           {/* Ana çerçeve */}
           <div className="relative w-[300px] h-[400px] md:w-[340px] md:h-[460px] rounded-[40px] overflow-hidden border-4 border-white/25 shadow-2xl shadow-black/40">
             <img
-              src="/avukat.jpg"
+              src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=700&q=85&auto=format&fit=crop&crop=top"
               alt="Av. Aybike Sultan Biçer"
               className="w-full h-full object-cover object-top"
               onError={(e) => {
@@ -258,7 +258,7 @@ export default function Home() {
       {/* ══════════════════════════════════════
           HİZMETLER — Görsel Kart Yapısı
       ══════════════════════════════════════ */}
-      <section id="hizmetler" className="py-24 md:py-32 bg-[#F8F5EF]">
+      <section id="hizmetler" className="pt-10 pb-24 md:pt-12 md:pb-32 bg-[#F8F5EF]">
         <div className="container mx-auto px-6 max-w-7xl">
 
           {/* Başlık */}

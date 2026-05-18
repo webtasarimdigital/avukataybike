@@ -53,44 +53,38 @@ export default function Header() {
     <header className="w-full fixed top-0 left-0 right-0 z-50 flex flex-col font-sans">
       {/* Top Info Bar */}
       <div className={`bg-primary transition-all duration-300 origin-top ${isScrolled ? "h-0 opacity-0 overflow-hidden" : "hidden lg:flex h-[52px] opacity-100"}`}>
-        <div className="w-full max-w-[1400px] mx-auto px-8 flex items-center h-full gap-0">
+        <div className="w-full max-w-[1400px] mx-auto px-8 flex items-center justify-center h-full gap-5 text-[11.5px]">
 
-          {/* Info items */}
-          <div className="flex items-center gap-5 text-[11.5px]">
-            <a href="https://maps.google.com/?q=Eğitim+Mah.+Poyraz+Sk.+No:26/4+Kadıköy+İstanbul" target="_blank"
-              className="flex items-center gap-1.5 text-white hover:text-accent transition-colors whitespace-nowrap shrink-0">
-              <MapPin size={12} className="text-accent shrink-0" />
-              Eğitim Mah., Poyraz Sk. No:26/4 — Kadıköy / İst.
-            </a>
-            <span className="text-white/20 shrink-0">|</span>
-            <a href="mailto:info@aybikesultanbicer.com"
-              className="flex items-center gap-1.5 text-white hover:text-accent transition-colors whitespace-nowrap shrink-0">
-              <Mail size={12} className="text-accent shrink-0" />
-              info@aybikesultanbicer.com
-            </a>
-            <span className="text-white/20 shrink-0">|</span>
-            <div className="flex items-center gap-1.5 text-white whitespace-nowrap shrink-0">
-              <Clock size={12} className="text-accent shrink-0" />
-              Pzt–Cum: 09:00–18:00
-            </div>
-            <span className="text-white/20 shrink-0">|</span>
-            <a href="tel:05514882948" className="flex items-center gap-1.5 text-white hover:text-accent transition-colors whitespace-nowrap shrink-0">
-              <Phone size={12} className="text-accent shrink-0" />
-              0 551 488 29 48
-            </a>
+          <a href="https://maps.google.com/?q=Eğitim+Mah.+Poyraz+Sk.+No:26/4+Kadıköy+İstanbul" target="_blank"
+            className="flex items-center gap-1.5 text-white hover:text-accent transition-colors whitespace-nowrap">
+            <MapPin size={12} className="text-accent shrink-0" />
+            Eğitim Mah., Poyraz Sk. No:26/4 — Kadıköy / İst.
+          </a>
+          <span className="text-white/20">|</span>
+          <a href="mailto:info@aybikesultanbicer.com"
+            className="flex items-center gap-1.5 text-white hover:text-accent transition-colors whitespace-nowrap">
+            <Mail size={12} className="text-accent shrink-0" />
+            info@aybikesultanbicer.com
+          </a>
+          <span className="text-white/20">|</span>
+          <div className="flex items-center gap-1.5 text-white whitespace-nowrap">
+            <Clock size={12} className="text-accent shrink-0" />
+            Pzt–Cum: 09:00–18:00
           </div>
-
-          {/* Sosyal: sağ kenara yapışık */}
-          <div className="flex items-center gap-3 pl-8 shrink-0 border-l border-white/10 ml-6">
-            <a href="https://www.instagram.com/asblawoffice.av/" target="_blank" rel="noopener noreferrer"
-              className="text-white/70 hover:text-accent transition-colors">
-              <Instagram size={15} />
-            </a>
-            <a href="https://wa.me/905514882948" target="_blank"
-              className="text-white/70 hover:text-accent transition-colors">
-              <MessageCircle size={15} />
-            </a>
-          </div>
+          <span className="text-white/20">|</span>
+          <a href="tel:05514882948" className="flex items-center gap-1.5 text-white hover:text-accent transition-colors whitespace-nowrap">
+            <Phone size={12} className="text-accent shrink-0" />
+            0 551 488 29 48
+          </a>
+          <span className="text-white/20">|</span>
+          <a href="https://www.instagram.com/asblawoffice.av/" target="_blank" rel="noopener noreferrer"
+            className="text-white/70 hover:text-accent transition-colors">
+            <Instagram size={15} />
+          </a>
+          <a href="https://wa.me/905514882948" target="_blank"
+            className="text-white/70 hover:text-accent transition-colors">
+            <MessageCircle size={15} />
+          </a>
 
         </div>
       </div>
