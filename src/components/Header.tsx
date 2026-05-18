@@ -22,6 +22,7 @@ const kurumsal = [
   { title: "Vizyonumuz", href: "/hakkimizda#vizyon" },
   { title: "Misyonumuz", href: "/hakkimizda#misyon" },
   { title: "Ekibimiz", href: "/hakkimizda#ekibimiz" },
+  { title: "İş Başvurusu", href: "/is-basvurusu" },
 ];
 
 export default function Header() {
@@ -45,7 +46,6 @@ export default function Header() {
     { name: "KURUMSAL", href: "#", id: "kurumsal" },
     { name: "HİZMETLER", href: "#", id: "services" },
     { name: "BLOG", href: "/blog" },
-    { name: "İŞ BAŞVURUSU", href: "/is-basvurusu" },
     { name: "İLETİŞİM", href: "/iletisim" },
   ];
 

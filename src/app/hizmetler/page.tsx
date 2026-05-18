@@ -78,7 +78,7 @@ export default function HizmetlerPage() {
     <main className="min-h-screen bg-[#F8FAFC]">
 
       {/* HERO */}
-      <div className="relative w-full min-h-[440px] flex items-end pt-28 pb-0 overflow-hidden">
+      <div className="relative w-full min-h-[440px] flex items-end pt-44 pb-0 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-[#0a1628] z-0">
           <img
             src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=1600&q=80&auto=format&fit=crop"
