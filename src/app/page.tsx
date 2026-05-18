@@ -62,7 +62,7 @@ export default function Home() {
       {/* ══════════════════════════════════════
           HERO — Yatay Split
       ══════════════════════════════════════ */}
-      <section className="relative w-full min-h-screen flex flex-col lg:flex-row overflow-hidden pt-[92px] lg:pt-[100px]">
+      <section className="relative w-full min-h-screen flex flex-col lg:flex-row overflow-hidden pt-[92px] lg:pt-[100px]" style={{maxWidth:"100vw"}}>
 
         {/* SOL — Metin */}
         <div className="relative flex-1 lg:w-[52%] bg-[#F7F4EE] flex items-center justify-center">
@@ -102,14 +102,14 @@ export default function Home() {
             </div>
 
             {/* Butonlar */}
-            <div className="flex flex-wrap gap-3 pt-1">
+            <div className="flex gap-3 pt-1">
               <a href="tel:05514882948"
-                className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-2xl font-black text-[13px] tracking-widest uppercase transition-all shadow-xl shadow-primary/20 flex items-center gap-3">
-                <Phone size={16} /> Hemen Ara
+                className="flex-1 bg-primary hover:bg-primary/90 text-white px-4 py-4 rounded-2xl font-black text-[12px] tracking-widest uppercase transition-all shadow-xl shadow-primary/20 flex items-center justify-center gap-2">
+                <Phone size={15} /> Hemen Ara
               </a>
               <Link href="/hakkimizda"
-                className="border-2 border-primary/20 hover:border-primary/40 hover:bg-primary/5 text-primary px-8 py-4 rounded-2xl font-black text-[13px] tracking-widest uppercase transition-all flex items-center gap-2">
-                Hakkımızda <ArrowRight size={14} />
+                className="flex-1 border-2 border-primary/20 hover:border-primary/40 hover:bg-primary/5 text-primary px-4 py-4 rounded-2xl font-black text-[12px] tracking-widest uppercase transition-all flex items-center justify-center gap-2">
+                Hakkımızda <ArrowRight size={13} />
               </Link>
             </div>
           </div>
