@@ -56,7 +56,7 @@ export default function Header() {
         <div className="w-full max-w-[1400px] mx-auto px-8 flex items-center h-full gap-0">
 
           {/* Info items */}
-          <div className="flex items-center gap-5 text-[11.5px] flex-1 min-w-0">
+          <div className="flex items-center gap-5 text-[11.5px]">
             <a href="https://maps.google.com/?q=Eğitim+Mah.+Poyraz+Sk.+No:26/4+Kadıköy+İstanbul" target="_blank"
               className="flex items-center gap-1.5 text-white hover:text-accent transition-colors whitespace-nowrap shrink-0">
               <MapPin size={12} className="text-accent shrink-0" />

@@ -126,7 +126,9 @@ export default function Home() {
             alt="Av. Aybike Sultan Biçer"
             className="h-full max-h-[700px] lg:max-h-none lg:h-[90vh] w-auto object-cover object-top drop-shadow-2xl"
             onError={(e) => {
-              (e.currentTarget as HTMLImageElement).src = "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=700&q=85&auto=format&fit=crop&crop=top";
+              const img = e.currentTarget as HTMLImageElement;
+              img.onerror = null;
+              img.src = "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=700&q=85&auto=format&fit=crop&crop=top";
             }}
           />
           {/* İsim etiketi */}
