@@ -63,7 +63,7 @@ export default function Header() {
           </div>
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-4 border-r border-white/10 pr-6 mr-2 text-white/50">
-              <a href="#" className="hover:text-accent transition-colors"><Instagram size={15} /></a>
+              <a href="https://www.instagram.com/asblawoffice.av/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors"><Instagram size={15} /></a>
               <a href="#" className="hover:text-accent transition-colors"><Facebook size={15} /></a>
               <a href="#" className="hover:text-accent transition-colors"><MessageCircle size={15} /></a>
             </div>

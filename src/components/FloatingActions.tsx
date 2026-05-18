@@ -55,7 +55,7 @@ export default function FloatingActions() {
       {/* DESKTOP (Web) VERSION - Floating Icons Bottom Right */}
       <div className="fixed bottom-8 right-8 z-[100] flex flex-col gap-4 hidden md:flex">
         <a 
-          href="https://instagram.com" 
+          href="https://www.instagram.com/asblawoffice.av/" 
           target="_blank"
           rel="noopener noreferrer"
           className="w-14 h-14 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform group"

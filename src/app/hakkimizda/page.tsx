@@ -55,9 +55,14 @@ export default function AboutPage() {
         {/* ── AVUKAT TANITIM KARTI ── */}
         <div className="bg-white rounded-[48px] shadow-2xl border border-gray-100 overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2">
-            {/* Sol – Logo/Visual */}
-            <div className="relative bg-primary p-16 flex items-center justify-center min-h-[420px]">
-              <div className="absolute inset-0 opacity-5" style={{backgroundImage:"repeating-linear-gradient(45deg,transparent,transparent 30px,rgba(255,255,255,.05) 30px,rgba(255,255,255,.05) 60px)"}} />
+            {/* Sol – Ofis Görseli */}
+            <div className="relative bg-primary p-16 flex items-center justify-center min-h-[420px] overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80&auto=format&fit=crop"
+                alt="Hukuk Bürosu"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-primary/80" />
               <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent/10 rounded-full -ml-32 -mb-32 blur-3xl" />
               <div className="relative z-10 flex flex-col items-center gap-6">
                 <div className="w-48 h-48 rounded-[40px] bg-white/10 border border-white/20 p-6 backdrop-blur-sm flex items-center justify-center">
