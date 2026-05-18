@@ -247,10 +247,7 @@ export default function Home() {
               <span className="text-neutral-400 font-black">Hukuk Bürosu</span>
             </h2>
             <p className="text-neutral-600 text-lg leading-relaxed">
-              İstanbul Barosu'na kayıtlı avukat olarak ticaret hukukundan aile hukukuna, ceza hukukundan gayrimenkul uyuşmazlıklarına kadar geniş bir alanda hukuki danışmanlık ve dava takibi hizmeti sunmaktayım.
-            </p>
-            <p className="text-neutral-500 leading-relaxed">
-              Her müvekkile şeffaf, dürüst ve kişiselleştirilmiş bir hizmet anlayışıyla yaklaşıyor; hukuki süreçlerin her adımında yanında oluyorum.
+              Türkiye'nin seçkin hukuk fakültelerinden mezun, alanında uzman ve dinamik kadromuzla; bireysel ve kurumsal müvekkillerimize modern, hızlı ve sonuç odaklı hukuki hizmet sunuyoruz.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-2">
               {[
