@@ -14,6 +14,7 @@ const services = [
   { title: "SAĞLIK HUKUKU", slug: "saglik-hukuku" },
   { title: "TÜKETİCİ HUKUKU", slug: "tuketici-hukuku" },
   { title: "KİŞİSEL VERİLERİN KORUNMASI HUKUKU", slug: "kisisel-verilerin-korunmasi-hukuku" },
+  { title: "KİRA HUKUKU", slug: "kira-hukuku" },
 ];
 
 const kurumsal = [

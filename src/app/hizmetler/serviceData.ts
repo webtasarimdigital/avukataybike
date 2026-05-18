@@ -507,6 +507,41 @@ export const serviceContent: Record<string, ServiceItem> = {
     ],
   },
 
+  "kira-hukuku": {
+    title: "Kira Hukuku",
+    subtitle: "Kira Uyuşmazlıklarında Güvenilir Hukuki Destek",
+    heroDesc: "Kira ilişkilerinden doğan uyuşmazlıklarda hem mal sahipleri hem de kiracılar için etkin, hızlı ve çözüm odaklı hukuki destek sunuyoruz.",
+    desc1: "Kira ilişkilerinden doğan uyuşmazlıklar, hem mal sahipleri hem de kiracılar açısından ciddi hukuki ve ekonomik sonuçlar doğurabilmektedir. Büromuz; konut ve ticari kira ilişkilerine dair tüm süreçlerde müvekkillerine etkin, hızlı ve çözüm odaklı hukuki destek sunmaktadır.",
+    desc2: "Bireysel ve kurumsal müvekkiller için her dosyayı stratejik bir bakış açısıyla değerlendiriyor; hukuki süreci yalnızca dava aşamasıyla sınırlı görmeyip, önleyici ve koruyucu danışmanlık yaklaşımıyla yönetiyoruz. Özellikle güncel yargı kararları ve değişen mevzuat doğrultusunda, müvekkillerimizin hak kaybı yaşamaması adına süreci titizlikle yürütmekteyiz.",
+    features: [
+      "Kira sözleşmelerinin hazırlanması ve incelenmesi",
+      "Kira bedelinin tespiti davaları",
+      "Tahliye davaları (konut ve ticari)",
+      "Kira alacaklarının tahsili",
+      "Kira uyarlama davaları",
+      "Erken tahliye ve tazminat talepleri",
+      "Kira artış uyuşmazlıklarının çözümü",
+      "Depozito iade süreçleri",
+    ],
+    process: [
+      { step: "01", title: "Sözleşme ve Durum Analizi", desc: "Kira sözleşmesi, ihtarnameler ve mevcut hukuki durum kapsamlı biçimde değerlendirilir." },
+      { step: "02", title: "İhtarname Gönderilmesi", desc: "Gerekli hallerde karşı tarafa noter kanalıyla hukuki ihtarname yöneltilir." },
+      { step: "03", title: "Arabuluculuk veya Dava", desc: "Uyuşmazlığın niteliğine göre arabuluculuk sürecine başvurulur ya da dava açılır." },
+      { step: "04", title: "Tahsil ve İcra", desc: "Alacak veya tahliye kararı kesinleştiğinde icra takibi başlatılarak sonuç alınır." },
+    ],
+    faq: [
+      { q: "Kiracı evi tahliye etmezse ne yapabilirim?", a: "Sözleşme süresi dolmuş ya da fesih koşulları gerçekleşmişse, noter ihtarnamesi ardından sulh hukuk mahkemesinde tahliye davası açılabilir. Kira bedelinin ödenmemesi halinde ise icra yoluyla tahliye mümkündür." },
+      { q: "Kira artışı yasal sınırı aşabilir mi?", a: "Konut kiralarında yasal düzenleme kapsamında artış oranları sınırlandırılmış olup, bu oranların üzerinde yapılan artışlar geçersizdir. Ancak ticari kiralarda taraflar farklı oranlar üzerinde serbestçe anlaşabilir." },
+      { q: "Kiracı erken tahliye ederse tazminat alabilir miyim?", a: "Evet. Kiracı sözleşme süresi dolmadan kira ilişkisini sona erdirirse, yeni kiracı bulunana kadar ya da sözleşme bitimine kadar kira tazminatı talep edilebilir." },
+      { q: "Uyarlama davası nedir?", a: "Kira bedelinin, ekonomik koşullardaki aşırı değişim nedeniyle piyasa değerinin çok altında kalması durumunda açılan davadır. Mahkeme, sözleşmeyi piyasa şartlarına uyarlayabilir." },
+    ],
+    stats: [
+      { label: "Tahliye Davası", value: "120+" },
+      { label: "Kira Uyuşmazlığı", value: "200+" },
+      { label: "Yıllık Deneyim", value: "10+" },
+    ],
+  },
+
   "idare-ve-vergi-hukuku": {
     title: "İdare ve Vergi Hukuku",
     subtitle: "Kamu Kurumlarına Karşı Etkili Hukuki Mücadele",

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
   Scale, Gavel, Shield, Briefcase, Users,
-  Heart, ShoppingCart, Award, Target,
+  Heart, ShoppingCart, Award, Target, Home,
   CheckCircle2, ArrowRight, MessageSquare, Phone,
   MapPin, FileText, Clock,
 } from "lucide-react";
@@ -21,6 +21,7 @@ const services: SvcType[] = [
   { title: "Sağlık Hukuku", slug: "saglik-hukuku", Icon: Heart, desc: "Tıbbi malpraktis ve hasta hakları uyuşmazlıkları.", img: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&q=80&auto=format&fit=crop" },
   { title: "Tüketici Hukuku", slug: "tuketici-hukuku", Icon: ShoppingCart, desc: "Ayıplı ürün, tüketici hakları ve hakem heyeti.", img: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80&auto=format&fit=crop" },
   { title: "Kişisel Verilerin Korunması Hukuku", slug: "kisisel-verilerin-korunmasi-hukuku", Icon: Shield, desc: "KVKK uyum, veri envanteri ve veri ihlali danışmanlığı.", img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&q=80&auto=format&fit=crop" },
+  { title: "Kira Hukuku", slug: "kira-hukuku", Icon: Home, desc: "Kira sözleşmesi, tahliye davaları ve kira alacağı tahsili.", img: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80&auto=format&fit=crop" },
 ];
 
 const TeraziSVG = ({ className }: { className?: string }) => (
