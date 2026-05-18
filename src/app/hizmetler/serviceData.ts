@@ -96,10 +96,10 @@ export const serviceContent: Record<string, ServiceItem> = {
 
   "aile-hukuku": {
     title: "Aile Hukuku",
-    subtitle: "Aile Uyuşmazlıklarında Hukuki Destek",
-    heroDesc: "Boşanma, velayet, nafaka ve miras gibi hassas süreçlerde hukuki haklarınız kapsamında danışmanlık ve temsil hizmetleri.",
-    desc1: "Aile hukuku; bireylerin en kırılgan dönemlerinde ihtiyaç duydukları hukuki desteği içermektedir. Boşanma davası, velayet ve kişisel ilişki düzenlenmesi, nafaka talepleri, mal rejimi ve aile içi şiddet davalarında müvekkillerimize güvenilir bir yol arkadaşlığı yapıyoruz.",
-    desc2: "Öncelikle anlaşmalı çözüm yollarını değerlendiriyor, taraflara ve koşullara göre en uygun hukuki yolu birlikte belirliyoruz. Çekişmeli davalarda ise hukuki argümanlar ve delil yönetimi konusunda müvekkile destek sunuyoruz.",
+    subtitle: "Aile Uyuşmazlıklarında Tecrübeli Hukuki Destek",
+    heroDesc: "Nişanlanmadan boşanmaya, velayetten mirasa kadar Aile Hukuku'nun tüm alanlarında tecrübeli avukatlarımızla yanınızdayız.",
+    desc1: "Aile, toplumun temel taşı olarak kabul edilmektedir. Aileyi oluşturan kişiler arasındaki ilişkileri düzenleyen hukuk dalı ise Aile Hukuku olup en yaygın ve sıklıkla ihtiyaç duyulan hukuk dallarından bir diğeridir. Aile Hukuku'nun konusunu nişanlanma, evlenme, boşanma, velayet, vesayet, soybağı, miras gibi özel hayatta bilinen ve ihtiyaç duyulan birçok kavram teşkil etmektedir.",
+    desc2: "Boşanma ve boşanmaya bağlı velayet, mal paylaşımı konuları sıklıkla uyuşmazlık yaşanan Aile Hukuku konuları arasında bulunmaktadır. Hukuk Büromuz, evlilik birliğinin kurulması, yürütülmesi, sona erdirilmesi, vesayet, soybağı, miras ve benzeri Aile Hukuku konusuna giren alanlarda tecrübeli avukatları ile hukuki danışmanlık sağlamakta ve uyuşmazlıkları takip etmektedir.",
     features: [
       "Anlaşmalı ve çekişmeli boşanma davaları",
       "Velayet ve kişisel ilişki düzenlenmesi",
