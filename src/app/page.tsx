@@ -213,7 +213,7 @@ export default function Home() {
 
           {/* Sol: görsel */}
           <div className="relative">
-            <div className="relative rounded-[40px] overflow-hidden shadow-2xl bg-primary aspect-[4/5] flex items-end">
+            <div className="relative rounded-[40px] overflow-hidden shadow-2xl bg-primary aspect-[3/2] flex items-end">
               <img
                 src="/avukat.jpg"
                 alt="Av. Aybike Sultan Biçer"
@@ -233,11 +233,6 @@ export default function Home() {
                 <p className="text-white font-black text-xl italic uppercase tracking-tight">Av. Aybike Sultan Biçer</p>
                 <p className="text-accent text-xs font-bold tracking-[0.25em] uppercase mt-1">Hukuk & Danışmanlık — Kadıköy, İstanbul</p>
               </div>
-            </div>
-            {/* Deneyim rozeti */}
-            <div className="absolute -bottom-8 -right-8 bg-accent text-primary rounded-3xl p-8 shadow-2xl shadow-accent/20 hidden md:block">
-              <p className="font-black text-5xl italic leading-none">10+</p>
-              <p className="font-bold text-[10px] uppercase tracking-widest mt-2 opacity-70">Yıllık Tecrübe</p>
             </div>
             {/* Terazi rozeti sol üst */}
             <div className="absolute -top-6 -left-6 bg-primary rounded-3xl p-5 shadow-xl hidden md:flex items-center justify-center">
