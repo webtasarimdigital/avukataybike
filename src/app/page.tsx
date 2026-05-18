@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
   Scale, Gavel, Shield, Briefcase, Users,
-  Heart, ShoppingCart,
+  Heart, ShoppingCart, Award, Target,
   CheckCircle2, ArrowRight, MessageSquare, Phone,
   MapPin, FileText, Clock,
 } from "lucide-react";
@@ -359,30 +359,75 @@ export default function Home() {
       </section>
 
       {/* ══════════════════════════════════════
-          TERÂZİ BANNER — Alıntı + Büyük SVG
+          DEĞERLER — Merkez görsel + özellikler
       ══════════════════════════════════════ */}
-      <section className="relative bg-primary overflow-hidden py-24 md:py-32">
-        <div className="absolute inset-0 opacity-[0.04]" style={{backgroundImage:"radial-gradient(circle, #C9882A 1px, transparent 1px)", backgroundSize:"30px 30px"}} />
-        <div className="absolute right-0 top-0 h-full w-1/3 flex items-center justify-center opacity-8 pointer-events-none">
-          <TeraziSVG className="w-full h-full text-accent" />
-        </div>
-        <div className="relative z-10 container mx-auto px-6 max-w-5xl text-center space-y-8">
-          <div className="w-16 h-16 rounded-2xl bg-accent/15 border border-accent/30 flex items-center justify-center mx-auto">
-            <TeraziSVG className="w-9 h-9 text-accent" />
+      <section className="bg-[#F8F5EF] py-16 md:py-20">
+        <div className="container mx-auto px-6 max-w-7xl">
+
+          {/* Quote — üst */}
+          <div className="text-center mb-12">
+            <blockquote className="text-2xl md:text-3xl font-black text-primary leading-snug">
+              "Hukuk, <span className="text-accent italic">güçlünün değil</span>, haklının yanında durur."
+            </blockquote>
+            <p className="text-primary/40 text-[11px] font-bold tracking-[0.3em] uppercase mt-3">Hukuki Danışmanlık · Dava Takibi · Arabuluculuk</p>
           </div>
-          <blockquote className="text-3xl md:text-5xl font-black text-white leading-tight max-w-4xl mx-auto">
-            "Hukuk, <span className="text-accent italic">güçlünün değil</span>,<br className="hidden md:block"/> haklının yanında durur."
-          </blockquote>
-          <p className="text-white/40 text-sm font-bold tracking-widest uppercase">Hukuki Danışmanlık · Dava Takibi · Arabuluculuk</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-            <a href="tel:05514882948"
-              className="bg-accent hover:bg-white text-primary px-10 py-4 rounded-full font-black text-sm tracking-widest uppercase transition-all shadow-xl shadow-accent/20 flex items-center justify-center gap-3">
-              <Phone size={17} /> Hemen Ara
-            </a>
-            <a href="https://wa.me/905514882948" target="_blank"
-              className="bg-white/8 hover:bg-white/15 border border-white/15 text-white px-10 py-4 rounded-full font-black text-sm tracking-widest uppercase transition-all flex items-center justify-center gap-3">
-              <MessageSquare size={17} /> WhatsApp
-            </a>
+
+          {/* 3 sütun: sol özellikler | merkez görsel | sağ özellikler */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+
+            {/* Sol */}
+            <div className="flex flex-col gap-8">
+              {[
+                { icon: Shield, title: "Gizlilik İlkesi", desc: "Müvekkillerimize ait tüm bilgiler mutlak gizlilik içinde, meslek etiği çerçevesinde korunur." },
+                { icon: Scale, title: "Şeffaf İletişim", desc: "Hukuki sürecin her aşamasında açık, anlaşılır ve zamanında bilgilendirme yapılır." },
+              ].map(({ icon: Icon, title, desc }) => (
+                <div key={title} className="flex items-start gap-4 text-right flex-row-reverse md:flex-row md:text-left">
+                  <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center shrink-0">
+                    <Icon size={22} className="text-accent" />
+                  </div>
+                  <div>
+                    <h4 className="font-black text-primary text-base mb-1">{title}</h4>
+                    <p className="text-neutral-500 text-sm leading-relaxed">{desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Merkez görsel */}
+            <div className="flex justify-center">
+              <div className="relative w-72 h-80 md:w-80 md:h-[420px] rounded-3xl overflow-hidden shadow-2xl shadow-primary/20 border-4 border-white">
+                <img
+                  src="https://images.unsplash.com/photo-1589578228447-e1a4e481c6c8?w=800&q=85&auto=format&fit=crop"
+                  alt="Adalet Terazisi"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent" />
+                <div className="absolute bottom-5 left-0 right-0 text-center">
+                  <span className="bg-accent text-primary text-[10px] font-black tracking-widest uppercase px-4 py-1.5 rounded-full">
+                    ASB Hukuk &amp; Danışmanlık
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Sağ */}
+            <div className="flex flex-col gap-8">
+              {[
+                { icon: Award, title: "Uzman Kadro", desc: "İstanbul Barosu üyesi, alanında deneyimli avukat kadrosuyla profesyonel hizmet." },
+                { icon: Target, title: "Sonuç Odaklı", desc: "Hukuki hedeflere ulaşmak için kararlı, stratejik ve sistematik bir çalışma anlayışı." },
+              ].map(({ icon: Icon, title, desc }) => (
+                <div key={title} className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center shrink-0">
+                    <Icon size={22} className="text-accent" />
+                  </div>
+                  <div>
+                    <h4 className="font-black text-primary text-base mb-1">{title}</h4>
+                    <p className="text-neutral-500 text-sm leading-relaxed">{desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
           </div>
         </div>
       </section>
