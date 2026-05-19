@@ -1,5 +1,5 @@
 "use client";
-import { MapPin, Phone } from "lucide-react";
+import { MapPin, Phone, MessageCircle } from "lucide-react";
 import Link from "next/link";
 
 export default function FloatingActions() {
