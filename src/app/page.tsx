@@ -64,7 +64,7 @@ export default function Home() {
       {/* ══════════════════════════════════════
           HERO — Yatay Split
       ══════════════════════════════════════ */}
-      <section className="relative w-full min-h-screen flex flex-col lg:flex-row overflow-hidden" style={{paddingTop:"var(--header-h,92px)"}}>
+      <section className="relative w-full min-h-[70vh] flex items-center overflow-hidden" style={{paddingTop:"var(--header-h,92px)"}}>
 
         {/* Arka plan: hukuk kitaplığı tam kaplıyor */}
         <img
@@ -72,12 +72,12 @@ export default function Home() {
           alt="Hukuk Bürosu"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        {/* Overlay: soldan sağa koyulaşan gradient */}
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/92 via-primary/70 to-primary/20 z-10" />
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-primary/85 z-10" />
 
-        {/* SOL — Metin (overlay üstünde) */}
-        <div className="relative z-20 flex-1 lg:w-[55%] flex items-center justify-center py-20 lg:py-0 px-8 md:px-14">
-          <div className="w-full max-w-[540px] space-y-7">
+        {/* Metin — ortalanmış */}
+        <div className="relative z-20 w-full flex items-center justify-center py-24 lg:py-32 px-8 md:px-14">
+          <div className="w-full max-w-[700px] text-center space-y-7">
 
             {/* Etiket */}
             <div className="inline-flex items-center gap-2.5 bg-white/10 border border-white/20 px-4 py-2 rounded-full">
@@ -93,7 +93,7 @@ export default function Home() {
             </h1>
 
             {/* Butonlar */}
-            <div className="flex gap-3 pt-2">
+            <div className="flex gap-3 pt-2 justify-center max-w-sm mx-auto">
               <Link href="/iletisim"
                 className="flex-1 bg-accent hover:bg-accent/90 text-primary px-4 py-4 rounded-2xl font-black text-[12px] tracking-widest uppercase transition-all shadow-xl shadow-accent/20 flex items-center justify-center gap-2">
                 İletişim
@@ -104,40 +104,6 @@ export default function Home() {
               </Link>
             </div>
           </div>
-        </div>
-
-        {/* SAĞ — Avukat portresi şık çerçevede */}
-        <div className="relative z-20 lg:w-[45%] flex items-center justify-center py-12 lg:py-16">
-
-          {/* Dış dekoratif halka */}
-          <div className="absolute w-[340px] h-[440px] md:w-[380px] md:h-[500px] rounded-[48px] border border-white/10 rotate-3" />
-          <div className="absolute w-[340px] h-[440px] md:w-[380px] md:h-[500px] rounded-[48px] border border-accent/20 -rotate-3" />
-
-          {/* Ana çerçeve */}
-          <div className="relative w-[300px] h-[400px] md:w-[340px] md:h-[460px] rounded-[40px] overflow-hidden border-4 border-white/25 shadow-2xl shadow-black/40">
-            <img
-              src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=700&q=85&auto=format&fit=crop&crop=top"
-              alt="Av. Aybike Sultan Biçer"
-              className="w-full h-full object-cover object-top"
-              onError={(e) => {
-                const img = e.currentTarget as HTMLImageElement;
-                img.onerror = null;
-                img.src = "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=700&q=85&auto=format&fit=crop&crop=top";
-              }}
-            />
-            {/* Alt gradient */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-
-            {/* İsim etiketi — çerçeve içinde */}
-            <div className="absolute bottom-5 left-4 right-4 bg-black/40 backdrop-blur-md border border-white/15 text-white rounded-2xl px-4 py-3 text-center">
-              <p className="font-black text-sm uppercase italic tracking-tight">Av. Aybike Sultan Biçer</p>
-              <p className="text-accent text-[9px] font-bold tracking-[0.2em] uppercase mt-0.5">Hukuk & Danışmanlık · İstanbul Barosu</p>
-            </div>
-          </div>
-
-          {/* Accent köşe süsü */}
-          <div className="absolute top-10 right-10 md:right-16 w-3 h-3 rounded-full bg-accent opacity-60" />
-          <div className="absolute bottom-10 left-10 md:left-16 w-2 h-2 rounded-full bg-white opacity-30" />
         </div>
 
       </section>
