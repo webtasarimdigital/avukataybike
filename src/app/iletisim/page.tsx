@@ -4,34 +4,28 @@ import { MapPin, Phone, Mail, Clock, ArrowRight, MessageSquare } from "lucide-re
 export default function ContactPage() {
   return (
     <main className="min-h-screen bg-[#F8FAFC]">
-      {/* Hero Header Area (Megagöz Style) */}
-      <div className="relative w-full h-[450px] md:h-[550px] flex items-center justify-center pt-44 pb-12 overflow-hidden">
-        <div className="absolute inset-0 bg-primary z-0">
-           <div className="absolute inset-0 bg-primary-light/20 -skew-x-12 translate-x-1/4 pointer-events-none" />
-           <div className="absolute inset-0 bg-black/40 z-10" />
-        </div>
+      {/* Hero */}
+      <div className="relative w-full pt-44 pb-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-[#0a1628] z-0" />
         
-        <div className="relative z-20 flex flex-col items-center justify-center text-center px-4 max-w-4xl">
-          <div className="flex items-center gap-4 mb-4">
-            <div className="h-[1px] w-8 md:w-12 bg-accent" />
-            <span className="text-accent font-bold tracking-[0.4em] uppercase text-xs md:text-sm italic">
-              İLETİŞİM
-            </span>
-            <div className="h-[1px] w-8 md:w-12 bg-accent" />
+        <div className="relative z-20 container mx-auto px-6 max-w-5xl">
+          <div className="flex items-center gap-3 mb-5">
+            <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+            <span className="text-accent text-xs font-bold tracking-widest uppercase">İletişim</span>
           </div>
           
-          <h1 className="text-4xl md:text-6xl font-black text-white tracking-tight mb-6 uppercase italic">
-            BİZE ULAŞIN
+          <h1 className="text-4xl md:text-6xl font-black text-white tracking-tight uppercase italic leading-tight">
+            Bize Ulaşın
           </h1>
           
-          <p className="text-white/70 text-sm md:text-lg font-medium leading-relaxed max-w-2xl px-4">
-            Hukuki süreçleriniz hakkında bilgi almak ve randevu oluşturmak için bizimle iletişime geçin.
+          <p className="text-white/60 text-sm md:text-lg font-medium leading-relaxed max-w-2xl mt-5">
+            Hukuki süreçleriniz hakkında bilgi almak için bizimle iletişime geçin.
           </p>
         </div>
       </div>
 
       {/* Main Content (Overlapping Form & Info) */}
-      <div className="container mx-auto px-6 max-w-7xl relative z-30 -mt-24 md:-mt-32 pb-24">
+      <div className="container mx-auto px-6 max-w-7xl relative z-30 -mt-8 pb-24">
         <div className="bg-white rounded-[40px] shadow-2xl overflow-hidden border border-gray-100 p-8 md:p-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
             

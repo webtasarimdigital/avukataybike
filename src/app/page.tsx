@@ -348,7 +348,7 @@ export default function Home() {
             {/* Sağ */}
             <div className="flex flex-col gap-8">
               {[
-                { icon: Award, title: "Uzman Kadro", desc: "İstanbul Barosu üyesi, alanında deneyimli avukat kadrosuyla profesyonel hizmet." },
+                { icon: Award, title: "Deneyim", desc: "İstanbul Barosu üyesi avukat kadrosuyla profesyonel hukuki danışmanlık." },
                 { icon: Target, title: "Sonuç Odaklı", desc: "Hukuki hedeflere ulaşmak için kararlı, stratejik ve sistematik bir çalışma anlayışı." },
               ].map(({ icon: Icon, title, desc }) => (
                 <div key={title} className="flex items-start gap-4">

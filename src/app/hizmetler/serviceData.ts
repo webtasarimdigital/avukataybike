@@ -199,7 +199,7 @@ export const serviceContent: Record<string, ServiceItem> = {
   "sigorta-hukuku": {
     title: "Sigorta Hukuku",
     subtitle: "Sigorta Uyuşmazlıklarında Uzman Hukuki Temsil",
-    heroDesc: "Sigorta poliçesinden kaynaklanan alacak davalarından mesleki mesuliyet uyuşmazlıklarına kadar Sigorta Hukuku'nun tüm alanlarında uzman kadromuzla yanınızdayız.",
+    heroDesc: "Sigorta poliçesinden kaynaklanan alacak davalarından mesleki mesuliyet uyuşmazlıklarına kadar Sigorta Hukuku'nun tüm alanlarında yanınızdayız.",
     desc1: "Hukuk büromuz, Sigorta Hukuku düzenlemeleri uyarınca zararın teminatı sigorta poliçesinden kaynaklanan alacak davaları, kazalar nedeniyle sigorta şirketlerine yahut ilgili sorumlulara karşı açılan tazminat davalarında tarafların temsili, sigortalı ve sigorta ettiren ile sigorta şirketleri arasında doğabilecek her türlü hukuki uyuşmazlıklar, mesleki mesuliyet sigortasıyla ilgili tüm uyuşmazlıklar, maluliyetin belirlenmesine ilişkin davalar ve sigorta hukukundan doğan tüm anlaşmazlıklar konusunda uzman hukukçu kadrosu ile hukuki danışmanlık hizmetini vermektedir.",
     desc2: "Sigorta şirketleri kimi zaman ödeme yapmaktan kaçınmakta ya da hak edilen tazminatın çok altında teklifler sunmaktadır. Bu durumlarda tarafınızda yer alarak sigorta poliçesi şartlarını titizlikle inceliyor, haklarınızı en etkin biçimde kullanmanız için hukuki destek sağlıyoruz.",
     features: [
@@ -220,7 +220,7 @@ export const serviceContent: Record<string, ServiceItem> = {
     ],
     faq: [
       { q: "Sigorta şirketi tazminat ödemeyi reddederse ne yapabilirim?", a: "Sigorta şirketine yazılı ret gerekçesini talep edin. Akabinde Sigorta Tahkim Komisyonu'na veya Asliye Ticaret Mahkemesi'ne başvurabilirsiniz." },
-      { q: "Mesleki mesuliyet sigortasında uyuşmazlık çıkarsa ne yapılır?", a: "Poliçe kapsamı, sorumluluk sınırları ve ret gerekçeleri titizlikle incelenerek en uygun hukuki yol belirlenir. Ofisimiz bu alanda uzman kadrosuyla hizmet vermektedir." },
+      { q: "Mesleki mesuliyet sigortasında uyuşmazlık çıkarsa ne yapılır?", a: "Poliçe kapsamı, sorumluluk sınırları ve ret gerekçeleri titizlikle incelenerek en uygun hukuki yol belirlenir. Bu alanda kapsamlı hukuki destek sağlanmaktadır." },
       { q: "Maluliyet davası açabilir miyim?", a: "Kaza veya meslek hastalığı sonucu maluliyet oluşmuşsa, sigorta şirketi veya ilgili sorumluya karşı tazminat davası açılabilir. Maluliyet oranının doğru belirlenmesi süreç açısından kritik önem taşır." },
       { q: "Sigorta tazminat davası ne kadar sürer?", a: "Tahkim kararları genellikle 3–6 ay içinde çıkar. Asliye Ticaret Mahkemesi'nde ise ortalama 1–2 yıl sürebilmektedir." },
     ],
@@ -268,7 +268,7 @@ export const serviceContent: Record<string, ServiceItem> = {
   "icra-ve-iflas-hukuku": {
     title: "İcra ve İflas Hukuku",
     subtitle: "Alacaklı ve Borçlu Taraf İçin Etkin Hukuki Çözümler",
-    heroDesc: "Ekonomik krizlerin etkisiyle zora düşen şirketlere ve alacak tahsili gerektiren kurumlara; uzman kadromuzla prosedüre uygun, hızlı ve etkin hukuki destek sağlıyoruz.",
+    heroDesc: "Ekonomik krizlerin etkisiyle zora düşen şirketlere ve alacak tahsili gerektiren kurumlara; prosedüre uygun, hızlı ve etkin hukuki destek sağlıyoruz.",
     desc1: "Ekonomide yaşanan krizler ve dalgalanmalar faaliyet gösteren her ölçekteki ticari yapıyı olumsuz olarak etkilemekte ve ne yazık ki şirketleri ekonomik olarak sıkıntıya sürüklemektedir. Hukuk Büromuz hem alacaklı tarafa hem de borçlu tarafa yönelik süreçlerin yönetimi konusunda destek sunmaktadır.",
     desc2: "Borçlu olarak; ticari değere sahip ve bu durumunu korumak isteyen ancak ekonomik hayatta finansal zorluk içerisinde olan gerçek ve tüzel kişilerin malvarlıklarının korunması, alacaklıların talepleri karşısında somut durumun koşullarına en uygun çözümlerin belirlenmesi, ticari faaliyetin devamlılığının sağlanması için gerekli önlemlerin alınması ve yeniden yapılandırma gibi konularda Hukuk Büromuz uzman avukatları ile destek vermekte ve değer yaratmaktadır. Alacaklı olarak; kredi finans kuruluşları başta olmak üzere birçok kurumsal yapının alacaklarının tahsili ve buna bağlı çok yönlü hukuki süreçlerinin takibi Hukuk Büromuz tarafından konusunda uzman avukatları ile prosedüre uygun, etkin ve hızlı bir şekilde yapılabilmektedir.",
     features: [
@@ -372,7 +372,7 @@ export const serviceContent: Record<string, ServiceItem> = {
   "tuketici-hukuku": {
     title: "Tüketici Hukuku",
     subtitle: "Tüketici ve Hizmet Sağlayıcılarına İki Yönlü Hukuki Destek",
-    heroDesc: "Ayıplı malın iadesi ve cayma hakkından firmaların yükümlülük uyumuna kadar Tüketici Hukuku'nun tüm alanlarında uzman kadromuzla yanınızdayız.",
+    heroDesc: "Ayıplı malın iadesi ve cayma hakkından firmaların yükümlülük uyumuna kadar Tüketici Hukuku'nun tüm alanlarında yanınızdayız.",
     desc1: "Hukuk büromuz tüketicinin korunması kuralları çerçevesinde, ayıplı malın iadesi, cayma hakkı kullanılması, bedel indirimi konularında tüketicilere hukuki destek vermektedir. Ortaya çıkan uyuşmazlıkların çözümü için uzman avukatları ile tecrübe ve bilgi birikimi ile destek sağlamaktadır.",
     desc2: "Ayrıca hizmet ve ürün sağlayıcılarının da Tüketici Hukuku kapsamında haklarını ve yükümlülüklerini yerine getirmesi, idari, mali ve cezai yaptırımlarla karşılaşmamaları için çok önemlidir. Hukuk büromuz, tüketici ile ilişkinin kurulması anından itibaren hukuki düzenlemelere uygun şekilde firmaların hareket etmelerini sağlayarak hizmet ve ürün sağlayıcılarına da uzman avukat kadrosu ile hukuki destek sağlayarak değer yaratmaktadır.",
     features: [

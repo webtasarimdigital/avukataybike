@@ -1,55 +1,10 @@
 "use client";
-import { useState, useEffect } from "react";
-import { MapPin, Phone, X, CalendarClock, MessageCircle } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 
 export default function FloatingActions() {
-  const [isWidgetClosed, setIsWidgetClosed] = useState(true);
-
-  useEffect(() => {
-    if (window.innerWidth >= 768) {
-      setIsWidgetClosed(false);
-    }
-  }, []);
-
   return (
     <>
-      {/* 24/7 RIGHT APPOINTMENT WIDGET (Global) */}
-      <div 
-        className={`fixed right-0 top-1/2 -translate-y-1/2 z-[110] transition-transform duration-500 ease-in-out flex items-center ${isWidgetClosed ? "translate-x-full" : "translate-x-0"}`}
-      >
-        {/* Closed Tab (Expander) */}
-        <button 
-          onClick={() => setIsWidgetClosed(false)}
-          className={`absolute left-0 -translate-x-full w-10 md:w-12 h-14 md:h-16 bg-accent text-black rounded-l-xl flex items-center justify-center shadow-lg transition-all duration-300 hover:bg-white ${isWidgetClosed ? "opacity-100" : "opacity-0 pointer-events-none"}`}
-        >
-          <CalendarClock size={20} className="md:w-6 md:h-6" />
-        </button>
-
-        {/* Main active panel */}
-        <div
-          onClick={() => document.dispatchEvent(new CustomEvent("open-contact-modal"))}
-          className="relative w-[70px] h-[150px] md:w-[85px] md:h-[190px] flex flex-col shadow-[-5px_0_20px_rgba(0,0,0,0.2)] overflow-hidden hover:scale-[1.03] origin-right rounded-l-xl md:rounded-l-2xl z-40 bg-white group transition-transform text-left cursor-pointer"
-        >
-          <div className="bg-primary flex-1 w-full flex flex-col items-center justify-center border-b border-white/10 relative">
-            {/* Close Button */}
-            <button
-              onClick={(e) => { e.stopPropagation(); setIsWidgetClosed(true); }}
-              className="absolute top-1 left-1 md:top-1.5 md:left-1.5 text-white/50 hover:text-white transition-colors bg-black/20 hover:bg-red-500 rounded-full p-1 z-50"
-            >
-               <X size={12} className="md:w-[14px] md:h-[14px]" />
-            </button>
-            <div className="relative w-10 h-10 md:w-12 md:h-12 flex items-center justify-center">
-               <MessageCircle size={32} className="text-accent" />
-            </div>
-          </div>
-          <div className="bg-accent group-hover:bg-white transition-colors flex-1 w-full flex items-center justify-center text-center text-primary font-black text-[11px] md:text-[13px] leading-snug tracking-wider px-1 md:px-2">
-            <div>İLETİŞİM</div>
-          </div>
-        </div>
-      </div>
-
       {/* DESKTOP (Web) VERSION - Floating Icons Bottom Right */}
       <div className="fixed bottom-8 right-8 z-[100] flex flex-col gap-4 hidden md:flex">
         <a 

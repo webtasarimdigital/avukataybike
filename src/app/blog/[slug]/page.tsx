@@ -143,7 +143,7 @@ export default function BlogPostPage() {
             <div className="bg-accent rounded-[40px] p-10 shadow-xl relative overflow-hidden">
               <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-white/10 rounded-full blur-3xl" />
               <h3 className="text-primary font-black text-2xl italic uppercase leading-tight mb-3">HUKUKI DESTEK<br />ALIN</h3>
-              <p className="text-primary/70 text-xs font-bold uppercase tracking-widest mb-8">Sorularınız için uzman ekibimizle iletişime geçin.</p>
+              <p className="text-primary/70 text-xs font-bold uppercase tracking-widest mb-8">Sorularınız için iletişime geçin.</p>
               <div className="space-y-3 relative z-10">
                 <Link href="/iletisim" className="w-full bg-primary text-white py-5 rounded-2xl flex items-center justify-center gap-3 font-black text-xs tracking-widest hover:bg-white hover:text-primary transition-all uppercase">
                   İletişim

@@ -70,6 +70,13 @@ const services = [
     desc: "KVKK uyum süreçleri, veri envanteri, VERBİS ve veri ihlali durumlarında hukuki destek.",
     img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=700&q=80&auto=format&fit=crop",
   },
+  {
+    title: "Ceza Hukuku",
+    slug: "ceza-hukuku",
+    Icon: Gavel,
+    desc: "Soruşturma ve kovuşturma süreçlerinde etkin savunma, ağır ceza davaları ve kanun yolları.",
+    img: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=700&q=80&auto=format&fit=crop",
+  },
 ];
 
 
@@ -107,7 +114,7 @@ export default function HizmetlerPage() {
               Hukuki<br /><span className="text-accent">Hizmetlerimiz</span>
             </h1>
             <p className="text-white/60 text-xl leading-relaxed max-w-2xl">
-              Her hukuki sürecin kendine özgü olduğunu biliyor; müvekkillerimize özel stratejiler ve uzman kadromuzla sonuç odaklı hizmet sunuyoruz.
+              Her hukuki sürecin kendine özgü olduğunu biliyor; müvekkillerimize özel stratejiler ile sonuç odaklı hizmet sunuyoruz.
             </p>
           </motion.div>
         </div>
