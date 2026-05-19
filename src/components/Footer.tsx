@@ -12,6 +12,7 @@ const services = [
   { title: "Tüketici Hukuku", slug: "tuketici-hukuku" },
   { title: "Kişisel Verilerin Korunması", slug: "kisisel-verilerin-korunmasi-hukuku" },
   { title: "Kira Hukuku", slug: "kira-hukuku" },
+  { title: "Ceza Hukuku", slug: "ceza-hukuku" },
 ];
 
 export default function Footer() {

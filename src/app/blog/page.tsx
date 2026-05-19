@@ -119,11 +119,8 @@ export default function BlogPage() {
             </h3>
           </div>
           <div className="relative z-10 flex gap-4 shrink-0 flex-wrap">
-            <a href="tel:05514882948" className="bg-accent hover:bg-white text-primary px-8 py-5 rounded-2xl font-black text-sm tracking-widest uppercase transition-all flex items-center gap-3">
-              <Phone size={18} /> Hemen Ara
-            </a>
-            <Link href="/iletisim" className="bg-white/10 hover:bg-white/20 border border-white/20 text-white px-8 py-5 rounded-2xl font-black text-sm tracking-widest uppercase transition-all">
-              İletişim Formu
+            <Link href="/iletisim" className="bg-accent hover:bg-white text-primary px-8 py-5 rounded-2xl font-black text-sm tracking-widest uppercase transition-all flex items-center gap-3">
+              İletişim
             </Link>
           </div>
         </div>

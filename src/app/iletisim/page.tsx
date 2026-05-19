@@ -89,7 +89,7 @@ export default function ContactPage() {
             <div className="lg:col-span-7 bg-neutral-50 p-8 md:p-12 rounded-[40px] border border-gray-100 shadow-sm">
                <div className="flex flex-col gap-2 mb-10 text-center md:text-left">
                   <h3 className="text-2xl font-black text-primary uppercase italic">BİZE MESAJ GÖNDERİN</h3>
-                  <p className="text-neutral-400 font-bold text-xs uppercase tracking-widest">HIZLI BİLGİ VE RANDEVU FORMU</p>
+                  <p className="text-neutral-400 font-bold text-xs uppercase tracking-widest">İLETİŞİM FORMU</p>
                </div>
                
                <form className="grid grid-cols-1 md:grid-cols-2 gap-6">

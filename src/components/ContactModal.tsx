@@ -66,7 +66,6 @@ export default function ContactModal() {
               <div className="bg-primary px-8 py-6 flex items-start justify-between relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-48 h-48 bg-accent/10 rounded-full -mr-24 -mt-24 blur-2xl" />
                 <div className="relative z-10">
-                  <p className="text-accent text-[10px] font-black tracking-[0.3em] uppercase mb-1">Ücretsiz</p>
                   <h2 className="text-white font-black text-2xl uppercase italic">Bilgi Talebi</h2>
                   <p className="text-white/50 text-xs mt-1">En kısa sürede dönüş yapılacaktır.</p>
                 </div>

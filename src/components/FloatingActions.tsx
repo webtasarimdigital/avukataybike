@@ -45,7 +45,7 @@ export default function FloatingActions() {
             </div>
           </div>
           <div className="bg-accent group-hover:bg-white transition-colors flex-1 w-full flex items-center justify-center text-center text-primary font-black text-[11px] md:text-[13px] leading-snug tracking-wider px-1 md:px-2">
-            <div>TIKLA BİLGİ AL</div>
+            <div>İLETİŞİM</div>
           </div>
         </div>
       </div>
@@ -89,11 +89,11 @@ export default function FloatingActions() {
       <div className="fixed bottom-0 left-0 right-0 z-[250] md:hidden bg-white/95 backdrop-blur-md border-t border-gray-100 flex shadow-[0_-10px_30px_rgba(0,0,0,0.08)] pb-safe h-[70px]">
         
         {/* BILGI AL - Priority Button */}
-        <button onClick={() => document.dispatchEvent(new CustomEvent("open-contact-modal"))} className="w-[40%] flex items-center justify-center bg-accent text-primary hover:bg-white transition-colors h-full border-r border-primary/5">
+        <a href="/iletisim" className="w-[40%] flex items-center justify-center bg-accent text-primary hover:bg-white transition-colors h-full border-r border-primary/5">
           <span className="font-black tracking-widest uppercase text-[13px] text-center leading-tight">
-            BİLGİ AL
+            İLETİŞİM
           </span>
-        </button>
+        </a>
 
         {/* ICONS (Location, Phone, WA) */}
         <div className="w-[60%] flex items-center justify-evenly h-full">

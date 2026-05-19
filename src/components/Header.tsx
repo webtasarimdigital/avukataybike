@@ -198,12 +198,12 @@ export default function Header() {
 
           {/* Action Button */}
           <div className="hidden lg:block">
-            <button
-              onClick={() => document.dispatchEvent(new CustomEvent("open-contact-modal"))}
+            <Link
+              href="/iletisim"
               className="bg-accent text-primary px-8 py-3.5 rounded-xl font-bold text-[13px] tracking-widest hover:bg-white hover:text-primary transition-all shadow-lg shadow-accent/20 uppercase italic"
             >
-              Tıkla Bilgi Al
-            </button>
+              İletişim
+            </Link>
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -329,9 +329,9 @@ export default function Header() {
             </div>
 
             <div className="p-8 border-t border-white/5">
-              <a href="tel:05514882948" className="w-full bg-accent text-primary py-5 rounded-2xl flex items-center justify-center gap-3 font-black tracking-widest uppercase text-sm">
-                <Phone size={20} /> HEMEN ARA
-              </a>
+              <Link href="/iletisim" className="w-full bg-accent text-primary py-5 rounded-2xl flex items-center justify-center gap-3 font-black tracking-widest uppercase text-sm">
+                İLETİŞİM
+              </Link>
             </div>
           </motion.div>
         )}

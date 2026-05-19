@@ -185,7 +185,7 @@ export const serviceContent: Record<string, ServiceItem> = {
       { step: "04", title: "Kanun Yolları", desc: "Aleyhte kararlarda istinaf ve temyiz yollarını kararlılıkla kullanıyoruz." },
     ],
     faq: [
-      { q: "Gözaltına alındımda ilk ne yapmalıyım?", a: "Avukatınızı hemen arayın veya aile üyelerinizden avukat talep etmelerini isteyin. İfade vermeden önce mutlaka avukatınızla görüşün." },
+      { q: "Gözaltına alındımda ilk ne yapmalıyım?", a: "Avukatınıza ulaşın veya aile üyelerinizden avukat talep etmelerini isteyin. İfade vermeden önce mutlaka avukatınızla görüşün." },
       { q: "Tutukluluk kararına itiraz edebilir miyim?", a: "Evet. Tutukluluk kararına sulh ceza hakimliği nezdinde itiraz hakkınız vardır. Bu itirazı avukatınız aracılığıyla derhal yapmanız önerilir." },
       { q: "Ceza davası ne kadar sürer?", a: "Suçun niteliğine ve mahkemenin yoğunluğuna göre değişir. Basit suçlarda 6 ay–1 yıl iken ağır ceza mahkemelerinde 2-4 yıl sürebilir." },
     ],

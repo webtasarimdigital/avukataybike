@@ -73,11 +73,8 @@ export default function ServiceDetailPage() {
               {data?.heroDesc || `${title} alanında müvekkillerimize profesyonel danışmanlık ve etkin dava takibi sunuyoruz.`}
             </p>
             <div className="flex flex-wrap gap-4 pt-2">
-              <a href="tel:05514882948" className="bg-accent hover:bg-white text-primary px-8 py-4 rounded-2xl font-black text-sm tracking-widest uppercase transition-all flex items-center gap-3 shadow-xl shadow-accent/20">
-                <Phone size={18} /> Hemen Ara
-              </a>
-              <Link href="/iletisim" className="bg-white/10 hover:bg-white/20 border border-white/20 text-white px-8 py-4 rounded-2xl font-black text-sm tracking-widest uppercase transition-all flex items-center gap-3">
-                <MessageSquare size={18} /> Randevu Al
+              <Link href="/iletisim" className="bg-accent hover:bg-white text-primary px-8 py-4 rounded-2xl font-black text-sm tracking-widest uppercase transition-all flex items-center gap-3 shadow-xl shadow-accent/20">
+                İletişim
               </Link>
             </div>
           </div>
@@ -230,14 +227,8 @@ export default function ServiceDetailPage() {
               <h3 className="text-primary font-black text-2xl italic uppercase leading-tight mb-3">HUKUKI DESTEK<br />ALIN</h3>
               <p className="text-primary/70 text-xs font-bold uppercase tracking-widest mb-8 leading-relaxed">Uyuşmazlığınız için doğru stratejiyi birlikte belirleyelim.</p>
               <div className="space-y-3 relative z-10">
-                <a href="tel:05514882948" className="w-full bg-primary text-white py-5 rounded-2xl flex items-center justify-center gap-3 font-black text-xs tracking-widest hover:bg-white hover:text-primary transition-all shadow-lg uppercase">
-                  <Phone size={18} /> Hemen Ara
-                </a>
-                <a href="https://wa.me/905514882948" target="_blank" className="w-full bg-white text-primary py-5 rounded-2xl flex items-center justify-center gap-3 font-black text-xs tracking-widest hover:bg-primary hover:text-white transition-all shadow-lg uppercase">
-                  <MessageSquare size={18} /> WhatsApp
-                </a>
-                <Link href="/iletisim" className="w-full bg-primary/10 text-primary py-5 rounded-2xl flex items-center justify-center gap-3 font-black text-xs tracking-widest hover:bg-primary hover:text-white transition-all uppercase">
-                  Randevu Formu
+                <Link href="/iletisim" className="w-full bg-primary text-white py-5 rounded-2xl flex items-center justify-center gap-3 font-black text-xs tracking-widest hover:bg-white hover:text-primary transition-all shadow-lg uppercase">
+                  İletişim
                 </Link>
               </div>
             </div>

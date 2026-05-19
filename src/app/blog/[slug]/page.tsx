@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useParams } from "next/navigation";
-import { Calendar, User, ArrowLeft, BookOpen, Share2, Phone, MessageSquare, Tag, ArrowRight } from "lucide-react";
+import { Calendar, User, ArrowLeft, BookOpen, Share2, MessageSquare, Tag, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 const relatedPosts = [
@@ -25,7 +25,7 @@ export default function BlogPostPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-[#0a1628]">
           <div className="absolute inset-0 opacity-5" style={{backgroundImage:"repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(255,255,255,.04) 40px,rgba(255,255,255,.04) 80px)"}} />
         </div>
-        <div className="container mx-auto px-6 max-w-5xl relative z-10 pb-28 space-y-6">
+        <div className="container mx-auto px-6 max-w-5xl relative z-10 pb-36 space-y-6">
           <div className="flex items-center gap-3">
             <Link href="/blog" className="flex items-center gap-2 text-white/40 hover:text-accent text-xs font-bold tracking-widest uppercase transition-colors">
               <ArrowLeft size={16} /> Blog
@@ -46,7 +46,7 @@ export default function BlogPostPage() {
       </div>
 
       {/* ── CONTENT + SIDEBAR ── */}
-      <div className="container mx-auto px-6 max-w-7xl -mt-16 pb-32">
+      <div className="container mx-auto px-6 max-w-7xl -mt-10 pb-32">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
 
           {/* Main Article */}
@@ -145,12 +145,9 @@ export default function BlogPostPage() {
               <h3 className="text-primary font-black text-2xl italic uppercase leading-tight mb-3">HUKUKI DESTEK<br />ALIN</h3>
               <p className="text-primary/70 text-xs font-bold uppercase tracking-widest mb-8">Sorularınız için uzman ekibimizle iletişime geçin.</p>
               <div className="space-y-3 relative z-10">
-                <a href="tel:05514882948" className="w-full bg-primary text-white py-5 rounded-2xl flex items-center justify-center gap-3 font-black text-xs tracking-widest hover:bg-white hover:text-primary transition-all uppercase">
-                  <Phone size={18} /> Hemen Ara
-                </a>
-                <a href="https://wa.me/905514882948" target="_blank" className="w-full bg-white text-primary py-5 rounded-2xl flex items-center justify-center gap-3 font-black text-xs tracking-widest hover:bg-primary hover:text-white transition-all uppercase">
-                  <MessageSquare size={18} /> WhatsApp
-                </a>
+                <Link href="/iletisim" className="w-full bg-primary text-white py-5 rounded-2xl flex items-center justify-center gap-3 font-black text-xs tracking-widest hover:bg-white hover:text-primary transition-all uppercase">
+                  İletişim
+                </Link>
               </div>
             </div>
 

@@ -348,17 +348,11 @@ export default function AboutPage() {
               <h3 className="text-3xl md:text-4xl font-black text-white uppercase italic leading-tight">
                 Hukuki Sorununuz<br /><span className="text-accent">Çözümsüz Değil.</span>
               </h3>
-              <p className="text-white/60 leading-relaxed">Uzman ekibimizle en doğru stratejiyi birlikte belirleyelim. İlk görüşme için hemen ulaşın.</p>
+              <p className="text-white/60 leading-relaxed">Hukuki süreçlerinizde doğru stratejiyi birlikte belirleyelim.</p>
             </div>
             <div className="relative z-10 flex flex-col gap-4">
-              <a href="tel:05514882948" className="bg-accent hover:bg-white text-primary px-8 py-5 rounded-2xl font-black tracking-widest text-sm transition-all flex items-center justify-center gap-3 shadow-xl shadow-accent/20 uppercase">
-                <Phone size={20} /> Hemen Ara
-              </a>
-              <a href="https://wa.me/905514882948" target="_blank" className="bg-[#25D366] hover:bg-white hover:text-[#25D366] text-white px-8 py-5 rounded-2xl font-black tracking-widest text-sm transition-all flex items-center justify-center gap-3 uppercase">
-                <MessageSquare size={20} /> WhatsApp ile Yaz
-              </a>
-              <Link href="/iletisim" className="bg-white/10 hover:bg-white/20 border border-white/20 text-white px-8 py-5 rounded-2xl font-black tracking-widest text-sm transition-all flex items-center justify-center gap-3 uppercase">
-                İletişim Formu
+              <Link href="/iletisim" className="bg-accent hover:bg-white text-primary px-8 py-5 rounded-2xl font-black tracking-widest text-sm transition-all flex items-center justify-center gap-3 shadow-xl shadow-accent/20 uppercase">
+                İletişim
               </Link>
             </div>
           </div>
