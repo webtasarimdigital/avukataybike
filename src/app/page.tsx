@@ -188,12 +188,21 @@ export default function Home() {
           </div>
 
           {/* Kart Izgarası */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <motion.div
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.15 }}
+            variants={{ visible: { transition: { staggerChildren: 0.08 } } }}
+          >
             {services.map((svc) => (
-              <Link
+              <motion.div
                 key={svc.slug}
+                variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5 } } }}
+              >
+              <Link
                 href={`/hizmetler/${svc.slug}`}
-                className="group relative bg-white rounded-3xl p-5 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-400 flex flex-col border border-neutral-100 hover:border-accent overflow-hidden"
+                className="group relative bg-white rounded-3xl p-5 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-400 flex flex-col border border-neutral-100 hover:border-accent overflow-hidden h-full"
               >
                 {/* Alttan yukarı dolma katmanı */}
                 <div className="absolute inset-0 bg-accent origin-bottom scale-y-0 group-hover:scale-y-100 transition-transform duration-500 ease-out rounded-3xl z-0" />
@@ -223,8 +232,9 @@ export default function Home() {
                   </div>
                 </div>
               </Link>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
 
           {/* Alt CTA */}
           <div className="text-center mt-14">
