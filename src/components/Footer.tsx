@@ -66,7 +66,7 @@ export default function Footer() {
               <img src="/logo.png" alt="Logo" className="h-20 w-auto" />
             </Link>
             <p className="text-[14px] leading-relaxed text-neutral-400 font-medium max-w-sm">
-              Avukat Aybike Sultan Biçer, hukuk ve danışmanlık alanında profesyonel, şeffaf ve sonuç odaklı hizmetler sunarak müvekkillerinin haklarını en üst seviyede korumayı amaçlamaktadır.
+              ASB Hukuk, hukuk ve danışmanlık alanında profesyonel, şeffaf ve sonuç odaklı hizmetler sunarak müvekkillerinin haklarını en üst seviyede korumayı amaçlamaktadır.
             </p>
             <div className="flex gap-4">
               <a href="https://www.instagram.com/asblawoffice.av/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:bg-accent hover:text-black hover:border-accent transition-all">
@@ -125,7 +125,7 @@ export default function Footer() {
               <div className="flex items-start gap-3">
                 <Mail size={20} className="text-accent shrink-0 mt-1" />
                 <p className="text-[14px] text-neutral-400 font-medium leading-relaxed">
-                  info@aybikesultanbicer.com
+                  info@asblawoffice.com
                 </p>
               </div>
               <div className="flex items-start gap-3">
@@ -142,7 +142,7 @@ export default function Footer() {
         {/* Footer Bottom Bar */}
         <div className="border-t border-white/5 pt-8 pb-10 flex flex-col md:flex-row justify-between items-center gap-4 text-center">
           <p className="text-[13px] text-neutral-500 font-medium">
-            © 2026 <strong>Av. Aybike Sultan Biçer.</strong> Tüm Hakları Saklıdır.
+            © 2026 <strong>ASB Hukuk.</strong> Tüm Hakları Saklıdır.
           </p>
           <div className="flex gap-6">
             <Link href="#" className="text-[12px] text-neutral-500 hover:text-white transition-colors">Gizlilik Politikası</Link>

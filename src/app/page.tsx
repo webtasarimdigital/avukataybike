@@ -119,7 +119,7 @@ export default function Home() {
             <div className="h-px w-10 bg-accent" />
           </div>
           <h2 className="text-3xl md:text-4xl font-black text-primary leading-tight">
-            Aybike Sultan Biçer Hukuk & Danışmanlık
+            ASB Hukuk & Danışmanlık
           </h2>
           <p className="text-neutral-600 text-lg leading-relaxed max-w-3xl mx-auto">
             İstanbul Barosu'na kayıtlı avukat kadromuzla; bireysel ve kurumsal müvekkillerimize şeffaf, güvenilir ve sonuç odaklı hukuki hizmet sunuyoruz. Hukuki süreçlerinizde yanınızdayız.
@@ -488,7 +488,7 @@ export default function Home() {
                     <Phone size={16} className="text-accent" /> 0551 488 29 48
                   </div>
                   <div className="flex items-center gap-3 text-white/70 text-sm font-bold">
-                    <MessageSquare size={16} className="text-accent" /> info@aybikesultanbicer.com
+                    <MessageSquare size={16} className="text-accent" /> info@asblawoffice.com
                   </div>
                 </div>
                 <Link href="/iletisim"

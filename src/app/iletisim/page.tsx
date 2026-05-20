@@ -63,7 +63,7 @@ export default function ContactPage() {
                      </div>
                      <div>
                         <h4 className="font-bold text-primary text-xl mb-1">E-Posta</h4>
-                        <p className="text-neutral-500 font-medium leading-relaxed tracking-tight">info@aybikesultanbicer.com</p>
+                        <p className="text-neutral-500 font-medium leading-relaxed tracking-tight">info@asblawoffice.com</p>
                      </div>
                   </div>
 

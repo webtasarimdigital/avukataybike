@@ -13,7 +13,8 @@ const relatedPosts = [
 export default function BlogPostPage() {
   const params = useParams();
   const slug = params.slug as string;
-  const title = slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+  const post = relatedPosts.find(p => p.slug === slug);
+  const title = post ? post.t : slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
 
   const titleWords = slug.split("-");
   const category = titleWords.length > 2 ? "Hukuki Rehber" : "Genel";
@@ -40,7 +41,7 @@ export default function BlogPostPage() {
           <h1 className="text-3xl md:text-5xl font-black text-white leading-tight uppercase italic max-w-3xl">{title}</h1>
           <div className="flex flex-wrap items-center gap-6 text-white/40 text-xs font-bold tracking-widest uppercase">
             <span className="flex items-center gap-2"><Calendar size={14} className="text-accent" /> 20 Mayıs 2024</span>
-            <span className="flex items-center gap-2"><User size={14} className="text-accent" /> Av. Aybike Sultan Biçer</span>
+            <span className="flex items-center gap-2"><User size={14} className="text-accent" /> ASB Hukuk</span>
           </div>
         </div>
       </div>
@@ -106,7 +107,7 @@ export default function BlogPostPage() {
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-black text-lg">A</div>
                   <div>
-                    <p className="font-black text-primary text-sm">Av. Aybike Sultan Biçer</p>
+                    <p className="font-black text-primary text-sm">ASB Hukuk</p>
                     <p className="text-neutral-400 text-xs">Hukuk & Danışmanlık</p>
                   </div>
                 </div>

@@ -58,17 +58,12 @@ export default function AboutPage() {
         <div className="bg-white rounded-[48px] shadow-2xl border border-gray-100 overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2">
             {/* Sol – Ofis Görseli */}
-            <div className="relative bg-primary p-16 flex items-center justify-center min-h-[420px] overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80&auto=format&fit=crop"
-                alt="Hukuk Bürosu"
-                className="absolute inset-0 w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-primary/80" />
+            <div className="relative bg-primary p-10 md:p-16 flex items-center justify-center min-h-[420px] overflow-hidden">
+              <div className="absolute inset-0 opacity-10" style={{backgroundImage:"repeating-linear-gradient(45deg,transparent,transparent 20px,rgba(255,255,255,.04) 20px,rgba(255,255,255,.04) 40px)"}} />
               <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent/10 rounded-full -ml-32 -mb-32 blur-3xl" />
               <div className="relative z-10 flex flex-col items-center gap-6">
-                <div className="w-48 h-48 rounded-[40px] bg-white/10 border border-white/20 p-6 backdrop-blur-sm flex items-center justify-center">
-                  <img src="/logo.png" alt="Av. Aybike Sultan Biçer" className="w-full h-full object-contain" />
+                <div className="w-48 h-48 rounded-[40px] bg-white/10 border border-white/20 p-1 backdrop-blur-sm overflow-hidden">
+                  <img src="/Aybike-sultan-bicer.jpeg" alt="Av. Aybike Sultan Biçer" className="w-full h-full object-cover rounded-[36px]" />
                 </div>
                 <div className="text-center">
                   <p className="text-white font-black text-2xl italic uppercase">Av. Aybike Sultan Biçer</p>
@@ -77,14 +72,6 @@ export default function AboutPage() {
                     <p className="text-white/50 text-[11px] font-medium">Marmara Üniversitesi Hukuk Fakültesi (2021)</p>
                     <p className="text-white/50 text-[11px] font-medium">İstanbul Barosu (2021)</p>
                   </div>
-                </div>
-                <div className="flex gap-6 mt-2">
-                  {[["10+","Yıl Deneyim"],["14","Hizmet Alanı"],["Kadıköy","İstanbul"]].map(([v,l],i)=>(
-                    <div key={i} className="text-center">
-                      <p className="text-accent font-black text-2xl italic">{v}</p>
-                      <p className="text-white/40 text-[10px] font-bold uppercase tracking-widest leading-tight mt-1">{l}</p>
-                    </div>
-                  ))}
                 </div>
               </div>
             </div>
@@ -159,8 +146,8 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr]">
             <div className="bg-primary p-10 flex flex-col items-center justify-center gap-5 relative overflow-hidden">
               <div className="absolute inset-0 opacity-10" style={{backgroundImage:"repeating-linear-gradient(45deg,transparent,transparent 20px,rgba(255,255,255,.04) 20px,rgba(255,255,255,.04) 40px)"}} />
-              <div className="relative z-10 w-32 h-32 rounded-[28px] bg-white/10 border border-white/20 p-4 flex items-center justify-center">
-                <img src="/logo.png" alt="Logo" className="w-full h-full object-contain" />
+              <div className="relative z-10 w-32 h-32 rounded-[28px] bg-white/10 border border-white/20 p-1 overflow-hidden">
+                <img src="/Aybike-sultan-bicer.jpeg" alt="Av. Aybike Sultan Biçer" className="w-full h-full object-cover rounded-[24px]" />
               </div>
               <div className="relative z-10 text-center">
                 <p className="text-white font-black text-lg italic uppercase leading-tight">Av. Aybike Sultan Biçer</p>
@@ -203,8 +190,8 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr]">
             <div className="bg-[#0a1628] p-10 flex flex-col items-center justify-center gap-5 relative overflow-hidden">
               <div className="absolute inset-0 opacity-10" style={{backgroundImage:"repeating-linear-gradient(45deg,transparent,transparent 20px,rgba(255,255,255,.04) 20px,rgba(255,255,255,.04) 40px)"}} />
-              <div className="relative z-10 w-32 h-32 rounded-[28px] bg-white/10 border border-white/20 p-4 flex items-center justify-center">
-                <img src="/logo.png" alt="Logo" className="w-full h-full object-contain" />
+              <div className="relative z-10 w-32 h-32 rounded-[28px] bg-white/10 border border-white/20 p-1 overflow-hidden">
+                <img src="/Aysenur-simsek.jpeg" alt="Av. Ayşe Nur Şimşek Kırkıncı" className="w-full h-full object-cover rounded-[24px]" />
               </div>
               <div className="relative z-10 text-center">
                 <p className="text-white font-black text-lg italic uppercase leading-tight">Av. Ayşe Nur Şimşek Kırkıncı</p>

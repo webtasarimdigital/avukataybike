@@ -21,7 +21,7 @@ export async function POST(req: NextRequest) {
 
     await transporter.sendMail({
       from: `"ASB Hukuk Web" <${process.env.SMTP_USER}>`,
-      to: process.env.SMTP_TO || "info@aybikesultanbicer.com",
+      to: process.env.SMTP_TO || "info@asblawoffice.com",
       subject: `Yeni Bilgi Talebi — ${name}`,
       html: `
         <h2>Yeni İletişim Formu</h2>
