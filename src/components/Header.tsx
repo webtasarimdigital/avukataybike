@@ -98,8 +98,7 @@ export default function Header() {
               <img src="/logo.png" alt="Logo" className="w-full h-full object-contain" />
             </div>
             <div className="flex flex-col">
-              <span className="text-primary font-black text-base md:text-xl leading-none tracking-tight">ASB HUKUK</span>
-              <span className="text-accent font-bold text-[9px] md:text-[11px] tracking-[0.25em] mt-1 leading-none uppercase">Hukuk & Danışmanlık</span>
+              <span className="text-accent font-bold text-sm md:text-base tracking-[0.25em] leading-none uppercase">Hukuk & Danışmanlık</span>
             </div>
           </Link>
 
