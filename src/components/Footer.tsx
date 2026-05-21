@@ -94,14 +94,10 @@ export default function Footer() {
         </div>
 
         {/* Footer Bottom Bar */}
-        <div className="border-t border-white/5 pt-8 pb-10 flex flex-col md:flex-row justify-between items-center gap-4 text-center">
+        <div className="border-t border-white/5 pt-8 pb-10 text-center">
           <p className="text-[13px] text-neutral-500 font-medium">
             © 2026 <strong>ASB Hukuk.</strong> Tüm Hakları Saklıdır.
           </p>
-          <div className="flex gap-6">
-            <Link href="#" className="text-[12px] text-neutral-500 hover:text-white transition-colors">Gizlilik Politikası</Link>
-            <Link href="#" className="text-[12px] text-neutral-500 hover:text-white transition-colors">Kullanım Koşulları</Link>
-          </div>
         </div>
       </div>
     </footer>
