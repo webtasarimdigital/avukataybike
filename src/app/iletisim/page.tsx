@@ -42,7 +42,7 @@ export default function ContactPage() {
                         <MapPin size={28} />
                      </div>
                      <div>
-                        <h4 className="font-bold text-primary text-xl mb-1">Adresimiz</h4>
+                        <h4 className="font-bold text-primary text-xl mb-1">Adres</h4>
                         <p className="text-neutral-500 font-medium leading-relaxed">Eğitim Mah., Poyraz Sokak, No:26/4, <br /> Kadıköy / İstanbul</p>
                      </div>
                   </div>
