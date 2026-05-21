@@ -89,7 +89,7 @@ export default function Home() {
             <h1 className="text-4xl md:text-[48px] lg:text-[56px] font-bold text-white leading-[1.02] tracking-tight uppercase">
               Adalet İçin<br />
               <span className="text-accent italic">Güvenilir</span><br />
-              Hukuki Destek.
+              Hukuki Destek
             </h1>
 
             {/* Butonlar */}
