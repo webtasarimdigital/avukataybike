@@ -68,7 +68,7 @@ export default function Home() {
 
         {/* Arka plan: boğaz manzarası */}
         <img
-          src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1800&q=80&auto=format&fit=crop"
+          src="/bogaz.png"
           alt="Boğaz Manzarası"
           className="absolute inset-0 w-full h-full object-cover"
         />

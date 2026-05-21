@@ -62,7 +62,7 @@ export default function AboutPage() {
               <div className="absolute inset-0 opacity-10" style={{backgroundImage:"repeating-linear-gradient(45deg,transparent,transparent 20px,rgba(255,255,255,.04) 20px,rgba(255,255,255,.04) 40px)"}} />
               <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent/10 rounded-full -ml-32 -mb-32 blur-3xl" />
               <div className="relative z-10 flex flex-col items-center gap-6">
-                <div className="w-48 h-48 rounded-[40px] bg-white/10 border border-white/20 p-1 backdrop-blur-sm overflow-hidden">
+                <div className="w-60 h-60 rounded-[40px] bg-white/10 border border-white/20 p-1 backdrop-blur-sm overflow-hidden">
                   <img src="/Aybike-sultan-bicer.jpeg" alt="Av. Aybike Sultan Biçer" className="w-full h-full object-cover rounded-[36px]" />
                 </div>
                 <div className="text-center">
@@ -146,7 +146,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr]">
             <div className="bg-primary p-10 flex flex-col items-center justify-center gap-5 relative overflow-hidden">
               <div className="absolute inset-0 opacity-10" style={{backgroundImage:"repeating-linear-gradient(45deg,transparent,transparent 20px,rgba(255,255,255,.04) 20px,rgba(255,255,255,.04) 40px)"}} />
-              <div className="relative z-10 w-32 h-32 rounded-[28px] bg-white/10 border border-white/20 p-1 overflow-hidden">
+              <div className="relative z-10 w-44 h-44 rounded-[28px] bg-white/10 border border-white/20 p-1 overflow-hidden">
                 <img src="/Aybike-sultan-bicer.jpeg" alt="Av. Aybike Sultan Biçer" className="w-full h-full object-cover rounded-[24px]" />
               </div>
               <div className="relative z-10 text-center">
@@ -190,7 +190,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr]">
             <div className="bg-[#0a1628] p-10 flex flex-col items-center justify-center gap-5 relative overflow-hidden">
               <div className="absolute inset-0 opacity-10" style={{backgroundImage:"repeating-linear-gradient(45deg,transparent,transparent 20px,rgba(255,255,255,.04) 20px,rgba(255,255,255,.04) 40px)"}} />
-              <div className="relative z-10 w-32 h-32 rounded-[28px] bg-white/10 border border-white/20 p-1 overflow-hidden">
+              <div className="relative z-10 w-44 h-44 rounded-[28px] bg-white/10 border border-white/20 p-1 overflow-hidden">
                 <img src="/Aysenur-simsek.jpeg" alt="Av. Ayşe Nur Şimşek Kırkıncı" className="w-full h-full object-cover rounded-[24px]" />
               </div>
               <div className="relative z-10 text-center">
