@@ -62,48 +62,44 @@ export default function Home() {
     <div className="flex flex-col w-full overflow-hidden">
 
       {/* ══════════════════════════════════════
-          HERO — İstanbul Boğazı
+          HERO — Yatay Split
       ══════════════════════════════════════ */}
-      <section className="relative w-full min-h-[80vh] flex items-center overflow-hidden" style={{paddingTop:"var(--header-h,92px)"}}>
+      <section className="relative w-full min-h-[70vh] flex items-center overflow-hidden" style={{paddingTop:"var(--header-h,92px)"}}>
 
-        {/* Background image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=1800&q=80&auto=format&fit=crop')" }}
+        {/* Arka plan: hukuk kitaplığı tam kaplıyor */}
+        <img
+          src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=1800&q=80&auto=format&fit=crop"
+          alt="Hukuk Bürosu"
+          className="absolute inset-0 w-full h-full object-cover"
         />
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-primary/70" />
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-primary/85 z-10" />
 
-        {/* Metin */}
-        <div className="relative z-20 w-full flex items-center justify-center py-28 lg:py-36 px-8 md:px-14">
-          <div className="w-full max-w-[760px] text-center space-y-8">
+        {/* Metin — ortalanmış */}
+        <div className="relative z-20 w-full flex items-center justify-center py-24 lg:py-32 px-8 md:px-14">
+          <div className="w-full max-w-[700px] text-center space-y-7">
 
             {/* Etiket */}
-            <div className="inline-flex items-center gap-2.5 bg-white/10 border border-white/20 px-5 py-2 rounded-full">
+            <div className="inline-flex items-center gap-2.5 bg-white/10 border border-white/20 px-4 py-2 rounded-full">
               <span className="w-2 h-2 rounded-full bg-accent animate-pulse shrink-0" />
-              <span className="text-white/90 text-[10px] font-semibold tracking-[0.4em] uppercase">Hukuki Çözüm Ortağınız</span>
+              <span className="text-white/80 text-[10px] font-black tracking-[0.3em] uppercase">Hukuki Çözüm Ortağınız</span>
             </div>
 
             {/* Başlık */}
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-light text-white leading-[1.1] tracking-[0.08em] uppercase">
+            <h1 className="text-5xl md:text-[58px] lg:text-[68px] font-black text-white leading-[1] tracking-tight uppercase">
               Adalet İçin<br />
-              <span className="text-accent font-semibold italic tracking-normal">Güvenilir</span><br />
+              <span className="text-accent italic">Güvenilir</span><br />
               Hukuki Destek.
             </h1>
-
-            {/* Alt yazı */}
-            <p className="text-white/70 text-sm md:text-base font-light tracking-widest uppercase">
-              İstanbul · Kadıköy
-            </p>
 
             {/* Butonlar */}
             <div className="flex gap-3 pt-2 justify-center max-w-sm mx-auto">
               <Link href="/iletisim"
-                className="flex-1 bg-accent hover:bg-white hover:text-primary text-primary px-4 py-4 rounded-2xl font-semibold text-[12px] tracking-widest uppercase transition-all shadow-xl shadow-black/30 flex items-center justify-center gap-2">
+                className="flex-1 bg-accent hover:bg-accent/90 text-primary px-4 py-4 rounded-2xl font-black text-[12px] tracking-widest uppercase transition-all shadow-xl shadow-accent/20 flex items-center justify-center gap-2">
                 İletişim
               </Link>
               <Link href="/hakkimizda"
-                className="flex-1 border border-white/30 hover:border-white/60 hover:bg-white/10 text-white px-4 py-4 rounded-2xl font-semibold text-[12px] tracking-widest uppercase transition-all flex items-center justify-center gap-2">
+                className="flex-1 border-2 border-white/30 hover:border-white/60 hover:bg-white/10 text-white px-4 py-4 rounded-2xl font-black text-[12px] tracking-widest uppercase transition-all flex items-center justify-center gap-2 backdrop-blur-sm">
                 Hakkımızda <ArrowRight size={13} />
               </Link>
             </div>
@@ -157,12 +153,12 @@ export default function Home() {
             </div>
 
             {/* Misyon */}
-            <div className="bg-cream-dark rounded-3xl p-10 md:p-12 space-y-5 border border-primary/10">
+            <div className="bg-primary rounded-3xl p-10 md:p-12 space-y-5">
               <div className="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center">
                 <Shield size={22} className="text-accent" />
               </div>
-              <h3 className="text-2xl font-black text-primary uppercase italic">Misyonumuz</h3>
-              <p className="text-primary-muted leading-relaxed">
+              <h3 className="text-2xl font-black text-white uppercase italic">Misyonumuz</h3>
+              <p className="text-white/70 leading-relaxed">
                 Müvekkillerimize yalnızca hukuki temsil sunmak değil; süreci doğru yöneten, riskleri öngören ve sürdürülebilir çözümler üreten güçlü bir iş ortağı olmak.
               </p>
               <Link href="/misyon" className="inline-flex items-center gap-2 text-accent font-black text-[11px] tracking-widest uppercase">
@@ -187,8 +183,8 @@ export default function Home() {
               <span className="text-accent font-black tracking-[0.35em] text-[11px] uppercase">Uzmanlık Alanları</span>
               <div className="h-px w-10 bg-accent" />
             </div>
-            <h2 className="text-4xl md:text-5xl font-black text-primary uppercase leading-tight">Çalışma Alanlarımız</h2>
-            <p className="text-primary-muted text-lg">Hukuki Sorunlarınız İçin Uzman Çözümler</p>
+            <h2 className="text-4xl md:text-5xl font-black text-primary uppercase leading-tight">Hukuki Hizmetlerimiz</h2>
+            <p className="text-neutral-500 text-lg">Hukuki Sorunlarınız İçin Uzman Çözümler</p>
           </div>
 
           {/* Kart Izgarası */}
@@ -222,15 +218,15 @@ export default function Home() {
 
                 {/* İçerik */}
                 <div className="relative z-10 flex flex-col flex-1">
-                  <h3 className="font-black text-primary text-lg leading-tight mb-2 tracking-tight transition-colors duration-300">
+                  <h3 className="font-black text-primary group-hover:text-white text-lg leading-tight mb-2 tracking-tight transition-colors duration-300">
                     {svc.title}
                   </h3>
-                  <p className="text-primary-muted group-hover:text-primary/80 text-sm leading-relaxed flex-1 transition-colors duration-300">
+                  <p className="text-neutral-500 group-hover:text-white/90 text-sm leading-relaxed flex-1 transition-colors duration-300">
                     {svc.desc}
                   </p>
-                  <div className="mt-5 flex items-center gap-2 text-accent group-hover:text-primary text-[11px] font-black tracking-widest uppercase transition-colors duration-300">
+                  <div className="mt-5 flex items-center gap-2 text-accent group-hover:text-white text-[11px] font-black tracking-widest uppercase transition-colors duration-300">
                     DETAYLAR
-                    <span className="w-7 h-7 rounded-full border-2 border-accent group-hover:border-primary flex items-center justify-center transition-colors duration-300">
+                    <span className="w-7 h-7 rounded-full border-2 border-accent group-hover:border-white flex items-center justify-center transition-colors duration-300">
                       <ArrowRight size={12} className="group-hover:translate-x-0.5 transition-transform duration-300" />
                     </span>
                   </div>
@@ -243,8 +239,8 @@ export default function Home() {
           {/* Alt CTA */}
           <div className="text-center mt-14">
             <Link href="/hizmetler"
-              className="inline-flex items-center gap-3 bg-primary hover:bg-accent hover:text-primary text-cream px-10 py-4 rounded-2xl font-black text-sm tracking-widest uppercase transition-all shadow-xl shadow-primary/20">
-              Tüm Çalışma Alanlarımız <ArrowRight size={16} />
+              className="inline-flex items-center gap-3 bg-primary hover:bg-primary/90 text-white px-10 py-4 rounded-2xl font-black text-sm tracking-widest uppercase transition-all shadow-xl shadow-primary/20">
+              Tüm Hizmetlerimizi İnceleyin <ArrowRight size={16} />
             </Link>
           </div>
 
@@ -254,7 +250,7 @@ export default function Home() {
       {/* ══════════════════════════════════════
           SÜREÇ — Nasıl Çalışıyoruz
       ══════════════════════════════════════ */}
-      <section className="pb-24 md:pb-32 bg-cream-dark">
+      <section className="pb-24 md:pb-32 bg-primary">
         <div className="container mx-auto px-6 max-w-7xl pt-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -268,7 +264,7 @@ export default function Home() {
               <span className="text-accent font-black tracking-[0.35em] text-[11px] uppercase">Çalışma Sürecimiz</span>
               <div className="h-px w-10 bg-accent" />
             </div>
-            <h2 className="text-4xl md:text-5xl font-black text-primary uppercase">Nasıl İlerleriz?</h2>
+            <h2 className="text-4xl md:text-5xl font-black text-white uppercase">Nasıl İlerleriz?</h2>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             {[
@@ -283,14 +279,14 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: i * 0.1 }}
-                className="relative bg-cream border border-primary/10 rounded-2xl p-8 group hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                className="relative bg-white/5 border border-white/10 rounded-2xl p-8 group hover:bg-white/10 hover:-translate-y-1 transition-all duration-300"
               >
-                <div className="absolute top-5 right-5 text-5xl font-black text-primary/5 leading-none select-none">{step.n}</div>
+                <div className="absolute top-5 right-5 text-5xl font-black text-white/5 leading-none select-none">{step.n}</div>
                 <div className="w-14 h-14 rounded-xl bg-accent/20 text-accent flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-primary transition-all duration-300">
                   <step.icon size={26} />
                 </div>
-                <h3 className="font-black text-primary text-lg mb-3">{step.t}</h3>
-                <p className="text-primary-muted text-sm leading-relaxed">{step.d}</p>
+                <h3 className="font-black text-white text-lg mb-3">{step.t}</h3>
+                <p className="text-white/50 text-sm leading-relaxed">{step.d}</p>
               </motion.div>
             ))}
           </div>
@@ -431,7 +427,7 @@ export default function Home() {
               <h2 className="text-4xl font-black text-primary uppercase leading-tight">Sıkça Sorulan Sorular</h2>
               <p className="text-neutral-500 leading-relaxed text-sm">Merak ettiklerinizi bulamadıysanız bize doğrudan ulaşabilirsiniz.</p>
               <Link href="/iletisim"
-                className="inline-flex items-center gap-3 bg-primary text-cream px-7 py-3.5 rounded-xl font-black text-sm tracking-widest uppercase transition-all hover:bg-accent hover:text-primary shadow-lg shadow-primary/20">
+                className="inline-flex items-center gap-3 bg-primary text-white px-7 py-3.5 rounded-xl font-black text-sm tracking-widest uppercase transition-all hover:bg-primary/90 shadow-lg shadow-primary/20">
                 İletişim
               </Link>
             </div>
@@ -462,40 +458,41 @@ export default function Home() {
       {/* ══════════════════════════════════════
           CTA — İletişim
       ══════════════════════════════════════ */}
-      <section id="iletisim" className="py-16 bg-cream">
+      <section id="iletisim" className="py-16 bg-white">
         <div className="container mx-auto px-6 max-w-7xl">
-          <div className="relative bg-cream-dark rounded-[48px] overflow-hidden border border-primary/10">
+          <div className="relative bg-primary rounded-[48px] overflow-hidden">
+            <div className="absolute inset-0 opacity-[0.04]" style={{backgroundImage:"radial-gradient(circle, #fff 1px, transparent 1px)", backgroundSize:"28px 28px"}} />
             <div className="absolute right-0 bottom-0 opacity-5 pointer-events-none translate-x-1/4 translate-y-1/4">
-              <TeraziSVG className="w-96 h-96 text-primary" />
+              <TeraziSVG className="w-96 h-96 text-white" />
             </div>
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 p-12 md:p-20 items-center">
               <div className="space-y-6">
                 <div className="w-14 h-14 rounded-2xl bg-accent/15 border border-accent/30 flex items-center justify-center">
                   <TeraziSVG className="w-8 h-8 text-accent" />
                 </div>
-                <h2 className="text-4xl md:text-5xl font-black text-primary leading-tight uppercase">
+                <h2 className="text-4xl md:text-5xl font-black text-white leading-tight uppercase">
                   Hukuki Sorununuz<br />
                   <span className="text-accent italic">Çözümsüz Değil.</span>
                 </h2>
-                <p className="text-primary-muted text-lg max-w-md leading-relaxed">
+                <p className="text-white/55 text-lg max-w-md leading-relaxed">
                   Hukuki süreçlerde doğru adımı atmak için bizimle iletişime geçin.
                 </p>
-                <div className="flex items-center gap-3 text-primary/60 text-[11px] font-bold tracking-widest uppercase">
+                <div className="flex items-center gap-3 text-white/30 text-[11px] font-bold tracking-widest uppercase">
                   <MapPin size={13} className="text-accent" />
                   Eğitim Mah., Poyraz Sk. No:26/4, Kadıköy / İstanbul
                 </div>
               </div>
               <div className="flex flex-col gap-4">
-                <div className="bg-cream border border-primary/10 rounded-2xl px-10 py-6 text-primary space-y-2">
-                  <div className="flex items-center gap-3 text-primary-muted text-sm font-bold">
+                <div className="bg-white/10 border border-white/15 rounded-2xl px-10 py-6 text-white space-y-2">
+                  <div className="flex items-center gap-3 text-white/70 text-sm font-bold">
                     <Phone size={16} className="text-accent" /> 0551 488 29 48
                   </div>
-                  <div className="flex items-center gap-3 text-primary-muted text-sm font-bold">
+                  <div className="flex items-center gap-3 text-white/70 text-sm font-bold">
                     <MessageSquare size={16} className="text-accent" /> info@asblawoffice.com
                   </div>
                 </div>
                 <Link href="/iletisim"
-                  className="bg-accent hover:bg-primary hover:text-cream text-primary px-10 py-6 rounded-2xl font-black tracking-widest text-base transition-all flex items-center justify-between group shadow-2xl">
+                  className="bg-accent hover:bg-white text-primary px-10 py-6 rounded-2xl font-black tracking-widest text-base transition-all flex items-center justify-between group shadow-2xl">
                   <span>İLETİŞİM</span>
                   <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                 </Link>

@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
-import { Raleway, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingActions from "@/components/FloatingActions";
 import ContactModal from "@/components/ContactModal";
 
-const raleway = Raleway({
+const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
-  display: "swap",
 });
 
 const geistMono = Geist_Mono({
@@ -34,7 +32,7 @@ export default function RootLayout({
   return (
     <html
       lang="tr"
-      className={`${raleway.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
     >
       <head>
         <link rel="icon" href="/favicon.png" type="image/png" />

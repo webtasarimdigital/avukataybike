@@ -19,34 +19,27 @@ export default function BlogPostPage() {
   const titleWords = slug.split("-");
   const category = titleWords.length > 2 ? "Hukuki Rehber" : "Genel";
 
-  const handleShare = async () => {
-    const url = window.location.href;
-    if (navigator.share) {
-      await navigator.share({ title, url });
-    } else {
-      await navigator.clipboard.writeText(url);
-      alert("Bağlantı kopyalandı!");
-    }
-  };
-
   return (
-    <main className="min-h-screen bg-cream">
+    <main className="min-h-screen bg-[#F8FAFC]">
       {/* ── HERO ── */}
-      <div className="relative w-full min-h-[440px] flex items-end pt-44 pb-0 overflow-hidden bg-cream-dark">
+      <div className="relative w-full min-h-[480px] flex items-end pt-44 pb-0 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-[#0a1628]">
+          <div className="absolute inset-0 opacity-5" style={{backgroundImage:"repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(255,255,255,.04) 40px,rgba(255,255,255,.04) 80px)"}} />
+        </div>
         <div className="container mx-auto px-6 max-w-5xl relative z-10 pb-36 space-y-6">
           <div className="flex items-center gap-3">
-            <Link href="/blog" className="flex items-center gap-2 text-primary/50 hover:text-accent text-xs font-bold tracking-widest uppercase transition-colors">
+            <Link href="/blog" className="flex items-center gap-2 text-white/40 hover:text-accent text-xs font-bold tracking-widest uppercase transition-colors">
               <ArrowLeft size={16} /> Blog
             </Link>
-            <span className="text-primary/30">/</span>
+            <span className="text-white/20">/</span>
             <span className="text-accent text-xs font-bold tracking-widest uppercase">{category}</span>
           </div>
-          <div className="inline-flex items-center gap-3 bg-accent/10 border border-accent/30 px-4 py-2 rounded-full">
+          <div className="inline-flex items-center gap-3 bg-accent/10 border border-accent/20 px-4 py-2 rounded-full">
             <Tag size={12} className="text-accent" />
             <span className="text-accent text-xs font-bold tracking-widest uppercase">Hukuki Rehber</span>
           </div>
-          <h1 className="text-3xl md:text-5xl font-black text-primary leading-tight uppercase italic max-w-3xl">{title}</h1>
-          <div className="flex flex-wrap items-center gap-6 text-primary/60 text-xs font-bold tracking-widest uppercase">
+          <h1 className="text-3xl md:text-5xl font-black text-white leading-tight uppercase italic max-w-3xl">{title}</h1>
+          <div className="flex flex-wrap items-center gap-6 text-white/40 text-xs font-bold tracking-widest uppercase">
             <span className="flex items-center gap-2"><Calendar size={14} className="text-accent" /> 20 Mayıs 2024</span>
             <span className="flex items-center gap-2"><User size={14} className="text-accent" /> ASB Hukuk</span>
           </div>
@@ -68,7 +61,7 @@ export default function BlogPostPage() {
               <div className="space-y-6 text-neutral-600 leading-relaxed">
                 <h2 className="text-2xl font-black text-primary uppercase italic">{title} Hakkında Genel Bilgi</h2>
                 <p>
-                  Bu yazıda {title.toLowerCase()} konusundaki süreçler ve dikkat edilmesi gereken hususlara ilişkin genel bilgiler ele alınmaktadır. Bu sayfa bilgilendirme niteliği taşımakta olup kişisel hukuki danışmanlık hizmeti niteliği taşımamaktadır.
+                  Bu yazıda {title.toLowerCase()} konusundaki yasal düzenlemeler, süreçler ve dikkat edilmesi gereken hususlara ilişkin genel bilgiler ele alınmaktadır. Bu sayfa bilgilendirme niteliği taşımakta olup kişisel hukuki danışmanlık hizmeti niteliği taşımamaktadır.
                 </p>
                 <p>
                   Bireysel durumunuzu değerlendirmek ve somut hukuki tavsiye almak için mutlaka bir avukata başvurmanızı öneririz. Hukuki süreçlerde yasal süreler kısa olabilmekte; geç kalınan başvurular hak kaybına yol açabilmektedir.
@@ -93,13 +86,13 @@ export default function BlogPostPage() {
                 </div>
 
                 {/* Yasal Uyarı */}
-                <div className="bg-cream-dark border border-primary/10 rounded-3xl p-8 flex gap-6 items-start my-6">
+                <div className="bg-primary rounded-3xl p-8 flex gap-6 items-start my-6">
                   <div className="w-14 h-14 rounded-2xl bg-accent/20 text-accent flex items-center justify-center shrink-0">
                     <BookOpen size={28} />
                   </div>
                   <div>
-                    <h4 className="text-primary font-black text-lg uppercase italic mb-2">Yasal Uyarı</h4>
-                    <p className="text-primary-muted text-sm leading-relaxed">Bu yazı yalnızca genel bilgilendirme amacıyla hazırlanmıştır. Kişisel hukuki danışmanlık niteliği taşımaz. Bireysel durumunuz için lütfen bir avukattan hukuki yardım alınız.</p>
+                    <h4 className="text-white font-black text-lg uppercase italic mb-2">Yasal Uyarı</h4>
+                    <p className="text-white/60 text-sm leading-relaxed">Bu yazı yalnızca genel bilgilendirme amacıyla hazırlanmıştır. Kişisel hukuki danışmanlık niteliği taşımaz. Bireysel durumunuz için lütfen bir avukattan hukuki yardım alınız.</p>
                   </div>
                 </div>
 
@@ -120,7 +113,7 @@ export default function BlogPostPage() {
                 </div>
                 <div className="flex items-center gap-3">
                   <span className="text-xs font-bold text-neutral-400 uppercase tracking-widest">Paylaş</span>
-                  <button onClick={handleShare} className="w-10 h-10 rounded-xl bg-neutral-100 hover:bg-accent flex items-center justify-center text-primary transition-all"><Share2 size={16} /></button>
+                  <button className="w-10 h-10 rounded-xl bg-neutral-100 hover:bg-accent flex items-center justify-center text-primary transition-all"><Share2 size={16} /></button>
                 </div>
               </div>
             </div>
@@ -149,20 +142,20 @@ export default function BlogPostPage() {
           <div className="lg:col-span-4 space-y-8">
             {/* CTA */}
             <div className="bg-accent rounded-[40px] p-10 shadow-xl relative overflow-hidden">
-              <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-cream/30 rounded-full blur-3xl" />
+              <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-white/10 rounded-full blur-3xl" />
               <h3 className="text-primary font-black text-2xl italic uppercase leading-tight mb-3">HUKUKI DESTEK<br />ALIN</h3>
               <p className="text-primary/70 text-xs font-bold uppercase tracking-widest mb-8">Sorularınız için iletişime geçin.</p>
               <div className="space-y-3 relative z-10">
-                <Link href="/iletisim" className="w-full bg-primary text-cream py-5 rounded-2xl flex items-center justify-center gap-3 font-black text-xs tracking-widest hover:bg-cream hover:text-primary transition-all uppercase">
+                <Link href="/iletisim" className="w-full bg-primary text-white py-5 rounded-2xl flex items-center justify-center gap-3 font-black text-xs tracking-widest hover:bg-white hover:text-primary transition-all uppercase">
                   İletişim
                 </Link>
               </div>
             </div>
 
             {/* Back to Blog */}
-            <div className="bg-cream-dark border border-primary/10 rounded-[40px] p-8 text-center">
-              <p className="text-primary-muted text-xs font-bold uppercase tracking-widest mb-4">Tüm Yazılar</p>
-              <Link href="/blog" className="inline-flex items-center gap-3 text-accent hover:text-primary transition-colors font-black text-sm uppercase tracking-widest">
+            <div className="bg-primary rounded-[40px] p-8 text-center">
+              <p className="text-white/60 text-xs font-bold uppercase tracking-widest mb-4">Tüm Yazılar</p>
+              <Link href="/blog" className="inline-flex items-center gap-3 text-accent hover:text-white transition-colors font-black text-sm uppercase tracking-widest">
                 <ArrowLeft size={16} /> Blog Sayfasına Dön
               </Link>
             </div>

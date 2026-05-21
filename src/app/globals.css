@@ -1,15 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --background: #F5EFE4;
-  --foreground: #092f1a;
+  --background: #ffffff;
+  --foreground: #0a0a0a;
   --primary: #092f1a;
   --primary-light: #1a4a2e;
-  --primary-muted: #4f6a5a;
   --accent: #C9882A; /* Warm amber-gold */
   --accent-foreground: #0A3125;
-  --cream: #F5EFE4;
-  --cream-dark: #E8DFCC;
 }
 
 @theme inline {
@@ -17,11 +14,8 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-primary-light: var(--primary-light);
-  --color-primary-muted: var(--primary-muted);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
-  --color-cream: var(--cream);
-  --color-cream-dark: var(--cream-dark);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -31,18 +25,6 @@
     @apply font-sans text-primary antialiased selection:bg-accent/30 selection:text-primary;
     overflow-x: hidden;
     max-width: 100vw;
-    font-weight: 400;
-  }
-
-  h1, h2, h3, h4, h5 {
-    font-weight: 700;
-    letter-spacing: 0.02em;
-  }
-}
-
-@media (max-width: 768px) {
-  p, h1, h2, h3, h4, h5, h6 {
-    text-align: center;
   }
 }
 
