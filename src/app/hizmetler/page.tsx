@@ -82,18 +82,10 @@ const services = [
 
 export default function HizmetlerPage() {
   return (
-    <main className="min-h-screen bg-[#F8FAFC]">
+    <main className="min-h-screen bg-cream">
 
       {/* HERO */}
-      <div className="relative w-full min-h-[440px] flex items-end pt-44 pb-0 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-[#0a1628] z-0">
-          <img
-            src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=1600&q=80&auto=format&fit=crop"
-            alt="Hukuk Bürosu"
-            className="absolute inset-0 w-full h-full object-cover opacity-[0.12] mix-blend-luminosity"
-          />
-          <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(255,255,255,.03) 40px,rgba(255,255,255,.03) 80px)" }} />
-        </div>
+      <div className="relative w-full min-h-[440px] flex items-end pt-44 pb-0 overflow-hidden bg-cream-dark">
         <div className="container mx-auto px-6 max-w-7xl relative z-10 pb-36">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -102,18 +94,18 @@ export default function HizmetlerPage() {
             className="max-w-3xl space-y-6"
           >
             <div className="flex items-center gap-3">
-              <Link href="/" className="text-white/40 hover:text-white text-xs font-bold tracking-widest uppercase transition-colors">Ana Sayfa</Link>
-              <span className="text-white/20">/</span>
-              <span className="text-accent text-xs font-bold tracking-widest uppercase">Hizmetler</span>
+              <Link href="/" className="text-primary/50 hover:text-primary text-xs font-bold tracking-widest uppercase transition-colors">Ana Sayfa</Link>
+              <span className="text-primary/30">/</span>
+              <span className="text-accent text-xs font-bold tracking-widest uppercase">Çalışma Alanları</span>
             </div>
-            <div className="inline-flex items-center gap-3 bg-accent/10 border border-accent/20 px-4 py-2 rounded-full">
+            <div className="inline-flex items-center gap-3 bg-accent/10 border border-accent/30 px-4 py-2 rounded-full">
               <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
               <span className="text-accent text-xs font-bold tracking-widest uppercase">Uzmanlık Alanları</span>
             </div>
-            <h1 className="text-5xl md:text-7xl font-black text-white leading-tight uppercase italic">
-              Hukuki<br /><span className="text-accent">Hizmetlerimiz</span>
+            <h1 className="text-5xl md:text-7xl font-black text-primary leading-tight uppercase italic">
+              Çalışma<br /><span className="text-accent">Alanlarımız</span>
             </h1>
-            <p className="text-white/60 text-xl leading-relaxed max-w-2xl">
+            <p className="text-primary-muted text-xl leading-relaxed max-w-2xl">
               Her hukuki sürecin kendine özgü olduğunu biliyor; müvekkillerimize özel stratejiler ile sonuç odaklı hizmet sunuyoruz.
             </p>
           </motion.div>
@@ -148,15 +140,15 @@ export default function HizmetlerPage() {
 
                 {/* İçerik */}
                 <div className="relative z-10 flex flex-col flex-1">
-                  <h3 className="font-black text-primary group-hover:text-white text-lg leading-tight mb-2 tracking-tight transition-colors duration-300">
+                  <h3 className="font-black text-primary text-lg leading-tight mb-2 tracking-tight transition-colors duration-300">
                     {svc.title}
                   </h3>
-                  <p className="text-neutral-500 group-hover:text-white/90 text-sm leading-relaxed flex-1 transition-colors duration-300">
+                  <p className="text-primary-muted group-hover:text-primary/80 text-sm leading-relaxed flex-1 transition-colors duration-300">
                     {svc.desc}
                   </p>
-                  <div className="mt-5 flex items-center gap-2 text-accent group-hover:text-white text-[11px] font-black tracking-widest uppercase transition-colors duration-300">
+                  <div className="mt-5 flex items-center gap-2 text-accent group-hover:text-primary text-[11px] font-black tracking-widest uppercase transition-colors duration-300">
                     DETAYLAR
-                    <span className="w-7 h-7 rounded-full border-2 border-accent group-hover:border-white flex items-center justify-center transition-colors duration-300">
+                    <span className="w-7 h-7 rounded-full border-2 border-accent group-hover:border-primary flex items-center justify-center transition-colors duration-300">
                       <ArrowRight size={12} className="group-hover:translate-x-0.5 transition-transform duration-300" />
                     </span>
                   </div>

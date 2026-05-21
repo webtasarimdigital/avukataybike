@@ -77,13 +77,13 @@ export const serviceContent: Record<string, ServiceItem> = {
     ],
     process: [
       { step: "01", title: "Durum Değerlendirmesi", desc: "İş ilişkinizin hukuki boyutunu ve uyuşmazlığın niteliğini detaylı inceliyoruz." },
-      { step: "02", title: "Zorunlu Arabuluculuk", desc: "İş uyuşmazlıklarında yasal zorunluluk olan arabuluculuk sürecini etkin biçimde yönetiyoruz." },
+      { step: "02", title: "Zorunlu Arabuluculuk", desc: "İş hukuku uyuşmazlıklarında yasal zorunluluk olan arabuluculuk sürecini etkin biçimde yönetiyoruz." },
       { step: "03", title: "Dava Takibi", desc: "Arabuluculukta anlaşma sağlanamazsa iş mahkemesinde davayı tecrübeli avukatlarla sürdürüyoruz." },
       { step: "04", title: "Karar Sonrası İnfaz", desc: "Mahkeme kararının uygulanmasını ve hak kazanılan alacakların tahsilini takip ediyoruz." },
     ],
     faq: [
-      { q: "İşten çıkarılırsam ne kadar sürem var?", a: "Fesih bildiriminden itibaren 1 ay içinde arabulucuya başvurmanız, anlaşmazlık halinde ise 2 ay içinde dava açmanız gerekmektedir." },
-      { q: "Kıdem tazminatı ne zaman ödenir?", a: "En az 1 yıl çalışmış olmak kaydıyla; işveren feshi, emeklilik, askerlik veya kadın işçilerin evlenme sebebiyle ayrılması durumunda kıdem tazminatına hak kazanılır." },
+      { q: "İşten çıkarılırsam ne kadar sürem var?", a: "Fesih bildiriminden itibaren 1 ay içinde arabulucuya başvurmanız, anlaşmazlık halinde ise 2 hafta içinde dava açmanız gerekmektedir." },
+      { q: "Kıdem tazminatı ne zaman ödenir?", a: "Kıdem tazminatı, iş sözleşmesinin kanunda belirtilen haklı veya zorunlu nedenlerle feshedilmesiyle birlikte işten ayrılış tarihinde (derhal) peşin olarak ödenir." },
       { q: "Rekabet yasağı sözleşmesi bağlayıcı mıdır?", a: "Rekabet yasağı sözleşmelerinin geçerliliği süre, coğrafi kapsam ve konu bakımından sınırlıdır. Hukuki danışmanlık alarak sözleşmenizin geçerlilik koşullarını değerlendirmenizi öneririz." },
       { q: "İş kazası geçirdim, tazminat alabilir miyim?", a: "İş kazası durumunda SGK'ya bildirim yapılması ve işverenin kusur oranının tespiti büyük önem taşır. Maddi ve manevi tazminat taleplerinde hukuki destek almanız haklarınızın korunması açısından kritiktir." },
     ],
@@ -325,7 +325,7 @@ export const serviceContent: Record<string, ServiceItem> = {
     faq: [
       { q: "Marka tescili ne kadar sürer?", a: "TÜRKPATENT'e başvurudan tescile kadar genellikle 12-18 ay sürmektedir. İtiraz olmaksızın yaklaşık 12 ay içinde sonuçlanabilir." },
       { q: "TÜRKPATENT Siciline kayıtlı vekil zorunlu mu?", a: "Tescil başvuruları ve itiraz süreçlerinde sicile kayıtlı vekil ile çalışmak süreci güvenli, eksiksiz ve hızlı yürütmek açısından kritik önem taşır. Ofisimiz bu konuda tam yetkili vekil kadrosuna sahiptir." },
-      { q: "Markam ihlal edilirse ne yapabilirim?", a: "İhlal tespiti halinde ihtiyati tedbir kararı, tazminat davası ve cezai şikayet yollarına başvurabilirsiniz. Hukuki danışmanlık alarak en etkin yolu birlikte belirleyebiliriz." },
+      { q: "Markam ihlal edilirse ne yapabilirim?", a: "İhlal tespiti halinde ihtiyati tedbir kararı, tazminat davası ve cezai şikayet yollarına başvurabilirsiniz." },
       { q: "Uluslararası marka tescili nasıl yapılır?", a: "Madrid Protokolü kapsamında TÜRKPATENT üzerinden uluslararası başvuru yapılabilir. Hedef ülkeler belirlenerek süreç vekilimizce yönetilir." },
     ],
     stats: [

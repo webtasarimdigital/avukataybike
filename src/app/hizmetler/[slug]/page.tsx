@@ -48,51 +48,33 @@ export default function ServiceDetailPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
-    <main className="min-h-screen bg-[#F8FAFC]">
+    <main className="min-h-screen bg-cream">
       {/* ── HERO ── */}
-      <div className="relative w-full min-h-[520px] md:min-h-[620px] flex items-end pt-44 pb-0 overflow-hidden">
-        <div className="absolute inset-0 bg-primary z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-[#0a1628] z-0" />
-          <div className="absolute inset-0 opacity-10" style={{backgroundImage:"repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(255,255,255,.03) 40px,rgba(255,255,255,.03) 80px)"}} />
-          <div className="absolute right-0 top-0 w-[55%] h-full opacity-5 flex items-center justify-end pr-12">{icon}</div>
-        </div>
+      <div className="relative w-full min-h-[520px] md:min-h-[620px] flex items-end pt-44 pb-0 overflow-hidden bg-cream-dark">
+        <div className="absolute right-0 top-0 w-[55%] h-full opacity-[0.06] flex items-center justify-end pr-12 text-primary">{icon}</div>
 
         <div className="container mx-auto px-6 max-w-7xl relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-end pb-32">
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <Link href="/" className="text-white/40 hover:text-white text-xs font-bold tracking-widest uppercase transition-colors">Ana Sayfa</Link>
-              <span className="text-white/20">/</span>
-              <span className="text-accent text-xs font-bold tracking-widest uppercase">Hizmetler</span>
+              <Link href="/" className="text-primary/50 hover:text-primary text-xs font-bold tracking-widest uppercase transition-colors">Ana Sayfa</Link>
+              <span className="text-primary/30">/</span>
+              <span className="text-accent text-xs font-bold tracking-widest uppercase">Çalışma Alanları</span>
             </div>
-            <div className="inline-flex items-center gap-3 bg-accent/10 border border-accent/20 px-4 py-2 rounded-full">
+            <div className="inline-flex items-center gap-3 bg-accent/10 border border-accent/30 px-4 py-2 rounded-full">
               <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
               <span className="text-accent text-xs font-bold tracking-widest uppercase">Uzmanlık Alanımız</span>
             </div>
-            <h1 className="text-4xl md:text-6xl font-black text-white leading-tight uppercase italic">{title}</h1>
-            <p className="text-white/60 text-lg leading-relaxed max-w-lg">
+            <h1 className="text-4xl md:text-6xl font-black text-primary leading-tight uppercase italic">{title}</h1>
+            <p className="text-primary-muted text-lg leading-relaxed max-w-lg">
               {data?.heroDesc || `${title} alanında müvekkillerimize profesyonel danışmanlık ve etkin dava takibi sunuyoruz.`}
             </p>
             <div className="flex flex-wrap gap-4 pt-2">
-              <Link href="/iletisim" className="bg-accent hover:bg-white text-primary px-8 py-4 rounded-2xl font-black text-sm tracking-widest uppercase transition-all flex items-center gap-3 shadow-xl shadow-accent/20">
+              <Link href="/iletisim" className="bg-accent hover:bg-primary hover:text-cream text-primary px-8 py-4 rounded-2xl font-black text-sm tracking-widest uppercase transition-all flex items-center gap-3 shadow-xl shadow-accent/20">
                 İletişim
               </Link>
             </div>
           </div>
 
-          <div className="hidden lg:grid grid-cols-3 gap-4 pb-8">
-            <div className="bg-white/5 border border-white/10 rounded-3xl p-6 text-center backdrop-blur-sm">
-              <p className="text-3xl font-black text-accent italic leading-none mb-2">10+</p>
-              <p className="text-white/50 text-[10px] font-bold uppercase tracking-widest leading-tight">Yıllık Deneyim</p>
-            </div>
-            <div className="bg-white/5 border border-white/10 rounded-3xl p-6 text-center backdrop-blur-sm">
-              <p className="text-3xl font-black text-accent italic leading-none mb-2">14</p>
-              <p className="text-white/50 text-[10px] font-bold uppercase tracking-widest leading-tight">Hizmet Alanı</p>
-            </div>
-            <div className="bg-white/5 border border-white/10 rounded-3xl p-6 text-center backdrop-blur-sm">
-              <p className="text-2xl font-black text-accent italic leading-none mb-2">Kadıköy</p>
-              <p className="text-white/50 text-[10px] font-bold uppercase tracking-widest leading-tight">İstanbul</p>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -137,9 +119,9 @@ export default function ServiceDetailPage() {
             </div>
 
             {/* Process Steps */}
-            <div className="bg-primary rounded-[40px] shadow-xl p-10 md:p-16 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full -mr-32 -mt-32 blur-3xl" />
-              <h3 className="text-2xl font-black text-white uppercase italic mb-10 relative z-10">Çalışma Sürecimiz</h3>
+            <div className="bg-cream-dark border border-primary/10 rounded-[40px] shadow-sm p-10 md:p-16 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full -mr-32 -mt-32 blur-3xl" />
+              <h3 className="text-2xl font-black text-primary uppercase italic mb-10 relative z-10">Çalışma Sürecimiz</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
                 {(data?.process || [
                   { step: "01", title: "Ön Görüşme", desc: "Durumunuzu dinleyip değerlendiriyoruz." },
@@ -148,33 +130,18 @@ export default function ServiceDetailPage() {
                   { step: "04", title: "Sonuç", desc: "Hedeflenen sonuca ulaşıyoruz." },
                 ]).map((p, i) => (
                   <div key={i} className="flex gap-5 items-start group">
-                    <div className="w-14 h-14 rounded-2xl bg-accent/10 border border-accent/20 flex items-center justify-center shrink-0 group-hover:bg-accent transition-all">
+                    <div className="w-14 h-14 rounded-2xl bg-accent/10 border border-accent/30 flex items-center justify-center shrink-0 group-hover:bg-accent transition-all">
                       <span className="text-accent group-hover:text-primary font-black text-xl italic transition-colors">{p.step}</span>
                     </div>
                     <div>
-                      <h4 className="text-white font-black text-lg mb-1">{p.title}</h4>
-                      <p className="text-white/50 text-sm leading-relaxed">{p.desc}</p>
+                      <h4 className="text-primary font-black text-lg mb-1">{p.title}</h4>
+                      <p className="text-primary-muted text-sm leading-relaxed">{p.desc}</p>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Stats (mobile) */}
-            <div className="grid grid-cols-3 gap-4 lg:hidden">
-              <div className="bg-white rounded-3xl p-6 text-center shadow-md border border-gray-100">
-                <p className="text-2xl font-black text-primary italic leading-none mb-1">10+</p>
-                <p className="text-neutral-400 text-[10px] font-bold uppercase tracking-widest leading-tight">Yıllık Deneyim</p>
-              </div>
-              <div className="bg-white rounded-3xl p-6 text-center shadow-md border border-gray-100">
-                <p className="text-2xl font-black text-primary italic leading-none mb-1">14</p>
-                <p className="text-neutral-400 text-[10px] font-bold uppercase tracking-widest leading-tight">Hizmet Alanı</p>
-              </div>
-              <div className="bg-white rounded-3xl p-6 text-center shadow-md border border-gray-100">
-                <p className="text-xl font-black text-primary italic leading-none mb-1">Kadıköy</p>
-                <p className="text-neutral-400 text-[10px] font-bold uppercase tracking-widest leading-tight">İstanbul</p>
-              </div>
-            </div>
 
             {/* FAQ */}
             <div className="bg-white rounded-[40px] shadow-xl border border-gray-100 p-10 md:p-16">
@@ -223,26 +190,25 @@ export default function ServiceDetailPage() {
 
             {/* CTA Box */}
             <div className="bg-accent rounded-[40px] p-10 shadow-xl relative overflow-hidden">
-              <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-white/10 rounded-full blur-3xl" />
+              <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-cream/30 rounded-full blur-3xl" />
               <h3 className="text-primary font-black text-2xl italic uppercase leading-tight mb-3">HUKUKI DESTEK<br />ALIN</h3>
               <p className="text-primary/70 text-xs font-bold uppercase tracking-widest mb-8 leading-relaxed">Uyuşmazlığınız için doğru stratejiyi birlikte belirleyelim.</p>
               <div className="space-y-3 relative z-10">
-                <Link href="/iletisim" className="w-full bg-primary text-white py-5 rounded-2xl flex items-center justify-center gap-3 font-black text-xs tracking-widest hover:bg-white hover:text-primary transition-all shadow-lg uppercase">
+                <Link href="/iletisim" className="w-full bg-primary text-cream py-5 rounded-2xl flex items-center justify-center gap-3 font-black text-xs tracking-widest hover:bg-cream hover:text-primary transition-all shadow-lg uppercase">
                   İletişim
                 </Link>
               </div>
             </div>
 
             {/* All Services Menu */}
-            <div className="bg-primary rounded-[40px] shadow-xl p-10 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -mr-16 -mt-16 blur-3xl" />
-              <h3 className="text-white font-black text-base mb-6 border-b border-white/10 pb-4 italic uppercase tracking-widest">Tüm Hizmetlerimiz</h3>
+            <div className="bg-cream-dark border border-primary/10 rounded-[40px] shadow-sm p-10 relative overflow-hidden">
+              <h3 className="text-primary font-black text-base mb-6 border-b border-primary/10 pb-4 italic uppercase tracking-widest">Tüm Hizmetlerimiz</h3>
               <ul className="space-y-3">
                 {allServices.map((item, i) => (
                   <li key={i}>
                     <Link
                       href={`/hizmetler/${item.s}`}
-                      className={`flex items-center justify-between group transition-all font-bold text-xs uppercase tracking-wider py-1 border-b border-white/5 last:border-0 ${slug === item.s ? "text-accent" : "text-white/40 hover:text-white"}`}
+                      className={`flex items-center justify-between group transition-all font-bold text-xs uppercase tracking-wider py-1 border-b border-primary/5 last:border-0 ${slug === item.s ? "text-accent" : "text-primary-muted hover:text-primary"}`}
                     >
                       <span>{item.t}</span>
                       <ArrowRight size={14} className={`transition-transform group-hover:translate-x-1 ${slug === item.s ? "opacity-100 text-accent" : "opacity-0 group-hover:opacity-100"}`} />
@@ -252,15 +218,6 @@ export default function ServiceDetailPage() {
               </ul>
             </div>
 
-            {/* Office Info */}
-            <div className="bg-white rounded-[40px] shadow-md border border-gray-100 p-10">
-              <h3 className="text-primary font-black text-base italic uppercase mb-6 tracking-widest">Ofis Bilgileri</h3>
-              <div className="space-y-4 text-sm">
-                <div className="flex gap-3"><span className="text-accent font-bold">📍</span><span className="text-neutral-500 font-medium">Eğitim Mah., Poyraz Sk. No:26/4, Kadıköy / İstanbul</span></div>
-                <div className="flex gap-3"><span className="text-accent font-bold">📞</span><a href="tel:05514882948" className="text-neutral-500 font-medium hover:text-accent transition-colors">0551 488 29 48</a></div>
-                <div className="flex gap-3"><span className="text-accent font-bold">🕐</span><span className="text-neutral-500 font-medium">Pzt–Cum: 09:00–18:00</span></div>
-              </div>
-            </div>
           </div>
 
         </div>

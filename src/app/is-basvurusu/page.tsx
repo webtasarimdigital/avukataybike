@@ -48,28 +48,25 @@ export default function IsBasvurusuPage() {
   };
 
   return (
-    <main className="min-h-screen bg-[#F8FAFC]">
+    <main className="min-h-screen bg-cream">
 
       {/* HERO */}
-      <div className="relative w-full min-h-[420px] flex items-end pt-44 pb-0 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-[#0a1628] z-0">
-          <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(255,255,255,.03) 40px,rgba(255,255,255,.03) 80px)" }} />
-        </div>
+      <div className="relative w-full min-h-[420px] flex items-end pt-44 pb-0 overflow-hidden bg-cream-dark">
         <div className="container mx-auto px-6 max-w-7xl relative z-10 pb-36">
           <div className="max-w-2xl space-y-5">
             <div className="flex items-center gap-3">
-              <Link href="/" className="text-white/40 hover:text-white text-xs font-bold tracking-widest uppercase transition-colors">Ana Sayfa</Link>
-              <span className="text-white/20">/</span>
+              <Link href="/" className="text-primary/50 hover:text-primary text-xs font-bold tracking-widest uppercase transition-colors">Ana Sayfa</Link>
+              <span className="text-primary/30">/</span>
               <span className="text-accent text-xs font-bold tracking-widest uppercase">İş Başvurusu</span>
             </div>
-            <div className="inline-flex items-center gap-3 bg-accent/10 border border-accent/20 px-4 py-2 rounded-full">
+            <div className="inline-flex items-center gap-3 bg-accent/10 border border-accent/30 px-4 py-2 rounded-full">
               <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
               <span className="text-accent text-xs font-bold tracking-widest uppercase">Kariyer</span>
             </div>
-            <h1 className="text-5xl md:text-6xl font-black text-white leading-tight uppercase italic">
+            <h1 className="text-5xl md:text-6xl font-black text-primary leading-tight uppercase italic">
               Ekibimize<br /><span className="text-accent">Katılın.</span>
             </h1>
-            <p className="text-white/60 text-lg leading-relaxed max-w-xl">
+            <p className="text-primary-muted text-lg leading-relaxed max-w-xl">
               Dinamik ve uzman ekibimizde yer almak istiyorsanız başvurunuzu aşağıdaki form aracılığıyla iletebilirsiniz.
             </p>
           </div>
@@ -87,19 +84,19 @@ export default function IsBasvurusuPage() {
             <p className="text-neutral-500 text-lg max-w-md leading-relaxed">
               Başvurunuzu inceleyeceğiz ve kısa süre içinde sizinle iletişime geçeceğiz. İlginiz için teşekkür ederiz.
             </p>
-            <Link href="/" className="mt-4 bg-primary text-white px-10 py-4 rounded-xl font-bold tracking-widest uppercase text-sm hover:bg-accent hover:text-primary transition-all">
+            <Link href="/" className="mt-4 bg-primary text-cream px-10 py-4 rounded-xl font-bold tracking-widest uppercase text-sm hover:bg-accent hover:text-primary transition-all">
               Ana Sayfaya Dön
             </Link>
           </div>
         ) : (
           <div className="bg-white rounded-[40px] shadow-2xl border border-gray-100 overflow-hidden">
-            <div className="bg-primary px-10 py-8 flex items-center gap-4">
+            <div className="bg-cream-dark border-b border-primary/10 px-10 py-8 flex items-center gap-4">
               <div className="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center">
                 <Send size={22} className="text-accent" />
               </div>
               <div>
-                <h2 className="text-white font-black text-xl uppercase italic">Başvuru Formu</h2>
-                <p className="text-white/50 text-xs font-medium mt-0.5">Tüm alanları eksiksiz doldurunuz</p>
+                <h2 className="text-primary font-black text-xl uppercase italic">Başvuru Formu</h2>
+                <p className="text-primary-muted text-xs font-medium mt-0.5">Tüm alanları eksiksiz doldurunuz</p>
               </div>
             </div>
 
@@ -245,7 +242,7 @@ export default function IsBasvurusuPage() {
 
               <button
                 type="submit"
-                className="w-full bg-primary text-white py-5 rounded-2xl font-black tracking-widest uppercase text-sm hover:bg-accent hover:text-primary transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-3"
+                className="w-full bg-primary text-cream py-5 rounded-2xl font-black tracking-widest uppercase text-sm hover:bg-accent hover:text-primary transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-3"
               >
                 <Send size={18} /> Başvuruyu Gönder
               </button>

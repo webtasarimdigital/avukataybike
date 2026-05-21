@@ -5,21 +5,20 @@ export const metadata = { title: "Vizyonumuz | ASB Hukuk & Danışmanlık" };
 
 export default function VizyonPage() {
   return (
-    <main className="min-h-screen bg-[#F8F5EF]">
+    <main className="min-h-screen bg-cream">
 
       {/* HERO */}
-      <div className="relative bg-primary overflow-hidden pt-44 pb-24">
-        <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: "radial-gradient(circle, #C9882A 1px, transparent 1px)", backgroundSize: "30px 30px" }} />
+      <div className="relative bg-cream-dark overflow-hidden pt-44 pb-24">
         <div className="container mx-auto px-6 max-w-5xl relative z-10 text-center">
-          <div className="inline-flex items-center gap-2 bg-accent/15 border border-accent/25 px-4 py-2 rounded-full mb-6">
+          <div className="inline-flex items-center gap-2 bg-accent/15 border border-accent/30 px-4 py-2 rounded-full mb-6">
             <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
             <span className="text-accent text-[11px] font-black tracking-[0.3em] uppercase">Hedefimiz</span>
           </div>
-          <h1 className="text-5xl md:text-7xl font-black text-white uppercase italic leading-tight mb-6">
+          <h1 className="text-5xl md:text-7xl font-black text-primary uppercase italic leading-tight mb-6">
             Vizyon<span className="text-accent">umuz</span>
           </h1>
           <div className="w-16 h-1.5 bg-accent rounded-full mx-auto mb-8" />
-          <p className="text-white/60 text-xl leading-relaxed max-w-2xl mx-auto">
+          <p className="text-primary-muted text-xl leading-relaxed max-w-2xl mx-auto">
             Hukuki hizmet anlayışını modern, erişilebilir ve stratejik bir bakış açısıyla yeniden şekillendiriyoruz.
           </p>
         </div>

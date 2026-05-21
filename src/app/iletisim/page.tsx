@@ -3,22 +3,20 @@ import { MapPin, Phone, Mail, Clock, ArrowRight, MessageSquare } from "lucide-re
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen bg-[#F8FAFC]">
+    <main className="min-h-screen bg-cream">
       {/* Hero */}
-      <div className="relative w-full pt-44 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-[#0a1628] z-0" />
-        
+      <div className="relative w-full pt-44 pb-20 overflow-hidden bg-cream-dark">
         <div className="relative z-20 container mx-auto px-6 max-w-5xl">
           <div className="flex items-center gap-3 mb-5">
             <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
             <span className="text-accent text-xs font-bold tracking-widest uppercase">İletişim</span>
           </div>
-          
-          <h1 className="text-4xl md:text-6xl font-black text-white tracking-tight uppercase italic leading-tight">
+
+          <h1 className="text-4xl md:text-6xl font-black text-primary tracking-tight uppercase italic leading-tight">
             Bize Ulaşın
           </h1>
-          
-          <p className="text-white/60 text-sm md:text-lg font-medium leading-relaxed max-w-2xl mt-5">
+
+          <p className="text-primary-muted text-sm md:text-lg font-medium leading-relaxed max-w-2xl mt-5">
             Hukuki süreçleriniz hakkında bilgi almak için bizimle iletişime geçin.
           </p>
         </div>
@@ -43,7 +41,7 @@ export default function ContactPage() {
                      </div>
                      <div>
                         <h4 className="font-bold text-primary text-xl mb-1">Adres</h4>
-                        <p className="text-neutral-500 font-medium leading-relaxed">Eğitim Mah., Poyraz Sokak, No:26/4, <br /> Kadıköy / İstanbul</p>
+                        <p className="text-primary-muted font-medium leading-relaxed">Eğitim Mah., Poyraz Sokak, No:26/4, <br /> Kadıköy / İstanbul</p>
                      </div>
                   </div>
 
@@ -53,7 +51,7 @@ export default function ContactPage() {
                      </div>
                      <div>
                         <h4 className="font-bold text-primary text-xl mb-1">Telefon</h4>
-                        <p className="text-neutral-500 font-medium leading-relaxed tracking-wider">0 551 488 29 48</p>
+                        <p className="text-primary-muted font-medium leading-relaxed tracking-wider">0 551 488 29 48</p>
                      </div>
                   </div>
 
@@ -63,7 +61,7 @@ export default function ContactPage() {
                      </div>
                      <div>
                         <h4 className="font-bold text-primary text-xl mb-1">E-Posta</h4>
-                        <p className="text-neutral-500 font-medium leading-relaxed tracking-tight">info@asblawoffice.com</p>
+                        <p className="text-primary-muted font-medium leading-relaxed tracking-tight">info@asblawoffice.com</p>
                      </div>
                   </div>
 
@@ -73,7 +71,7 @@ export default function ContactPage() {
                      </div>
                      <div>
                         <h4 className="font-bold text-primary text-xl mb-1 italic uppercase">Çalışma Saatleri</h4>
-                        <p className="text-neutral-500 font-medium leading-relaxed">Pazartesi - Cuma: 09:00 - 18:00</p>
+                        <p className="text-primary-muted font-medium leading-relaxed">Pazartesi - Cuma: 09:00 - 18:00</p>
                      </div>
                   </div>
                </div>
@@ -108,7 +106,7 @@ export default function ContactPage() {
                      <textarea rows={4} placeholder="Size nasıl yardımcı olabiliriz?" className="bg-white border border-gray-100 rounded-2xl px-6 py-5 outline-none focus:ring-2 focus:ring-accent/50 transition-all font-bold text-sm shadow-sm resize-none"></textarea>
                   </div>
                   <div className="md:col-span-2 pt-4">
-                     <button type="submit" className="w-full bg-primary text-white rounded-2xl py-6 font-black tracking-[0.2em] uppercase flex items-center justify-center gap-4 hover:bg-accent hover:text-primary transition-all shadow-xl shadow-primary/10 group italic">
+                     <button type="submit" className="w-full bg-primary text-cream rounded-2xl py-6 font-black tracking-[0.2em] uppercase flex items-center justify-center gap-4 hover:bg-accent hover:text-primary transition-all shadow-xl shadow-primary/10 group italic">
                         FORMU GÖNDER <ArrowRight size={22} className="group-hover:translate-x-2 transition-transform" />
                      </button>
                   </div>

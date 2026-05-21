@@ -15,6 +15,7 @@ const services = [
   { title: "TÜKETİCİ HUKUKU", slug: "tuketici-hukuku" },
   { title: "KİŞİSEL VERİLERİN KORUNMASI HUKUKU", slug: "kisisel-verilerin-korunmasi-hukuku" },
   { title: "KİRA HUKUKU", slug: "kira-hukuku" },
+  { title: "CEZA HUKUKU", slug: "ceza-hukuku" },
 ];
 
 const kurumsal = [
@@ -52,37 +53,37 @@ export default function Header() {
   return (
     <header className="w-full fixed top-0 left-0 right-0 z-50 flex flex-col font-sans">
       {/* Top Info Bar */}
-      <div className={`bg-primary transition-all duration-300 origin-top ${isScrolled ? "h-0 opacity-0 overflow-hidden" : "hidden lg:flex h-[52px] opacity-100"}`}>
+      <div className={`bg-cream-dark transition-all duration-300 origin-top ${isScrolled ? "h-0 opacity-0 overflow-hidden" : "hidden lg:flex h-[52px] opacity-100"}`}>
         <div className="w-full max-w-[1400px] mx-auto px-8 flex items-center justify-center h-full gap-5 text-[11.5px]">
 
           <a href="https://maps.google.com/?q=Eğitim+Mah.+Poyraz+Sk.+No:26/4+Kadıköy+İstanbul" target="_blank"
-            className="flex items-center gap-1.5 text-white hover:text-accent transition-colors whitespace-nowrap">
+            className="flex items-center gap-1.5 text-primary hover:text-accent transition-colors whitespace-nowrap font-medium">
             <MapPin size={12} className="text-accent shrink-0" />
             Eğitim Mah., Poyraz Sk. No:26/4 — Kadıköy / İst.
           </a>
-          <span className="text-white/20">|</span>
+          <span className="text-primary/20">|</span>
           <a href="mailto:info@asblawoffice.com"
-            className="flex items-center gap-1.5 text-white hover:text-accent transition-colors whitespace-nowrap">
+            className="flex items-center gap-1.5 text-primary hover:text-accent transition-colors whitespace-nowrap font-medium">
             <Mail size={12} className="text-accent shrink-0" />
             info@asblawoffice.com
           </a>
-          <span className="text-white/20">|</span>
-          <div className="flex items-center gap-1.5 text-white whitespace-nowrap">
+          <span className="text-primary/20">|</span>
+          <div className="flex items-center gap-1.5 text-primary whitespace-nowrap font-medium">
             <Clock size={12} className="text-accent shrink-0" />
             Pzt–Cum: 09:00–18:00
           </div>
-          <span className="text-white/20">|</span>
-          <a href="tel:05514882948" className="flex items-center gap-1.5 text-white hover:text-accent transition-colors whitespace-nowrap">
+          <span className="text-primary/20">|</span>
+          <a href="tel:05514882948" className="flex items-center gap-1.5 text-primary hover:text-accent transition-colors whitespace-nowrap font-medium">
             <Phone size={12} className="text-accent shrink-0" />
             0 551 488 29 48
           </a>
-          <span className="text-white/20">|</span>
+          <span className="text-primary/20">|</span>
           <a href="https://www.instagram.com/asblawoffice.av/" target="_blank" rel="noopener noreferrer"
-            className="text-white/70 hover:text-accent transition-colors">
+            className="text-primary/70 hover:text-accent transition-colors">
             <Instagram size={15} />
           </a>
           <a href="https://wa.me/905514882948" target="_blank"
-            className="text-white/70 hover:text-accent transition-colors">
+            className="text-primary/70 hover:text-accent transition-colors">
             <MessageCircle size={15} />
           </a>
 
@@ -97,8 +98,9 @@ export default function Header() {
             <div className="relative w-16 h-16 md:w-20 md:h-20 overflow-hidden shrink-0">
               <img src="/logo.png" alt="Logo" className="w-full h-full object-contain" />
             </div>
-            <div className="flex flex-col">
-              <span className="text-accent font-bold text-sm md:text-base tracking-[0.25em] leading-none uppercase">Hukuk & Danışmanlık</span>
+            <div className="flex flex-col leading-tight">
+              <span className="text-primary font-black text-lg md:text-xl tracking-[0.15em] uppercase">ASB</span>
+              <span className="text-primary font-semibold text-[11px] md:text-[13px] tracking-[0.2em] uppercase">Hukuk & Danışmanlık</span>
             </div>
           </Link>
 
@@ -123,7 +125,7 @@ export default function Header() {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: 10 }}
                           transition={{ duration: 0.2 }}
-                          className="absolute top-[90%] left-1/2 -translate-x-1/2 min-w-[240px] bg-white rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.3)] border border-gray-100 flex flex-col overflow-hidden z-50 py-3"
+                          className="absolute top-[90%] left-1/2 -translate-x-1/2 min-w-[240px] max-h-[70vh] overflow-y-auto overscroll-contain bg-white rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.3)] border border-gray-100 flex flex-col z-50 py-3"
                         >
                           {kurumsal.map((k, idx) => (
                             <Link
@@ -162,7 +164,7 @@ export default function Header() {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: 10 }}
                           transition={{ duration: 0.2 }}
-                          className="absolute top-[90%] left-1/2 -translate-x-1/2 min-w-[320px] bg-white rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.3)] border border-gray-100 flex flex-col overflow-hidden z-50 py-3"
+                          className="absolute top-[90%] left-1/2 -translate-x-1/2 min-w-[320px] max-h-[70vh] overflow-y-auto overscroll-contain bg-white rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.3)] border border-gray-100 flex flex-col z-50 py-3"
                         >
                           {services.map((s, idx) => (
                             <Link 
@@ -194,16 +196,6 @@ export default function Header() {
               );
             })}
           </nav>
-
-          {/* Action Button */}
-          <div className="hidden lg:block">
-            <Link
-              href="/iletisim"
-              className="bg-accent text-primary px-8 py-3.5 rounded-xl font-bold text-[13px] tracking-widest hover:bg-white hover:text-primary transition-all shadow-lg shadow-accent/20 uppercase italic"
-            >
-              İletişim
-            </Link>
-          </div>
 
           {/* Mobile Menu Toggle */}
           <div className="lg:hidden">
