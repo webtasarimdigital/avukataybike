@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "next/navigation";
 import { Calendar, User, ArrowLeft, BookOpen, Share2, MessageSquare, Tag, ArrowRight } from "lucide-react";
 import Link from "next/link";
@@ -18,6 +18,28 @@ export default function BlogPostPage() {
 
   const titleWords = slug.split("-");
   const category = titleWords.length > 2 ? "Hukuki Rehber" : "Genel";
+  const subjectPhrase = slug === "haksiz-isten-cikarilmada-yasal-basvuru-yollari"
+    ? "İş hukuku uyuşmazlıklarında"
+    : slug === "bosanma-surecinde-mal-rejimi-ve-yasal-duzenlemeler"
+      ? "Aile hukuku uyuşmazlıklarında"
+      : `${title} kapsamında`;
+
+  const [toastVisible, setToastVisible] = useState(false);
+  const [toastMessage, setToastMessage] = useState("");
+
+  const handleShare = async () => {
+    if (typeof window === "undefined") return;
+
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+      setToastMessage("Blog linki kopyalandı.");
+    } catch (error) {
+      setToastMessage("Link kopyalanamadı. Lütfen tekrar deneyin.");
+    }
+
+    setToastVisible(true);
+    window.setTimeout(() => setToastVisible(false), 2500);
+  };
 
   return (
     <main className="min-h-screen bg-[#F8FAFC]">
@@ -26,25 +48,31 @@ export default function BlogPostPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-[#0a1628]">
           <div className="absolute inset-0 opacity-5" style={{backgroundImage:"repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(255,255,255,.04) 40px,rgba(255,255,255,.04) 80px)"}} />
         </div>
-        <div className="container mx-auto px-6 max-w-5xl relative z-10 pb-36 space-y-6">
-          <div className="flex items-center gap-3">
+        <div className="container mx-auto px-6 max-w-5xl relative z-10 pb-36 space-y-6 text-center">
+          <div className="flex items-center justify-center gap-3">
             <Link href="/blog" className="flex items-center gap-2 text-white/40 hover:text-accent text-xs font-bold tracking-widest uppercase transition-colors">
               <ArrowLeft size={16} /> Blog
             </Link>
             <span className="text-white/20">/</span>
             <span className="text-accent text-xs font-bold tracking-widest uppercase">{category}</span>
           </div>
-          <div className="inline-flex items-center gap-3 bg-accent/10 border border-accent/20 px-4 py-2 rounded-full">
+          <div className="inline-flex items-center justify-center gap-3 bg-accent/10 border border-accent/20 px-4 py-2 rounded-full mx-auto">
             <Tag size={12} className="text-accent" />
             <span className="text-accent text-xs font-bold tracking-widest uppercase">Hukuki Rehber</span>
           </div>
-          <h1 className="text-3xl md:text-5xl font-black text-white leading-tight uppercase italic max-w-3xl">{title}</h1>
-          <div className="flex flex-wrap items-center gap-6 text-white/40 text-xs font-bold tracking-widest uppercase">
+          <h1 className="text-3xl md:text-5xl font-black text-white leading-tight uppercase italic max-w-3xl mx-auto text-center">{title}</h1>
+          <div className="flex flex-wrap justify-center items-center gap-6 text-white/40 text-xs font-bold tracking-widest uppercase">
             <span className="flex items-center gap-2"><Calendar size={14} className="text-accent" /> 20 Mayıs 2024</span>
             <span className="flex items-center gap-2"><User size={14} className="text-accent" /> ASB Hukuk</span>
           </div>
         </div>
       </div>
+
+      {toastVisible && (
+        <div className="fixed bottom-6 right-6 z-50 max-w-xs rounded-3xl bg-primary px-5 py-4 shadow-2xl shadow-black/20 text-white text-sm font-bold tracking-wide uppercase">
+          {toastMessage}
+        </div>
+      )}
 
       {/* ── CONTENT + SIDEBAR ── */}
       <div className="container mx-auto px-6 max-w-7xl -mt-10 pb-32">
@@ -58,10 +86,10 @@ export default function BlogPostPage() {
                 Bu yazımızda <strong>{title}</strong> konusunu hukuki boyutları, güncel yargı kararları ve dikkat edilmesi gereken kritik noktalar eşliğinde ele alıyoruz.
               </p>
 
-              <div className="space-y-6 text-neutral-600 leading-relaxed">
-                <h2 className="text-2xl font-black text-primary uppercase italic">{title} Hakkında Genel Bilgi</h2>
+              <div className="space-y-6 text-neutral-600 leading-relaxed text-justify">
+                <h2 className="text-2xl font-black text-primary uppercase italic text-center">{title} Hakkında Genel Bilgi</h2>
                 <p>
-                  Bu yazıda {title.toLowerCase()} konusundaki yasal düzenlemeler, süreçler ve dikkat edilmesi gereken hususlara ilişkin genel bilgiler ele alınmaktadır. Bu sayfa bilgilendirme niteliği taşımakta olup kişisel hukuki danışmanlık hizmeti niteliği taşımamaktadır.
+                  Bu yazıda {title.toLowerCase()} konusundaki, süreçler ve dikkat edilmesi gereken hususlara ilişkin genel bilgiler ele alınmaktadır. Bu sayfa bilgilendirme niteliği taşımakta olup kişisel hukuki danışmanlık hizmeti niteliği taşımamaktadır.
                 </p>
                 <p>
                   Bireysel durumunuzu değerlendirmek ve somut hukuki tavsiye almak için mutlaka bir avukata başvurmanızı öneririz. Hukuki süreçlerde yasal süreler kısa olabilmekte; geç kalınan başvurular hak kaybına yol açabilmektedir.
@@ -98,7 +126,7 @@ export default function BlogPostPage() {
 
                 <h2 className="text-2xl font-black text-primary uppercase italic pt-4">Sonuç</h2>
                 <p>
-                  {title.split(" ")[0]} alanında yaşanan uyuşmazlıklarda kısa yasal süreler ve ispat yükü kuralları sürecin kritik unsurlarını oluşturmaktadır. Durumunuza özel değerlendirme için bir hukuk bürosuyla irtibata geçmeniz önerilir.
+                  {subjectPhrase} kısa yasal süreler ve ispat yükü kuralları sürecin kritik unsurlarını oluşturmaktadır. Durumunuza özel değerlendirme için bir hukuk bürosuyla irtibata geçmeniz önerilir.
                 </p>
               </div>
 
@@ -107,13 +135,18 @@ export default function BlogPostPage() {
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-black text-lg">A</div>
                   <div>
-                    <p className="font-black text-primary text-sm">ASB Hukuk</p>
+                    <p className="font-black text-primary text-sm">ASB</p>
                     <p className="text-neutral-400 text-xs">Hukuk & Danışmanlık</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
                   <span className="text-xs font-bold text-neutral-400 uppercase tracking-widest">Paylaş</span>
-                  <button className="w-10 h-10 rounded-xl bg-neutral-100 hover:bg-accent flex items-center justify-center text-primary transition-all"><Share2 size={16} /></button>
+                  <button
+                    onClick={handleShare}
+                    className="w-10 h-10 rounded-xl bg-neutral-100 hover:bg-accent flex items-center justify-center text-primary transition-all"
+                  >
+                    <Share2 size={16} />
+                  </button>
                 </div>
               </div>
             </div>

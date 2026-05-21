@@ -42,8 +42,8 @@ export default function ContactPage() {
                         <MapPin size={28} />
                      </div>
                      <div>
-                        <h4 className="font-bold text-primary text-xl mb-1">Adresimiz</h4>
-                        <p className="text-neutral-500 font-medium leading-relaxed">Eğitim Mah., Poyraz Sokak, No:26/4, <br /> Kadıköy / İstanbul</p>
+                        <h4 className="font-bold text-primary text-xl mb-1">Adres</h4>
+                        <p className="text-neutral-500 font-medium leading-relaxed">Rıhtım, Poyraz Sokak, No:26/4, <br /> 34734 Kadıköy / İstanbul</p>
                      </div>
                   </div>
 
@@ -121,7 +121,7 @@ export default function ContactPage() {
         <div className="mt-16 bg-white rounded-[40px] shadow-2xl overflow-hidden border border-gray-100 h-[500px] relative group">
            <div className="absolute inset-0 bg-primary/5 pointer-events-none z-10 group-hover:opacity-0 transition-opacity" />
            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.6661159891823!2d29.0435163!3d40.9887719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab872659a8571%3A0x6b872b212f458123!2sE%C4%9Fitim%20Mah.%2C%20Poyraz%20Sk.%2C%20Kad%C4%B1k%C3%B6y%2F%C4%B0stanbul!5e0!3m2!1str!2str!4v1715873000000!5m2!1str!2str" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.5315529571035!2d29.036915090285884!3d40.99173744658874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab8743dd60435%3A0x382be194a608da08!2zRcSfaXRpbSwgUG95cmF6IFNrLiBObzoyNi80LCAzNDczNCBLYWTEsWvDtnkvxLBzdGFuYnVs!5e0!3m2!1str!2str!4v1779364256946!5m2!1str!2str" 
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 

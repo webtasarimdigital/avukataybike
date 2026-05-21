@@ -1,8 +1,10 @@
-"use client";
-import { MapPin, Phone, MessageCircle } from "lucide-react";
-import Link from "next/link";
+﻿"use client";
+import { useState } from "react";
+import { MapPin, Phone, MessageCircle, Instagram, X } from "lucide-react";
 
 export default function FloatingActions() {
+  const [open, setOpen] = useState(false);
+
   return (
     <>
       {/* DESKTOP (Web) VERSION - Floating Icons Bottom Right */}
@@ -40,43 +42,72 @@ export default function FloatingActions() {
         </a>
       </div>
 
-      {/* MOBILE VERSION - Fixed Bottom Bar */}
-      <div className="fixed bottom-0 left-0 right-0 z-[250] md:hidden bg-white/95 backdrop-blur-md border-t border-gray-100 flex shadow-[0_-10px_30px_rgba(0,0,0,0.08)] pb-safe h-[70px]">
-        
-        {/* BILGI AL - Priority Button */}
-        <a href="/iletisim" className="w-[40%] flex items-center justify-center bg-accent text-primary hover:bg-white transition-colors h-full border-r border-primary/5">
-          <span className="font-black tracking-widest uppercase text-[13px] text-center leading-tight">
-            İLETİŞİM
-          </span>
-        </a>
+      {/* MOBILE VERSION - Sticky Bottom Left Launcher */}
+      <div className="md:hidden">
+        {open && (
+          <div className="fixed inset-0 z-[240] bg-black/20" onClick={() => setOpen(false)} />
+        )}
 
-        {/* ICONS (Location, Phone, WA) */}
-        <div className="w-[60%] flex items-center justify-evenly h-full">
-          {/* KONUM */}
-          <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center w-full h-full hover:bg-gray-50 transition-colors">
-            <div className="w-8 h-8 rounded-xl bg-blue-500 flex items-center justify-center text-white shadow-sm mb-1">
-              <MapPin size={18} strokeWidth={2.5} />
-            </div>
-            <span className="text-[9px] font-bold text-primary tracking-wide">KONUM</span>
-          </a>
+        {open && (
+          <div className="fixed inset-x-4 bottom-[90px] z-[250] rounded-[36px] bg-white/95 backdrop-blur-xl border border-gray-200 shadow-2xl p-4 grid grid-cols-2 gap-3">
+            <a
+              href="https://maps.google.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-center justify-center gap-2 rounded-3xl bg-primary/5 text-primary py-4 px-3 text-center transition hover:bg-primary/10"
+              onClick={() => setOpen(false)}
+            >
+              <div className="w-12 h-12 rounded-3xl bg-blue-500 flex items-center justify-center text-white shadow-sm">
+                <MapPin size={22} />
+              </div>
+              <span className="text-[11px] font-black uppercase tracking-[0.18em]">Konum</span>
+            </a>
+            <a
+              href="tel:05514882948"
+              className="flex flex-col items-center justify-center gap-2 rounded-3xl bg-primary/5 text-primary py-4 px-3 text-center transition hover:bg-primary/10"
+              onClick={() => setOpen(false)}
+            >
+              <div className="w-12 h-12 rounded-3xl bg-green-600 flex items-center justify-center text-white shadow-sm">
+                <Phone size={22} />
+              </div>
+              <span className="text-[11px] font-black uppercase tracking-[0.18em]">Ara</span>
+            </a>
+            <a
+              href="https://wa.me/90514882948"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-center justify-center gap-2 rounded-3xl bg-primary/5 text-primary py-4 px-3 text-center transition hover:bg-primary/10"
+              onClick={() => setOpen(false)}
+            >
+              <div className="w-12 h-12 rounded-3xl bg-[#25D366] flex items-center justify-center text-white shadow-sm">
+                <MessageCircle size={22} />
+              </div>
+              <span className="text-[11px] font-black uppercase tracking-[0.18em]">WhatsApp</span>
+            </a>
+            <a
+              href="https://www.instagram.com/asblawoffice.av/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-center justify-center gap-2 rounded-3xl bg-primary/5 text-primary py-4 px-3 text-center transition hover:bg-primary/10"
+              onClick={() => setOpen(false)}
+            >
+              <div className="w-12 h-12 rounded-3xl bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 flex items-center justify-center text-white shadow-sm">
+                <Instagram size={22} />
+              </div>
+              <span className="text-[11px] font-black uppercase tracking-[0.18em]">Instagram</span>
+            </a>
+          </div>
+        )}
 
-          {/* ARA */}
-          <a href="tel:05514882948" className="flex flex-col items-center justify-center w-full h-full hover:bg-gray-50 transition-colors border-l border-gray-100">
-            <div className="w-8 h-8 rounded-xl bg-green-600 flex items-center justify-center text-white shadow-sm mb-1">
-              <Phone size={18} strokeWidth={2.5} />
-            </div>
-            <span className="text-[9px] font-bold text-primary tracking-wide">ARA</span>
-          </a>
-
-          {/* WHATSAPP */}
-          <a href="https://wa.me/905514882948" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center w-full h-full hover:bg-gray-50 transition-colors border-l border-gray-100">
-            <div className="w-8 h-8 rounded-xl bg-[#25D366] flex items-center justify-center text-white shadow-sm mb-1">
-              <MessageCircle size={18} strokeWidth={2.5} />
-            </div>
-            <span className="text-[9px] font-bold text-primary tracking-wide">WHATSAPP</span>
-          </a>
-        </div>
+        <button
+          type="button"
+          onClick={() => setOpen((prev) => !prev)}
+          className="fixed bottom-4 left-4 z-[260] w-14 h-14 rounded-full bg-accent text-primary shadow-2xl shadow-accent/30 flex items-center justify-center transition-transform duration-200 hover:scale-105"
+        >
+          {open ? <X size={24} /> : <MessageCircle size={24} />}
+        </button>
       </div>
     </>
   );
 }
+

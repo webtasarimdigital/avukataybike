@@ -1,5 +1,5 @@
 import React from "react";
-import { Scale, ShieldCheck, Users, Award, CheckCircle2, ArrowRight, Phone, MessageSquare, BookOpen, Gavel, MapPin, Clock } from "lucide-react";
+import { Scale, ShieldCheck, Users, Award, CheckCircle2, ArrowRight, Phone, MessageSquare, BookOpen, Gavel, MapPin, Clock, Mail } from "lucide-react";
 import Link from "next/link";
 
 const services = [
@@ -166,8 +166,8 @@ export default function AboutPage() {
             </div>
             <div className="p-10 md:p-14 flex flex-col justify-center">
               <div className="space-y-3 mb-8">
-                <span className="text-accent font-bold tracking-[0.3em] text-xs uppercase italic">Özgeçmiş</span>
-                <h3 className="text-2xl md:text-3xl font-black text-primary leading-tight uppercase italic">Kurucu Avukat <span className="text-accent">Hakkında</span></h3>
+                <span className="text-accent font-bold tracking-[0.3em] text-xs uppercase italic"></span>
+                <h3 className="text-2xl md:text-3xl font-black text-primary leading-tight uppercase italic">Kurucu Avukat <span className="text-accent"></span></h3>
                 <div className="w-12 h-1.5 bg-accent rounded-full" />
               </div>
               <p className="text-neutral-600 text-base leading-relaxed mb-6">
@@ -210,8 +210,8 @@ export default function AboutPage() {
             </div>
             <div className="p-10 md:p-14 flex flex-col justify-center">
               <div className="space-y-3 mb-8">
-                <span className="text-accent font-bold tracking-[0.3em] text-xs uppercase italic">Özgeçmiş</span>
-                <h3 className="text-2xl md:text-3xl font-black text-primary leading-tight uppercase italic">Ortak Avukat <span className="text-accent">Hakkında</span></h3>
+                <span className="text-accent font-bold tracking-[0.3em] text-xs uppercase italic"></span>
+                <h3 className="text-2xl md:text-3xl font-black text-primary leading-tight uppercase italic">Ortak Avukat <span className="text-accent"></span></h3>
                 <div className="w-12 h-1.5 bg-accent rounded-full" />
               </div>
               <p className="text-neutral-600 text-base leading-relaxed mb-6">
@@ -232,18 +232,14 @@ export default function AboutPage() {
         {/* ── DEĞERLER ── */}
         <div>
           <div className="text-center mb-12 space-y-3">
-            <span className="text-accent font-black tracking-[0.4em] text-xs uppercase italic">Temel İlkelerimiz</span>
-            <h2 className="text-3xl md:text-5xl font-black text-primary uppercase italic">Neden Bizi Tercih Etmelisiniz?</h2>
+            <h2 className="text-3xl md:text-5xl font-black text-primary uppercase italic">Temel İlkelerimiz</h2>
             <div className="w-20 h-1.5 bg-accent mx-auto rounded-full" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               { icon: <ShieldCheck size={44} />, t: "Güven ve Gizlilik", d: "Müvekkillerimizin tüm bilgileri avukatlık meslek sırrı kapsamında en üst düzeyde gizlilik prensibiyle korunmaktadır. Her müvekkil ilişkisi mutlak bir güven zeminine dayanır." },
               { icon: <Users size={44} />, t: "Müvekkil Odaklılık", d: "Her davayı kendi özgün koşulları içinde değerlendiriyor, müvekkillerimizle sürekli iletişim halinde kalıyoruz. Süreçteki her gelişmeden anında haberdar edilirsiniz." },
-              { icon: <Award size={44} />, t: "Profesyonel Mükemmeliyet", d: "Hukukun her dalında güncel mevzuat ve yargı kararlarını yakından takip ederek en doğru stratejiyi oluşturuyoruz. Sürekli eğitim ve gelişim temel prensiplerimizdendir." },
-              { icon: <Scale size={44} />, t: "Adalet Tutkusu", d: "Her müvekkil için adil ve hakkaniyetli bir sonuç elde etmek yalnızca bir iş değil, temel değerimizdir. Hakkın peşinde bitmez bir kararlılıkla yürüyoruz." },
               { icon: <BookOpen size={44} />, t: "Güncel Hukuki Bilgi", d: "Değişen mevzuat ve yargıtay kararlarını anlık takip ederek müvekkillerimize her zaman en güncel ve doğru hukuki danışmanlığı sunuyoruz." },
-              { icon: <Gavel size={44} />, t: "Güçlü Mahkeme Tecrübesi", d: "İstanbul başta olmak üzere Türkiye'nin önde gelen mahkemelerinde yürütülen davalarda kazandığımız tecrübe, her dosyada güçlü bir temsil sağlamamızı mümkün kılmaktadır." },
             ].map((item, i) => (
               <div key={i} className="bg-white p-10 rounded-[32px] shadow-sm border border-gray-100 flex flex-col group hover:shadow-xl hover:border-accent/30 transition-all duration-300">
                 <div className="w-16 h-16 rounded-2xl bg-primary/5 text-primary flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-primary transition-all shrink-0">
@@ -287,7 +283,6 @@ export default function AboutPage() {
             <div className="space-y-3">
               <h3 className="text-xl font-black text-primary uppercase italic">Avukatlık Hizmetleri Hakkında</h3>
               <p className="text-neutral-500 text-sm leading-relaxed">Bu internet sitesi yalnızca genel bilgilendirme amacıyla hazırlanmıştır; hukuki danışmanlık hizmeti yerine geçmez. Her hukuki uyuşmazlık kendine özgü koşullar içermekte olup benzer görünen davalarda farklı sonuçlar ortaya çıkabilir. Kişisel durumunuz için lütfen bir avukata başvurunuz.</p>
-              <p className="text-neutral-500 text-sm leading-relaxed">Büromuz İstanbul Barosu'na kayıtlıdır ve Avukatlık Kanunu ile Türkiye Barolar Birliği Meslek Kuralları çerçevesinde faaliyet göstermektedir.</p>
             </div>
           </div>
         </div>
@@ -316,6 +311,16 @@ export default function AboutPage() {
                   <a href="tel:05514882948" className="text-neutral-500 text-sm hover:text-accent transition-colors font-medium">0551 488 29 48</a>
                 </div>
               </div>
+
+              <div className="flex gap-4 items-start">
+                <div className="w-12 h-12 rounded-2xl bg-primary/5 text-primary flex items-center justify-center shrink-0"><Mail size={22} /></div>
+                <div>
+                  <p className="font-black text-primary text-sm uppercase tracking-wider mb-1">E-Posta</p>
+                  <a href="mailto:info@avukataybike.com" className="text-neutral-500 text-sm hover:text-accent transition-colors font-medium">info@avukataybike.com</a>
+                </div>
+              </div>
+
+
               <div className="flex gap-4 items-start">
                 <div className="w-12 h-12 rounded-2xl bg-primary/5 text-primary flex items-center justify-center shrink-0"><Clock size={22} /></div>
                 <div>

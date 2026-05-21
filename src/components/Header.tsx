@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const services = [
   { title: "BANKA VE TİCARET HUKUKU", slug: "banka-ve-ticaret-hukuku" },
   { title: "İŞ HUKUKU", slug: "is-hukuku" },
+  { title: "CEZA HUKUKU", slug: "ceza-hukuku" },
   { title: "MARKA VE PATENT HUKUKU", slug: "marka-ve-patent-hukuku" },
   { title: "AİLE HUKUKU", slug: "aile-hukuku" },
   { title: "SİGORTA HUKUKU", slug: "sigorta-hukuku" },
@@ -41,12 +42,19 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (typeof document === "undefined") return;
+    document.body.style.overflow = mobileMenuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileMenuOpen]);
+
   const navLinks = [
     { name: "ANA SAYFA", href: "/" },
     { name: "KURUMSAL", href: "#", id: "kurumsal" },
     { name: "HİZMETLER", href: "#", id: "services" },
     { name: "BLOG", href: "/blog" },
-    { name: "İLETİŞİM", href: "/iletisim" },
   ];
 
   return (
@@ -55,10 +63,10 @@ export default function Header() {
       <div className={`bg-primary transition-all duration-300 origin-top ${isScrolled ? "h-0 opacity-0 overflow-hidden" : "hidden lg:flex h-[52px] opacity-100"}`}>
         <div className="w-full max-w-[1400px] mx-auto px-8 flex items-center justify-center h-full gap-5 text-[11.5px]">
 
-          <a href="https://maps.google.com/?q=Eğitim+Mah.+Poyraz+Sk.+No:26/4+Kadıköy+İstanbul" target="_blank"
+          <a href="https://maps.google.com/maps?q=R%C4%B1ht%C4%B1m+Poyraz+Sk.+No%3A26%2F4%2C+34734+Kad%C4%B1k%C3%B6y+%C4%B0stanbul" target="_blank"
             className="flex items-center gap-1.5 text-white hover:text-accent transition-colors whitespace-nowrap">
             <MapPin size={12} className="text-accent shrink-0" />
-            Eğitim Mah., Poyraz Sk. No:26/4 — Kadıköy / İst.
+            Rıhtım, Poyraz Sk. No:26/4 — 34734 Kadıköy / İstanbul
           </a>
           <span className="text-white/20">|</span>
           <a href="mailto:info@asblawoffice.com"
@@ -98,7 +106,7 @@ export default function Header() {
               <img src="/logo.png" alt="Logo" className="w-full h-full object-contain" />
             </div>
             <div className="flex flex-col">
-              <span className="text-accent font-bold text-sm md:text-base tracking-[0.25em] leading-none uppercase">Hukuk & Danışmanlık</span>
+              <span className="text-[#0A8D4E] font-bold text-sm md:text-base tracking-[0.25em] leading-none uppercase">Hukuk & Danışmanlık</span>
             </div>
           </Link>
 
@@ -123,7 +131,7 @@ export default function Header() {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: 10 }}
                           transition={{ duration: 0.2 }}
-                          className="absolute top-[90%] left-1/2 -translate-x-1/2 min-w-[240px] bg-white rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.3)] border border-gray-100 flex flex-col overflow-hidden z-50 py-3"
+                          className="absolute top-[90%] left-1/2 -translate-x-1/2 min-w-[240px] max-h-[320px] bg-white rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.3)] border border-gray-100 flex flex-col overflow-y-auto z-50 py-3"
                         >
                           {kurumsal.map((k, idx) => (
                             <Link
@@ -162,7 +170,7 @@ export default function Header() {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: 10 }}
                           transition={{ duration: 0.2 }}
-                          className="absolute top-[90%] left-1/2 -translate-x-1/2 min-w-[320px] bg-white rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.3)] border border-gray-100 flex flex-col overflow-hidden z-50 py-3"
+                          className="absolute top-[90%] left-1/2 -translate-x-1/2 min-w-[320px] max-h-[360px] bg-white rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.3)] border border-gray-100 flex flex-col overflow-y-auto z-50 py-3"
                         >
                           {services.map((s, idx) => (
                             <Link 

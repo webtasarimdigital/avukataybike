@@ -78,21 +78,6 @@ export default function ServiceDetailPage() {
               </Link>
             </div>
           </div>
-
-          <div className="hidden lg:grid grid-cols-3 gap-4 pb-8">
-            <div className="bg-white/5 border border-white/10 rounded-3xl p-6 text-center backdrop-blur-sm">
-              <p className="text-3xl font-black text-accent italic leading-none mb-2">10+</p>
-              <p className="text-white/50 text-[10px] font-bold uppercase tracking-widest leading-tight">Yıllık Deneyim</p>
-            </div>
-            <div className="bg-white/5 border border-white/10 rounded-3xl p-6 text-center backdrop-blur-sm">
-              <p className="text-3xl font-black text-accent italic leading-none mb-2">14</p>
-              <p className="text-white/50 text-[10px] font-bold uppercase tracking-widest leading-tight">Hizmet Alanı</p>
-            </div>
-            <div className="bg-white/5 border border-white/10 rounded-3xl p-6 text-center backdrop-blur-sm">
-              <p className="text-2xl font-black text-accent italic leading-none mb-2">Kadıköy</p>
-              <p className="text-white/50 text-[10px] font-bold uppercase tracking-widest leading-tight">İstanbul</p>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -157,22 +142,6 @@ export default function ServiceDetailPage() {
                     </div>
                   </div>
                 ))}
-              </div>
-            </div>
-
-            {/* Stats (mobile) */}
-            <div className="grid grid-cols-3 gap-4 lg:hidden">
-              <div className="bg-white rounded-3xl p-6 text-center shadow-md border border-gray-100">
-                <p className="text-2xl font-black text-primary italic leading-none mb-1">10+</p>
-                <p className="text-neutral-400 text-[10px] font-bold uppercase tracking-widest leading-tight">Yıllık Deneyim</p>
-              </div>
-              <div className="bg-white rounded-3xl p-6 text-center shadow-md border border-gray-100">
-                <p className="text-2xl font-black text-primary italic leading-none mb-1">14</p>
-                <p className="text-neutral-400 text-[10px] font-bold uppercase tracking-widest leading-tight">Hizmet Alanı</p>
-              </div>
-              <div className="bg-white rounded-3xl p-6 text-center shadow-md border border-gray-100">
-                <p className="text-xl font-black text-primary italic leading-none mb-1">Kadıköy</p>
-                <p className="text-neutral-400 text-[10px] font-bold uppercase tracking-widest leading-tight">İstanbul</p>
               </div>
             </div>
 
@@ -253,14 +222,7 @@ export default function ServiceDetailPage() {
             </div>
 
             {/* Office Info */}
-            <div className="bg-white rounded-[40px] shadow-md border border-gray-100 p-10">
-              <h3 className="text-primary font-black text-base italic uppercase mb-6 tracking-widest">Ofis Bilgileri</h3>
-              <div className="space-y-4 text-sm">
-                <div className="flex gap-3"><span className="text-accent font-bold">📍</span><span className="text-neutral-500 font-medium">Eğitim Mah., Poyraz Sk. No:26/4, Kadıköy / İstanbul</span></div>
-                <div className="flex gap-3"><span className="text-accent font-bold">📞</span><a href="tel:05514882948" className="text-neutral-500 font-medium hover:text-accent transition-colors">0551 488 29 48</a></div>
-                <div className="flex gap-3"><span className="text-accent font-bold">🕐</span><span className="text-neutral-500 font-medium">Pzt–Cum: 09:00–18:00</span></div>
-              </div>
-            </div>
+          
           </div>
 
         </div>

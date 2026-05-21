@@ -66,10 +66,10 @@ export default function Home() {
       ══════════════════════════════════════ */}
       <section className="relative w-full min-h-[70vh] flex items-center overflow-hidden" style={{paddingTop:"var(--header-h,92px)"}}>
 
-        {/* Arka plan: hukuk kitaplığı tam kaplıyor */}
+        {/* Arka plan: boğaz manzarası */}
         <img
-          src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=1800&q=80&auto=format&fit=crop"
-          alt="Hukuk Bürosu"
+          src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1800&q=80&auto=format&fit=crop"
+          alt="Boğaz Manzarası"
           className="absolute inset-0 w-full h-full object-cover"
         />
         {/* Overlay */}
@@ -183,7 +183,7 @@ export default function Home() {
               <span className="text-accent font-black tracking-[0.35em] text-[11px] uppercase">Uzmanlık Alanları</span>
               <div className="h-px w-10 bg-accent" />
             </div>
-            <h2 className="text-4xl md:text-5xl font-black text-primary uppercase leading-tight">Hukuki Hizmetlerimiz</h2>
+            <h2 className="text-4xl md:text-5xl font-black text-primary uppercase leading-tight">Çalışma Alanlarımız</h2>
             <p className="text-neutral-500 text-lg">Hukuki Sorunlarınız İçin Uzman Çözümler</p>
           </div>
 
