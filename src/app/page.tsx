@@ -70,10 +70,10 @@ export default function Home() {
         <img
           src="/bogaz.png"
           alt="Boğaz Manzarası"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover brightness-110 contrast-105"
         />
         {/* Overlay */}
-        <div className="absolute inset-0 bg-primary/85 z-10" />
+        <div className="absolute inset-0 bg-primary/35 z-10" />
 
         {/* Metin — ortalanmış */}
         <div className="relative z-20 w-full flex items-center justify-center py-24 lg:py-32 px-8 md:px-14">

@@ -3,14 +3,14 @@ import Link from "next/link";
 
 const services = [
   { title: "Banka ve Ticaret Hukuku", slug: "banka-ve-ticaret-hukuku" },
-  { title: "Ä°ÅŸ Hukuku", slug: "is-hukuku" },
+  { title: "İş Hukuku", slug: "is-hukuku" },
   { title: "Marka ve Patent Hukuku", slug: "marka-ve-patent-hukuku" },
   { title: "Aile Hukuku", slug: "aile-hukuku" },
   { title: "Sigorta Hukuku", slug: "sigorta-hukuku" },
-  { title: "Ä°cra ve Ä°flas Hukuku", slug: "icra-ve-iflas-hukuku" },
-  { title: "SaÄŸlÄ±k Hukuku", slug: "saglik-hukuku" },
-  { title: "TÃ¼ketici Hukuku", slug: "tuketici-hukuku" },
-  { title: "KiÅŸisel Verilerin KorunmasÄ±", slug: "kisisel-verilerin-korunmasi-hukuku" },
+  { title: "İcra ve İflas Hukuku", slug: "icra-ve-iflas-hukuku" },
+  { title: "Sağlık Hukuku", slug: "saglik-hukuku" },
+  { title: "Tüketici Hukuku", slug: "tuketici-hukuku" },
+  { title: "Kişisel Verilerin Korunması", slug: "kisisel-verilerin-korunmasi-hukuku" },
   { title: "Kira Hukuku", slug: "kira-hukuku" },
   { title: "Ceza Hukuku", slug: "ceza-hukuku" },
 ];
@@ -26,7 +26,7 @@ export default function Footer() {
               <img src="/logo.png" alt="Logo" className="h-20 w-auto" />
             </Link>
             <p className="text-[14px] leading-relaxed text-neutral-400 font-medium max-w-sm">
-              ASB Hukuk, hukuk ve danÄ±ÅŸmanlÄ±k alanÄ±nda profesyonel, ÅŸeffaf ve sonuÃ§ odaklÄ± hizmetler sunarak mÃ¼vekkillerinin haklarÄ±nÄ± en Ã¼st seviyede korumayÄ± amaÃ§lamaktadÄ±r.
+              ASB Hukuk, hukuk ve danışmanlık alanında profesyonel, şeffaf ve sonuç odaklı hizmetler sunarak müvekkillerinin haklarını en üst seviyede korumayı amaçlamaktadır.
             </p>
             <div className="flex gap-4">
               <a href="https://www.instagram.com/asblawoffice.av/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:bg-accent hover:text-black hover:border-accent transition-all">
@@ -40,15 +40,15 @@ export default function Footer() {
             <h4 className="text-white font-bold tracking-widest uppercase text-[15px] mb-6">KURUMSAL</h4>
             <ul className="space-y-4">
               <li><Link href="/" className="text-[14px] text-neutral-400 hover:text-accent transition-colors">Ana Sayfa</Link></li>
-              <li><Link href="/hakkimizda" className="text-[14px] text-neutral-400 hover:text-accent transition-colors">HakkÄ±mÄ±zda</Link></li>
+              <li><Link href="/hakkimizda" className="text-[14px] text-neutral-400 hover:text-accent transition-colors">Hakkımızda</Link></li>
               <li><Link href="/blog" className="text-[14px] text-neutral-400 hover:text-accent transition-colors">Blog</Link></li>
-              <li><Link href="/iletisim" className="text-[14px] text-neutral-400 hover:text-accent transition-colors">Ä°letiÅŸim</Link></li>
+              <li><Link href="/iletisim" className="text-[14px] text-neutral-400 hover:text-accent transition-colors">İletişim</Link></li>
             </ul>
           </div>
 
           {/* Column 3: Hizmetlerimiz */}
           <div className="col-span-2 md:col-span-1 lg:col-span-3 min-w-0">
-            <h4 className="text-white font-bold tracking-widest uppercase text-[15px] mb-6">HÄ°ZMETLERÄ°MÄ°Z</h4>
+            <h4 className="text-white font-bold tracking-widest uppercase text-[15px] mb-6">HİZMETLERİMİZ</h4>
             <ul className="space-y-4">
               {services.map((s, idx) => (
                 <li key={idx}>
@@ -62,12 +62,12 @@ export default function Footer() {
 
           {/* Column 4: Ä°letiÅŸim */}
           <div className="col-span-2 md:col-span-2 lg:col-span-3 min-w-0">
-            <h4 className="text-white font-bold tracking-widest uppercase text-[15px] mb-6">Ä°LETÄ°ÅÄ°M</h4>
+            <h4 className="text-white font-bold tracking-widest uppercase text-[15px] mb-6">İLETİŞİM</h4>
             <div className="space-y-6">
               <div className="flex items-start gap-3">
                 <MapPin size={20} className="text-accent shrink-0 mt-1" />
                 <p className="text-[14px] text-neutral-400 font-medium leading-relaxed">
-                  EÄŸitim Mah., Poyraz Sokak, No:26/4, <br/>KadÄ±kÃ¶y / Ä°stanbul
+                  Eğitim Mah., Poyraz Sokak, No:26/4, <br/>Kadıköy / İstanbul
                 </p>
               </div>
               <div className="flex items-start gap-3">
@@ -85,7 +85,7 @@ export default function Footer() {
               <div className="flex items-start gap-3">
                 <Clock size={20} className="text-accent shrink-0 mt-1" />
                 <div>
-                  <p className="text-[14px] font-bold text-white mb-1">Ã‡alÄ±ÅŸma Saatleri</p>
+                  <p className="text-[14px] font-bold text-white mb-1">Çalışma Saatleri</p>
                   <p className="text-[13px] text-neutral-500">Pazartesi - Cuma: 09:00 - 18:00</p>
                 </div>
               </div>
@@ -96,11 +96,11 @@ export default function Footer() {
         {/* Footer Bottom Bar */}
         <div className="border-t border-white/5 pt-8 pb-10 flex flex-col md:flex-row justify-between items-center gap-4 text-center">
           <p className="text-[13px] text-neutral-500 font-medium">
-            Â© 2026 <strong>ASB Hukuk.</strong> TÃ¼m HaklarÄ± SaklÄ±dÄ±r.
+            © 2026 <strong>ASB Hukuk.</strong> Tüm Hakları Saklıdır.
           </p>
           <div className="flex gap-6">
-            <Link href="#" className="text-[12px] text-neutral-500 hover:text-white transition-colors">Gizlilik PolitikasÄ±</Link>
-            <Link href="#" className="text-[12px] text-neutral-500 hover:text-white transition-colors">KullanÄ±m KoÅŸullarÄ±</Link>
+            <Link href="#" className="text-[12px] text-neutral-500 hover:text-white transition-colors">Gizlilik Politikası</Link>
+            <Link href="#" className="text-[12px] text-neutral-500 hover:text-white transition-colors">Kullanım Koşulları</Link>
           </div>
         </div>
       </div>
