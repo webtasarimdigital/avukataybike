@@ -86,7 +86,7 @@ export default function Home() {
             </div>
 
             {/* Başlık */}
-            <h1 className="text-5xl md:text-[58px] lg:text-[68px] font-black text-white leading-[1] tracking-tight uppercase">
+            <h1 className="text-4xl md:text-[48px] lg:text-[56px] font-bold text-white leading-[1.02] tracking-tight uppercase">
               Adalet İçin<br />
               <span className="text-accent italic">Güvenilir</span><br />
               Hukuki Destek.
@@ -118,7 +118,7 @@ export default function Home() {
             <span className="text-accent font-black tracking-[0.35em] text-[11px] uppercase">Hakkımızda</span>
             <div className="h-px w-10 bg-accent" />
           </div>
-          <h2 className="text-3xl md:text-4xl font-black text-primary leading-tight">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
             ASB Hukuk & Danışmanlık
           </h2>
           <p className="text-neutral-600 text-lg leading-relaxed max-w-3xl mx-auto">
@@ -143,7 +143,7 @@ export default function Home() {
               <div className="w-12 h-12 rounded-xl bg-accent/15 flex items-center justify-center">
                 <Scale size={22} className="text-accent" />
               </div>
-              <h3 className="text-2xl font-black text-primary uppercase italic">Vizyonumuz</h3>
+              <h3 className="text-2xl font-semibold text-primary uppercase italic">Vizyonumuz</h3>
               <p className="text-neutral-600 leading-relaxed">
                 Hukuki hizmet anlayışını modern, erişilebilir ve stratejik bir bakış açısıyla yeniden şekillendirerek; Türkiye'nin güvenilir ve tercih edilen hukuk bürolarından biri olmak.
               </p>
@@ -157,7 +157,7 @@ export default function Home() {
               <div className="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center">
                 <Shield size={22} className="text-accent" />
               </div>
-              <h3 className="text-2xl font-black text-white uppercase italic">Misyonumuz</h3>
+              <h3 className="text-2xl font-semibold text-white uppercase italic">Misyonumuz</h3>
               <p className="text-white/70 leading-relaxed">
                 Müvekkillerimize yalnızca hukuki temsil sunmak değil; süreci doğru yöneten, riskleri öngören ve sürdürülebilir çözümler üreten güçlü bir iş ortağı olmak.
               </p>
@@ -183,7 +183,7 @@ export default function Home() {
               <span className="text-accent font-black tracking-[0.35em] text-[11px] uppercase">Uzmanlık Alanları</span>
               <div className="h-px w-10 bg-accent" />
             </div>
-            <h2 className="text-4xl md:text-5xl font-black text-primary uppercase leading-tight">Çalışma Alanlarımız</h2>
+            <h2 className="text-4xl md:text-5xl font-semibold text-primary uppercase leading-tight">Çalışma Alanlarımız</h2>
             <p className="text-neutral-500 text-lg">Hukuki Sorunlarınız İçin Uzman Çözümler</p>
           </div>
 
@@ -264,7 +264,7 @@ export default function Home() {
               <span className="text-accent font-black tracking-[0.35em] text-[11px] uppercase">Çalışma Sürecimiz</span>
               <div className="h-px w-10 bg-accent" />
             </div>
-            <h2 className="text-4xl md:text-5xl font-black text-white uppercase">Nasıl İlerleriz?</h2>
+            <h2 className="text-4xl md:text-5xl font-semibold text-white uppercase">Nasıl İlerleriz?</h2>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             {[
@@ -285,7 +285,7 @@ export default function Home() {
                 <div className="w-14 h-14 rounded-xl bg-accent/20 text-accent flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-primary transition-all duration-300">
                   <step.icon size={26} />
                 </div>
-                <h3 className="font-black text-white text-lg mb-3">{step.t}</h3>
+                <h3 className="font-semibold text-white text-lg mb-3">{step.t}</h3>
                 <p className="text-white/50 text-sm leading-relaxed">{step.d}</p>
               </motion.div>
             ))}
@@ -301,7 +301,7 @@ export default function Home() {
 
           {/* Quote — üst */}
           <div className="text-center mb-12">
-            <blockquote className="text-2xl md:text-3xl font-black text-primary leading-snug">
+            <blockquote className="text-2xl md:text-3xl font-semibold text-primary leading-snug">
               "Hukuk, <span className="text-accent italic">güçlünün değil</span>, haklının yanında durur."
             </blockquote>
             <p className="text-primary/40 text-[11px] font-bold tracking-[0.3em] uppercase mt-3">Hukuki Danışmanlık · Dava Takibi · Arabuluculuk</p>
@@ -378,7 +378,7 @@ export default function Home() {
                 <div className="h-px w-10 bg-accent" />
                 <span className="text-accent font-black tracking-[0.35em] text-[11px] uppercase">Blog</span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-black text-primary uppercase">Hukuki Bilgilendirme</h2>
+              <h2 className="text-4xl md:text-5xl font-semibold text-primary uppercase">Hukuki Bilgilendirme</h2>
             </div>
             <Link href="/blog" className="group flex items-center gap-3 font-black text-xs tracking-widest text-primary uppercase border-b-2 border-accent pb-2">
               Tüm Yazılar <ArrowRight size={14} className="group-hover:translate-x-2 transition-transform" />
@@ -400,7 +400,7 @@ export default function Home() {
                 </div>
                 <div className="space-y-2 px-1">
                   <p className="text-accent font-bold text-[11px] tracking-widest uppercase">{post.d}</p>
-                  <h3 className="text-xl font-black text-primary leading-tight group-hover:text-accent transition-colors line-clamp-2">
+                  <h3 className="text-xl font-semibold text-primary leading-tight group-hover:text-accent transition-colors line-clamp-2">
                     {post.t}
                   </h3>
                   <div className="flex items-center gap-2 pt-1 text-primary/40 font-black text-[11px] uppercase tracking-widest group-hover:text-accent transition-colors">
@@ -424,7 +424,7 @@ export default function Home() {
                 <div className="h-px w-10 bg-accent" />
                 <span className="text-accent font-black tracking-[0.35em] text-[11px] uppercase">SSS</span>
               </div>
-              <h2 className="text-4xl font-black text-primary uppercase leading-tight">Sıkça Sorulan Sorular</h2>
+              <h2 className="text-4xl font-semibold text-primary uppercase leading-tight">Sıkça Sorulan Sorular</h2>
               <p className="text-neutral-500 leading-relaxed text-sm">Merak ettiklerinizi bulamadıysanız bize doğrudan ulaşabilirsiniz.</p>
               <Link href="/iletisim"
                 className="inline-flex items-center gap-3 bg-primary text-white px-7 py-3.5 rounded-xl font-black text-sm tracking-widest uppercase transition-all hover:bg-primary/90 shadow-lg shadow-primary/20">
@@ -438,7 +438,7 @@ export default function Home() {
                     className="w-full flex items-center justify-between p-6 text-left"
                     onClick={() => setOpenFaq(openFaq === i ? null : i)}
                   >
-                    <span className={`font-black text-sm pr-4 transition-colors ${openFaq===i?"text-accent":"text-primary"}`}>{faq.q}</span>
+                    <span className={`font-semibold text-sm pr-4 transition-colors ${openFaq===i?"text-accent":"text-primary"}`}>{faq.q}</span>
                     <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-all ${openFaq===i?"bg-primary text-white rotate-180":"bg-primary/5 text-primary"}`}>
                       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6"/></svg>
                     </div>
@@ -470,7 +470,7 @@ export default function Home() {
                 <div className="w-14 h-14 rounded-2xl bg-accent/15 border border-accent/30 flex items-center justify-center">
                   <TeraziSVG className="w-8 h-8 text-accent" />
                 </div>
-                <h2 className="text-4xl md:text-5xl font-black text-white leading-tight uppercase">
+                <h2 className="text-4xl md:text-5xl font-semibold text-white leading-tight uppercase">
                   Hukuki Sorununuz<br />
                   <span className="text-accent italic">Çözümsüz Değil.</span>
                 </h2>
