@@ -65,13 +65,13 @@ export default function Home() {
       {/* ══════════════════════════════════════
           HERO — Yatay Split
       ══════════════════════════════════════ */}
-      <section className="relative w-full min-h-[70vh] flex items-center overflow-hidden" style={{paddingTop:"var(--header-h,92px)"}}>
+      <section className="relative w-full min-h-[70vh] flex items-center overflow-hidden">
 
         {/* Arka plan: boğaz manzarası */}
         <img
-          src="/bogaz.png"
-          alt="Boğaz Manzarası"
-          className="absolute inset-0 w-full h-full object-cover brightness-105 contrast-105 opacity-90"
+          src="/hero-bg.jpg"
+          alt="Hero arka planı"
+          className="absolute inset-0 w-full h-full object-cover object-top"
         />
         {/* Overlay */}
         <div className="absolute inset-0 bg-primary/45 z-10" />
@@ -112,7 +112,7 @@ export default function Home() {
       {/* ══════════════════════════════════════
           TANITIM
       ══════════════════════════════════════ */}
-      <section className="py-20 md:py-24 bg-[#F8F5EF]">
+      <section className="py-20 md:py-24 bg-[#F6F3ED]">
         <div className="container mx-auto px-6 max-w-4xl text-center space-y-6">
           <div className="flex items-center justify-center gap-4">
             <div className="h-px w-10 bg-accent" />
@@ -140,7 +140,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
             {/* Vizyon */}
-            <div className="bg-[#F8F5EF] rounded-3xl p-10 md:p-12 border border-neutral-100 space-y-5">
+            <div className="bg-[#F6F3ED] rounded-3xl p-10 md:p-12 border border-neutral-100 space-y-5">
               <div className="w-12 h-12 rounded-xl bg-accent/15 flex items-center justify-center">
                 <Scale size={22} className="text-accent" />
               </div>
@@ -174,7 +174,7 @@ export default function Home() {
       {/* ══════════════════════════════════════
           HİZMETLER — Görsel Kart Yapısı
       ══════════════════════════════════════ */}
-      <section id="hizmetler" className="pt-10 pb-24 md:pt-12 md:pb-32 bg-[#F8F5EF]">
+      <section id="hizmetler" className="pt-10 pb-24 md:pt-12 md:pb-32 bg-[#F6F3ED]">
         <div className="container mx-auto px-6 max-w-7xl">
 
           {/* Başlık */}
@@ -297,7 +297,7 @@ export default function Home() {
       {/* ══════════════════════════════════════
           DEĞERLER — Merkez görsel + özellikler
       ══════════════════════════════════════ */}
-      <section className="bg-[#F8F5EF] py-16 md:py-20">
+      <section className="bg-[#F6F3ED] py-16 md:py-20">
         <div className="container mx-auto px-6 max-w-7xl">
 
           {/* Quote — üst */}
@@ -417,7 +417,7 @@ export default function Home() {
       {/* ══════════════════════════════════════
           SSS
       ══════════════════════════════════════ */}
-      <section className="py-24 md:py-32 bg-[#F8F5EF]">
+      <section className="py-24 md:py-32 bg-[#F6F3ED]">
         <div className="container mx-auto px-6 max-w-5xl">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-16 items-start">
             <div className="lg:col-span-2 space-y-6 lg:sticky lg:top-32">

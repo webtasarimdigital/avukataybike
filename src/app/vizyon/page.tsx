@@ -5,7 +5,7 @@ export const metadata = { title: "Vizyonumuz | ASB Hukuk & Danışmanlık" };
 
 export default function VizyonPage() {
   return (
-    <main className="min-h-screen bg-[#F8F5EF]">
+    <main className="min-h-screen bg-[#F6F3ED]">
 
       {/* HERO */}
       <div className="relative bg-primary overflow-hidden pt-44 pb-24">

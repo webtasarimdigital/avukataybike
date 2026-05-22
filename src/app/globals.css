@@ -1,12 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #0a0a0a;
-  --primary: #092f1a;
-  --primary-light: #1a4a2e;
-  --accent: #C9882A; /* Warm amber-gold */
-  --accent-foreground: #0A3125;
+  /* ASB Hukuk — Marka Renk Paleti */
+  --primary: #0F2B24;          /* Ana Koyu Yeşil (Primary Brand Green) */
+  --primary-light: #183C33;    /* Derin Zümrüt Yeşili (Secondary Green) */
+  --accent: #C8A96B;           /* Mat Altın (Primary Gold) */
+  --accent-soft: #D9BE88;      /* Açık Altın Vurgu (Soft Gold Highlight) */
+  --accent-foreground: #0F2B24;
+  --ivory: #F6F3ED;            /* Kırık Beyaz / Ivory — site arka planı */
+  --header-bg: #FBFAF8;        /* Header arka planı */
+  --border-soft: #D8D2C8;      /* Soft Gri Border */
+  --background: #F6F3ED;
+  --foreground: #1E1E1E;       /* Koyu Metin Rengi */
 }
 
 @theme inline {
@@ -15,16 +20,26 @@
   --color-primary: var(--primary);
   --color-primary-light: var(--primary-light);
   --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
   --color-accent-foreground: var(--accent-foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-ivory: var(--ivory);
+  --color-header-bg: var(--header-bg);
+  --color-border-soft: var(--border-soft);
+  --font-sans: "Times New Roman", Times, Georgia, serif;
+  --font-serif: "Times New Roman", Times, Georgia, serif;
+  --font-mono: "Times New Roman", Times, Georgia, serif;
 }
 
 @layer base {
   html, body {
-    @apply font-sans text-primary antialiased selection:bg-accent/30 selection:text-primary;
+    font-family: "Times New Roman", Times, Georgia, serif;
+    @apply text-foreground antialiased selection:bg-accent/30 selection:text-primary;
+    background-color: var(--ivory);
     overflow-x: hidden;
     max-width: 100vw;
+  }
+  body, button, input, textarea, select, h1, h2, h3, h4, h5, h6, p, a, span, li, label {
+    font-family: "Times New Roman", Times, Georgia, serif !important;
   }
 }
 

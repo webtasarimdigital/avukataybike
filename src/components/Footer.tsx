@@ -23,7 +23,7 @@ export default function Footer() {
           {/* Column 1: Brand & Intro */}
           <div className="col-span-2 md:col-span-2 lg:col-span-4 space-y-5">
             <Link href="/" className="inline-block bg-white p-2 rounded-xl">
-              <img src="/logo.png" alt="Logo" className="h-20 w-auto" />
+              <img src="/yeni-logo.jpg" alt="ASB Hukuk" className="h-32 md:h-36 w-auto" />
             </Link>
             <p className="text-[14px] leading-relaxed text-neutral-400 font-medium max-w-sm">
               ASB Hukuk, hukuk ve danışmanlık alanında profesyonel, şeffaf ve sonuç odaklı hizmetler sunarak müvekkillerinin haklarını en üst seviyede korumayı amaçlamaktadır.
@@ -96,7 +96,7 @@ export default function Footer() {
         {/* Footer Bottom Bar */}
         <div className="border-t border-white/5 pt-8 pb-10 text-center">
           <p className="text-[13px] text-neutral-500 font-medium">
-            ©2026 <strong>ASB Hukuk.</strong> Tüm Hakları Saklıdır.
+            © 2026 <strong>ASB Hukuk.</strong> Tüm Hakları Saklıdır.
           </p>
         </div>
       </div>

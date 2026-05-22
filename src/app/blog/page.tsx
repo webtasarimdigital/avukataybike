@@ -37,7 +37,7 @@ const blogPosts = [
 
 export default function BlogPage() {
   return (
-    <main className="min-h-screen bg-[#F8F5EF]">
+    <main className="min-h-screen bg-[#F6F3ED]">
 
       {/* HERO */}
       <div className="relative w-full overflow-hidden pt-44 pb-24">
