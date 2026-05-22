@@ -96,7 +96,7 @@ export default function Footer() {
         {/* Footer Bottom Bar */}
         <div className="border-t border-white/5 pt-8 pb-10 text-center">
           <p className="text-[13px] text-neutral-500 font-medium">
-            © 2026 <strong>ASB Hukuk.</strong> Tüm Hakları Saklıdır.
+            ©2026 <strong>ASB Hukuk.</strong> Tüm Hakları Saklıdır.
           </p>
         </div>
       </div>
