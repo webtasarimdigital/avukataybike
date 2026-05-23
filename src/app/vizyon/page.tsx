@@ -20,7 +20,7 @@ export default function VizyonPage() {
           </h1>
           <div className="w-16 h-1.5 bg-accent rounded-full mx-auto mb-8" />
           <p className="text-white/60 text-xl leading-relaxed max-w-2xl mx-auto">
-            Hukuki hizmet anlayışını modern, erişilebilir ve stratejik bir bakış açısıyla yeniden şekillendiriyoruz.
+            Modern hukuk yaklaşımını güçlü temsil kabiliyeti ve müvekkil odaklı bakış açısıyla birleştirerek, farklı sektörlerde güvenle başvurulan bir çözüm ortağı olarak konumlanıyoruz.
           </p>
         </div>
       </div>
@@ -36,7 +36,7 @@ export default function VizyonPage() {
               <Eye size={28} className="text-accent" />
             </div>
             <p className="text-2xl md:text-3xl font-black text-primary leading-relaxed italic mb-6">
-              "Hukuki hizmet anlayışını modern, erişilebilir ve stratejik bir bakış açısıyla yeniden şekillendirerek; Türkiye'nin güvenilir ve tercih edilen hukuk bürolarından biri olmak."
+              "Modern hukuk yaklaşımını güçlü temsil kabiliyeti ve müvekkil odaklı bakış açısıyla birleştirerek, farklı sektörlerde güvenle başvurulan bir çözüm ortağı olarak konumlanmak."
             </p>
             <div className="w-12 h-1.5 bg-accent rounded-full" />
           </div>

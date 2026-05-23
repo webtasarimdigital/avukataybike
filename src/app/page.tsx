@@ -146,7 +146,7 @@ export default function Home() {
               </div>
               <h3 className="text-2xl font-semibold text-primary uppercase italic">Vizyonumuz</h3>
               <p className="text-neutral-600 leading-relaxed">
-                Hukuki hizmet anlayışını modern, erişilebilir ve stratejik bir bakış açısıyla yeniden şekillendirerek; Türkiye'nin güvenilir ve tercih edilen hukuk bürolarından biri olmak.
+                Modern hukuk yaklaşımını güçlü temsil kabiliyeti ve müvekkil odaklı bakış açısıyla birleştirerek, farklı sektörlerde güvenle başvurulan bir çözüm ortağı olarak konumlanmak.
               </p>
               <Link href="/vizyon" className="inline-flex items-center gap-2 text-accent font-black text-[11px] tracking-widest uppercase">
                 Detaylı Bilgi <ArrowRight size={12} />

@@ -123,7 +123,7 @@ export default function AboutPage() {
               <h3 className="text-3xl font-black text-white uppercase italic mt-2 mb-5">Vizyonumuz</h3>
               <div className="w-12 h-1.5 bg-accent rounded-full mb-6" />
               <p className="text-white/70 text-base leading-relaxed">
-                Hukuki hizmet anlayışını modern, erişilebilir ve stratejik bir bakış açısıyla yeniden şekillendirerek; Türkiye'nin güvenilir ve tercih edilen hukuk bürolarından biri olmak.
+                Modern hukuk yaklaşımını güçlü temsil kabiliyeti ve müvekkil odaklı bakış açısıyla birleştirerek, farklı sektörlerde güvenle başvurulan bir çözüm ortağı olarak konumlanmak.
               </p>
             </div>
           </div>
@@ -222,6 +222,40 @@ export default function AboutPage() {
               </p>
               <div className="flex flex-wrap gap-2">
                 {["İcra İflas Hukuku","Ticaret Hukuku","Tüketici Hukuku","İş Hukuku","Aile Hukuku","Miras Hukuku"].map((alan) => (
+                  <span key={alan} className="bg-primary/5 text-primary text-xs font-black px-4 py-2 rounded-full border border-primary/10 uppercase tracking-wide">{alan}</span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* ── YÖNETİCİ ASİSTANI ÖZGEÇMİŞ ── */}
+        <div className="bg-white rounded-[40px] border border-gray-100 shadow-sm overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr]">
+            <div className="bg-primary p-10 flex flex-col items-center justify-center gap-5 relative overflow-hidden">
+              <div className="absolute inset-0 opacity-10" style={{backgroundImage:"repeating-linear-gradient(45deg,transparent,transparent 20px,rgba(255,255,255,.04) 20px,rgba(255,255,255,.04) 40px)"}} />
+              <div className="relative z-10 w-56 h-56 rounded-[28px] bg-white/10 border border-white/20 p-1 overflow-hidden">
+                <img src="/elif-naz-bicer.jpg" alt="Elif Naz Biçer" className="w-full h-full object-cover rounded-[24px]" />
+              </div>
+              <div className="relative z-10 text-center">
+                <p className="text-white font-black text-lg italic uppercase leading-tight">Elif Naz Biçer</p>
+                <p className="text-accent text-[10px] font-black tracking-[0.3em] uppercase mt-1">Yönetici Asistanı</p>
+              </div>
+            </div>
+            <div className="p-10 md:p-14 flex flex-col justify-center">
+              <div className="space-y-3 mb-8">
+                <span className="text-accent font-bold tracking-[0.3em] text-xs uppercase italic"></span>
+                <h3 className="text-2xl md:text-3xl font-black text-primary leading-tight uppercase italic">Yönetici Asistanı</h3>
+                <div className="w-12 h-1.5 bg-accent rounded-full" />
+              </div>
+              <p className="text-neutral-600 text-base leading-relaxed mb-6">
+                ASB Hukuk & Danışmanlık bünyesinde yönetici asistanı olarak görev almakta; ofisin günlük operasyonel süreçlerinin koordinasyonu, müvekkil iletişimi ve randevu yönetimi konularında destek sağlamaktadır.
+              </p>
+              <p className="text-neutral-500 text-base leading-relaxed mb-8">
+                Disiplinli, çözüm odaklı ve organizasyon becerisi yüksek çalışma anlayışıyla; ekibin verimli işleyişine ve müvekkillerimize sunulan hizmet kalitesinin sürdürülebilirliğine katkı sağlamaktadır.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {["Ofis Yönetimi","Müvekkil İlişkileri","Randevu Koordinasyonu","Dosya Takibi"].map((alan) => (
                   <span key={alan} className="bg-primary/5 text-primary text-xs font-black px-4 py-2 rounded-full border border-primary/10 uppercase tracking-wide">{alan}</span>
                 ))}
               </div>

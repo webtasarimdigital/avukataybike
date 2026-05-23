@@ -98,15 +98,14 @@ export default function Header() {
       </div>
 
       {/* Main Nav Bar */}
-      <div className={`transition-all duration-300 border-b border-border-soft ${isScrolled ? "shadow-lg py-2" : "py-2 lg:py-3"}`} style={{ backgroundColor: "#FBFAF8" }}>
+      <div className={`transition-all duration-300 border-b border-accent/20 ${isScrolled ? "shadow-lg py-2" : "py-2 lg:py-3"}`} style={{ backgroundColor: "#0F2B24" }}>
         <div className="w-full max-w-[1400px] mx-auto flex items-center justify-between px-8">
           {/* Logo */}
           <Link href="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex items-center shrink-0">
             <img
-              src="/yeni-logo.jpg"
+              src="/yeni-logo.png"
               alt="ASB Hukuk"
-              className="h-16 md:h-20 lg:h-24 w-auto object-contain"
-              style={{ mixBlendMode: "multiply" }}
+              className="h-14 md:h-16 lg:h-20 w-auto max-w-none object-contain rounded-md"
             />
           </Link>
 
@@ -121,7 +120,7 @@ export default function Header() {
                     onMouseEnter={() => setKurumsalHovered(true)}
                     onMouseLeave={() => setKurumsalHovered(false)}
                   >
-                    <button className="text-[14px] font-bold text-primary hover:text-accent transition-colors whitespace-nowrap tracking-widest flex items-center gap-1.5 py-4">
+                    <button className="text-[14px] font-bold text-white hover:text-accent transition-colors whitespace-nowrap tracking-widest flex items-center gap-1.5 py-4">
                       {link.name} <ChevronDown size={14} className={`mt-0.5 transition-transform duration-300 ${kurumsalHovered ? "rotate-180 text-accent" : ""}`} />
                     </button>
                     <AnimatePresence>
@@ -159,7 +158,7 @@ export default function Header() {
                     onMouseEnter={() => setServicesHovered(true)}
                     onMouseLeave={() => setServicesHovered(false)}
                   >
-                    <button className="text-[14px] font-bold text-primary hover:text-accent transition-colors whitespace-nowrap tracking-widest flex items-center gap-1.5 py-4">
+                    <button className="text-[14px] font-bold text-white hover:text-accent transition-colors whitespace-nowrap tracking-widest flex items-center gap-1.5 py-4">
                       {link.name} <ChevronDown size={14} className={`mt-0.5 transition-transform duration-300 ${servicesHovered ? "rotate-180 text-accent" : ""}`} />
                     </button>
 
@@ -195,7 +194,7 @@ export default function Header() {
                   key={link.name}
                   href={link.href}
                   onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                  className="text-[14px] font-bold text-primary hover:text-accent transition-colors whitespace-nowrap tracking-widest py-4 uppercase"
+                  className="text-[14px] font-bold text-white hover:text-accent transition-colors whitespace-nowrap tracking-widest py-4 uppercase"
                 >
                   {link.name}
                 </Link>
@@ -216,7 +215,7 @@ export default function Header() {
           {/* Mobile Menu Toggle */}
           <div className="lg:hidden">
              <button 
-               className="text-primary p-1"
+               className="text-white p-1"
                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
              >
                {mobileMenuOpen ? <X size={32} /> : <Menu size={32} />}
@@ -238,7 +237,7 @@ export default function Header() {
             <div className="flex items-center justify-between p-8 border-b border-white/5">
                <div className="flex items-center gap-3">
                   <div className="h-12 w-auto bg-white rounded-lg p-1">
-                    <img src="/yeni-logo.jpg" alt="ASB Hukuk" className="h-full w-auto object-contain" />
+                    <img src="/yeni-logo.png" alt="ASB Hukuk" className="h-full w-auto object-contain" />
                   </div>
                </div>
                <button 

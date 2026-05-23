@@ -73,7 +73,7 @@ export default function FloatingActions() {
               <span className="text-[11px] font-black uppercase tracking-[0.18em]">Ara</span>
             </a>
             <a
-              href="https://wa.me/90514882948"
+              href="https://wa.me/905514882948"
               target="_blank"
               rel="noopener noreferrer"
               className="flex flex-col items-center justify-center gap-2 rounded-3xl bg-primary/5 text-primary py-4 px-3 text-center transition hover:bg-primary/10"
