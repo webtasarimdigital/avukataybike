@@ -66,7 +66,7 @@ export default function Header() {
           <a href="https://maps.google.com/maps?q=R%C4%B1ht%C4%B1m+Poyraz+Sk.+No%3A26%2F4%2C+34734+Kad%C4%B1k%C3%B6y+%C4%B0stanbul" target="_blank"
             className="flex items-center gap-1.5 text-white hover:text-accent transition-colors whitespace-nowrap">
             <MapPin size={12} className="text-accent shrink-0" />
-            Rıhtım, Poyraz Sk. No:26/4 — 34734 Kadıköy / İstanbul
+            Emek Mahallesi, Poyraz Sk. No:26/4 — 34734 Kadıköy / İstanbul
           </a>
           <span className="text-white/20">|</span>
           <a href="mailto:info@asblawoffice.com"
