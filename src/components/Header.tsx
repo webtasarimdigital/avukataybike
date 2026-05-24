@@ -63,10 +63,10 @@ export default function Header() {
       <div className={`bg-primary transition-all duration-300 origin-top ${isScrolled ? "h-0 opacity-0 overflow-hidden" : "hidden lg:flex h-[52px] opacity-100"}`}>
         <div className="w-full max-w-[1400px] mx-auto px-8 flex items-center justify-center h-full gap-5 text-[11.5px]">
 
-          <a href="https://maps.google.com/maps?q=R%C4%B1ht%C4%B1m+Poyraz+Sk.+No%3A26%2F4%2C+34734+Kad%C4%B1k%C3%B6y+%C4%B0stanbul" target="_blank"
+          <a href="https://maps.google.com/maps?q=E%C4%9Fitim+Mahallesi+Poyraz+Sk.+No%3A26%2F4+Kad%C4%B1k%C3%B6y+%C4%B0stanbul" target="_blank"
             className="flex items-center gap-1.5 text-white hover:text-accent transition-colors whitespace-nowrap">
             <MapPin size={12} className="text-accent shrink-0" />
-            Emek Mahallesi, Poyraz Sk. No:26/4 — 34734 Kadıköy / İstanbul
+            Eğitim Mahallesi, Poyraz Sk. No:26/4 — Kadıköy / İstanbul
           </a>
           <span className="text-white/20">|</span>
           <a href="mailto:info@asblawoffice.com"
@@ -105,7 +105,7 @@ export default function Header() {
             <img
               src="/yeni-logo.png"
               alt="ASB Hukuk"
-              className="h-14 md:h-16 lg:h-20 w-auto max-w-none object-contain rounded-md"
+              className="h-20 md:h-24 lg:h-28 w-auto max-w-none object-contain"
             />
           </Link>
 
@@ -236,9 +236,7 @@ export default function Header() {
           >
             <div className="flex items-center justify-between p-8 border-b border-white/5">
                <div className="flex items-center gap-3">
-                  <div className="h-12 w-auto bg-white rounded-lg p-1">
-                    <img src="/yeni-logo.png" alt="ASB Hukuk" className="h-full w-auto object-contain" />
-                  </div>
+                  <img src="/yeni-logo.png" alt="ASB Hukuk" className="h-20 w-auto max-w-none object-contain" />
                </div>
                <button 
                  onClick={() => setMobileMenuOpen(false)}

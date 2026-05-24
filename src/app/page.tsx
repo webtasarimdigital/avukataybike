@@ -480,7 +480,7 @@ export default function Home() {
                 </p>
                 <div className="flex items-center gap-3 text-white/30 text-[11px] font-bold tracking-widest uppercase">
                   <MapPin size={13} className="text-accent" />
-                  Eğitim Mah., Poyraz Sk. No:26/4, Kadıköy / İstanbul
+                  Eğitim Mahallesi, Poyraz Sk. No:26/4, Kadıköy / İstanbul
                 </div>
               </div>
               <div className="flex flex-col gap-4">

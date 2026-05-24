@@ -67,7 +67,7 @@ export default function Footer() {
               <div className="flex items-start gap-3">
                 <MapPin size={20} className="text-accent shrink-0 mt-1" />
                 <p className="text-[14px] text-neutral-400 font-medium leading-relaxed">
-                  Eğitim Mah., Poyraz Sokak, No:26/4, <br/>Kadıköy / İstanbul
+                  Eğitim Mahallesi, Poyraz Sokak, No:26/4, <br/>Kadıköy / İstanbul
                 </p>
               </div>
               <div className="flex items-start gap-3">

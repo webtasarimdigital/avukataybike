@@ -43,7 +43,7 @@ export default function ContactPage() {
                      </div>
                      <div>
                         <h4 className="font-bold text-primary text-xl mb-1">Adres</h4>
-                        <p className="text-neutral-500 font-medium leading-relaxed">Emek Mahallesi, Poyraz Sokak, No:26/4, <br /> 34734 Kadıköy / İstanbul</p>
+                        <p className="text-neutral-500 font-medium leading-relaxed">Eğitim Mahallesi, Poyraz Sokak, No:26/4, <br />Kadıköy / İstanbul</p>
                      </div>
                   </div>
 
