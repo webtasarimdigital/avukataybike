@@ -489,7 +489,7 @@ export default function Home() {
                     <Phone size={16} className="text-accent" /> 0551 488 29 48
                   </div>
                   <div className="flex items-center gap-3 text-white/70 text-sm font-bold">
-                    <MessageSquare size={16} className="text-accent" /> info@asblawoffice.com
+                    <MessageSquare size={16} className="text-accent" /> info@asblawoffice.av.tr
                   </div>
                 </div>
                 <Link href="/iletisim"

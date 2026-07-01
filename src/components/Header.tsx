@@ -69,10 +69,10 @@ export default function Header() {
             Eğitim Mahallesi, Poyraz Sk. No:26/4 — Kadıköy / İstanbul
           </a>
           <span className="text-white/20">|</span>
-          <a href="mailto:info@asblawoffice.com"
+          <a href="mailto:info@asblawoffice.av.tr"
             className="flex items-center gap-1.5 text-white hover:text-accent transition-colors whitespace-nowrap">
             <Mail size={12} className="text-accent shrink-0" />
-            info@asblawoffice.com
+            info@asblawoffice.av.tr
           </a>
           <span className="text-white/20">|</span>
           <div className="flex items-center gap-1.5 text-white whitespace-nowrap">

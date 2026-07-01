@@ -79,7 +79,7 @@ export default function Footer() {
               <div className="flex items-start gap-3">
                 <Mail size={20} className="text-accent shrink-0 mt-1" />
                 <p className="text-[14px] text-neutral-400 font-medium leading-relaxed">
-                  info@asblawoffice.com
+                  info@asblawoffice.av.tr
                 </p>
               </div>
               <div className="flex items-start gap-3">
