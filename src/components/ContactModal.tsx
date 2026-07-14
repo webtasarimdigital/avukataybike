@@ -23,15 +23,29 @@ export default function ContactModal() {
     e.preventDefault();
     setStatus("loading");
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
+          subject: `Yeni Bilgi Talebi — ${form.name}`,
+          from_name: "ASB Hukuk Web",
+          name: form.name,
+          phone: form.phone,
+          email: form.email,
+          message: form.message,
+          replyto: form.email,
+        }),
       });
-      if (res.ok) {
+      const data = await res.json();
+      if (data.success) {
         setStatus("success");
         setForm({ name: "", phone: "", email: "", message: "" });
       } else {
+        console.error("Web3Forms error:", data);
         setStatus("error");
       }
     } catch {

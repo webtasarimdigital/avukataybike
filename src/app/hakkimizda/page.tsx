@@ -350,7 +350,7 @@ export default function AboutPage() {
                 <div className="w-12 h-12 rounded-2xl bg-primary/5 text-primary flex items-center justify-center shrink-0"><Mail size={22} /></div>
                 <div>
                   <p className="font-black text-primary text-sm uppercase tracking-wider mb-1">E-Posta</p>
-                  <a href="mailto:info@avukataybike.com" className="text-neutral-500 text-sm hover:text-accent transition-colors font-medium">info@avukataybike.com</a>
+                  <a href="mailto:info@asblawoffice.av.tr" className="text-neutral-500 text-sm hover:text-accent transition-colors font-medium">info@asblawoffice.av.tr</a>
                 </div>
               </div>
 
